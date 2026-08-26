@@ -1,0 +1,27 @@
+{
+  "name": "Louisiana",
+  "abbreviation": "LA",
+  "fips": "22",
+  "nickname": "The Pelican State",
+  "capital": "Baton Rouge",
+  "capitalCoords": [-91.1871, 30.4515],
+  "region": "South / Gulf Coast",
+  "statehoodOrder": 18,
+  "statehoodYear": 1812,
+  "nameStory": "In 1682 La Salle stood at the mouth of the Mississippi and claimed the entire river basin for King Louis XIV, naming it Louisiana for a monarch who would never see it. That absurd paper claim is exactly what Napoleon later sold to Jefferson, doubling the size of the United States in one transaction.",
+  "capitalStory": "Baton Rouge is French for 'red stick.' Explorers coming upriver saw a reddish cypress pole planted on the bluff, marking the hunting boundary between the Houma and Bayogoula peoples. The capital is named after a property line.",
+  "neighboringStates": ["AR", "MS", "TX"],
+  "majorFeatures": [
+    { "name": "Mississippi River Delta", "type": "delta", "note": "Where the continent's water finally reaches the Gulf", "coords": [-89.4, 29.2] },
+    { "name": "Atchafalaya Basin", "type": "wetland", "note": "Largest wetland and swamp in the US", "coords": [-91.5, 30.2] },
+    { "name": "Lake Pontchartrain", "type": "lake", "note": "The shallow lake north of New Orleans", "coords": [-90.1, 30.2] },
+    { "name": "Red River", "type": "river", "note": "Crosses the state to meet the Mississippi", "coords": [-93.0, 31.8] }
+  ],
+  "funFacts": [
+    "Louisiana is the only state with parishes instead of counties, a leftover of Catholic French and Spanish rule.",
+    "Its legal system is built on French and Spanish civil law, not English common law like every other state.",
+    "Much of New Orleans sits below sea level and is kept dry by pumps and levees.",
+    "The state loses a chunk of coastal land roughly the size of a football field every 100 minutes."
+  ],
+  "whyItMatters": "The levees that keep the Mississippi in its channel also stop it from depositing the silt that built southern Louisiana. The land is now sinking and washing away, which is what made Hurricane Katrina in 2005 so catastrophic."
+}

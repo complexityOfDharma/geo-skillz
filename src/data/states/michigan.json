@@ -1,0 +1,27 @@
+{
+  "name": "Michigan",
+  "abbreviation": "MI",
+  "fips": "26",
+  "nickname": "The Great Lakes State",
+  "capital": "Lansing",
+  "capitalCoords": [-84.5555, 42.7325],
+  "region": "Midwest / Great Lakes",
+  "statehoodOrder": 26,
+  "statehoodYear": 1837,
+  "nameStory": "From the Ojibwe 'mishigamaa' - 'large water.' But the memory trick is the shape: Michigan's Lower Peninsula is a mitten. Hold up your right hand, palm out, and you can point to any city in the state. No other state comes with a built-in map on your own hand.",
+  "capitalStory": "In 1847 the legislature deadlocked over where to move the capital from Detroit. Someone proposed an almost empty township in the woods, apparently as a sarcastic joke - and it passed. Michigan's capital was chosen by a prank that nobody managed to take back.",
+  "neighboringStates": ["OH", "IN", "WI"],
+  "majorFeatures": [
+    { "name": "Lake Michigan", "type": "lake", "note": "The only Great Lake entirely inside the US", "coords": [-86.6, 44.0] },
+    { "name": "Lake Superior", "type": "lake", "note": "Largest freshwater lake in the world by area", "coords": [-87.5, 47.4] },
+    { "name": "Straits of Mackinac", "type": "strait", "note": "Where the two peninsulas nearly touch", "coords": [-84.75, 45.82] },
+    { "name": "Upper Peninsula", "type": "peninsula", "note": "Wild, forested, and connected to Wisconsin, not Michigan", "coords": [-87.5, 46.3] }
+  ],
+  "funFacts": [
+    "Michigan touches four of the five Great Lakes - every one except Lake Ontario.",
+    "It has the longest freshwater coastline of anywhere on Earth.",
+    "Michigan only got the Upper Peninsula as a consolation prize after losing the 'Toledo War' border fight to Ohio. It looked like a terrible deal until iron and copper were found there.",
+    "No point in Michigan is more than about 85 miles from a Great Lake."
+  ],
+  "whyItMatters": "In 2014 Flint switched its water source to save money and failed to treat the water properly, so lead leached out of old pipes and poisoned the city's children. It became the clearest modern example of infrastructure decisions falling hardest on poor communities."
+}

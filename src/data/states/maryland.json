@@ -1,0 +1,27 @@
+{
+  "name": "Maryland",
+  "abbreviation": "MD",
+  "fips": "24",
+  "nickname": "The Old Line State",
+  "capital": "Annapolis",
+  "capitalCoords": [-76.4922, 38.9784],
+  "region": "Northeast / Mid-Atlantic",
+  "statehoodOrder": 7,
+  "statehoodYear": 1788,
+  "nameStory": "Named for Queen Henrietta Maria, wife of Charles I. The colony was founded as a refuge for English Catholics, who were a persecuted minority at home, and its 1649 Toleration Act was one of the first laws anywhere to protect freedom of worship - though only for Christians.",
+  "capitalStory": "Annapolis, named for Princess Anne, was briefly the capital of the entire United States in 1783. It is where George Washington resigned his commission rather than keep his army - the moment a victorious general handed power back to civilians instead of taking it.",
+  "neighboringStates": ["PA", "DE", "VA", "WV", "DC"],
+  "majorFeatures": [
+    { "name": "Chesapeake Bay", "type": "bay", "note": "Largest estuary in the United States", "coords": [-76.3, 38.6] },
+    { "name": "Potomac River", "type": "river", "note": "The whole southern border", "coords": [-77.3, 39.1] },
+    { "name": "Appalachian Mountains", "type": "mountains", "note": "The narrow western panhandle", "coords": [-79.0, 39.6] },
+    { "name": "Assateague Island", "type": "island", "note": "Barrier island famous for wild horses", "coords": [-75.2, 38.1] }
+  ],
+  "funFacts": [
+    "Near Hancock, Maryland is only about 1.8 miles wide - you can drive across the state in under three minutes.",
+    "Maryland donated the land that became Washington, DC.",
+    "The Chesapeake is really a drowned river valley: the Susquehanna's old channel, flooded when the ice age ended.",
+    "The US Naval Academy has been in Annapolis since 1845."
+  ],
+  "whyItMatters": "The Mason-Dixon Line was surveyed in the 1760s just to settle a boundary argument with Pennsylvania. It became the symbolic border between North and South, free and slave - a property dispute that turned into the country's deepest dividing line."
+}

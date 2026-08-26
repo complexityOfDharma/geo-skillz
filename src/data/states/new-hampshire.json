@@ -1,0 +1,27 @@
+{
+  "name": "New Hampshire",
+  "abbreviation": "NH",
+  "fips": "33",
+  "nickname": "The Granite State",
+  "capital": "Concord",
+  "capitalCoords": [-71.5376, 43.2081],
+  "region": "Northeast / New England",
+  "statehoodOrder": 9,
+  "statehoodYear": 1788,
+  "nameStory": "Named by Captain John Mason for Hampshire, England, where he had lived. The phrase everyone actually remembers, 'Live Free or Die,' came much later - from a toast General John Stark sent to a veterans' reunion in 1809 when he was too ill to attend.",
+  "capitalStory": "Concord is named after an actual concord: the settlement of a long, bitter boundary war between rival towns. The capital of New Hampshire is named for the moment people finally stopped arguing.",
+  "neighboringStates": ["ME", "VT", "MA"],
+  "majorFeatures": [
+    { "name": "White Mountains", "type": "mountains", "note": "The highest range in the Northeast", "coords": [-71.4, 44.2] },
+    { "name": "Mount Washington", "type": "mountain", "note": "Famous for the worst weather in America", "coords": [-71.303, 44.27] },
+    { "name": "Merrimack River", "type": "river", "note": "Powered the mill towns of the 1800s", "coords": [-71.5, 42.95] },
+    { "name": "Lake Winnipesaukee", "type": "lake", "note": "The state's big glacial lake", "coords": [-71.35, 43.6] }
+  ],
+  "funFacts": [
+    "A wind gust of 231 mph was recorded on Mount Washington in 1934 and stood as the world record for surface wind for over 60 years.",
+    "New Hampshire has about 18 miles of ocean coastline, the shortest of any coastal state.",
+    "The 1944 Bretton Woods conference, held at a New Hampshire resort, set up the financial system that ran the postwar world.",
+    "Three climate zones collide over Mount Washington, which is why its weather is so violent."
+  ],
+  "whyItMatters": "New Hampshire has held the first presidential primary in the nation since 1920. A state with about 0.4% of the US population gets an outsized first look at every candidate, which both parties argue about constantly."
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Montana",
+  "abbreviation": "MT",
+  "fips": "30",
+  "nickname": "Big Sky Country",
+  "capital": "Helena",
+  "capitalCoords": [-112.0391, 46.5891],
+  "region": "West / Mountain",
+  "statehoodOrder": 41,
+  "statehoodYear": 1889,
+  "nameStory": "From the Spanish 'montana,' mountain - which only describes half the state. Montana is really two places wearing one name: mountains in the western third, and flat Great Plains across the entire east. The Continental Divide is the seam between them.",
+  "capitalStory": "Helena began as Last Chance Gulch, named by four broke prospectors who agreed to try one final spot in 1864 before quitting. They struck gold. The capital's main street is still called Last Chance Gulch, and it bends because it follows the old creek bed.",
+  "neighboringStates": ["ND", "SD", "WY", "ID"],
+  "majorFeatures": [
+    { "name": "Rocky Mountains", "type": "mountains", "note": "The western third of the state", "coords": [-113.5, 46.8] },
+    { "name": "Glacier National Park", "type": "park", "note": "Carved peaks on the Canadian border", "coords": [-113.8, 48.7] },
+    { "name": "Missouri River headwaters", "type": "river", "note": "Three rivers join to start the Missouri", "coords": [-111.5, 45.9] },
+    { "name": "Great Plains", "type": "plain", "note": "Dry open grassland across the east", "coords": [-106.5, 46.5] }
+  ],
+  "funFacts": [
+    "Triple Divide Peak in Glacier is the only place in the US where water can flow to the Pacific, the Atlantic, and the Arctic from a single point.",
+    "Glacier National Park had about 150 glaciers in 1850. Roughly 25 remain.",
+    "Montana is the fourth-largest state but has fewer people than many single cities.",
+    "The Battle of the Little Bighorn, where Lakota and Cheyenne forces destroyed Custer's command, was fought here in 1876."
+  ]
+}

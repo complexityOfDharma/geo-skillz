@@ -1,0 +1,27 @@
+{
+  "name": "Mississippi",
+  "abbreviation": "MS",
+  "fips": "28",
+  "nickname": "The Magnolia State",
+  "capital": "Jackson",
+  "capitalCoords": [-90.1848, 32.2988],
+  "region": "South / Deep South",
+  "statehoodOrder": 20,
+  "statehoodYear": 1817,
+  "nameStory": "From the Ojibwe 'misi-ziibi' - 'great river.' Both the river and the state carry a name given by people living a thousand miles north, near its source. For the spelling, use the old chant: M-I-S-S-I-S-S-I-P-P-I, in a rhythm of four beats.",
+  "capitalStory": "Jackson is named for Andrew Jackson, and it sits on land the Choctaw were pressured into ceding in 1820. Jackson then signed the Indian Removal Act as president. The capital is named after the man most responsible for emptying the ground it stands on.",
+  "neighboringStates": ["TN", "AL", "LA", "AR"],
+  "majorFeatures": [
+    { "name": "Mississippi River", "type": "river", "note": "The entire western border", "coords": [-91.1, 32.5] },
+    { "name": "Mississippi Delta", "type": "plain", "note": "Flat, black-soil floodplain in the northwest", "coords": [-90.7, 33.5] },
+    { "name": "Gulf Coast", "type": "coast", "note": "Barrier islands and warm shallow sound", "coords": [-89.0, 30.35] },
+    { "name": "Natchez Trace", "type": "trail", "note": "Ancient footpath turned national parkway", "coords": [-89.5, 32.8] }
+  ],
+  "funFacts": [
+    "The Mississippi Delta is not a river delta at all - it is a floodplain between two rivers, about 200 miles from the actual delta.",
+    "The blues was born in that Delta, and nearly all American rock and roll descends from it.",
+    "Mississippi founded the first state-supported college for women in the United States, in 1884.",
+    "The Natchez Trace was worn into the ground by animals, then Native nations, then boatmen walking home after floating their cargo downriver."
+  ],
+  "whyItMatters": "The murder of 14-year-old Emmett Till in 1955, and the killing of three voter-registration workers during Freedom Summer in 1964, both happened here and both pushed national civil rights legislation forward."
+}

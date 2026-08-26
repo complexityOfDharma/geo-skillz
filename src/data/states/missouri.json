@@ -1,0 +1,27 @@
+{
+  "name": "Missouri",
+  "abbreviation": "MO",
+  "fips": "29",
+  "nickname": "The Show-Me State",
+  "capital": "Jefferson City",
+  "capitalCoords": [-92.1735, 38.5767],
+  "region": "Midwest",
+  "statehoodOrder": 24,
+  "statehoodYear": 1821,
+  "nameStory": "Named for the Missouria people, from an Illinois-language word meaning roughly 'those who have dugout canoes.' It is often claimed to mean 'muddy water' because the river is famously muddy, but that is a folk explanation, not the real root.",
+  "capitalStory": "Jefferson City was built from nothing on a bluff over the Missouri River and named for Thomas Jefferson - fitting, since his Louisiana Purchase is the only reason the land was American at all. It remains one of the smallest state capitals in the country.",
+  "neighboringStates": ["IA", "IL", "KY", "TN", "AR", "OK", "KS", "NE"],
+  "majorFeatures": [
+    { "name": "Missouri River", "type": "river", "note": "Longest river in North America", "coords": [-93.5, 38.9] },
+    { "name": "Mississippi River", "type": "river", "note": "The entire eastern border", "coords": [-90.4, 38.5] },
+    { "name": "Ozark Mountains", "type": "mountains", "note": "Ancient eroded highlands full of caves and springs", "coords": [-92.3, 37.2] },
+    { "name": "Confluence", "type": "confluence", "note": "Missouri meets the Mississippi just above St. Louis", "coords": [-90.2, 38.82] }
+  ],
+  "funFacts": [
+    "Missouri touches eight states, tied with Tennessee for the most of any state.",
+    "The two greatest rivers in North America join just north of St. Louis, which is why the city has the Gateway Arch.",
+    "The New Madrid earthquakes of 1811-12 were so violent they rang church bells in Boston and briefly made the Mississippi appear to run backwards.",
+    "Lewis and Clark launched their expedition from near St. Louis in 1804."
+  ],
+  "whyItMatters": "Missouri's 1821 admission forced the Missouri Compromise, drawing a line across the country between free and slave territory. Dred Scott then sued for his freedom in St. Louis, and the 1857 ruling against him helped make the Civil War unavoidable."
+}

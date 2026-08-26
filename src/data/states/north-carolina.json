@@ -1,0 +1,27 @@
+{
+  "name": "North Carolina",
+  "abbreviation": "NC",
+  "fips": "37",
+  "nickname": "The Tar Heel State",
+  "capital": "Raleigh",
+  "capitalCoords": [-78.6382, 35.7796],
+  "region": "South / Southeast",
+  "statehoodOrder": 12,
+  "statehoodYear": 1789,
+  "nameStory": "Carolina is Latin for 'land of Charles,' honoring King Charles I and later his son. The single colony grew too big and unruly to govern from one place, so in 1712 it was cut in half - which is why there are two Carolinas and not one.",
+  "capitalStory": "Raleigh is named for Sir Walter Raleigh, who never came to America but sponsored the Roanoke colony on this coast. Those settlers vanished, leaving only the word CROATOAN carved on a post. North Carolina's capital honors the man behind the Lost Colony.",
+  "neighboringStates": ["VA", "TN", "GA", "SC"],
+  "majorFeatures": [
+    { "name": "Outer Banks", "type": "islands", "note": "Barrier islands that constantly move", "coords": [-75.7, 35.4] },
+    { "name": "Blue Ridge Mountains", "type": "mountains", "note": "The high western edge of the state", "coords": [-82.4, 35.7] },
+    { "name": "Great Smoky Mountains", "type": "mountains", "note": "Shared with Tennessee along the crest", "coords": [-83.4, 35.55] },
+    { "name": "Cape Hatteras", "type": "cape", "note": "Where two ocean currents collide", "coords": [-75.53, 35.25] }
+  ],
+  "funFacts": [
+    "Mount Mitchell, at 6,684 feet, is the highest point anywhere in the United States east of the Mississippi.",
+    "The waters off Cape Hatteras are called the Graveyard of the Atlantic; more than 5,000 ships have wrecked there.",
+    "The Wright brothers made the first powered flight at Kitty Hawk in 1903, choosing the spot for its steady wind and soft sand.",
+    "The Outer Banks are not anchored to anything - they roll slowly toward the mainland, taking roads and houses with them."
+  ],
+  "whyItMatters": "On February 1, 1960, four Black college students sat down at a segregated Woolworth's lunch counter in Greensboro and refused to leave. Within two months the sit-in tactic had spread to 55 cities in 13 states."
+}

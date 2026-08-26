@@ -1,0 +1,27 @@
+{
+  "name": "Massachusetts",
+  "abbreviation": "MA",
+  "fips": "25",
+  "nickname": "The Bay State",
+  "capital": "Boston",
+  "capitalCoords": [-71.0589, 42.3601],
+  "region": "Northeast / New England",
+  "statehoodOrder": 6,
+  "statehoodYear": 1788,
+  "nameStory": "From the Massachusett people, meaning roughly 'at the great hill' - the Blue Hills just south of Boston. The longest, most misspelled state name in America is really just directions to a hill you can still go climb.",
+  "capitalStory": "Boston was built on a cramped, hilly peninsula, so colonists did something drastic: they shoveled the hills into the harbor to manufacture more land. Much of downtown Boston, including Back Bay, is ground that did not exist in 1700.",
+  "neighboringStates": ["NH", "VT", "NY", "CT", "RI"],
+  "majorFeatures": [
+    { "name": "Cape Cod", "type": "peninsula", "note": "A pile of sand and gravel dumped by a glacier", "coords": [-70.1, 41.85] },
+    { "name": "Berkshire Mountains", "type": "mountains", "note": "The wooded western highlands", "coords": [-73.2, 42.4] },
+    { "name": "Connecticut River", "type": "river", "note": "Splits the state's fertile middle valley", "coords": [-72.6, 42.4] },
+    { "name": "Massachusetts Bay", "type": "bay", "note": "The harbor that made Boston", "coords": [-70.7, 42.4] }
+  ],
+  "funFacts": [
+    "America's first public school (Boston Latin, 1635) and first college (Harvard, 1636) are both here, founded within a year of each other.",
+    "Boston opened the first subway in the United States in 1897.",
+    "Cape Cod is a glacial moraine - it only exists because an ice sheet stopped there and dropped its load of rubble.",
+    "Basketball and volleyball were both invented in Massachusetts, in Springfield and Holyoke."
+  ],
+  "whyItMatters": "The Boston Massacre, the Tea Party, and the first shots at Lexington and Concord all happened within a few dozen miles of each other. The American Revolution began as a local Massachusetts quarrel that spread."
+}
