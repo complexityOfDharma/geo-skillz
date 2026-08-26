@@ -1,0 +1,21 @@
+{
+  "name": "geo-skillz",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Story-first geography study deck. Phase 1: US states + major US geographic features.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check:data": "node scripts/check-data.mjs"
+  },
+  "devDependencies": {
+    "vite": "^7.1.5"
+  },
+  "dependencies": {
+    "d3-geo": "^3.1.1",
+    "topojson-client": "^3.1.0",
+    "us-atlas": "^3.0.1"
+  }
+}
