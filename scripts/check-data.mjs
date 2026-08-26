@@ -5,7 +5,8 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import * as topojson from 'topojson-client';
-import { geoBounds, geoContains } from 'd3-geo';
+import { geoArea, geoBounds, geoContains } from 'd3-geo';
+import { bboxFeature } from '../src/lib/geo.js';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const statesDir = join(root, 'src/data/states');
@@ -78,6 +79,11 @@ const features = JSON.parse(readFileSync(join(root, 'src/data/features.json'), '
 features.forEach((f, i) => {
   for (const k of ['id', 'name', 'story', 'statesTouched', 'keyFacts', 'focus']) {
     if (f[k] === undefined) fail(`features.json[${i}]`, `missing "${k}"`);
+  }
+  // d3-geo reads a wrongly wound ring as "the whole globe minus this box",
+  // which silently zooms the detail map out to the entire planet.
+  if (f.focus?.bbox && geoArea(bboxFeature(f.focus.bbox)) > 1) {
+    fail(`features.json[${i}]`, `focus.bbox covers most of the globe - check ring winding`);
   }
   for (const abbr of f.statesTouched ?? []) {
     if (abbr !== 'DC' && !byAbbr.has(abbr)) fail(`features.json[${i}]`, `unknown state "${abbr}"`);
