@@ -57,6 +57,15 @@ function go(i, { replace = false } = {}) {
   stage.scrollTop = 0;
   window.scrollTo(0, 0);
 
+  // DC is a genuine neighbour of Maryland and Virginia but has no slide of its
+  // own, so its chip should not look or behave like a link.
+  for (const chip of stage.querySelectorAll('[data-goto-abbr]')) {
+    if (!stateByAbbr.has(chip.dataset.gotoAbbr)) {
+      chip.classList.add('is-inert');
+      chip.disabled = true;
+    }
+  }
+
   document.getElementById('tb-title').textContent = slide.title;
   document.getElementById('tb-count').textContent = `${current + 1} / ${deck.length}`;
   document.getElementById('tb-bar').style.width = `${((current + 1) / deck.length) * 100}%`;

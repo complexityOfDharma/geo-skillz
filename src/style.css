@@ -229,8 +229,9 @@ html, body {
   transition: fill 0.12s;
 }
 .map-context.is-interactive .ctx-nation { stroke: var(--ink-faint); }
-.map-context.is-interactive .ctx-state:hover,
-.map-context.is-interactive .ctx-state:focus {
+.map-context.is-interactive .ctx-state.is-inert { cursor: default; opacity: 0.55; }
+.map-context.is-interactive .ctx-state:not(.is-inert):hover,
+.map-context.is-interactive .ctx-state:not(.is-inert):focus {
   fill: var(--accent);
   outline: none;
 }
@@ -303,6 +304,12 @@ html, body {
   cursor: pointer;
 }
 .chip:hover { background: var(--accent); color: #1a1206; }
+.chip.is-inert {
+  color: var(--ink-dim);
+  background: none;
+  border-color: var(--line);
+  cursor: default;
+}
 .chip.is-empty {
   font-family: inherit;
   font-weight: 400;
@@ -550,6 +557,16 @@ kbd {
   .tl-list li { grid-template-columns: 1fr; padding-left: 0.85rem; }
   .tl-detail { grid-column: 1; }
   .tb-count { display: none; }
+}
+
+/* The map SVGs scale down with the viewport, which shrinks their labels too.
+   Scale the type up so it stays readable on a phone or small tablet. */
+@media (max-width: 900px) {
+  .marker-label { font-size: 17px; stroke-width: 4.5px; }
+}
+@media (max-width: 640px) {
+  .marker-label { font-size: 22px; stroke-width: 6px; }
+  .marker-dot { stroke-width: 1.6; }
 }
 
 @media (prefers-reduced-motion: reduce) {

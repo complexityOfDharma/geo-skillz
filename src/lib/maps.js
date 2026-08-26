@@ -46,24 +46,35 @@ function project(projection, markers, width, height) {
     if (!pt || !Number.isFinite(pt[0])) continue;
     placed.push({ ...m, x: pt[0], y: pt[1] });
   }
-  return spread(placed, 17, height);
+  // Gap is in SVG units, so it must clear the largest label size any breakpoint
+  // uses - phones scale the whole SVG down and compensate with bigger type.
+  return spread(placed, 24, height);
 }
 
 // Tier 1: the whole country, with the subject filled and everything else muted.
-export function contextMap(atlas, { highlight = [], interactive = false, width = 820, height = 500 } = {}) {
+export function contextMap(
+  atlas,
+  { highlight = [], interactive = false, clickable = null, width = 820, height = 500 } = {}
+) {
   const projection = contextProjection(atlas.nation, width, height);
   const path = pathFor(projection);
   const hot = new Set(highlight);
+  // Only shapes that actually have a slide should invite a click. DC is in the
+  // atlas and is a real neighbour of Maryland and Virginia, but has no slide.
+  const canClick = clickable ? new Set(clickable) : null;
 
   const shapes = atlas.states.features
     .map((f) => {
       const d = path(f);
       if (!d) return '';
       const on = hot.has(f.id);
-      const cls = `ctx-state${on ? ' is-active' : ''}`;
-      const attrs = interactive
+      const navigable = interactive && (!canClick || canClick.has(f.id));
+      const attrs = navigable
         ? ` tabindex="0" role="button" data-fips="${f.id}" aria-label="${esc(f.properties.name)}"`
         : '';
+      const cls = `ctx-state${on ? ' is-active' : ''}${
+        interactive && !navigable ? ' is-inert' : ''
+      }`;
       return `<path class="${cls}" d="${d}"${attrs}><title>${esc(f.properties.name)}</title></path>`;
     })
     .join('');

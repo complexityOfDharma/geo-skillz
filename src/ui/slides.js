@@ -33,8 +33,10 @@ const mapPair = (contextSvg, detailSvg, contextCaption, detailCaption) =>
    </section>`;
 
 function overviewSlide(atlas, deck) {
-  const count = deck.filter((s) => s.kind === 'state').length;
+  const stateSlides = deck.filter((s) => s.kind === 'state');
+  const count = stateSlides.length;
   const featureCount = deck.filter((s) => s.kind === 'feature').length;
+  const clickable = stateSlides.map((s) => s.data.fips);
   return `
     <article class="slide slide-overview">
       <header class="slide-head">
@@ -43,7 +45,7 @@ function overviewSlide(atlas, deck) {
       </header>
       <section class="maps maps-single">
         <figure class="map-figure">
-          ${contextMap(atlas, { interactive: true, width: 900, height: 560 })}
+          ${contextMap(atlas, { interactive: true, clickable, width: 900, height: 560 })}
           <figcaption>Click or tap a state, or use the search button in the toolbar.</figcaption>
         </figure>
       </section>
