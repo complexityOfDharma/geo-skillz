@@ -1,0 +1,27 @@
+{
+  "name": "California",
+  "abbreviation": "CA",
+  "fips": "06",
+  "nickname": "The Golden State",
+  "capital": "Sacramento",
+  "capitalCoords": [-121.4944, 38.5816],
+  "region": "West / Pacific",
+  "statehoodOrder": 31,
+  "statehoodYear": 1850,
+  "nameStory": "California is named after a fantasy novel. A 1510 Spanish romance described a mythical island called California, full of gold and ruled by Queen Calafia. Explorers thought Baja was an island, named it for the myth - and the place then actually turned out to have the gold.",
+  "capitalStory": "Sacramento means 'sacrament' in Spanish. It sits where the Sacramento and American rivers meet, which made it the supply gate for the Gold Rush: Sutter's Mill, where gold was found in 1848, is only about 40 miles upstream.",
+  "neighboringStates": ["OR", "NV", "AZ"],
+  "majorFeatures": [
+    { "name": "Sierra Nevada", "type": "mountains", "note": "Granite spine of the state", "coords": [-118.8, 37.2] },
+    { "name": "Central Valley", "type": "valley", "note": "Grows a quarter of America's food", "coords": [-120.3, 36.6] },
+    { "name": "Mojave Desert", "type": "desert", "note": "Contains Death Valley", "coords": [-116.5, 35.0] },
+    { "name": "San Andreas Fault", "type": "fault", "note": "800-mile boundary between two plates", "coords": [-120.5, 35.7] }
+  ],
+  "funFacts": [
+    "Mount Whitney (14,505 ft) and Death Valley (-282 ft), the highest and lowest points in the contiguous US, are about 85 miles apart.",
+    "If California were a country it would have roughly the fifth-largest economy on Earth.",
+    "It is the most populous state, with more people than all of Canada.",
+    "The General Sherman tree in Sequoia is the largest single living organism by volume on the planet."
+  ],
+  "whyItMatters": "California's fire season now runs most of the year. Drought, a century of suppressing natural fires, and building into wild land have combined so that several of the state's largest fires on record have happened since 2017."
+}

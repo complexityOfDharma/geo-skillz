@@ -1,0 +1,26 @@
+{
+  "name": "Illinois",
+  "abbreviation": "IL",
+  "fips": "17",
+  "nickname": "The Prairie State",
+  "capital": "Springfield",
+  "capitalCoords": [-89.6501, 39.7817],
+  "region": "Midwest",
+  "statehoodOrder": 21,
+  "statehoodYear": 1818,
+  "nameStory": "A French spelling of the Illinois people's own name, which meant roughly 'those who speak the ordinary way.' The French added an '-ois' ending, and that is why there is an 's' on the end that nobody pronounces.",
+  "capitalStory": "Springfield became the capital because of nine lobbying legislators nicknamed the 'Long Nine' - all of them over six feet tall, including a young Abraham Lincoln. He then lived there for 24 years, longer than anywhere else.",
+  "neighboringStates": ["WI", "IA", "MO", "KY", "IN"],
+  "majorFeatures": [
+    { "name": "Lake Michigan", "type": "lake", "note": "Chicago's shoreline and water supply", "coords": [-87.4, 42.1] },
+    { "name": "Mississippi River", "type": "river", "note": "The entire western border", "coords": [-90.9, 40.5] },
+    { "name": "Illinois River", "type": "river", "note": "Links Chicago to the Mississippi", "coords": [-89.6, 40.9] },
+    { "name": "Ohio River", "type": "river", "note": "The southern tip's border", "coords": [-88.5, 37.3] }
+  ],
+  "funFacts": [
+    "Cahokia, near modern St. Louis, was the largest city north of Mexico before Columbus - bigger at its peak than London was at the time.",
+    "Chicago built the world's first steel-frame skyscraper in 1885.",
+    "In 1900 engineers reversed the flow of the Chicago River so the city's sewage would go toward the Mississippi instead of its own drinking water.",
+    "The highest point in Illinois is only 1,235 feet."
+  ]
+}

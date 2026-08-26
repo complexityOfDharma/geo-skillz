@@ -1,0 +1,27 @@
+{
+  "name": "Kentucky",
+  "abbreviation": "KY",
+  "fips": "21",
+  "nickname": "The Bluegrass State",
+  "capital": "Frankfort",
+  "capitalCoords": [-84.8733, 38.2009],
+  "region": "South / Upland South",
+  "statehoodOrder": 15,
+  "statehoodYear": 1792,
+  "nameStory": "From an Iroquoian word along the lines of 'on the meadow.' The romantic translation you'll often hear - 'dark and bloody ground' - is a later legend, not the actual root, though it stuck because it fit the frontier stories people wanted to tell.",
+  "capitalStory": "Frankfort is 'Frank's Ford': a river crossing where a settler named Stephen Frank was killed in an ambush. The capital of Kentucky is named after the spot where a man died. It stayed small because it was picked as a neutral compromise between rivals Louisville and Lexington.",
+  "neighboringStates": ["IL", "IN", "OH", "WV", "VA", "TN", "MO"],
+  "majorFeatures": [
+    { "name": "Mammoth Cave", "type": "cave", "note": "Longest cave system in the world", "coords": [-86.1, 37.19] },
+    { "name": "Ohio River", "type": "river", "note": "The entire northern border", "coords": [-85.5, 38.7] },
+    { "name": "Cumberland Gap", "type": "pass", "note": "The pioneer doorway through the Appalachians", "coords": [-83.68, 36.6] },
+    { "name": "Appalachian Mountains", "type": "mountains", "note": "Coal country in the east", "coords": [-83.2, 37.3] }
+  ],
+  "funFacts": [
+    "Mammoth Cave has over 420 mapped miles of passage - more than twice any other cave on Earth.",
+    "Kentucky holds more barrels of aging bourbon than it has people.",
+    "The Cumberland Gap was the natural gate through the mountains, and Daniel Boone's road through it opened the west to settlers.",
+    "Kentucky is officially a Commonwealth, one of only four states that use that title."
+  ],
+  "whyItMatters": "Abraham Lincoln and Jefferson Davis, the two opposing presidents of the Civil War, were both born in Kentucky about 100 miles and one year apart. The state stayed in the Union while remaining a slave state."
+}

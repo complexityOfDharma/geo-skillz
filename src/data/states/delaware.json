@@ -1,0 +1,25 @@
+{
+  "name": "Delaware",
+  "abbreviation": "DE",
+  "fips": "10",
+  "nickname": "The First State",
+  "capital": "Dover",
+  "capitalCoords": [-75.5244, 39.1582],
+  "region": "Northeast / Mid-Atlantic",
+  "statehoodOrder": 1,
+  "statehoodYear": 1787,
+  "nameStory": "Follow the chain backwards: the state is named for the Delaware River, which is named for Thomas West, Baron De La Warr, a governor of Virginia who never set foot in it. Colonists then pinned that same dead baron's name onto the Lenape people, who called themselves something else entirely.",
+  "capitalStory": "William Penn put Dover inland on purpose. A capital on the coast could be shelled or raided from the sea, so he placed the seat of government safely in the middle of the colony.",
+  "neighboringStates": ["MD", "PA", "NJ"],
+  "majorFeatures": [
+    { "name": "Delaware Bay", "type": "bay", "note": "Major estuary and shipping channel", "coords": [-75.2, 39.0] },
+    { "name": "Delaware River", "type": "river", "note": "The northern border and port route", "coords": [-75.5, 39.6] },
+    { "name": "Atlantic Coastal Plain", "type": "plain", "note": "Flat sandy lowland covering the state", "coords": [-75.4, 38.7] }
+  ],
+  "funFacts": [
+    "First to ratify the Constitution, on December 7, 1787, which is the whole reason for 'The First State.'",
+    "More than half of all publicly traded US companies are legally incorporated in Delaware, for its specialized business court.",
+    "Its highest point is about 448 feet, the lowest 'highest point' of any state.",
+    "Delaware's northern border is a perfect arc: the Twelve-Mile Circle, the only circular state boundary in America."
+  ]
+}

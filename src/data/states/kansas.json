@@ -1,0 +1,27 @@
+{
+  "name": "Kansas",
+  "abbreviation": "KS",
+  "fips": "20",
+  "nickname": "The Sunflower State",
+  "capital": "Topeka",
+  "capitalCoords": [-95.6890, 39.0473],
+  "region": "Midwest / Great Plains",
+  "statehoodOrder": 34,
+  "statehoodYear": 1861,
+  "nameStory": "Named for the Kansa people, whose name is usually translated 'people of the south wind.' A state named after wind, which happens to be the flattest, windiest, most tornado-famous stretch of the country - the name and the weather agree.",
+  "capitalStory": "Topeka is thought to mean 'a good place to dig potatoes,' referring to wild prairie tubers. It was founded in 1854 by antislavery settlers trying to win Kansas for the free-state side, and a century later it gave its name to the case that ended school segregation.",
+  "neighboringStates": ["NE", "MO", "OK", "CO"],
+  "majorFeatures": [
+    { "name": "Great Plains", "type": "plain", "note": "The state tilts steadily upward toward the west", "coords": [-100.5, 38.5] },
+    { "name": "Flint Hills", "type": "hills", "note": "The last large tallgrass prairie in America", "coords": [-96.6, 38.4] },
+    { "name": "Arkansas River", "type": "river", "note": "Crosses the state west to east", "coords": [-98.5, 38.0] },
+    { "name": "Kansas River", "type": "river", "note": "Joins the Missouri at Kansas City", "coords": [-95.9, 39.1] }
+  ],
+  "funFacts": [
+    "The geographic center of the contiguous 48 states sits in Smith County, Kansas.",
+    "Kansas is not actually the flattest state - Florida is - but it rises about 3,000 feet from its eastern edge to its western one without ever feeling like a hill.",
+    "The Flint Hills survived the plow because the rock was too close to the surface to farm.",
+    "Before statehood the territory was so violent over slavery that it was nicknamed 'Bleeding Kansas.'"
+  ],
+  "whyItMatters": "Brown v. Board of Education of Topeka (1954) struck down 'separate but equal' and ordered American public schools desegregated - one of the most consequential Supreme Court rulings ever issued."
+}

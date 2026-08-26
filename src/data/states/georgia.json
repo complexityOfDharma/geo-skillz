@@ -1,0 +1,27 @@
+{
+  "name": "Georgia",
+  "abbreviation": "GA",
+  "fips": "13",
+  "nickname": "The Peach State",
+  "capital": "Atlanta",
+  "capitalCoords": [-84.3880, 33.7490],
+  "region": "South / Southeast",
+  "statehoodOrder": 4,
+  "statehoodYear": 1788,
+  "nameStory": "Named for King George II, who chartered it in 1732 with two jobs: give people rotting in debtors' prison a second chance, and put a wall of armed colonists between the Carolinas and Spanish Florida. Georgia was founded as a charity and a human shield at the same time.",
+  "capitalStory": "Atlanta began as a railroad stake in the dirt called Terminus - literally 'the end of the line.' Sherman burned it in 1864 and it rebuilt bigger, which is why the city seal is a phoenix.",
+  "neighboringStates": ["FL", "AL", "TN", "NC", "SC"],
+  "majorFeatures": [
+    { "name": "Appalachian Mountains", "type": "mountains", "note": "The range's southern end", "coords": [-84.2, 34.8] },
+    { "name": "Chattahoochee River", "type": "river", "note": "Atlanta's water supply and the Alabama border", "coords": [-85.0, 32.5] },
+    { "name": "Okefenokee Swamp", "type": "wetland", "note": "One of the largest intact freshwater swamps", "coords": [-82.4, 30.8] },
+    { "name": "Savannah River", "type": "river", "note": "The entire South Carolina border", "coords": [-81.7, 32.6] }
+  ],
+  "funFacts": [
+    "Largest state east of the Mississippi River.",
+    "The last of the original 13 colonies to be founded.",
+    "Hartsfield-Jackson in Atlanta is the busiest airport in the world by passenger count.",
+    "Springer Mountain in north Georgia is the southern trailhead of the Appalachian Trail.",
+    "Martin Luther King Jr. was born, preached, and is buried in Atlanta."
+  ]
+}

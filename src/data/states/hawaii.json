@@ -1,0 +1,28 @@
+{
+  "name": "Hawaii",
+  "abbreviation": "HI",
+  "fips": "15",
+  "nickname": "The Aloha State",
+  "capital": "Honolulu",
+  "capitalCoords": [-157.8583, 21.3069],
+  "region": "Pacific",
+  "statehoodOrder": 50,
+  "statehoodYear": 1959,
+  "nameStory": "The name likely comes from Hawaiki, the legendary Polynesian homeland - or from Hawai'iloa, the navigator remembered as finding the islands. Either way, voyagers crossed 2,000 miles of open ocean and named the new place after the old one they had left.",
+  "capitalStory": "Honolulu means 'sheltered harbor.' It is the only deep protected anchorage in the whole chain, which is why whalers, then traders, then the US Navy all converged on the same few square miles - Pearl Harbor is right next door.",
+  "neighboringStates": [],
+  "majorFeatures": [
+    { "name": "Mauna Kea", "type": "mountain", "note": "Tallest mountain on Earth measured from its base", "coords": [-155.47, 19.82] },
+    { "name": "Kilauea", "type": "volcano", "note": "One of the most active volcanoes in the world", "coords": [-155.28, 19.42] },
+    { "name": "Pearl Harbor", "type": "harbor", "note": "Attacked December 7, 1941", "coords": [-157.97, 21.35] },
+    { "name": "Waimea Canyon", "type": "canyon", "note": "The 'Grand Canyon of the Pacific' on Kauai", "coords": [-159.66, 22.07] }
+  ],
+  "funFacts": [
+    "The only US state made entirely of islands, and the only one in the tropics.",
+    "Measured from the sea floor, Mauna Kea is about 33,500 feet tall - taller than Everest.",
+    "Honolulu is the most isolated major city on Earth; the nearest continent is 2,400 miles away.",
+    "Hawaii has two official languages, English and Hawaiian.",
+    "It is the newest state, admitted August 21, 1959."
+  ],
+  "whyItMatters": "In 1893 US-backed businessmen overthrew Queen Liliuokalani and the independent Kingdom of Hawaii. Congress formally apologized for it in 1993, and a Hawaiian sovereignty movement is still active today."
+}

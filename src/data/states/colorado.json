@@ -1,0 +1,27 @@
+{
+  "name": "Colorado",
+  "abbreviation": "CO",
+  "fips": "08",
+  "nickname": "The Centennial State",
+  "capital": "Denver",
+  "capitalCoords": [-104.9903, 39.7392],
+  "region": "West / Mountain",
+  "statehoodOrder": 38,
+  "statehoodYear": 1876,
+  "nameStory": "Spanish for 'colored red,' named for the Colorado River running rusty with canyon silt. The state is named after the color of its own mud.",
+  "capitalStory": "Denver is the Mile High City: the thirteenth step of the State Capitol sits at exactly 5,280 feet. The town was named to flatter territorial governor James Denver, except the flattery arrived late - he had already resigned, and never came.",
+  "neighboringStates": ["WY", "NE", "KS", "OK", "NM", "UT", "AZ"],
+  "majorFeatures": [
+    { "name": "Rocky Mountains", "type": "mountains", "note": "58 peaks above 14,000 feet", "coords": [-106.3, 39.3] },
+    { "name": "Continental Divide", "type": "divide", "note": "Splits Pacific-bound from Atlantic-bound water", "coords": [-106.0, 40.2] },
+    { "name": "Colorado River headwaters", "type": "river", "note": "Starts here, supplies seven states", "coords": [-105.8, 40.4] },
+    { "name": "Great Sand Dunes", "type": "dunes", "note": "Tallest dunes in North America, 750 ft", "coords": [-105.5, 37.8] }
+  ],
+  "funFacts": [
+    "Admitted in 1876, exactly 100 years after the Declaration of Independence - hence 'Centennial State.'",
+    "It has the highest average elevation of any state, and no point in it is below 3,300 feet.",
+    "It looks like a perfect rectangle but isn't: 19th-century survey errors left the border with roughly 697 sides.",
+    "Colorado has more 14,000-foot peaks than the other 49 states combined."
+  ],
+  "whyItMatters": "Snow that falls in the Colorado Rockies becomes drinking water for about 40 million people across seven states and Mexico. When the snowpack is thin here, cities a thousand miles away ration."
+}

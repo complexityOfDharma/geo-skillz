@@ -1,0 +1,25 @@
+{
+  "name": "Connecticut",
+  "abbreviation": "CT",
+  "fips": "09",
+  "nickname": "The Constitution State",
+  "capital": "Hartford",
+  "capitalCoords": [-72.6851, 41.7637],
+  "region": "Northeast / New England",
+  "statehoodOrder": 5,
+  "statehoodYear": 1788,
+  "nameStory": "From the Mohegan-Pequot 'quinnitukqut' - 'beside the long tidal river.' That silent 'c' in the middle is an English spelling accident: colonists writing down an Algonquian word by ear added a letter nobody ever pronounced.",
+  "capitalStory": "Hartford is named for Hertford, England, but its real claim is the Fundamental Orders of 1639, drafted here and often called the first written constitution in the Western world. That document is why the license plates say 'Constitution State.'",
+  "neighboringStates": ["NY", "MA", "RI"],
+  "majorFeatures": [
+    { "name": "Connecticut River", "type": "river", "note": "New England's longest river, splits the state", "coords": [-72.6, 41.6] },
+    { "name": "Long Island Sound", "type": "sound", "note": "The state's entire southern shore", "coords": [-72.9, 41.1] },
+    { "name": "Housatonic River", "type": "river", "note": "Drains the western hills", "coords": [-73.4, 41.5] }
+  ],
+  "funFacts": [
+    "Third smallest state by area, and historically one of the wealthiest per person.",
+    "Hartford became the insurance capital of America because merchants there first insured sailing ships.",
+    "Yale was founded in 1701, the third-oldest college in the country.",
+    "Mark Twain wrote Tom Sawyer and Huckleberry Finn in his Hartford house."
+  ]
+}
