@@ -1,12 +1,13 @@
-// Searchable jump-to menu. Matches on state name, capital, abbreviation,
-// nickname and region, so "richmond", "VA" and "old dominion" all find Virginia.
+// Searchable jump-to menu, spanning every slide in every category. Matches on
+// title, capital, abbreviation, nickname and region, so "richmond", "VA" and
+// "old dominion" all find Virginia.
 const esc = (s) =>
   String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-export function createJumpMenu(deck, onPick) {
-  const haystacks = deck.map((s) => {
+export function createJumpMenu(slides, onPick) {
+  const haystacks = slides.map((s) => {
     const d = s.data ?? {};
-    return [s.title, d.capital, d.abbreviation, d.nickname, d.region, s.subtitle]
+    return [s.title, d.capital, d.abbreviation, d.nickname, d.region, s.subtitle, s.categoryId]
       .filter(Boolean)
       .join(' ')
       .toLowerCase();
@@ -38,11 +39,11 @@ export function createJumpMenu(deck, onPick) {
     }
     listEl.innerHTML = results
       .map((i, n) => {
-        const meta = deck[i].subtitle ?? (deck[i].kind === 'overview' ? 'Start here' : '');
+        const s = slides[i];
         return (
           `<li><button class="jump-row${n === cursor ? ' is-on' : ''}" data-index="${i}">` +
-          `<span class="jump-name">${esc(deck[i].title)}</span>` +
-          `<span class="jump-meta">${esc(meta)}</span></button></li>`
+          `<span class="jump-name">${esc(s.title)}</span>` +
+          `<span class="jump-meta">${esc(s.subtitle ?? '')}</span></button></li>`
         );
       })
       .join('');
@@ -51,14 +52,12 @@ export function createJumpMenu(deck, onPick) {
 
   function filter() {
     const q = input.value.trim().toLowerCase();
-    results = deck.map((_, i) => i).filter((i) => !q || haystacks[i].includes(q));
+    results = slides.map((_, i) => i).filter((i) => !q || haystacks[i].includes(q));
     cursor = 0;
     draw();
   }
 
-  function close() {
-    panel.hidden = true;
-  }
+  const close = () => { panel.hidden = true; };
 
   function open() {
     panel.hidden = false;
@@ -67,19 +66,18 @@ export function createJumpMenu(deck, onPick) {
     input.focus();
   }
 
+  const pick = (i) => { close(); onPick(slides[i]); };
+
   input.addEventListener('input', filter);
 
   panel.addEventListener('click', (e) => {
     if (e.target === panel) return close();
     const row = e.target.closest('[data-index]');
-    if (row) {
-      close();
-      onPick(Number(row.dataset.index));
-    }
+    if (row) pick(Number(row.dataset.index));
   });
 
   panel.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') return close();
+    if (e.key === 'Escape') { e.stopPropagation(); return close(); }
     if (e.key === 'ArrowDown') {
       e.preventDefault();
       cursor = Math.min(cursor + 1, results.length - 1);
@@ -90,8 +88,7 @@ export function createJumpMenu(deck, onPick) {
       draw();
     } else if (e.key === 'Enter' && results.length) {
       e.preventDefault();
-      close();
-      onPick(results[cursor]);
+      pick(results[cursor]);
     }
   });
 

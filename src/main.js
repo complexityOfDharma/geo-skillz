@@ -1,20 +1,29 @@
 import './style.css';
 import { loadAtlas } from './lib/atlas.js';
-import { buildDeck, stateByAbbr, states } from './data/index.js';
-import { renderSlide } from './ui/slides.js';
+import * as router from './lib/router.js';
+import {
+  sections,
+  allSlides,
+  states,
+  getCategory,
+  getSlide,
+  getSlideById,
+  getSlideByFips,
+  getSlideByAbbr,
+} from './data/index.js';
+import { renderSlide, breadcrumbFor } from './ui/slides.js';
+import { renderLanding } from './ui/landing.js';
+import { renderCategory } from './ui/category.js';
+import { createSidebar } from './ui/sidebar.js';
 import { createJumpMenu } from './ui/jump.js';
 
-const deck = buildDeck();
 const app = document.getElementById('app');
-const indexById = new Map(deck.map((s, i) => [s.id, i]));
-const fipsToIndex = new Map(
-  deck.filter((s) => s.kind === 'state').map((s) => [s.data.fips, indexById.get(s.id)])
-);
 
 let atlas;
-let current = 0;
 let stage;
+let sidebar;
 let jump;
+let route = { kind: 'landing' };
 
 init();
 
@@ -27,81 +36,184 @@ async function init() {
       `<p class="boot-detail">${err.message}</p></div>`;
     return;
   }
-  app.innerHTML = chrome();
+
+  app.innerHTML = shell();
   stage = document.getElementById('stage');
-  jump = createJumpMenu(deck, (i) => go(i));
+
+  jump = createJumpMenu(allSlides, (slide) => go(routeForSlide(slide)));
+  sidebar = createSidebar(sections, { onSearch: () => jump.open() });
+  document.getElementById('shell').prepend(sidebar.el);
+
   wire();
-  go(indexFromHash(), { replace: true });
+  go(resolve(location.hash), { replace: true });
 }
 
-function chrome() {
+function shell() {
   return `
-    <div class="toolbar">
-      <button class="tb-btn" data-nav="prev" aria-label="Previous slide">&larr;</button>
-      <div class="tb-center">
-        <button class="tb-jump" data-open-jump aria-haspopup="dialog">
-          <span class="tb-title" id="tb-title">&nbsp;</span>
-          <span class="tb-count" id="tb-count"></span>
-        </button>
-        <div class="tb-progress"><div class="tb-progress-bar" id="tb-bar"></div></div>
+    <div class="shell" id="shell">
+      <div class="content">
+        <div class="toolbar">
+          <button class="tb-btn tb-menu" data-open-nav aria-label="Open navigation">☰</button>
+          <div class="tb-center">
+            <div class="tb-line">
+              <span class="tb-title" id="tb-title">&nbsp;</span>
+              <span class="tb-count" id="tb-count"></span>
+            </div>
+            <div class="tb-progress"><div class="tb-progress-bar" id="tb-bar"></div></div>
+          </div>
+          <div class="tb-arrows">
+            <button class="tb-btn" data-nav="prev" aria-label="Previous slide">←</button>
+            <button class="tb-btn" data-nav="next" aria-label="Next slide">→</button>
+          </div>
+        </div>
+        <main id="stage" class="stage" tabindex="-1"></main>
       </div>
-      <button class="tb-btn" data-nav="next" aria-label="Next slide">&rarr;</button>
-    </div>
-    <main id="stage" class="stage" tabindex="-1"></main>`;
+    </div>`;
 }
 
-function go(i, { replace = false } = {}) {
-  current = Math.max(0, Math.min(deck.length - 1, i));
-  const slide = deck[current];
-  stage.innerHTML = renderSlide(slide, atlas, deck);
-  stage.scrollTop = 0;
-  window.scrollTo(0, 0);
+const routeForSlide = (slide) => ({
+  kind: 'slide',
+  sectionId: slide.sectionId,
+  categoryId: slide.categoryId,
+  slideId: slide.id,
+});
+
+// Turn a hash into a route we can actually render, rewriting the flat routes the
+// first build shipped (#/virginia) onto their new hierarchical path.
+function resolve(hash) {
+  const parsed = router.parse(hash);
+  if (parsed.kind === 'legacy') {
+    const slide = getSlideById(parsed.id);
+    return slide ? routeForSlide(slide) : { kind: 'landing' };
+  }
+  if (parsed.kind === 'category' && !getCategory(parsed.sectionId, parsed.categoryId)) {
+    return { kind: 'landing' };
+  }
+  if (parsed.kind === 'slide' && !getSlide(parsed.sectionId, parsed.categoryId, parsed.slideId)) {
+    const slide = getSlideById(parsed.slideId);
+    return slide ? routeForSlide(slide) : { kind: 'landing' };
+  }
+  return parsed;
+}
+
+function trailFor(current) {
+  const trail = [{ label: 'Home', href: '#/' }];
+  if (current.kind === 'landing') return trail;
+
+  const category = getCategory(current.sectionId, current.categoryId);
+  const section = sections.find((s) => s.id === current.sectionId);
+  if (section) trail.push({ label: section.title });
+  if (category) {
+    trail.push({
+      label: category.title,
+      href: router.format({
+        kind: 'category',
+        sectionId: category.sectionId,
+        categoryId: category.id,
+      }),
+    });
+  }
+  if (current.kind === 'slide') {
+    const slide = getSlide(current.sectionId, current.categoryId, current.slideId);
+    if (slide) trail.push({ label: slide.title });
+  }
+  return trail;
+}
+
+function go(next, { replace = false } = {}) {
+  route = next;
+  const crumb = breadcrumbFor(trailFor(route));
+
+  let title = 'Geo Skillz';
+  let counter = '';
+  let progress = 0;
+
+  if (route.kind === 'landing') {
+    stage.innerHTML = renderLanding(sections);
+    sidebar.setActive('home');
+  } else if (route.kind === 'category') {
+    const category = getCategory(route.sectionId, route.categoryId);
+    stage.innerHTML = renderCategory(category, atlas, crumb);
+    title = category.title;
+    sidebar.setActive(`${category.sectionId}/${category.id}`);
+  } else {
+    const slide = getSlide(route.sectionId, route.categoryId, route.slideId);
+    const category = getCategory(route.sectionId, route.categoryId);
+    stage.innerHTML = renderSlide(slide, atlas, crumb);
+    title = slide.title;
+    // Counter is scoped to the category, so Virginia reads 46 / 50 rather than
+    // giving a position in one undifferentiated pile of everything.
+    counter = `${slide.indexInCategory + 1} / ${category.count}`;
+    progress = ((slide.indexInCategory + 1) / category.count) * 100;
+    sidebar.setActive(`${category.sectionId}/${category.id}`);
+  }
 
   // DC is a genuine neighbour of Maryland and Virginia but has no slide of its
   // own, so its chip should not look or behave like a link.
   for (const chip of stage.querySelectorAll('[data-goto-abbr]')) {
-    if (!stateByAbbr.has(chip.dataset.gotoAbbr)) {
+    if (!getSlideByAbbr(chip.dataset.gotoAbbr)) {
       chip.classList.add('is-inert');
       chip.disabled = true;
     }
   }
 
-  document.getElementById('tb-title').textContent = slide.title;
-  document.getElementById('tb-count').textContent = `${current + 1} / ${deck.length}`;
-  document.getElementById('tb-bar').style.width = `${((current + 1) / deck.length) * 100}%`;
+  document.getElementById('tb-title').textContent = title;
+  document.getElementById('tb-count').textContent = counter;
+  document.getElementById('tb-bar').style.width = `${progress}%`;
+  // Arrows and the progress track only mean anything on a slide.
+  const isSlide = route.kind === 'slide';
+  document.querySelector('.tb-arrows').hidden = !isSlide;
+  document.querySelector('.tb-progress').hidden = !isSlide;
 
-  const hash = `#/${slide.id}`;
+  stage.scrollTop = 0;
+  window.scrollTo(0, 0);
+
+  const hash = router.format(route);
   if (location.hash !== hash) {
     if (replace) history.replaceState(null, '', hash);
     else history.pushState(null, '', hash);
   }
 }
 
-const next = () => go(current + 1);
-const prev = () => go(current - 1);
-
-function indexFromHash() {
-  return indexById.get(location.hash.replace(/^#\/?/, '')) ?? 0;
+// Prev/next stay inside the current category.
+function step(delta) {
+  if (route.kind !== 'slide') return;
+  const category = getCategory(route.sectionId, route.categoryId);
+  const slide = getSlide(route.sectionId, route.categoryId, route.slideId);
+  const next = category.slides[slide.indexInCategory + delta];
+  if (next) go(routeForSlide(next));
 }
 
-function gotoFips(fips) {
-  const i = fipsToIndex.get(fips);
-  if (i !== undefined) go(i);
+function up() {
+  const parent = router.parentOf(route);
+  if (parent) go(parent);
 }
 
 function wire() {
   document.querySelector('.toolbar').addEventListener('click', (e) => {
     const nav = e.target.closest('[data-nav]');
-    if (nav) return nav.dataset.nav === 'next' ? next() : prev();
-    if (e.target.closest('[data-open-jump]')) jump.open();
+    if (nav) return step(nav.dataset.nav === 'next' ? 1 : -1);
+    if (e.target.closest('[data-open-nav]')) sidebar.open();
   });
 
-  // Clicks inside a slide: the overview map, and the neighbour chips.
-  stage.addEventListener('click', (e) => {
+  // Delegated so every data-route link in any view just works.
+  document.getElementById('shell').addEventListener('click', (e) => {
+    const link = e.target.closest('a[data-route]');
+    if (link) {
+      e.preventDefault();
+      return go(resolve(link.getAttribute('href')));
+    }
     const chip = e.target.closest('[data-goto-abbr]');
-    if (chip) return gotoFips(stateByAbbr.get(chip.dataset.gotoAbbr)?.fips);
+    if (chip) {
+      const slide = getSlideByAbbr(chip.dataset.gotoAbbr);
+      if (slide) go(routeForSlide(slide));
+      return;
+    }
     const shape = e.target.closest('[data-fips]');
-    if (shape) gotoFips(shape.dataset.fips);
+    if (shape) {
+      const slide = getSlideByFips(shape.dataset.fips);
+      if (slide) go(routeForSlide(slide));
+    }
   });
 
   stage.addEventListener('keydown', (e) => {
@@ -109,19 +221,24 @@ function wire() {
     const shape = e.target.closest('[data-fips]');
     if (!shape) return;
     e.preventDefault();
-    gotoFips(shape.dataset.fips);
+    const slide = getSlideByFips(shape.dataset.fips);
+    if (slide) go(routeForSlide(slide));
   });
 
   window.addEventListener('keydown', (e) => {
     if (jump.isOpen() || e.target.matches('input, textarea')) return;
-    if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); next(); }
-    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); prev(); }
-    else if (e.key === 'Home') { e.preventDefault(); go(0); }
-    else if (e.key === 'End') { e.preventDefault(); go(deck.length - 1); }
+    if (e.key === 'Escape') {
+      if (sidebar.isOpen()) return sidebar.close();
+      e.preventDefault();
+      return up();
+    }
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); step(1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); step(-1); }
+    else if (e.key === 'Home') { e.preventDefault(); go({ kind: 'landing' }); }
     else if (e.key === '/') { e.preventDefault(); jump.open(); }
   });
 
-  window.addEventListener('popstate', () => go(indexFromHash(), { replace: true }));
+  window.addEventListener('popstate', () => go(resolve(location.hash), { replace: true }));
   wireSwipe();
 }
 
@@ -141,10 +258,10 @@ function wireSwipe() {
     // Must be horizontal, decisive, and quick - otherwise it was a scroll.
     if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 1.6) return;
     if (Date.now() - t0 > 700) return;
-    dx < 0 ? next() : prev();
+    step(dx < 0 ? 1 : -1);
   }, { passive: true });
 }
 
 // Reachable from the console while studying, and proof the data layer works
 // without the UI - which is exactly how a future quiz mode would consume it.
-if (import.meta.env.DEV) window.geoSkillz = { deck, states };
+if (import.meta.env.DEV) window.geoSkillz = { sections, allSlides, states };

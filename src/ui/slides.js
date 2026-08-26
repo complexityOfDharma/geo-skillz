@@ -1,5 +1,18 @@
 import { contextMap, stateDetailMap, featureDetailMap } from '../lib/maps.js';
 
+// Rendered above every slide and category page so "up" is always visible, not
+// just reachable by pressing Escape.
+export function breadcrumbFor(trail) {
+  const parts = trail.map((step, i) => {
+    const last = i === trail.length - 1;
+    if (last || !step.href) return `<span class="crumb is-current">${esc(step.label)}</span>`;
+    return `<a class="crumb" href="${step.href}" data-route>${esc(step.label)}</a>`;
+  });
+  return `<nav class="breadcrumb" aria-label="Breadcrumb">${parts.join(
+    '<span class="crumb-sep" aria-hidden="true">/</span>'
+  )}</nav>`;
+}
+
 const esc = (s) =>
   String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
@@ -31,32 +44,6 @@ const mapPair = (contextSvg, detailSvg, contextCaption, detailCaption) =>
      <figure class="map-figure">${contextSvg}<figcaption>${esc(contextCaption)}</figcaption></figure>
      <figure class="map-figure">${detailSvg}<figcaption>${esc(detailCaption)}</figcaption></figure>
    </section>`;
-
-function overviewSlide(atlas, deck) {
-  const stateSlides = deck.filter((s) => s.kind === 'state');
-  const count = stateSlides.length;
-  const featureCount = deck.filter((s) => s.kind === 'feature').length;
-  const clickable = stateSlides.map((s) => s.data.fips);
-  return `
-    <article class="slide slide-overview">
-      <header class="slide-head">
-        <h1 class="slide-title">The United States</h1>
-        <p class="slide-sub">${count} states and ${featureCount} geographic features. Tap any state to jump to it.</p>
-      </header>
-      <section class="maps maps-single">
-        <figure class="map-figure">
-          ${contextMap(atlas, { interactive: true, clickable, width: 900, height: 560 })}
-          <figcaption>Click or tap a state, or use the search button in the toolbar.</figcaption>
-        </figure>
-      </section>
-      <section class="overview-hint">
-        <p><strong>How to use this deck.</strong> Every slide leads with a story, because names stick when they
-        mean something. Read the story first, then the facts underneath it will have somewhere to attach.</p>
-        <p class="keys">Arrow keys or <kbd>&larr;</kbd> <kbd>&rarr;</kbd> to move &middot; swipe on a tablet &middot;
-        <kbd>/</kbd> to search &middot; <kbd>Home</kbd> to come back here.</p>
-      </section>
-    </article>`;
-}
 
 function stateSlide(atlas, s) {
   const neighbours = s.neighboringStates.length
@@ -201,8 +188,7 @@ function featureSlide(atlas, f) {
     </article>`;
 }
 
-export function renderSlide(slide, atlas, deck) {
-  if (slide.kind === 'overview') return overviewSlide(atlas, deck);
-  if (slide.kind === 'state') return stateSlide(atlas, slide.data);
-  return featureSlide(atlas, slide.data);
+export function renderSlide(slide, atlas, breadcrumb = '') {
+  const body = slide.kind === 'state' ? stateSlide(atlas, slide.data) : featureSlide(atlas, slide.data);
+  return breadcrumb + body;
 }

@@ -11,6 +11,7 @@ import { bboxFeature } from '../src/lib/geo.js';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const statesDir = join(root, 'src/data/states');
 const topo = JSON.parse(readFileSync(join(root, 'node_modules/us-atlas/states-10m.json')));
+const sections = JSON.parse(readFileSync(join(root, 'src/data/sections.json'), 'utf8'));
 const geoByFips = new Map(
   topojson.feature(topo, topo.objects.states).features.map((f) => [f.id, f])
 );
@@ -76,8 +77,24 @@ for (const [abbr, d] of byAbbr) {
 }
 
 const features = JSON.parse(readFileSync(join(root, 'src/data/features.json'), 'utf8'));
+
+// Every category declared in a live section must resolve to real slides, and
+// every feature must name a category that exists.
+const featureCategories = new Set();
+for (const section of sections) {
+  for (const cat of section.categories ?? []) {
+    if (cat.kind === 'features') featureCategories.add(cat.id);
+    for (const k of ['id', 'title', 'kind', 'blurb']) {
+      if (cat[k] === undefined) fail('sections.json', `category "${cat.id}" missing "${k}"`);
+    }
+  }
+}
+
 features.forEach((f, i) => {
-  for (const k of ['id', 'name', 'story', 'statesTouched', 'keyFacts', 'focus']) {
+  if (!featureCategories.has(f.category)) {
+    fail(`features.json[${i}]`, `category "${f.category}" is not declared in sections.json`);
+  }
+  for (const k of ['id', 'name', 'category', 'story', 'statesTouched', 'keyFacts', 'focus']) {
     if (f[k] === undefined) fail(`features.json[${i}]`, `missing "${k}"`);
   }
   // d3-geo reads a wrongly wound ring as "the whole globe minus this box",
@@ -90,7 +107,21 @@ features.forEach((f, i) => {
   }
 });
 
+// An empty tile on the landing page reads as broken, so treat it as an error.
+for (const section of sections.filter((s) => s.status !== 'planned')) {
+  for (const cat of section.categories ?? []) {
+    const n = cat.kind === 'states' ? states.length : features.filter((f) => f.category === cat.id).length;
+    if (n === 0) fail('sections.json', `live category "${cat.id}" has no slides`);
+  }
+}
+
+const counts = sections
+  .filter((s) => s.status !== 'planned')
+  .flatMap((s) => s.categories)
+  .map((c) => `${c.id}=${c.kind === 'states' ? states.length : features.filter((f) => f.category === c.id).length}`)
+  .join(' ');
 console.log(`checked ${states.length} states + ${features.length} features`);
+console.log(`categories: ${counts}`);
 if (warnings.length) console.log('\nWARNINGS:\n' + warnings.map((w) => '  ' + w).join('\n'));
 if (errors.length) {
   console.error('\nERRORS:\n' + errors.map((e) => '  ' + e).join('\n'));

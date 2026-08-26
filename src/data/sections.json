@@ -1,0 +1,66 @@
+[
+  {
+    "id": "us",
+    "title": "The United States",
+    "status": "live",
+    "blurb": "Fifty states, and the landforms, water, borders and cities that shaped them.",
+    "categories": [
+      {
+        "id": "states",
+        "title": "States",
+        "kind": "states",
+        "icon": "🗺️",
+        "blurb": "All 50 states — the story behind every name and capital, two maps each, and why the place still matters."
+      },
+      {
+        "id": "landforms",
+        "title": "Landforms",
+        "kind": "features",
+        "icon": "⛰️",
+        "blurb": "Mountains, canyons and divides — the shapes the continent makes, and the reasons it makes them."
+      },
+      {
+        "id": "water",
+        "title": "Bodies of Water",
+        "kind": "features",
+        "icon": "🌊",
+        "blurb": "Rivers, lakes and bays. Where water goes decides where people settle and what they fight over."
+      },
+      {
+        "id": "climate",
+        "title": "Climate & Natural Regions",
+        "kind": "features",
+        "icon": "🌵",
+        "blurb": "Deserts, plains, wetlands and storm country — the belts of climate that cut across state lines."
+      },
+      {
+        "id": "borders",
+        "title": "Countries, Regions & Borders",
+        "kind": "features",
+        "icon": "📐",
+        "blurb": "The lines on the map: who drew them, what they were arguing about, and what they still decide."
+      },
+      {
+        "id": "cities",
+        "title": "Cities & Population",
+        "kind": "features",
+        "icon": "🏙️",
+        "blurb": "Where Americans actually live, why they clustered there, and where they have been moving."
+      },
+      {
+        "id": "cultural",
+        "title": "Cultural & Human-Made Features",
+        "kind": "features",
+        "icon": "🛤️",
+        "blurb": "Canals, trails, rails and roads — geography people built on purpose, and what it rearranged."
+      }
+    ]
+  },
+  {
+    "id": "world",
+    "title": "The World",
+    "status": "planned",
+    "blurb": "Coming next — continents, countries, and global physical geography, using the same six categories.",
+    "categories": []
+  }
+]
