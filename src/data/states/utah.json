@@ -1,0 +1,27 @@
+{
+  "name": "Utah",
+  "abbreviation": "UT",
+  "fips": "49",
+  "nickname": "The Beehive State",
+  "capital": "Salt Lake City",
+  "capitalCoords": [-111.8910, 40.7608],
+  "region": "West / Mountain",
+  "statehoodOrder": 45,
+  "statehoodYear": 1896,
+  "nameStory": "From the Ute people, whose name is often given as 'people of the mountains.' The nickname is the stranger one: the beehive stands for industry and cooperative labor, a symbol Mormon settlers chose to describe how they intended to survive in a desert.",
+  "capitalStory": "In 1847 Brigham Young led Mormon pioneers 1,300 miles west, looked out over a salt flat ringed by mountains, and reportedly said 'This is the right place.' They chose land nobody else wanted precisely because nobody else wanted it - being left alone was the entire point.",
+  "neighboringStates": ["ID", "WY", "CO", "NM", "AZ", "NV"],
+  "majorFeatures": [
+    { "name": "Great Salt Lake", "type": "lake", "note": "Water flows in and never flows out", "coords": [-112.5, 41.1] },
+    { "name": "Wasatch Range", "type": "mountains", "note": "The wall of mountains where most Utahns live", "coords": [-111.6, 40.5] },
+    { "name": "Colorado Plateau", "type": "plateau", "note": "Red rock canyon country in the south", "coords": [-110.5, 38.0] },
+    { "name": "Bonneville Salt Flats", "type": "salt flat", "note": "Land speed records are set here", "coords": [-113.8, 40.75] }
+  ],
+  "funFacts": [
+    "The Great Salt Lake is a terminal lake: rivers pour in and the only way out is evaporation, so everything dissolved stays behind. That is why it is saltier than the ocean.",
+    "It is the shrunken remnant of Lake Bonneville, an ice-age lake that was once the size of Lake Michigan.",
+    "Utah has five national parks, more than any state except California.",
+    "Utah applied for statehood six times over 46 years and was refused until the LDS church renounced polygamy in 1890."
+  ],
+  "whyItMatters": "The Great Salt Lake has lost most of its volume, and the exposed lakebed contains arsenic and other heavy metals that blow into Salt Lake City as dust. A drying lake is turning into a public health problem for two million people."
+}

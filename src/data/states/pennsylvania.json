@@ -1,0 +1,27 @@
+{
+  "name": "Pennsylvania",
+  "abbreviation": "PA",
+  "fips": "42",
+  "nickname": "The Keystone State",
+  "capital": "Harrisburg",
+  "capitalCoords": [-76.8867, 40.2732],
+  "region": "Northeast / Mid-Atlantic",
+  "statehoodOrder": 2,
+  "statehoodYear": 1787,
+  "nameStory": "'Penn's Woods' - but not for the William Penn you're thinking of. The king named it for Penn's father, an admiral he owed money to. The Quaker son who actually founded the colony was mortified at the vanity of it and tried to get the name changed. Charles II said no.",
+  "capitalStory": "Harrisburg is named for John Harris, who ran a ferry across the Susquehanna. Notice the pattern: capitals keep landing where people had to cross water, because that is where everybody already had to stop.",
+  "neighboringStates": ["NY", "NJ", "DE", "MD", "WV", "OH"],
+  "majorFeatures": [
+    { "name": "Appalachian Mountains", "type": "mountains", "note": "Long parallel folded ridges", "coords": [-77.8, 40.9] },
+    { "name": "Susquehanna River", "type": "river", "note": "Cuts straight through the ridges", "coords": [-76.6, 40.6] },
+    { "name": "Delaware River", "type": "river", "note": "The entire eastern border", "coords": [-75.2, 41.0] },
+    { "name": "Ohio River headwaters", "type": "confluence", "note": "Two rivers meet at Pittsburgh to form the Ohio", "coords": [-80.01, 40.44] }
+  ],
+  "funFacts": [
+    "'Keystone' is an arch metaphor: Pennsylvania was the middle colony of thirteen, the wedge at the top holding the rest together.",
+    "Both the Declaration of Independence and the Constitution were written in Philadelphia.",
+    "At Pittsburgh, the Allegheny and Monongahela join to create the Ohio River - the reason a steel city grew there.",
+    "The world's first commercial oil well was drilled at Titusville in 1859, starting the entire petroleum industry."
+  ],
+  "whyItMatters": "Gettysburg, in July 1863, was the largest battle ever fought in North America and the farthest north the Confederate army ever got. Lincoln's two-minute speech at the cemetery four months later redefined what the war was about."
+}

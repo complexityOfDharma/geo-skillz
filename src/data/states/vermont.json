@@ -1,0 +1,26 @@
+{
+  "name": "Vermont",
+  "abbreviation": "VT",
+  "fips": "50",
+  "nickname": "The Green Mountain State",
+  "capital": "Montpelier",
+  "capitalCoords": [-72.5754, 44.2601],
+  "region": "Northeast / New England",
+  "statehoodOrder": 14,
+  "statehoodYear": 1791,
+  "nameStory": "Vermont is French for green mountain - 'vert mont.' The nickname is not a nickname at all, it is just a translation of the name. Green Mountain State means Green Mountain State.",
+  "capitalStory": "Montpelier is the smallest state capital in America, around 8,000 people, and the only one without a single McDonald's. The whole state's government runs out of a town the size of a large high school's worth of families.",
+  "neighboringStates": ["NY", "NH", "MA"],
+  "majorFeatures": [
+    { "name": "Green Mountains", "type": "mountains", "note": "The forested spine running the state's length", "coords": [-72.9, 44.0] },
+    { "name": "Lake Champlain", "type": "lake", "note": "Deep glacial lake on the New York border", "coords": [-73.3, 44.5] },
+    { "name": "Connecticut River", "type": "river", "note": "The entire New Hampshire border", "coords": [-72.3, 43.9] }
+  ],
+  "funFacts": [
+    "Vermont was an independent republic for 14 years before joining, with its own currency and postal service.",
+    "It was the first state admitted after the original thirteen.",
+    "It is the only New England state with no ocean coastline.",
+    "Congress declared Lake Champlain a sixth Great Lake in 1998. The outcry was immediate and the designation was repealed 18 days later."
+  ],
+  "whyItMatters": "Vermont's 1777 constitution, written while it was still an independent republic, was the first in America to ban adult slavery outright - 88 years before the Thirteenth Amendment."
+}

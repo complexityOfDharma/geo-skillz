@@ -1,0 +1,27 @@
+{
+  "name": "Texas",
+  "abbreviation": "TX",
+  "fips": "48",
+  "nickname": "The Lone Star State",
+  "capital": "Austin",
+  "capitalCoords": [-97.7431, 30.2672],
+  "region": "South / Southwest",
+  "statehoodOrder": 28,
+  "statehoodYear": 1845,
+  "nameStory": "Texas means 'friends.' It comes from the Caddo word 'taysha,' meaning friends or allies, which the Spanish wrote down as 'Tejas.' The state motto is, accordingly, just the word 'Friendship' - which surprises people who expect something louder.",
+  "capitalStory": "Austin is named for Stephen F. Austin, who brought the first American colonists into what was then northern Mexico. It sits on the Colorado River - but not that Colorado River. Texas has its own, entirely separate Colorado, which confuses people constantly.",
+  "neighboringStates": ["NM", "OK", "AR", "LA"],
+  "majorFeatures": [
+    { "name": "Rio Grande", "type": "river", "note": "1,250 miles of international border", "coords": [-100.3, 28.5] },
+    { "name": "Gulf Coast", "type": "coast", "note": "Bays, barrier islands, and hurricane country", "coords": [-96.0, 28.4] },
+    { "name": "Hill Country", "type": "hills", "note": "Limestone hills and spring-fed rivers", "coords": [-98.8, 30.3] },
+    { "name": "Big Bend", "type": "desert", "note": "Where the Rio Grande makes its huge turn", "coords": [-103.25, 29.3] }
+  ],
+  "funFacts": [
+    "Texas is the only state that was an independent country first: the Republic of Texas, 1836 to 1845. That is what the lone star means.",
+    "El Paso is closer to San Diego, California than it is to Houston, Texas.",
+    "Texas is so wide it spans two time zones.",
+    "It borders more of Mexico than it does of the United States."
+  ],
+  "whyItMatters": "Annexing Texas in 1845 triggered war with Mexico, and the US came out of it holding California, Nevada, Utah, and most of Arizona, New Mexico, and Colorado. One state joining the Union is how the country got its entire Southwest."
+}

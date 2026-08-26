@@ -1,0 +1,27 @@
+{
+  "name": "South Carolina",
+  "abbreviation": "SC",
+  "fips": "45",
+  "nickname": "The Palmetto State",
+  "capital": "Columbia",
+  "capitalCoords": [-81.0348, 34.0007],
+  "region": "South / Southeast",
+  "statehoodOrder": 8,
+  "statehoodYear": 1788,
+  "nameStory": "Same root as North Carolina - Latin for 'land of Charles.' The nickname is the better story: in 1776 a half-finished fort on Sullivan's Island was built of spongy palmetto logs, and British cannonballs sank into the soft wood instead of shattering it. A tree won a battle, so the tree went on the flag.",
+  "capitalStory": "Columbia was built in 1786 for one reason: to drag the capital inland, away from the wealthy Charleston planters who had controlled the colony from the coast. It is one of America's first planned capital cities. Sherman's army burned most of it in 1865.",
+  "neighboringStates": ["NC", "GA"],
+  "majorFeatures": [
+    { "name": "Blue Ridge Mountains", "type": "mountains", "note": "The small northwestern corner", "coords": [-83.0, 35.0] },
+    { "name": "Lowcountry", "type": "coast", "note": "Marsh, tidal creeks, and rice plantations", "coords": [-80.4, 32.8] },
+    { "name": "Sea Islands", "type": "islands", "note": "Home of Gullah Geechee culture", "coords": [-80.7, 32.4] },
+    { "name": "Congaree Floodplain", "type": "forest", "note": "Largest old-growth bottomland forest left in the US", "coords": [-80.78, 33.79] }
+  ],
+  "funFacts": [
+    "South Carolina was the first state to secede from the Union, on December 20, 1860.",
+    "The Civil War's first shots were fired at Fort Sumter in Charleston Harbor in April 1861.",
+    "On the Sea Islands, isolation let enslaved West Africans and their descendants keep a distinct language and culture - Gullah Geechee - that still exists.",
+    "Rice made colonial South Carolina the richest of the thirteen colonies, farmed with West African expertise on tidal irrigation."
+  ],
+  "whyItMatters": "South Carolina led secession and started the Civil War, which is not a coincidence: it was the only state where enslaved people were a clear majority of the population, and its leaders judged they had the most to lose from any restriction on slavery."
+}

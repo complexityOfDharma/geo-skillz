@@ -1,0 +1,690 @@
+[
+  {
+    "id": "great-lakes",
+    "name": "The Great Lakes",
+    "type": "lakes",
+    "subtitle": "One fifth of the world's fresh surface water",
+    "mnemonic": {
+      "key": "HOMES",
+      "note": "Five letters, five lakes. HOMES gets you the names; going west to east gets you the order they drain: Superior, Michigan, Huron, Erie, Ontario.",
+      "items": [
+        {
+          "letter": "H",
+          "label": "Huron",
+          "note": "Longest shoreline of the five"
+        },
+        {
+          "letter": "O",
+          "label": "Ontario",
+          "note": "Smallest, and the last one before the Atlantic"
+        },
+        {
+          "letter": "M",
+          "label": "Michigan",
+          "note": "The only one entirely inside the US"
+        },
+        {
+          "letter": "E",
+          "label": "Erie",
+          "note": "Shallowest and warmest"
+        },
+        {
+          "letter": "S",
+          "label": "Superior",
+          "note": "Largest freshwater lake on Earth by area"
+        }
+      ]
+    },
+    "story": "The Great Lakes are what a mile-thick ice sheet leaves behind. Glaciers gouged out five basins, then melted into them. Everything drains one way, downhill from Superior to Ontario and out the St. Lawrence to the Atlantic - except for the 325-foot drop between Erie and Ontario, which is Niagara Falls.",
+    "nameStory": "The lakes carry a jumble of languages: Superior is French for 'upper,' Michigan and Huron come from Native words for large water and for the Wendat people, Erie from the Erie nation, and Ontario from an Iroquoian word for 'beautiful lake.' Four hundred years of naming, all still visible on one map.",
+    "statesTouched": [
+      "MN",
+      "WI",
+      "IL",
+      "IN",
+      "MI",
+      "OH",
+      "PA",
+      "NY"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -93,
+          40.4
+        ],
+        [
+          -74.2,
+          49.2
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Superior",
+        "letter": "S",
+        "coords": [
+          -87.6,
+          47.7
+        ]
+      },
+      {
+        "name": "Michigan",
+        "letter": "M",
+        "coords": [
+          -87,
+          44
+        ]
+      },
+      {
+        "name": "Huron",
+        "letter": "H",
+        "coords": [
+          -82.4,
+          44.8
+        ]
+      },
+      {
+        "name": "Erie",
+        "letter": "E",
+        "coords": [
+          -81.2,
+          42.2
+        ]
+      },
+      {
+        "name": "Ontario",
+        "letter": "O",
+        "coords": [
+          -77.8,
+          43.7
+        ]
+      },
+      {
+        "name": "Niagara Falls",
+        "coords": [
+          -79.04,
+          43.08
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Together they hold about 21% of the world's fresh surface water.",
+      "Only Lake Michigan lies entirely within the United States; the other four are shared with Canada.",
+      "Lake Superior alone could cover all of North and South America in a foot of water.",
+      "They are young: the last ice sheet only finished melting out of these basins about 10,000 years ago.",
+      "The Great Lakes coastline is longer than the US Atlantic and Pacific coasts combined."
+    ],
+    "whyItMatters": "Roughly 40 million people drink from these lakes. Because a border runs down the middle of four of them, protecting that water requires two countries to agree, which they formalized in the Great Lakes Compact."
+  },
+  {
+    "id": "rocky-mountains",
+    "name": "The Rocky Mountains",
+    "type": "mountains",
+    "subtitle": "The spine of the continent",
+    "story": "The Rockies run about 3,000 miles from New Mexico into Canada, and they do something no other American range does: they decide where water goes. Rain falling on one side of the crest ends up in the Pacific. Rain falling a few feet away on the other side ends up in the Atlantic or the Gulf of Mexico. That crest is the Continental Divide, and standing on it means standing between two oceans.",
+    "nameStory": "The name is a translation. French traders called the people living in them 'les Montagnes Rocheuses,' probably rendering a Cree term. English speakers shortened it to the Rockies and it stuck.",
+    "statesTouched": [
+      "NM",
+      "CO",
+      "UT",
+      "WY",
+      "ID",
+      "MT"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -119,
+          31.3
+        ],
+        [
+          -104,
+          49.2
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Continental Divide",
+        "coords": [
+          -106.5,
+          39.6
+        ]
+      },
+      {
+        "name": "Mt. Elbert 14,440 ft",
+        "coords": [
+          -106.44,
+          39.12
+        ]
+      },
+      {
+        "name": "Yellowstone",
+        "coords": [
+          -110.5,
+          44.6
+        ]
+      },
+      {
+        "name": "Glacier NP",
+        "coords": [
+          -113.8,
+          48.7
+        ]
+      }
+    ],
+    "keyFacts": [
+      "The Rockies are young mountains - roughly 55 to 80 million years old, compared to the Appalachians' 480 million.",
+      "Colorado's Mount Elbert, 14,440 feet, is the highest point in the whole range.",
+      "The Divide is not always a knife edge; in Wyoming's Great Divide Basin it splits and surrounds land that drains to neither ocean.",
+      "Snowpack in the Rockies is the water supply for most of the American West."
+    ],
+    "whyItMatters": "Almost every major western river - the Colorado, the Rio Grande, the Missouri, the Columbia's tributaries - starts as snow in these mountains. A warm winter here becomes a water crisis a thousand miles downstream."
+  },
+  {
+    "id": "continental-divide",
+    "name": "The Continental Divide",
+    "type": "divide",
+    "subtitle": "The line where water chooses an ocean",
+    "story": "Pour a glass of water on the Divide and it has to pick a side. West means the Pacific. East means the Gulf of Mexico or the Atlantic. There is no third option and no going back. The Divide runs the length of the Americas, and in the US it threads down the crest of the Rockies from Glacier National Park to the Mexican border.",
+    "nameStory": "Older maps call it the 'Great Divide,' and trappers called it simply 'the backbone of the world.' The idea it describes - a hydrologic divide - is why the Louisiana Purchase was defined the way it was: Jefferson bought a watershed, everything that drained into the Mississippi, and the Divide was its western wall.",
+    "statesTouched": [
+      "MT",
+      "ID",
+      "WY",
+      "CO",
+      "NM"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -117.5,
+          31.2
+        ],
+        [
+          -105,
+          49.2
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Triple Divide Peak",
+        "coords": [
+          -113.52,
+          48.55
+        ]
+      },
+      {
+        "name": "Great Divide Basin",
+        "coords": [
+          -108,
+          42
+        ]
+      },
+      {
+        "name": "Divide at Rio Grande headwaters",
+        "coords": [
+          -107.3,
+          37.8
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Triple Divide Peak in Montana sends water to the Pacific, the Atlantic, and the Arctic - the only such point in the United States.",
+      "The Continental Divide Trail follows it for about 3,100 miles from Mexico to Canada.",
+      "In Wyoming's Great Divide Basin the Divide splits in two and rejoins, enclosing land whose water reaches no ocean at all.",
+      "Chicago sits just barely on the Atlantic side of a much smaller divide - which is why a canal could connect the Great Lakes to the Mississippi."
+    ]
+  },
+  {
+    "id": "appalachian-mountains",
+    "name": "The Appalachian Mountains",
+    "type": "mountains",
+    "subtitle": "The oldest mountains in America",
+    "story": "The Appalachians are old almost beyond imagining - around 480 million years old, formed when the landmass that would become Africa slammed into North America. They were once as tall and sharp as the Himalayas. Everything you see now is the worn-down stump. Here is the part that sticks: when the Atlantic Ocean opened and tore the continents apart, it tore the range in half. The other half of the Appalachians is in Scotland, Ireland, and Norway. The Scottish Highlands are the same mountains.",
+    "nameStory": "The name came from the wrong end of the continent. Spanish explorers in northern Florida heard of a people called the Apalachee, wrote the name on their maps, and it drifted northward until it labeled a range stretching 1,500 miles into Canada.",
+    "statesTouched": [
+      "AL",
+      "GA",
+      "SC",
+      "NC",
+      "TN",
+      "VA",
+      "WV",
+      "KY",
+      "MD",
+      "PA",
+      "NJ",
+      "NY",
+      "CT",
+      "MA",
+      "VT",
+      "NH",
+      "ME"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -88,
+          32.6
+        ],
+        [
+          -66.8,
+          47.4
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Mt. Mitchell 6,684 ft",
+        "coords": [
+          -82.27,
+          35.76
+        ]
+      },
+      {
+        "name": "Great Smoky Mtns",
+        "coords": [
+          -83.5,
+          35.6
+        ]
+      },
+      {
+        "name": "Cumberland Gap",
+        "coords": [
+          -83.68,
+          36.6
+        ]
+      },
+      {
+        "name": "White Mountains",
+        "coords": [
+          -71.4,
+          44.2
+        ]
+      }
+    ],
+    "keyFacts": [
+      "About 480 million years old - roughly seven times older than the Rockies.",
+      "The same range continues in Scotland, Ireland, Norway, and Morocco; the Atlantic split it apart.",
+      "Mount Mitchell in North Carolina, 6,684 feet, is the highest point east of the Mississippi.",
+      "The range is not one ridge but dozens of parallel ridges, which is why crossing it was so difficult.",
+      "The Great Smokies are the most visited national park in the United States."
+    ],
+    "whyItMatters": "For 150 years these mountains were a wall that held British colonies against the coast. Britain's Proclamation of 1763 forbade settlement past the crest, and colonial anger about that line was one of the grievances that led to revolution. Where the range could be crossed - the Cumberland Gap, the Mohawk Valley - is where the roads, canals, railroads, and cities went."
+  },
+  {
+    "id": "appalachian-trail",
+    "name": "The Appalachian Trail",
+    "type": "trail",
+    "subtitle": "Georgia to Maine on foot",
+    "story": "About 2,197 miles of footpath from Springer Mountain in Georgia to Mount Katahdin in Maine, through fourteen states. A forester named Benton MacKaye proposed it in 1921 as an escape valve for people trapped in industrial cities. Walking the whole thing takes five to seven months, and roughly one in four people who start actually finish.",
+    "nameStory": "It takes its name from the mountains it follows, which took theirs from a Florida people the mountains never touched. The length changes slightly every year as sections are rerouted, so the trail has no permanent official distance.",
+    "statesTouched": [
+      "GA",
+      "NC",
+      "TN",
+      "VA",
+      "WV",
+      "MD",
+      "PA",
+      "NJ",
+      "NY",
+      "CT",
+      "MA",
+      "VT",
+      "NH",
+      "ME"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -85.5,
+          33.2
+        ],
+        [
+          -67.4,
+          46.4
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Springer Mtn - southern end",
+        "coords": [
+          -84.19,
+          34.63
+        ]
+      },
+      {
+        "name": "Harpers Ferry - halfway",
+        "coords": [
+          -77.73,
+          39.32
+        ]
+      },
+      {
+        "name": "Mt. Katahdin - northern end",
+        "coords": [
+          -68.92,
+          45.9
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Fourteen states: Georgia, North Carolina, Tennessee, Virginia, West Virginia, Maryland, Pennsylvania, New Jersey, New York, Connecticut, Massachusetts, Vermont, New Hampshire, Maine.",
+      "Virginia holds about a quarter of the entire trail - more than any other state.",
+      "Total elevation gain over the full hike is roughly equivalent to climbing Everest sixteen times from sea level.",
+      "Harpers Ferry, West Virginia is trail headquarters and the traditional psychological halfway point, though not the true midpoint.",
+      "It is maintained almost entirely by volunteers - tens of thousands of hours a year."
+    ]
+  },
+  {
+    "id": "sierra-nevada",
+    "name": "The Sierra Nevada",
+    "type": "mountains",
+    "subtitle": "One enormous tilted slab of granite",
+    "story": "The Sierra Nevada is not a folded range like the Appalachians. It is a single block of granite about 400 miles long that was pushed up along a fault on its eastern edge and tipped westward, like a trapdoor. That is why the western slope is a long gentle climb and the eastern face drops off in a wall - and why the gold was where it was. Streams cutting down that long west slope concentrated flecks of gold into the foothill gravel, which is exactly where James Marshall found some in a millrace in 1848.",
+    "nameStory": "Spanish for 'snowy saw-toothed range.' Sailors and explorers named it from far away, based on the jagged white skyline they could see from the Central Valley without ever going near it.",
+    "statesTouched": [
+      "CA",
+      "NV"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -122.4,
+          34.8
+        ],
+        [
+          -117.2,
+          40.8
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Mt. Whitney 14,505 ft",
+        "coords": [
+          -118.29,
+          36.58
+        ]
+      },
+      {
+        "name": "Yosemite Valley",
+        "coords": [
+          -119.54,
+          37.75
+        ]
+      },
+      {
+        "name": "Lake Tahoe",
+        "coords": [
+          -120.04,
+          39.09
+        ]
+      },
+      {
+        "name": "Donner Pass",
+        "coords": [
+          -120.32,
+          39.32
+        ]
+      },
+      {
+        "name": "Sutter's Mill 1848",
+        "coords": [
+          -120.89,
+          38.8
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Mount Whitney, 14,505 feet, is the highest point in the contiguous United States.",
+      "The range's rain shadow is why Nevada, immediately downwind, is the driest state in the country.",
+      "Giant sequoias - the largest trees on Earth by volume - grow naturally only on the Sierra's western slope.",
+      "Sierra snowpack supplies roughly 30% of California's water, stored as snow and released slowly all summer.",
+      "The Donner Party was trapped by Sierra snow in the winter of 1846-47 at what is now Donner Pass."
+    ],
+    "whyItMatters": "The gold found in these foothills in 1848 brought about 300,000 people to California in a few years. It was so overwhelming that California skipped the territorial stage entirely and became a state in 1850 - which forced the Compromise of 1850 and pushed the country another step toward civil war."
+  },
+  {
+    "id": "denali",
+    "name": "Denali / Mount McKinley",
+    "type": "mountain",
+    "subtitle": "The highest peak in North America - and a live naming dispute",
+    "disputedName": true,
+    "story": "At 20,310 feet it is the highest mountain in North America, and by one measure the most dramatic on Earth: it rises about 18,000 feet from the lowlands at its base, a taller vertical wall than Everest presents from the Tibetan plateau. It also has two names, and which one you use is a live political question rather than a settled fact.",
+    "nameStory": "The Koyukon Athabascan people, who have lived in its shadow for centuries, call it Denali - 'the high one.' In 1896 a gold prospector named it Mount McKinley after William McKinley, then a presidential candidate, who had never been to Alaska. That name was made official in 1917 and stood for decades while Alaska pushed to change it back.",
+    "namingTimeline": [
+      {
+        "year": "Centuries",
+        "label": "Denali",
+        "detail": "Koyukon Athabascan name meaning 'the high one,' in use long before any European saw the mountain."
+      },
+      {
+        "year": "1896",
+        "label": "Mount McKinley",
+        "detail": "A prospector names it for presidential candidate William McKinley, who never visited Alaska."
+      },
+      {
+        "year": "1917",
+        "label": "Mount McKinley",
+        "detail": "Federally recognized when Mount McKinley National Park is established."
+      },
+      {
+        "year": "1975",
+        "label": "Denali",
+        "detail": "Alaska officially adopts Denali and formally asks the federal government to do the same."
+      },
+      {
+        "year": "1980",
+        "label": "Split names",
+        "detail": "The park is renamed Denali National Park and Preserve, but the mountain stays McKinley federally."
+      },
+      {
+        "year": "2015",
+        "label": "Denali",
+        "detail": "The Obama administration renames the mountain Denali."
+      },
+      {
+        "year": "2025",
+        "label": "Mount McKinley",
+        "detail": "An executive order under the Trump administration renames it Mount McKinley in January."
+      }
+    ],
+    "statesTouched": [
+      "AK"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -153.6,
+          62.2
+        ],
+        [
+          -148,
+          64.3
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Summit 20,310 ft",
+        "coords": [
+          -151.007,
+          63.069
+        ]
+      },
+      {
+        "name": "Wonder Lake",
+        "coords": [
+          -150.87,
+          63.43
+        ]
+      },
+      {
+        "name": "Talkeetna - climbers' base",
+        "coords": [
+          -150.11,
+          62.32
+        ]
+      }
+    ],
+    "keyFacts": [
+      "20,310 feet - the highest point in North America.",
+      "Measured from its own base rather than from sea level, its rise is greater than Everest's.",
+      "The national park is named Denali National Park and Preserve, and that has not changed regardless of what the mountain is called.",
+      "Alaska's state government and many Alaska Natives have used and continue to use Denali.",
+      "The federal name as of this deck's last update is Mount McKinley."
+    ],
+    "whyItMatters": "This is a real, unresolved dispute, and it is worth understanding rather than picking a side on. One argument is that the original Koyukon name has priority and that the mountain was renamed for a politician with no connection to it. The other is that the McKinley name carries over a century of federal usage and honors an assassinated president. Both names are in wide use, and the federal name has now changed three times in fifty years. Geography is not only landforms - it is also who gets to name them."
+  },
+  {
+    "id": "mississippi-river",
+    "name": "The Mississippi River",
+    "type": "river",
+    "subtitle": "Minnesota to the Gulf, and the line America divides itself on",
+    "story": "It starts in northern Minnesota at Lake Itasca as a stream about three feet wide that you can wade across in ten steps, and ends 2,340 miles later spilling into the Gulf of Mexico through a delta of mud. Between those two points it drains 41% of the continental United States - water from 31 states and two Canadian provinces, everything between the Rockies and the Appalachians, funnels into this one channel.",
+    "nameStory": "From the Ojibwe 'misi-ziibi,' the great river - a name given near its source, over a thousand miles from where most Americans ever encounter it.",
+    "statesTouched": [
+      "MN",
+      "WI",
+      "IA",
+      "IL",
+      "MO",
+      "KY",
+      "TN",
+      "AR",
+      "MS",
+      "LA"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -97.5,
+          28.4
+        ],
+        [
+          -87.5,
+          48.6
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Lake Itasca - source",
+        "coords": [
+          -95.2,
+          47.24
+        ]
+      },
+      {
+        "name": "Missouri joins",
+        "coords": [
+          -90.2,
+          38.82
+        ]
+      },
+      {
+        "name": "Ohio joins at Cairo",
+        "coords": [
+          -89.13,
+          36.98
+        ]
+      },
+      {
+        "name": "Vicksburg",
+        "coords": [
+          -90.88,
+          32.35
+        ]
+      },
+      {
+        "name": "New Orleans",
+        "coords": [
+          -90.07,
+          29.95
+        ]
+      },
+      {
+        "name": "Gulf of Mexico",
+        "coords": [
+          -89.25,
+          29.05
+        ]
+      }
+    ],
+    "keyFacts": [
+      "2,340 miles long; a drop of water takes about 90 days to travel the whole thing.",
+      "Its basin covers 31 states and 2 Canadian provinces - about 1.2 million square miles.",
+      "It was the western border of the United States from 1783 until the Louisiana Purchase in 1803.",
+      "Taking Vicksburg in 1863 gave the Union control of the entire river and cut the Confederacy in two.",
+      "At Lake Itasca it is ankle deep; at New Orleans it is nearly 200 feet deep."
+    ],
+    "whyItMatters": "The Mississippi is actively trying to abandon its channel and switch into the Atchafalaya, a shorter and steeper route to the Gulf. If it succeeded, New Orleans and Baton Rouge would be left on a saltwater inlet with no river. One Army Corps of Engineers installation, the Old River Control Structure, is what prevents it. The economy of an entire region rests on a piece of concrete holding a river in a channel it does not want to be in."
+  },
+  {
+    "id": "grand-canyon",
+    "name": "The Grand Canyon",
+    "type": "canyon",
+    "subtitle": "A mile deep, and nearly two billion years old at the bottom",
+    "story": "The canyon is 277 river miles long, up to 18 miles wide, and about a mile deep. The trick to understanding it is that the canyon is young and the rock is ancient. The Colorado River has only been cutting here for five or six million years. But the rock exposed at the very bottom, the Vishnu Schist, is around 1.8 billion years old - close to half the age of the Earth. Hiking down to the river is walking backward through nearly two billion years.",
+    "nameStory": "Spanish scouts reached the rim in 1540, called it a 'gran canon,' failed to find any way down, and left. The English name was fixed by John Wesley Powell, who ran the entire river through it in wooden boats in 1869 - having lost an arm at Shiloh seven years before.",
+    "statesTouched": [
+      "AZ"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -114.6,
+          35.3
+        ],
+        [
+          -111.2,
+          37.1
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "South Rim",
+        "coords": [
+          -112.14,
+          36.06
+        ]
+      },
+      {
+        "name": "North Rim",
+        "coords": [
+          -112.06,
+          36.22
+        ]
+      },
+      {
+        "name": "Lees Ferry",
+        "coords": [
+          -111.59,
+          36.86
+        ]
+      },
+      {
+        "name": "Havasu Canyon",
+        "coords": [
+          -112.7,
+          36.25
+        ]
+      }
+    ],
+    "keyFacts": [
+      "The rims are about 10 miles apart, but driving between them is 215 miles and takes five hours.",
+      "The North Rim is roughly 1,000 feet higher than the South Rim and is closed by snow much of the year.",
+      "The Havasupai have lived in and around the canyon for more than 800 years and still do.",
+      "It is not the deepest canyon in the country - Hells Canyon in Idaho is deeper - but it is the widest and most completely exposed.",
+      "About 40 major rock layers are visible from rim to river."
+    ],
+    "whyItMatters": "Glen Canyon Dam, just upstream, changed the river that made the canyon. The Colorado used to run warm, red, and full of silt, and it flooded every spring. Now it runs cold and clear year-round because water is drawn from deep in the reservoir behind the dam. Native fish have largely vanished and the beaches are washing away, so managers periodically release artificial floods to try to rebuild them."
+  }
+]

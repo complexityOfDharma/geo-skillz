@@ -1,0 +1,26 @@
+{
+  "name": "North Dakota",
+  "abbreviation": "ND",
+  "fips": "38",
+  "nickname": "The Peace Garden State",
+  "capital": "Bismarck",
+  "capitalCoords": [-100.7837, 46.8083],
+  "region": "Midwest / Great Plains",
+  "statehoodOrder": 39,
+  "statehoodYear": 1889,
+  "nameStory": "Dakota is the Sioux word for 'friend' or 'ally' - what the Dakota people called themselves. Two states are named Friend, north and south.",
+  "capitalStory": "The town was called Edwinton until 1873, when the railroad renamed it Bismarck to flatter the German chancellor Otto von Bismarck and attract German money. It worked. A US state capital is named after a foreign politician as a marketing move.",
+  "neighboringStates": ["MT", "SD", "MN"],
+  "majorFeatures": [
+    { "name": "Missouri River", "type": "river", "note": "Dammed into vast Lake Sakakawea", "coords": [-101.5, 47.5] },
+    { "name": "Red River of the North", "type": "river", "note": "Flows north into Canada", "coords": [-96.9, 47.5] },
+    { "name": "Badlands", "type": "badlands", "note": "Eroded buttes where Roosevelt ranched", "coords": [-103.5, 47.0] },
+    { "name": "Great Plains", "type": "plain", "note": "Endless grain country", "coords": [-99.5, 47.3] }
+  ],
+  "funFacts": [
+    "Nobody knows whether North or South Dakota is really the 39th state. President Harrison shuffled the two papers before signing so no one could tell, and they are listed alphabetically.",
+    "The Red River flows north, which is why it floods so badly: the southern end thaws first and the meltwater runs straight into ice still blocking the north.",
+    "Rugby, North Dakota claims to be the geographic center of North America.",
+    "Theodore Roosevelt credited his time ranching in the North Dakota Badlands with making him president."
+  ]
+}

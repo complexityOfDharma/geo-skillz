@@ -1,0 +1,27 @@
+{
+  "name": "Ohio",
+  "abbreviation": "OH",
+  "fips": "39",
+  "nickname": "The Buckeye State",
+  "capital": "Columbus",
+  "capitalCoords": [-82.9988, 39.9612],
+  "region": "Midwest",
+  "statehoodOrder": 17,
+  "statehoodYear": 1803,
+  "nameStory": "From the Seneca word 'ohi:yo,' meaning 'great river' or 'good river' - the Ohio River, which forms the state's whole southern edge. The state took the river's name, not the other way around.",
+  "capitalStory": "Columbus is an artificial capital. In 1812 the legislature picked an empty patch of land in the exact middle of the state, across the river from an existing town, and built a government there on purpose so no established city would win the prize.",
+  "neighboringStates": ["MI", "PA", "WV", "KY", "IN"],
+  "majorFeatures": [
+    { "name": "Ohio River", "type": "river", "note": "The entire southern border", "coords": [-82.6, 38.9] },
+    { "name": "Lake Erie", "type": "lake", "note": "Shallowest and warmest Great Lake", "coords": [-81.7, 41.7] },
+    { "name": "Cuyahoga River", "type": "river", "note": "The river that caught fire", "coords": [-81.6, 41.4] },
+    { "name": "Appalachian Plateau", "type": "plateau", "note": "Hilly, unglaciated southeast", "coords": [-81.6, 39.5] }
+  ],
+  "funFacts": [
+    "Eight US presidents were born in Ohio, more than any state except Virginia.",
+    "You can see the edge of the last ice age on a map of Ohio: the glaciated north is flat, rich farmland, and the southeast, which the ice missed, is all hills and hollows.",
+    "The Wright brothers ran a bicycle shop in Dayton; John Glenn and Neil Armstrong were both Ohioans too.",
+    "Lake Erie is so shallow it freezes over more than any other Great Lake."
+  ],
+  "whyItMatters": "The Cuyahoga River was so polluted it caught fire in 1969. The photographs caused a national scandal, and within four years Congress had created the EPA and passed the Clean Water Act. A burning river is why American rivers are cleaner now."
+}

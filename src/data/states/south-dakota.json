@@ -1,0 +1,27 @@
+{
+  "name": "South Dakota",
+  "abbreviation": "SD",
+  "fips": "46",
+  "nickname": "The Mount Rushmore State",
+  "capital": "Pierre",
+  "capitalCoords": [-100.3510, 44.3683],
+  "region": "Midwest / Great Plains",
+  "statehoodOrder": 40,
+  "statehoodYear": 1889,
+  "nameStory": "Dakota means 'friend' or 'ally' in the Sioux language - the Dakota people's word for themselves. Note the irony that the two states named Friend were carved out of land taken from those same people.",
+  "capitalStory": "Pierre is pronounced 'peer,' not the French way, and it is one of the smallest state capitals in the country. It won the job by sitting almost exactly at the center of the state, on the Missouri River.",
+  "neighboringStates": ["ND", "MN", "IA", "NE", "WY", "MT"],
+  "majorFeatures": [
+    { "name": "Missouri River", "type": "river", "note": "Splits the state into East River and West River", "coords": [-100.0, 44.4] },
+    { "name": "Black Hills", "type": "mountains", "note": "An isolated forested range sacred to the Lakota", "coords": [-103.6, 44.0] },
+    { "name": "Badlands", "type": "badlands", "note": "Eroded spires and layered rock", "coords": [-102.3, 43.75] },
+    { "name": "Great Plains", "type": "plain", "note": "Shortgrass prairie across the west", "coords": [-101.0, 44.8] }
+  ],
+  "funFacts": [
+    "South Dakotans divide their own state into 'East River' and 'West River' - the Missouri splits it into two different cultures, economies, and landscapes.",
+    "The Black Hills are called black because the pines covering them look dark from a distance out on the plains.",
+    "Mount Rushmore took 14 years and was never actually finished as designed.",
+    "The Badlands are eroding about an inch a year and will be gone in perhaps half a million years."
+  ],
+  "whyItMatters": "The 1868 Treaty of Fort Laramie guaranteed the Black Hills to the Lakota forever. Gold was found in 1874 and the US took them anyway. In 1980 the Supreme Court ruled the seizure illegal and awarded compensation; the Lakota have refused the money, now over a billion dollars, because accepting it would mean selling the land."
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Wisconsin",
+  "abbreviation": "WI",
+  "fips": "55",
+  "nickname": "The Badger State",
+  "capital": "Madison",
+  "capitalCoords": [-89.4012, 43.0731],
+  "region": "Midwest / Great Lakes",
+  "statehoodOrder": 30,
+  "statehoodYear": 1848,
+  "nameStory": "It started as a Miami word, 'Meskonsing,' meaning roughly 'it lies red,' describing the red sandstone the Wisconsin River cuts through. The French wrote it down as best they could, the English respelled the French, and Wisconsin is what survived three languages of telephone.",
+  "capitalStory": "Madison was chosen as capital in 1836 while it did not exist. A land speculator bought a swampy isthmus between two lakes, drew a beautiful map of an imaginary city, and talked the legislature into picking it. They built the real city afterward to match the drawing.",
+  "neighboringStates": ["MI", "IL", "IA", "MN"],
+  "majorFeatures": [
+    { "name": "Lake Michigan", "type": "lake", "note": "The entire eastern shore", "coords": [-87.4, 44.2] },
+    { "name": "Lake Superior", "type": "lake", "note": "The northern edge and the Apostle Islands", "coords": [-90.8, 46.8] },
+    { "name": "Wisconsin River", "type": "river", "note": "Runs the length of the state to the Mississippi", "coords": [-89.9, 44.3] },
+    { "name": "Driftless Area", "type": "region", "note": "Hills the glaciers never touched", "coords": [-90.8, 43.5] }
+  ],
+  "funFacts": [
+    "'Badger' does not refer to the animal. It came from 1820s lead miners who dug shelters into hillsides and lived in them like badgers.",
+    "The Driftless Area in the southwest was somehow missed by every ice sheet, so it kept its deep valleys while everything around it was bulldozed flat.",
+    "Wisconsin touches two Great Lakes and has over 15,000 inland lakes.",
+    "It produces roughly a quarter of all cheese made in the United States."
+  ],
+  "whyItMatters": "The Republican Party was founded in a schoolhouse in Ripon, Wisconsin in 1854, by people organizing against the extension of slavery into the western territories."
+}

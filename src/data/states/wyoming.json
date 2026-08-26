@@ -1,0 +1,27 @@
+{
+  "name": "Wyoming",
+  "abbreviation": "WY",
+  "fips": "56",
+  "nickname": "The Equality State",
+  "capital": "Cheyenne",
+  "capitalCoords": [-104.8202, 41.1400],
+  "region": "West / Mountain",
+  "statehoodOrder": 44,
+  "statehoodYear": 1890,
+  "nameStory": "The name is borrowed from 1,500 miles away and does not describe the place at all. 'Wyoming' is a Delaware word meaning 'at the big river flat,' and it names a valley in Pennsylvania. A congressman simply liked the sound of it and pinned it on a territory of high, dry mountains.",
+  "capitalStory": "Cheyenne, named for the Cheyenne people, was a Union Pacific construction camp - one of the rolling, lawless 'hell on wheels' towns that followed the railhead west. This one happened to stop moving, and became the capital.",
+  "neighboringStates": ["MT", "SD", "NE", "CO", "UT", "ID"],
+  "majorFeatures": [
+    { "name": "Yellowstone", "type": "park", "note": "A caldera sitting on a supervolcano", "coords": [-110.5, 44.6] },
+    { "name": "Grand Teton", "type": "mountains", "note": "Young, sharp peaks with no foothills", "coords": [-110.8, 43.74] },
+    { "name": "Continental Divide", "type": "divide", "note": "Splits and encircles a basin that drains nowhere", "coords": [-108.5, 42.3] },
+    { "name": "Great Plains", "type": "plain", "note": "High dry grassland in the east", "coords": [-105.0, 43.0] }
+  ],
+  "funFacts": [
+    "Wyoming has fewer people than any other state - fewer than the city of Fresno.",
+    "Yellowstone, established in 1872, was the first national park anywhere in the world.",
+    "Wyoming and Colorado are the only two states whose borders are entirely straight lines.",
+    "In the Great Divide Basin, the Continental Divide splits in two and goes around; water that falls inside reaches neither ocean."
+  ],
+  "whyItMatters": "Wyoming Territory gave women the vote in 1869, the first place in America to do so. When Congress objected during the statehood debate 20 years later, the territory wired back that it would stay out of the Union a hundred years rather than join without its women. Congress blinked."
+}

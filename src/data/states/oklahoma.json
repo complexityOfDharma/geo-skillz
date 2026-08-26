@@ -1,0 +1,27 @@
+{
+  "name": "Oklahoma",
+  "abbreviation": "OK",
+  "fips": "40",
+  "nickname": "The Sooner State",
+  "capital": "Oklahoma City",
+  "capitalCoords": [-97.5164, 35.4676],
+  "region": "South / Great Plains",
+  "statehoodOrder": 46,
+  "statehoodYear": 1907,
+  "nameStory": "Choctaw for 'red people' - 'okla humma.' It was proposed in 1866 by Choctaw chief Allen Wright during treaty talks, which makes Oklahoma one of the very few states whose name was deliberately chosen by a Native leader rather than imposed by settlers.",
+  "capitalStory": "Oklahoma City went from empty prairie to about 10,000 residents in a single afternoon. At noon on April 22, 1889, a gun went off and settlers raced for plots of land. People who had snuck across the line early were called 'Sooners,' which the state now proudly puts on its football jerseys.",
+  "neighboringStates": ["KS", "MO", "AR", "TX", "NM", "CO"],
+  "majorFeatures": [
+    { "name": "Great Plains", "type": "plain", "note": "Dry shortgrass country in the west", "coords": [-100.0, 35.8] },
+    { "name": "Red River", "type": "river", "note": "The entire Texas border", "coords": [-97.5, 33.9] },
+    { "name": "Ozark Plateau", "type": "plateau", "note": "Wooded hills in the northeast", "coords": [-94.8, 36.2] },
+    { "name": "Panhandle", "type": "region", "note": "The strip that belonged to nobody", "coords": [-101.5, 36.75] }
+  ],
+  "funFacts": [
+    "Thirty-nine tribal nations are headquartered in Oklahoma, more than in any other state.",
+    "The Panhandle was literally called 'No Man's Land' - it belonged to no state or territory, so it had no law at all.",
+    "Oklahoma has more man-made lakes than any other state, nearly all built for flood control after the Dust Bowl.",
+    "The worst of the 1930s Dust Bowl centered on the Oklahoma Panhandle, and about 2.5 million people left the Plains."
+  ],
+  "whyItMatters": "Oklahoma was Indian Territory: the destination of the Trail of Tears, where the Cherokee, Choctaw, Chickasaw, Creek, and Seminole were forced to march after being driven from the Southeast, thousands dying on the way. They were promised the land permanently. Sixty years later the government opened it to settlers in land runs anyway."
+}
