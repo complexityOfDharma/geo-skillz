@@ -2,6 +2,20 @@
 // (scripts/smoke-render.mjs) can build the same structure the app does instead
 // of reimplementing it and drifting.
 
+import { geoArea } from 'd3-geo';
+
+// d3-geo reads a ring wound the wrong way as "the entire globe minus this
+// shape", which floods the map. Hand-authoring the correct direction is a trap
+// nobody should have to think about, so normalise by measurement instead.
+function normalizeWinding(geometry) {
+  if (!geometry || (geometry.type !== 'Polygon' && geometry.type !== 'MultiPolygon')) return geometry;
+  if (geoArea({ type: 'Feature', properties: {}, geometry }) <= 2 * Math.PI) return geometry;
+  const flip = (rings) => rings.map((r) => [...r].reverse());
+  return geometry.type === 'Polygon'
+    ? { ...geometry, coordinates: flip(geometry.coordinates) }
+    : { ...geometry, coordinates: geometry.coordinates.map(flip) };
+}
+
 export const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 export function buildSections(sectionData, states, features, shapes = {}) {
@@ -10,17 +24,25 @@ export function buildSections(sectionData, states, features, shapes = {}) {
   // Geometry comes from two places: shapes.json (subsetted from Natural Earth
   // by scripts/build-geometry.mjs) and inlineParts hand-authored in the data
   // file for routes no public dataset carries.
-  const partsFor = (data) => [
-    ...(shapes[data.id]?.parts ?? []),
-    ...(data.geometry?.inlineParts ?? []),
-  ];
+  const partsFor = (data) =>
+    [...(shapes[data.id]?.parts ?? []), ...(data.geometry?.inlineParts ?? [])].map((p) => ({
+      ...p,
+      geometry: normalizeWinding(p.geometry),
+    }));
+
+  const namesFor = (abbrs) =>
+    (abbrs ?? [])
+      .map((a) => byAbbr.get(a))
+      .filter(Boolean)
+      .map((s) => ({ fips: s.fips, name: s.name, abbr: s.abbreviation }));
 
   const stateSlide = (data) => ({
     kind: 'state',
     id: slug(data.name),
     title: data.name,
     subtitle: data.capital,
-    data,
+    // Grey names for the neighbours drawn around the subject on its close-up.
+    data: { ...data, neighborStates: namesFor(data.neighboringStates) },
   });
 
   const featureSlide = (data) => ({
@@ -34,10 +56,7 @@ export function buildSections(sectionData, states, features, shapes = {}) {
       // data files use into ids the map can match.
       fipsTouched: (data.statesTouched ?? []).map((a) => byAbbr.get(a)?.fips).filter(Boolean),
       // Names for the grey labels drawn on states the feature crosses.
-      touchedStates: (data.statesTouched ?? [])
-        .map((a) => byAbbr.get(a))
-        .filter(Boolean)
-        .map((s) => ({ fips: s.fips, name: s.name, abbr: s.abbreviation })),
+      touchedStates: namesFor(data.statesTouched),
       geometryParts: partsFor(data),
     },
   });

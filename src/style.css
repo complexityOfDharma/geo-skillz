@@ -237,6 +237,27 @@ html, body {
 }
 
 .detail-neighbor { fill: var(--map-land); stroke: var(--bg); stroke-width: 0.6; }
+/* Canada and Mexico: present for orientation, clearly not the subject. */
+.detail-abroad {
+  fill: #101d25;
+  stroke: #46617230;
+  stroke: #4a6577;
+  stroke-width: 0.9;
+  stroke-dasharray: 3 2.5;
+  pointer-events: none;
+}
+.country-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  fill: var(--ink-faint);
+  opacity: 0.85;
+  paint-order: stroke;
+  stroke: rgba(9, 18, 25, 0.8);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
 .detail-neighbor.is-touched { fill: var(--map-land-2); }
 .detail-subject {
   fill: var(--accent-soft);
@@ -607,12 +628,14 @@ kbd {
   .marker-label { font-size: 17px; stroke-width: 4.5px; }
   .feat-label { font-size: 18px; stroke-width: 5px; }
   .state-label { font-size: 15px; stroke-width: 4px; }
+  .country-label { font-size: 16px; stroke-width: 4px; }
 }
 @media (max-width: 640px) {
   .marker-label { font-size: 22px; stroke-width: 6px; }
   .marker-dot { stroke-width: 1.6; }
   .feat-label { font-size: 23px; stroke-width: 6.5px; }
   .state-label { font-size: 19px; stroke-width: 5px; }
+  .country-label { font-size: 20px; stroke-width: 5px; }
   .feat-line { stroke-width: 5; }
   .feat-shape { stroke-width: 3.6; }
 }

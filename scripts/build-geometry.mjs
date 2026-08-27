@@ -25,7 +25,13 @@ const LAYERS = {
   marine: 'ne_10m_geography_marine_polys',
   rivers: 'ne_10m_rivers_lake_centerlines',
   lines: 'ne_10m_geographic_lines',
+  countries: 'ne_50m_admin_0_countries',
 };
+
+// Drawn as context on every US close-up map. The national context map uses
+// AlbersUsa, which relocates Alaska and Hawaii into insets, so neighbouring
+// countries cannot be drawn truthfully there and deliberately are not.
+const CONTEXT_COUNTRIES = ['Canada', 'Mexico'];
 
 const neName = (f) => f.properties.NAME ?? f.properties.name ?? '';
 const norm = (s) => String(s).trim().toLowerCase();
@@ -193,3 +199,22 @@ console.log(`\nwrote ${Object.keys(shapes).length} shapes (${refs.reduce((n, r) 
 for (const [id, s] of Object.entries(shapes)) {
   console.log(`  ${id.padEnd(28)} ${s.kind.padEnd(8)} ${s.parts.length} part(s)`);
 }
+
+// Neighbouring-country outlines, generalised hard - they are background context
+// on every US close-up map, never the subject.
+const countries = await layer('countries');
+const context = {};
+for (const name of CONTEXT_COUNTRIES) {
+  const hit = countries.features.find((f) => norm(f.properties.NAME) === norm(name));
+  if (!hit) {
+    console.error(`context: country "${name}" not found in ${LAYERS.countries}`);
+    process.exit(1);
+  }
+  const geom = simplifyGeometry(hit.geometry, 0.08);
+  if (geom) context[name] = geom;
+}
+const ctxPath = join(outDir, 'context.json');
+writeFileSync(ctxPath, JSON.stringify(context) + '\n');
+console.log(
+  `context: ${Object.keys(context).join(', ')} -> ${(readFileSync(ctxPath).length / 1024).toFixed(0)} KB`
+);

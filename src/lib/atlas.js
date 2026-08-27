@@ -2,6 +2,7 @@
 // us-atlas is public domain, derived from US Census Bureau TIGER data.
 import { feature } from 'topojson-client';
 import atlasUrl from 'us-atlas/states-10m.json?url';
+import context from '../data/geometry/context.json';
 
 let pending;
 
@@ -18,6 +19,8 @@ export function loadAtlas() {
           states,
           nation: feature(topo, topo.objects.nation),
           byFips: new Map(states.features.map((f) => [f.id, f])),
+          // Canada and Mexico, drawn as background on close-up maps only.
+          context,
         };
       });
   }

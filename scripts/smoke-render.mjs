@@ -18,6 +18,7 @@ const atlas = {
   states: stateFC,
   nation: topojson.feature(topo, topo.objects.nation),
   byFips: new Map(stateFC.features.map((f) => [f.id, f])),
+  context: read('src/data/geometry/context.json'),
 };
 
 const dir = join(root, 'src/data/states');
