@@ -93,10 +93,22 @@
     }
   ],
   "funFacts": [
-    "Mammoth Cave has over 420 mapped miles of passage - more than twice any other cave on Earth.",
+    {
+      "text": "Mammoth Cave has over 420 surveyed miles of passage - about 1.5 times the length of the next longest cave on Earth.",
+      "source": "nps-mammoth"
+    },
     "Kentucky holds more barrels of aging bourbon than it has people.",
     "The Cumberland Gap was the natural gate through the mountains, and Daniel Boone's road through it opened the west to settlers.",
     "Kentucky is officially a Commonwealth, one of only four states that use that title."
   ],
-  "whyItMatters": "Abraham Lincoln and Jefferson Davis, the two opposing presidents of the Civil War, were both born in Kentucky about 100 miles and one year apart. The state stayed in the Union while remaining a slave state."
+  "whyItMatters": "Abraham Lincoln and Jefferson Davis, the two opposing presidents of the Civil War, were both born in Kentucky about 100 miles and one year apart. The state stayed in the Union while remaining a slave state.",
+  "sources": [
+    {
+      "id": "nps-mammoth",
+      "title": "Exploring the World’s Longest Known Cave",
+      "publisher": "National Park Service",
+      "url": "https://www.nps.gov/articles/000/exploring-the-worlds-longest-known-cave.htm",
+      "accessed": "2026-08-27"
+    }
+  ]
 }

@@ -940,3 +940,53 @@ a.crumb:hover { color: var(--accent-ink); text-decoration: underline; }
 @media (prefers-reduced-motion: reduce) {
   .tile:hover { transform: none; }
 }
+
+/* ---------- citations ---------- */
+
+.cite {
+  margin-left: 0.15em;
+  padding: 0 0.15em;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--accent);
+  vertical-align: super;
+  line-height: 0;
+}
+
+.sources {
+  margin-top: 1.5rem;
+  padding: 0.5rem 0.9rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.sources-summary {
+  padding: 0.35rem 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  cursor: pointer;
+}
+.sources-summary:hover { color: var(--ink); }
+.sources[open] .sources-summary { margin-bottom: 0.4rem; }
+
+.src-list {
+  margin: 0 0 0.5rem;
+  padding: 0;
+  list-style: none;
+  counter-reset: src;
+}
+.src-list li {
+  display: grid;
+  grid-template-columns: 1.4rem 1fr;
+  gap: 0.1rem 0.4rem;
+  padding: 0.4rem 0;
+  border-top: 1px solid var(--line);
+  font-size: 0.86rem;
+}
+.src-n { color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
+.src-link { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+.src-link:hover { color: var(--accent-ink); border-bottom-color: var(--accent); }
+.src-pub { grid-column: 2; font-size: 0.8rem; color: var(--ink-faint); }

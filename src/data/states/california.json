@@ -87,10 +87,29 @@
     }
   ],
   "funFacts": [
-    "Mount Whitney (14,505 ft) and Death Valley (-282 ft), the highest and lowest points in the contiguous US, are about 85 miles apart.",
+    {
+      "text": "Mount Whitney (14,494 ft) and Death Valley (-282 ft), the highest and lowest points in the contiguous US, are about 85 miles apart.",
+      "source": "usgs-elevations"
+    },
     "If California were a country it would have roughly the fifth-largest economy on Earth.",
     "It is the most populous state, with more people than all of Canada.",
     "The General Sherman tree in Sequoia is the largest single living organism by volume on the planet."
   ],
-  "whyItMatters": "California's fire season now runs most of the year. Drought, a century of suppressing natural fires, and building into wild land have combined so that several of the state's largest fires on record have happened since 2017."
+  "whyItMatters": "California's fire season now runs most of the year. Drought, a century of suppressing natural fires, and building into wild land have combined so that several of the state's largest fires on record have happened since 2017.",
+  "sources": [
+    {
+      "id": "usgs-elevations",
+      "title": "Highest and Lowest Elevations",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/educational-resources/highest-and-lowest-elevations",
+      "accessed": "2026-08-27"
+    },
+    {
+      "id": "ncei-hottest",
+      "title": "On This Day: Earth’s Hottest Temperature",
+      "publisher": "NOAA National Centers for Environmental Information",
+      "url": "https://www.ncei.noaa.gov/news/earths-hottest-temperature",
+      "accessed": "2026-08-27"
+    }
+  ]
 }

@@ -110,7 +110,10 @@
       }
     ],
     "keyFacts": [
-      "Together they hold about 21% of the world's fresh surface water.",
+      {
+        "text": "Together they hold about 21% of the world's fresh surface water.",
+        "source": "noaa-greatlakes"
+      },
       "Only Lake Michigan lies entirely within the United States; the other four are shared with Canada.",
       "Lake Superior alone could cover all of North and South America in a foot of water.",
       "They are young: the last ice sheet only finished melting out of these basins about 10,000 years ago.",
@@ -130,7 +133,16 @@
       ],
       "labelParts": true,
       "tolerance": 0.01
-    }
+    },
+    "sources": [
+      {
+        "id": "noaa-greatlakes",
+        "title": "Great Lakes Fast Facts",
+        "publisher": "NOAA Office for Coastal Management",
+        "url": "https://coast.noaa.gov/states/fast-facts/great-lakes.html",
+        "accessed": "2026-08-27"
+      }
+    ]
   },
   {
     "id": "rocky-mountains",
@@ -798,7 +810,10 @@
       }
     ],
     "keyFacts": [
-      "20,310 feet - the highest point in North America.",
+      {
+        "text": "20,310 feet - the highest point in North America.",
+        "source": "usgs-denali"
+      },
       "Measured from its own base rather than from sea level, its rise is greater than Everest's.",
       "The national park is named Denali National Park and Preserve, and that has not changed regardless of what the mountain is called.",
       "Alaska's state government and many Alaska Natives have used and continue to use Denali.",
@@ -812,7 +827,16 @@
       "names": [
         "ALASKA RANGE"
       ]
-    }
+    },
+    "sources": [
+      {
+        "id": "usgs-denali",
+        "title": "New Elevation for Nation’s Highest Peak",
+        "publisher": "U.S. Geological Survey",
+        "url": "https://www.usgs.gov/news/national-news-release/new-elevation-nations-highest-peak",
+        "accessed": "2026-08-27"
+      }
+    ]
   },
   {
     "id": "mississippi-river",
@@ -891,8 +915,14 @@
       }
     ],
     "keyFacts": [
-      "2,340 miles long; a drop of water takes about 90 days to travel the whole thing.",
-      "Its basin covers 31 states and 2 Canadian provinces - about 1.2 million square miles.",
+      {
+        "text": "2,350 miles long; a drop of water takes about 90 days to travel the whole thing.",
+        "source": "nps-mississippi"
+      },
+      {
+        "text": "Its basin covers 31 states and 2 Canadian provinces - about 1.2 million square miles.",
+        "source": "nps-mississippi"
+      },
       "It was the western border of the United States from 1783 until the Louisiana Purchase in 1803.",
       "Taking Vicksburg in 1863 gave the Union control of the entire river and cut the Confederacy in two.",
       "At Lake Itasca it is ankle deep; at New Orleans it is nearly 200 feet deep."
@@ -916,7 +946,16 @@
           72
         ]
       ]
-    }
+    },
+    "sources": [
+      {
+        "id": "nps-mississippi",
+        "title": "Mississippi River Facts",
+        "publisher": "National Park Service",
+        "url": "https://www.nps.gov/miss/riverfacts.htm",
+        "accessed": "2026-08-27"
+      }
+    ]
   },
   {
     "id": "grand-canyon",
@@ -976,7 +1015,10 @@
       "The North Rim is roughly 1,000 feet higher than the South Rim and is closed by snow much of the year.",
       "The Havasupai have lived in and around the canyon for more than 800 years and still do.",
       "It is not the deepest canyon in the country - Hells Canyon in Idaho is deeper - but it is the widest and most completely exposed.",
-      "About 40 major rock layers are visible from rim to river."
+      {
+        "text": "About 40 major rock layers are visible from rim to river.",
+        "source": "nps-grca-geology"
+      }
     ],
     "whyItMatters": "Glen Canyon Dam, just upstream, changed the river that made the canyon. The Colorado used to run warm, red, and full of silt, and it flooded every spring. Now it runs cold and clear year-round because water is drawn from deep in the reservoir behind the dam. Native fish have largely vanished and the beaches are washing away, so managers periodically release artificial floods to try to rebuild them.",
     "geometry": {
@@ -1120,7 +1162,16 @@
           }
         }
       ]
-    }
+    },
+    "sources": [
+      {
+        "id": "nps-grca-geology",
+        "title": "Grand Canyon Geology",
+        "publisher": "National Park Service",
+        "url": "https://www.nps.gov/grca/learn/nature/grca-geology.htm",
+        "accessed": "2026-08-27"
+      }
+    ]
   },
   {
     "id": "colorado-river",
@@ -1355,7 +1406,10 @@
       }
     ],
     "keyFacts": [
-      "Death Valley recorded 134 degrees Fahrenheit in 1913 - the highest air temperature ever measured anywhere on Earth.",
+      {
+        "text": "Death Valley recorded 134 degrees Fahrenheit in 1913 - the highest air temperature ever measured anywhere on Earth.",
+        "source": "ncei-hottest"
+      },
       "Joshua trees grow only in the Mojave. Saguaros grow only in the Sonoran. Neither crosses into the other's desert.",
       "The Sonoran gets both winter rain and a summer monsoon, which makes it the greenest desert in North America.",
       "A saguaro can take 60 years to grow its first arm and can live over 150 years."
@@ -1418,7 +1472,16 @@
           }
         }
       ]
-    }
+    },
+    "sources": [
+      {
+        "id": "ncei-hottest",
+        "title": "On This Day: Earth’s Hottest Temperature",
+        "publisher": "NOAA National Centers for Environmental Information",
+        "url": "https://www.ncei.noaa.gov/news/earths-hottest-temperature",
+        "accessed": "2026-08-27"
+      }
+    ]
   },
   {
     "id": "great-plains",

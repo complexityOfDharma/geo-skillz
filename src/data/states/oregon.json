@@ -88,9 +88,21 @@
     }
   ],
   "funFacts": [
-    "Crater Lake is 1,943 feet deep and sits in the collapsed crater of Mount Mazama, which blew itself apart about 7,700 years ago.",
+    {
+      "text": "Crater Lake is 1,943 feet deep and sits in the collapsed crater of Mount Mazama, which blew itself apart about 7,700 years ago.",
+      "source": "nps-crater"
+    },
     "Every inch of Oregon's coastline is public property by law, thanks to a 1967 act - no private beaches anywhere in the state.",
     "The Cascades split Oregon into two climates: rainforest on the west side, high desert on the east.",
     "The Columbia River Gorge is the only near-sea-level route through the entire Cascade Range, which is why every road, rail line, and barge uses it."
+  ],
+  "sources": [
+    {
+      "id": "nps-crater",
+      "title": "Crater Lake",
+      "publisher": "National Park Service",
+      "url": "https://www.nps.gov/places/crater-lake.htm",
+      "accessed": "2026-08-27"
+    }
   ]
 }
