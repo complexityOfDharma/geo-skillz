@@ -102,6 +102,66 @@ await page.waitForSelector('.slide-state');
 check('legacy flat link still resolves', (await title()) === 'Wyoming');
 check('legacy link is rewritten', page.url().endsWith('#/us/states/wyoming'), page.url().split('#')[1]);
 
+// ---- map tooltips ----
+await goto('#/us/states/oklahoma');
+await page.waitForSelector('.slide-state');
+check(
+  'subject state has a hover title',
+  (await page.$eval('.detail-subject title', (e) => e.textContent)) === 'Oklahoma'
+);
+// Clipping the projection means off-screen states emit no path at all, so
+// assert every rendered one carries a title rather than a fixed count.
+const nb = await page.evaluate(() => {
+  const paths = [...document.querySelectorAll('.map-detail .detail-neighbor')];
+  return { total: paths.length, titled: paths.filter((p) => p.querySelector('title')).length };
+});
+check(
+  'every rendered neighbour state has a hover title',
+  nb.total > 3 && nb.titled === nb.total,
+  `${nb.titled}/${nb.total}`
+);
+check(
+  'no country outline at Oklahoma zoom',
+  (await page.$$('.detail-abroad')).length === 0
+);
+// Every neighbour label must sit outside the highlighted state.
+const overlap = await page.evaluate(() => {
+  const svg = document.querySelector('.map-detail');
+  const subject = svg.querySelector('.detail-subject');
+  return [...svg.querySelectorAll('.state-label')].filter((t) => {
+    const b = t.getBBox();
+    const pt = svg.createSVGPoint();
+    pt.x = b.x + b.width / 2;
+    pt.y = b.y + b.height / 2;
+    return subject.isPointInFill(pt);
+  }).map((t) => t.textContent);
+});
+check('no neighbour label sits inside the subject state', overlap.length === 0, overlap.join(','));
+
+// Texas reaches Mexico, so the country layer is exercised there.
+await goto('#/us/states/texas');
+await page.waitForSelector('.slide-state');
+check(
+  'country outlines are hoverable',
+  await page.$eval('.detail-abroad', (e) => getComputedStyle(e).pointerEvents !== 'none')
+);
+check(
+  'country outlines have hover titles',
+  (await page.$eval('.detail-abroad title', (e) => e.textContent)).length > 0
+);
+const txOverlap = await page.evaluate(() => {
+  const svg = document.querySelector('.map-detail');
+  const subject = svg.querySelector('.detail-subject');
+  return [...svg.querySelectorAll('.state-label, .country-label')].filter((t) => {
+    const b = t.getBBox();
+    const pt = svg.createSVGPoint();
+    pt.x = b.x + b.width / 2;
+    pt.y = b.y + b.height / 2;
+    return subject.isPointInFill(pt);
+  }).map((t) => t.textContent);
+});
+check('no neighbour or country label sits inside Texas', txOverlap.length === 0, txOverlap.join(','));
+
 // ---- inert affordances ----
 await goto('#/us/states/maryland');
 await page.waitForSelector('.slide-state');

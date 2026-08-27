@@ -248,7 +248,6 @@ html, body {
   stroke: #4a6577;
   stroke-width: 0.9;
   stroke-dasharray: 3 2.5;
-  pointer-events: none;
 }
 .detail-abroad-hatch { stroke: none; pointer-events: none; }
 .hatch-line { stroke: var(--ink-faint); stroke-width: 0.7; opacity: 0.4; }
