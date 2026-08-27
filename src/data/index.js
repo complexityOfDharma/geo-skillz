@@ -8,6 +8,7 @@
 import { buildSections, slug } from './build-tree.js';
 import sectionData from './sections.json';
 import featureData from './features.json';
+import shapeData from './geometry/shapes.json';
 
 const stateModules = import.meta.glob('./states/*.json', { eager: true, import: 'default' });
 
@@ -19,7 +20,7 @@ export { slug };
 
 // Section -> Category -> Slide, with back-pointers so any slide knows where it
 // lives without the caller threading context through.
-export const sections = buildSections(sectionData, states, features);
+export const sections = buildSections(sectionData, states, features, shapeData);
 
 export const liveSections = sections.filter((s) => s.status !== 'planned');
 

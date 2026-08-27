@@ -11,7 +11,8 @@
     "check:data": "node scripts/check-data.mjs",
     "check:render": "node scripts/smoke-render.mjs",
     "check": "npm run check:data && npm run check:render",
-    "check:ui": "node scripts/check-ui.mjs"
+    "check:ui": "node scripts/check-ui.mjs",
+    "build:geometry": "node scripts/build-geometry.mjs"
   },
   "devDependencies": {
     "puppeteer-core": "^25.9.0",

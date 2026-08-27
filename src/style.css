@@ -245,6 +245,48 @@ html, body {
   stroke-linejoin: round;
 }
 
+/* The feature itself on a detail map: thick bold outline over a semi-transparent
+   muted fill, so the subject reads as the subject and the states behind it stay
+   context. */
+.feat-shape {
+  fill: var(--accent);
+  fill-opacity: 0.26;
+  stroke: var(--accent);
+  stroke-width: 2.6;
+  stroke-linejoin: round;
+}
+.feat-line {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 3.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.feat-label {
+  font-size: 13px;
+  font-weight: 700;
+  fill: var(--accent-ink);
+  paint-order: stroke;
+  stroke: rgba(9, 18, 25, 0.94);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+/* Grey names on the states a feature crosses - present, but clearly behind. */
+.state-label {
+  font-size: 11px;
+  font-weight: 600;
+  fill: var(--ink-faint);
+  paint-order: stroke;
+  stroke: rgba(9, 18, 25, 0.8);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.feat-shape.is-ctx { stroke-width: 1.6; fill-opacity: 0.4; }
+.feat-line.is-ctx { stroke-width: 2.2; }
+
 .capital-halo { fill: none; stroke: var(--accent); stroke-width: 1.2; opacity: 0.55; }
 .marker-dot { fill: var(--accent-ink); stroke: #23160a; stroke-width: 1; }
 .marker-leader { stroke: var(--ink-faint); stroke-width: 1; opacity: 0.75; }
@@ -563,10 +605,16 @@ kbd {
    Scale the type up so it stays readable on a phone or small tablet. */
 @media (max-width: 900px) {
   .marker-label { font-size: 17px; stroke-width: 4.5px; }
+  .feat-label { font-size: 18px; stroke-width: 5px; }
+  .state-label { font-size: 15px; stroke-width: 4px; }
 }
 @media (max-width: 640px) {
   .marker-label { font-size: 22px; stroke-width: 6px; }
   .marker-dot { stroke-width: 1.6; }
+  .feat-label { font-size: 23px; stroke-width: 6.5px; }
+  .state-label { font-size: 19px; stroke-width: 5px; }
+  .feat-line { stroke-width: 5; }
+  .feat-shape { stroke-width: 3.6; }
 }
 
 @media (prefers-reduced-motion: reduce) {

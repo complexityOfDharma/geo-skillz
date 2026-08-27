@@ -163,10 +163,15 @@ function featureSlide(atlas, f) {
       ])}
 
       ${mapPair(
-        contextMap(atlas, { highlight: f.fipsTouched }),
+        contextMap(atlas, {
+          highlight: f.fipsTouched,
+          shapeParts: f.geometryParts,
+          kind: f.geometry?.kind,
+        }),
         featureDetailMap(atlas, f),
         `${f.name} in national context`,
-        `${f.name} up close`
+        // Hand-drawn routes must never imply survey precision.
+        `${f.name} up close${f.geometry?.approximate ? ' — shape/route approximate' : ''}`
       )}
 
       ${timelineBlock(f.namingTimeline)}

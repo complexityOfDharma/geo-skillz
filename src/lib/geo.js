@@ -48,6 +48,20 @@ export function bboxFeature([[w, s], [e, n]]) {
   };
 }
 
+// Frame a feature by its own geometry rather than a hand-tuned bounding box.
+// A hand-set box tends to match the subject's extent exactly, which fills the
+// frame edge to edge and leaves no context around it.
+export function boundsOfParts(parts, pad = 0.28) {
+  if (!parts?.length) return null;
+  const fc = { type: 'FeatureCollection', features: parts.map((p) => ({ type: 'Feature', properties: {}, geometry: p.geometry })) };
+  const [[w, s], [e, n]] = geoBounds(fc);
+  if (![w, s, e, n].every(Number.isFinite)) return null;
+  // Pad by a share of the larger dimension so small features get proportionally
+  // more breathing room than continent-spanning ones.
+  const span = Math.max(Math.abs(e - w), Math.abs(n - s)) * pad;
+  return [[w - span, s - span], [e + span, n + span]];
+}
+
 export const pathFor = (projection) => geoPath(projection);
 
 // Some feature zooms (Denali, the Grand Canyon) land inside a single state,

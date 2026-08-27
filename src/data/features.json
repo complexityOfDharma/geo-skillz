@@ -116,7 +116,21 @@
       "They are young: the last ice sheet only finished melting out of these basins about 10,000 years ago.",
       "The Great Lakes coastline is longer than the US Atlantic and Pacific coasts combined."
     ],
-    "whyItMatters": "Roughly 40 million people drink from these lakes. Because a border runs down the middle of four of them, protecting that water requires two countries to agree, which they formalized in the Great Lakes Compact."
+    "whyItMatters": "Roughly 40 million people drink from these lakes. Because a border runs down the middle of four of them, protecting that water requires two countries to agree, which they formalized in the Great Lakes Compact.",
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "lakes",
+      "names": [
+        "Lake Superior",
+        "Lake Michigan",
+        "Lake Huron",
+        "Lake Erie",
+        "Lake Ontario"
+      ],
+      "labelParts": true,
+      "tolerance": 0.01
+    }
   },
   {
     "id": "rocky-mountains",
@@ -182,7 +196,15 @@
       "The Divide is not always a knife edge; in Wyoming's Great Divide Basin it splits and surrounds land that drains to neither ocean.",
       "Snowpack in the Rockies is the water supply for most of the American West."
     ],
-    "whyItMatters": "Almost every major western river - the Colorado, the Rio Grande, the Missouri, the Columbia's tributaries - starts as snow in these mountains. A warm winter here becomes a water crisis a thousand miles downstream."
+    "whyItMatters": "Almost every major western river - the Colorado, the Rio Grande, the Missouri, the Columbia's tributaries - starts as snow in these mountains. A warm winter here becomes a water crisis a thousand miles downstream.",
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "regions",
+      "names": [
+        "ROCKY MOUNTAINS"
+      ]
+    }
   },
   {
     "id": "continental-divide",
@@ -239,7 +261,99 @@
       "The Continental Divide Trail follows it for about 3,100 miles from Mexico to Canada.",
       "In Wyoming's Great Divide Basin the Divide splits in two and rejoins, enclosing land whose water reaches no ocean at all.",
       "Chicago sits just barely on the Atlantic side of a much smaller divide - which is why a canal could connect the Great Lakes to the Mississippi."
-    ]
+    ],
+    "geometry": {
+      "kind": "line",
+      "source": "inline",
+      "approximate": true,
+      "labelParts": true,
+      "inlineParts": [
+        {
+          "name": "Continental Divide",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -114.0,
+                49.0
+              ],
+              [
+                -113.4,
+                48.0
+              ],
+              [
+                -112.5,
+                46.8
+              ],
+              [
+                -111.5,
+                45.7
+              ],
+              [
+                -110.7,
+                44.6
+              ],
+              [
+                -109.8,
+                43.5
+              ],
+              [
+                -108.5,
+                42.4
+              ],
+              [
+                -107.0,
+                41.3
+              ],
+              [
+                -106.3,
+                40.4
+              ],
+              [
+                -106.0,
+                39.6
+              ],
+              [
+                -106.4,
+                38.8
+              ],
+              [
+                -106.6,
+                37.9
+              ],
+              [
+                -107.3,
+                37.4
+              ],
+              [
+                -108.2,
+                36.5
+              ],
+              [
+                -108.3,
+                35.5
+              ],
+              [
+                -108.5,
+                34.5
+              ],
+              [
+                -108.8,
+                33.5
+              ],
+              [
+                -108.6,
+                32.5
+              ],
+              [
+                -108.2,
+                31.33
+              ]
+            ]
+          }
+        }
+      ]
+    }
   },
   {
     "id": "appalachian-mountains",
@@ -317,7 +431,18 @@
       "The range is not one ridge but dozens of parallel ridges, which is why crossing it was so difficult.",
       "The Great Smokies are the most visited national park in the United States."
     ],
-    "whyItMatters": "For 150 years these mountains were a wall that held British colonies against the coast. Britain's Proclamation of 1763 forbade settlement past the crest, and colonial anger about that line was one of the grievances that led to revolution. Where the range could be crossed - the Cumberland Gap, the Mohawk Valley - is where the roads, canals, railroads, and cities went."
+    "whyItMatters": "For 150 years these mountains were a wall that held British colonies against the coast. Britain's Proclamation of 1763 forbade settlement past the crest, and colonial anger about that line was one of the grievances that led to revolution. Where the range could be crossed - the Cumberland Gap, the Mohawk Valley - is where the roads, canals, railroads, and cities went.",
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "regions",
+      "names": [
+        "APPALACHIAN MTS."
+      ],
+      "labels": {
+        "APPALACHIAN MTS.": "Appalachian Mountains"
+      }
+    }
   },
   {
     "id": "appalachian-trail",
@@ -384,7 +509,131 @@
       "Total elevation gain over the full hike is roughly equivalent to climbing Everest sixteen times from sea level.",
       "Harpers Ferry, West Virginia is trail headquarters and the traditional psychological halfway point, though not the true midpoint.",
       "It is maintained almost entirely by volunteers - tens of thousands of hours a year."
-    ]
+    ],
+    "geometry": {
+      "kind": "line",
+      "source": "inline",
+      "approximate": true,
+      "labelParts": true,
+      "inlineParts": [
+        {
+          "name": "Appalachian Trail",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -84.19,
+                34.63
+              ],
+              [
+                -83.9,
+                35.05
+              ],
+              [
+                -83.5,
+                35.55
+              ],
+              [
+                -82.9,
+                36.1
+              ],
+              [
+                -82.3,
+                36.6
+              ],
+              [
+                -81.6,
+                37.2
+              ],
+              [
+                -80.5,
+                37.4
+              ],
+              [
+                -79.9,
+                37.8
+              ],
+              [
+                -78.9,
+                38.4
+              ],
+              [
+                -78.2,
+                39.0
+              ],
+              [
+                -77.73,
+                39.32
+              ],
+              [
+                -77.2,
+                39.8
+              ],
+              [
+                -76.5,
+                40.3
+              ],
+              [
+                -75.9,
+                40.8
+              ],
+              [
+                -75.1,
+                41.2
+              ],
+              [
+                -74.3,
+                41.3
+              ],
+              [
+                -73.5,
+                41.4
+              ],
+              [
+                -73.2,
+                41.9
+              ],
+              [
+                -73.0,
+                42.5
+              ],
+              [
+                -72.9,
+                43.1
+              ],
+              [
+                -72.5,
+                43.6
+              ],
+              [
+                -71.8,
+                44.0
+              ],
+              [
+                -71.3,
+                44.27
+              ],
+              [
+                -70.9,
+                44.7
+              ],
+              [
+                -70.2,
+                45.1
+              ],
+              [
+                -69.5,
+                45.5
+              ],
+              [
+                -68.92,
+                45.9
+              ]
+            ]
+          }
+        }
+      ]
+    }
   },
   {
     "id": "sierra-nevada",
@@ -454,7 +703,15 @@
       "Sierra snowpack supplies roughly 30% of California's water, stored as snow and released slowly all summer.",
       "The Donner Party was trapped by Sierra snow in the winter of 1846-47 at what is now Donner Pass."
     ],
-    "whyItMatters": "The gold found in these foothills in 1848 brought about 300,000 people to California in a few years. It was so overwhelming that California skipped the territorial stage entirely and became a state in 1850 - which forced the Compromise of 1850 and pushed the country another step toward civil war."
+    "whyItMatters": "The gold found in these foothills in 1848 brought about 300,000 people to California in a few years. It was so overwhelming that California skipped the territorial stage entirely and became a state in 1850 - which forced the Compromise of 1850 and pushed the country another step toward civil war.",
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "regions",
+      "names": [
+        "SIERRA NEVADA"
+      ]
+    }
   },
   {
     "id": "denali",
@@ -547,7 +804,15 @@
       "Alaska's state government and many Alaska Natives have used and continue to use Denali.",
       "The federal name as of this deck's last update is Mount McKinley."
     ],
-    "whyItMatters": "This is a real, unresolved dispute, and it is worth understanding rather than picking a side on. One argument is that the original Koyukon name has priority and that the mountain was renamed for a politician with no connection to it. The other is that the McKinley name carries over a century of federal usage and honors an assassinated president. Both names are in wide use, and the federal name has now changed three times in fifty years. Geography is not only landforms - it is also who gets to name them."
+    "whyItMatters": "This is a real, unresolved dispute, and it is worth understanding rather than picking a side on. One argument is that the original Koyukon name has priority and that the mountain was renamed for a politician with no connection to it. The other is that the McKinley name carries over a century of federal usage and honors an assassinated president. Both names are in wide use, and the federal name has now changed three times in fifty years. Geography is not only landforms - it is also who gets to name them.",
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "regions",
+      "names": [
+        "ALASKA RANGE"
+      ]
+    }
   },
   {
     "id": "mississippi-river",
@@ -632,7 +897,16 @@
       "Taking Vicksburg in 1863 gave the Union control of the entire river and cut the Confederacy in two.",
       "At Lake Itasca it is ankle deep; at New Orleans it is nearly 200 feet deep."
     ],
-    "whyItMatters": "The Mississippi is actively trying to abandon its channel and switch into the Atchafalaya, a shorter and steeper route to the Gulf. If it succeeded, New Orleans and Baton Rouge would be left on a saltwater inlet with no river. One Army Corps of Engineers installation, the Old River Control Structure, is what prevents it. The economy of an entire region rests on a piece of concrete holding a river in a channel it does not want to be in."
+    "whyItMatters": "The Mississippi is actively trying to abandon its channel and switch into the Atchafalaya, a shorter and steeper route to the Gulf. If it succeeded, New Orleans and Baton Rouge would be left on a saltwater inlet with no river. One Army Corps of Engineers installation, the Old River Control Structure, is what prevents it. The economy of an entire region rests on a piece of concrete holding a river in a channel it does not want to be in.",
+    "geometry": {
+      "kind": "line",
+      "source": "natural-earth",
+      "layer": "rivers",
+      "names": [
+        "Mississippi"
+      ],
+      "tolerance": 0.01
+    }
   },
   {
     "id": "grand-canyon",
@@ -694,7 +968,16 @@
       "It is not the deepest canyon in the country - Hells Canyon in Idaho is deeper - but it is the widest and most completely exposed.",
       "About 40 major rock layers are visible from rim to river."
     ],
-    "whyItMatters": "Glen Canyon Dam, just upstream, changed the river that made the canyon. The Colorado used to run warm, red, and full of silt, and it flooded every spring. Now it runs cold and clear year-round because water is drawn from deep in the reservoir behind the dam. Native fish have largely vanished and the beaches are washing away, so managers periodically release artificial floods to try to rebuild them."
+    "whyItMatters": "Glen Canyon Dam, just upstream, changed the river that made the canyon. The Colorado used to run warm, red, and full of silt, and it flooded every spring. Now it runs cold and clear year-round because water is drawn from deep in the reservoir behind the dam. Native fish have largely vanished and the beaches are washing away, so managers periodically release artificial floods to try to rebuild them.",
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "regions",
+      "names": [
+        "Grand Canyon"
+      ],
+      "tolerance": 0.005
+    }
   },
   {
     "id": "colorado-river",
@@ -768,7 +1051,16 @@
       "Lake Mead and Lake Powell are the two largest reservoirs in the United States, and both have dropped far below capacity.",
       "Its delta in Mexico, once a huge wetland, is now mostly dry salt flat."
     ],
-    "whyItMatters": "Seven states, thirty tribal nations and Mexico all hold rights to this one river, allocated under a hundred-year-old deal based on water that was never there. Renegotiating it is one of the hardest political problems in the American West."
+    "whyItMatters": "Seven states, thirty tribal nations and Mexico all hold rights to this one river, allocated under a hundred-year-old deal based on water that was never there. Renegotiating it is one of the hardest political problems in the American West.",
+    "geometry": {
+      "kind": "line",
+      "source": "natural-earth",
+      "layer": "rivers",
+      "names": [
+        "Colorado"
+      ],
+      "tolerance": 0.01
+    }
   },
   {
     "id": "chesapeake-bay",
@@ -842,7 +1134,16 @@
       "An asteroid struck near the mouth of the bay about 35 million years ago, and the crater still influences where the channel sits.",
       "The oyster population is a small fraction of what it was in 1900, and oysters filter the water, so losing them made the water murkier."
     ],
-    "whyItMatters": "Fertiliser and manure washing off farms hundreds of miles inland feed algae blooms that strip oxygen from the bay, creating summer dead zones. Fixing it needs six states that share nothing else to agree, which is why the Chesapeake Bay Program is studied as a model for governing a whole watershed."
+    "whyItMatters": "Fertiliser and manure washing off farms hundreds of miles inland feed algae blooms that strip oxygen from the bay, creating summer dead zones. Fixing it needs six states that share nothing else to agree, which is why the Chesapeake Bay Program is studied as a model for governing a whole watershed.",
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "marine",
+      "names": [
+        "Chesapeake Bay"
+      ],
+      "tolerance": 0.01
+    }
   },
   {
     "id": "mojave-sonoran-deserts",
@@ -906,7 +1207,65 @@
       "The Sonoran gets both winter rain and a summer monsoon, which makes it the greenest desert in North America.",
       "A saguaro can take 60 years to grow its first arm and can live over 150 years."
     ],
-    "whyItMatters": "Phoenix and Las Vegas are among the fastest-growing metros in the country and both sit in these deserts, running on Colorado River water and air conditioning. They are a bet that engineering can keep outrunning the climate."
+    "whyItMatters": "Phoenix and Las Vegas are among the fastest-growing metros in the country and both sit in these deserts, running on Colorado River water and air conditioning. They are a bet that engineering can keep outrunning the climate.",
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "regions",
+      "names": [
+        "SONORAN DESERT"
+      ],
+      "labelParts": true,
+      "approximate": true,
+      "inlineParts": [
+        {
+          "name": "Mojave Desert",
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -118.5,
+                  35.9
+                ],
+                [
+                  -117.3,
+                  36.3
+                ],
+                [
+                  -115.6,
+                  36.4
+                ],
+                [
+                  -114.4,
+                  35.6
+                ],
+                [
+                  -114.5,
+                  34.6
+                ],
+                [
+                  -115.6,
+                  34.2
+                ],
+                [
+                  -117.0,
+                  34.2
+                ],
+                [
+                  -118.1,
+                  34.8
+                ],
+                [
+                  -118.5,
+                  35.9
+                ]
+              ]
+            ]
+          }
+        }
+      ]
+    }
   },
   {
     "id": "great-plains",
@@ -976,7 +1335,15 @@
       "The Ogallala Aquifer under the plains is being pumped far faster than rain refills it; in places it has already been drained past the point of use.",
       "Less than 4% of the original tallgrass prairie survives anywhere."
     ],
-    "whyItMatters": "The Dust Bowl was a man-made disaster - the result of farming a grassland as though it were Ohio. It produced the Soil Conservation Service and the idea that how you treat land is a public matter, not only a private one."
+    "whyItMatters": "The Dust Bowl was a man-made disaster - the result of farming a grassland as though it were Ohio. It produced the Soil Conservation Service and the idea that how you treat land is a public matter, not only a private one.",
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "regions",
+      "names": [
+        "GREAT PLAINS"
+      ]
+    }
   },
   {
     "id": "everglades",
@@ -1037,7 +1404,57 @@
       "It is the only place on Earth where alligators and crocodiles live in the same water.",
       "Roughly half the historic Everglades has been drained for farmland and cities."
     ],
-    "whyItMatters": "For a century the Everglades was treated as wasted land to be drained. Reversing that is now the largest ecosystem restoration ever attempted anywhere, and it has to work while South Florida's drinking water and its defence against storm surge both depend on it."
+    "whyItMatters": "For a century the Everglades was treated as wasted land to be drained. Reversing that is now the largest ecosystem restoration ever attempted anywhere, and it has to work while South Florida's drinking water and its defence against storm surge both depend on it.",
+    "geometry": {
+      "kind": "polygon",
+      "source": "inline",
+      "approximate": true,
+      "labelParts": true,
+      "inlineParts": [
+        {
+          "name": "Everglades",
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -81.55,
+                  26.35
+                ],
+                [
+                  -80.95,
+                  26.55
+                ],
+                [
+                  -80.45,
+                  26.15
+                ],
+                [
+                  -80.35,
+                  25.45
+                ],
+                [
+                  -80.65,
+                  25.15
+                ],
+                [
+                  -81.15,
+                  25.25
+                ],
+                [
+                  -81.45,
+                  25.85
+                ],
+                [
+                  -81.55,
+                  26.35
+                ]
+              ]
+            ]
+          }
+        }
+      ]
+    }
   },
   {
     "id": "tornado-alley",
@@ -1169,7 +1586,16 @@
       "In dry years, irrigation takes so much water that stretches of the 'border' are a sandy trench you can walk across.",
       "A 1970 treaty finally fixed the boundary in place no matter how the channel moves in future."
     ],
-    "whyItMatters": "Nearly every argument about the southern border is really an argument about this river - where it runs, who may cross it, and what a boundary means when the thing marking it is water that shifts, floods and sometimes disappears."
+    "whyItMatters": "Nearly every argument about the southern border is really an argument about this river - where it runs, who may cross it, and what a boundary means when the thing marking it is water that shifts, floods and sometimes disappears.",
+    "geometry": {
+      "kind": "line",
+      "source": "natural-earth",
+      "layer": "rivers",
+      "names": [
+        "Rio Grande"
+      ],
+      "tolerance": 0.01
+    }
   },
   {
     "id": "forty-ninth-parallel",
@@ -1234,7 +1660,179 @@
       "A 20-foot strip is kept permanently cleared of trees along the border so the line stays visible from the ground.",
       "It is often described as the world's longest undefended border."
     ],
-    "whyItMatters": "It is the clearest example anywhere of a border drawn by mathematics rather than geography. It splits watersheds, towns and one library down the middle, and it works anyway - which is itself worth noticing."
+    "whyItMatters": "It is the clearest example anywhere of a border drawn by mathematics rather than geography. It splits watersheds, towns and one library down the middle, and it works anyway - which is itself worth noticing.",
+    "geometry": {
+      "kind": "line",
+      "source": "inline",
+      "approximate": false,
+      "labelParts": true,
+      "inlineParts": [
+        {
+          "name": "The 49th Parallel",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -123.32,
+                49.0
+              ],
+              [
+                -122.57,
+                49.0
+              ],
+              [
+                -121.82,
+                49.0
+              ],
+              [
+                -121.07,
+                49.0
+              ],
+              [
+                -120.32,
+                49.0
+              ],
+              [
+                -119.57,
+                49.0
+              ],
+              [
+                -118.82,
+                49.0
+              ],
+              [
+                -118.07,
+                49.0
+              ],
+              [
+                -117.32,
+                49.0
+              ],
+              [
+                -116.57,
+                49.0
+              ],
+              [
+                -115.82,
+                49.0
+              ],
+              [
+                -115.07,
+                49.0
+              ],
+              [
+                -114.32,
+                49.0
+              ],
+              [
+                -113.57,
+                49.0
+              ],
+              [
+                -112.82,
+                49.0
+              ],
+              [
+                -112.07,
+                49.0
+              ],
+              [
+                -111.32,
+                49.0
+              ],
+              [
+                -110.57,
+                49.0
+              ],
+              [
+                -109.82,
+                49.0
+              ],
+              [
+                -109.07,
+                49.0
+              ],
+              [
+                -108.32,
+                49.0
+              ],
+              [
+                -107.57,
+                49.0
+              ],
+              [
+                -106.82,
+                49.0
+              ],
+              [
+                -106.07,
+                49.0
+              ],
+              [
+                -105.32,
+                49.0
+              ],
+              [
+                -104.57,
+                49.0
+              ],
+              [
+                -103.82,
+                49.0
+              ],
+              [
+                -103.07,
+                49.0
+              ],
+              [
+                -102.32,
+                49.0
+              ],
+              [
+                -101.57,
+                49.0
+              ],
+              [
+                -100.82,
+                49.0
+              ],
+              [
+                -100.07,
+                49.0
+              ],
+              [
+                -99.32,
+                49.0
+              ],
+              [
+                -98.57,
+                49.0
+              ],
+              [
+                -97.82,
+                49.0
+              ],
+              [
+                -97.07,
+                49.0
+              ],
+              [
+                -96.32,
+                49.0
+              ],
+              [
+                -95.57,
+                49.0
+              ],
+              [
+                -95.15,
+                49.0
+              ]
+            ]
+          }
+        }
+      ]
+    }
   },
   {
     "id": "mason-dixon-line",
@@ -1298,7 +1896,83 @@
       "The line sits at latitude 39 degrees 43 minutes - not a round number, because it was fixed by the Delaware circle, not chosen.",
       "Mason and Dixon had to stop when their Native guides refused to go further west into contested territory."
     ],
-    "whyItMatters": "Two astronomers settling a real estate quarrel accidentally drew the line the country would split along. It is the cleanest demonstration that borders acquire meanings nobody intended when they were made."
+    "whyItMatters": "Two astronomers settling a real estate quarrel accidentally drew the line the country would split along. It is the cleanest demonstration that borders acquire meanings nobody intended when they were made.",
+    "geometry": {
+      "kind": "line",
+      "source": "inline",
+      "approximate": false,
+      "labelParts": true,
+      "inlineParts": [
+        {
+          "name": "Mason-Dixon Line",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -80.52,
+                39.721
+              ],
+              [
+                -80.17,
+                39.721
+              ],
+              [
+                -79.82,
+                39.721
+              ],
+              [
+                -79.47,
+                39.721
+              ],
+              [
+                -79.12,
+                39.721
+              ],
+              [
+                -78.77,
+                39.721
+              ],
+              [
+                -78.42,
+                39.721
+              ],
+              [
+                -78.07,
+                39.721
+              ],
+              [
+                -77.72,
+                39.721
+              ],
+              [
+                -77.37,
+                39.721
+              ],
+              [
+                -77.02,
+                39.721
+              ],
+              [
+                -76.67,
+                39.721
+              ],
+              [
+                -76.32,
+                39.721
+              ],
+              [
+                -75.97,
+                39.721
+              ],
+              [
+                -75.79,
+                39.721
+              ]
+            ]
+          }
+        }
+      ]
+    }
   },
   {
     "id": "four-corners",
@@ -1655,7 +2329,59 @@
       "The city also draws from the Colorado River and from Northern California - three separate long-distance supplies.",
       "After deadly floods in 1938 the Los Angeles River was lined with concrete, which is why it looks like a drainage ditch in films."
     ],
-    "whyItMatters": "This became the template for water in the American West: a growing city buys the water rights of a rural valley that cannot outvote it, and moves the water hundreds of miles. Nearly every western water fight since has followed the same shape."
+    "whyItMatters": "This became the template for water in the American West: a growing city buys the water rights of a rural valley that cannot outvote it, and moves the water hundreds of miles. Nearly every western water fight since has followed the same shape.",
+    "geometry": {
+      "kind": "line",
+      "source": "inline",
+      "approximate": true,
+      "labelParts": true,
+      "inlineParts": [
+        {
+          "name": "Los Angeles Aqueduct",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -118.2,
+                37.36
+              ],
+              [
+                -118.15,
+                36.9
+              ],
+              [
+                -118.0,
+                36.5
+              ],
+              [
+                -117.9,
+                36.0
+              ],
+              [
+                -117.9,
+                35.5
+              ],
+              [
+                -118.0,
+                35.1
+              ],
+              [
+                -118.2,
+                34.7
+              ],
+              [
+                -118.3,
+                34.4
+              ],
+              [
+                -118.24,
+                34.05
+              ]
+            ]
+          }
+        }
+      ]
+    }
   },
   {
     "id": "erie-canal",
@@ -1716,7 +2442,71 @@
       "It paid back its entire construction cost in under a decade.",
       "It is why upstate New York is full of classical names - Syracuse, Rome, Utica, Ithaca - laid out by surveyors during a fashion for antiquity."
     ],
-    "whyItMatters": "Before the canal, Philadelphia, Baltimore and New Orleans were all serious rivals to New York. Afterwards there was no contest. A single engineering project decided which American city would become the largest, and it has stayed decided for 200 years."
+    "whyItMatters": "Before the canal, Philadelphia, Baltimore and New Orleans were all serious rivals to New York. Afterwards there was no contest. A single engineering project decided which American city would become the largest, and it has stayed decided for 200 years.",
+    "geometry": {
+      "kind": "line",
+      "source": "inline",
+      "approximate": true,
+      "labelParts": true,
+      "inlineParts": [
+        {
+          "name": "Erie Canal",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -78.88,
+                42.89
+              ],
+              [
+                -78.2,
+                43.1
+              ],
+              [
+                -77.61,
+                43.16
+              ],
+              [
+                -77.0,
+                43.1
+              ],
+              [
+                -76.5,
+                43.1
+              ],
+              [
+                -76.15,
+                43.05
+              ],
+              [
+                -75.6,
+                43.1
+              ],
+              [
+                -75.2,
+                43.12
+              ],
+              [
+                -74.7,
+                42.95
+              ],
+              [
+                -74.2,
+                42.82
+              ],
+              [
+                -73.9,
+                42.75
+              ],
+              [
+                -73.76,
+                42.65
+              ]
+            ]
+          }
+        }
+      ]
+    }
   },
   {
     "id": "route-66",
@@ -1791,7 +2581,143 @@
       "Officially removed from the highway system in 1985, after the Interstates made it redundant.",
       "The towns that boomed because the road went through them mostly emptied out when the Interstate went around them."
     ],
-    "whyItMatters": "Route 66 is the clearest case of infrastructure deciding which places live and which die. The same country that made those towns by routing a road through them unmade them by routing the next road elsewhere."
+    "whyItMatters": "Route 66 is the clearest case of infrastructure deciding which places live and which die. The same country that made those towns by routing a road through them unmade them by routing the next road elsewhere.",
+    "geometry": {
+      "kind": "line",
+      "source": "inline",
+      "approximate": true,
+      "labelParts": true,
+      "inlineParts": [
+        {
+          "name": "Route 66",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -87.63,
+                41.88
+              ],
+              [
+                -88.3,
+                41.5
+              ],
+              [
+                -89.0,
+                40.7
+              ],
+              [
+                -89.65,
+                39.8
+              ],
+              [
+                -90.2,
+                38.63
+              ],
+              [
+                -91.4,
+                38.2
+              ],
+              [
+                -92.3,
+                37.9
+              ],
+              [
+                -93.3,
+                37.2
+              ],
+              [
+                -94.51,
+                37.08
+              ],
+              [
+                -95.9,
+                36.15
+              ],
+              [
+                -97.52,
+                35.47
+              ],
+              [
+                -98.4,
+                35.5
+              ],
+              [
+                -99.4,
+                35.5
+              ],
+              [
+                -100.9,
+                35.2
+              ],
+              [
+                -101.83,
+                35.2
+              ],
+              [
+                -103.2,
+                35.2
+              ],
+              [
+                -104.5,
+                35.2
+              ],
+              [
+                -105.6,
+                35.6
+              ],
+              [
+                -106.65,
+                35.08
+              ],
+              [
+                -107.9,
+                35.08
+              ],
+              [
+                -108.74,
+                35.5
+              ],
+              [
+                -110.0,
+                35.2
+              ],
+              [
+                -111.65,
+                35.2
+              ],
+              [
+                -112.5,
+                35.2
+              ],
+              [
+                -113.5,
+                34.9
+              ],
+              [
+                -114.6,
+                34.8
+              ],
+              [
+                -116.0,
+                34.9
+              ],
+              [
+                -117.3,
+                34.5
+              ],
+              [
+                -117.9,
+                34.1
+              ],
+              [
+                -118.49,
+                34.01
+              ]
+            ]
+          }
+        }
+      ]
+    }
   },
   {
     "id": "transcontinental-railroad",
@@ -1857,6 +2783,106 @@
       "The railroad companies were paid by the mile, which is one reason some of the route wanders.",
       "Standard time zones followed in 1883, because a national railway is impossible without them."
     ],
-    "whyItMatters": "The railroad made the West governable and settlement unstoppable, and it did so at enormous cost to the Plains nations. It carried hunters who destroyed the bison herds within about fifteen years, and without the bison the economies and independence of those nations collapsed."
+    "whyItMatters": "The railroad made the West governable and settlement unstoppable, and it did so at enormous cost to the Plains nations. It carried hunters who destroyed the bison herds within about fifteen years, and without the bison the economies and independence of those nations collapsed.",
+    "geometry": {
+      "kind": "line",
+      "source": "inline",
+      "approximate": true,
+      "labelParts": true,
+      "inlineParts": [
+        {
+          "name": "Pacific Railroad",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -121.49,
+                38.58
+              ],
+              [
+                -120.9,
+                38.9
+              ],
+              [
+                -120.32,
+                39.32
+              ],
+              [
+                -119.8,
+                39.5
+              ],
+              [
+                -118.8,
+                40.0
+              ],
+              [
+                -117.5,
+                40.7
+              ],
+              [
+                -116.0,
+                40.9
+              ],
+              [
+                -114.5,
+                41.2
+              ],
+              [
+                -113.5,
+                41.5
+              ],
+              [
+                -112.55,
+                41.62
+              ],
+              [
+                -111.9,
+                41.25
+              ],
+              [
+                -111.0,
+                41.3
+              ],
+              [
+                -109.5,
+                41.6
+              ],
+              [
+                -108.0,
+                41.6
+              ],
+              [
+                -106.3,
+                41.3
+              ],
+              [
+                -105.6,
+                41.14
+              ],
+              [
+                -104.0,
+                41.15
+              ],
+              [
+                -102.0,
+                41.13
+              ],
+              [
+                -100.0,
+                41.1
+              ],
+              [
+                -98.0,
+                41.1
+              ],
+              [
+                -95.94,
+                41.26
+              ]
+            ]
+          }
+        }
+      ]
+    }
   }
 ]
