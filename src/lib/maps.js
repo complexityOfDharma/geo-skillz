@@ -158,7 +158,7 @@ export function featureDetailMap(atlas, item, { width = 820, height = 520 } = {}
 
   // Frame on the geometry when we have it; fall back to the declared bbox for
   // the features that are genuinely defined by their states.
-  const bbox = boundsOfParts(parts) ?? item.focus.bbox;
+  const bbox = boundsOfParts(parts, item.markers) ?? item.focus.bbox;
   const frame = bboxFeature(bbox);
   const projection = zoomProjection(frame, width, height, 14);
   const path = pathFor(projection);

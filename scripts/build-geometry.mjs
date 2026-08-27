@@ -10,6 +10,7 @@
 // That output IS committed, so `npm run build` and CI never touch the network.
 // Re-run this only when a data file starts referencing a new shape.
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { geoCentroid } from 'd3-geo';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -153,7 +154,22 @@ for (const ref of refs) {
       );
       continue;
     }
-    for (const hit of hits) {
+    // Place names repeat across the globe - Natural Earth has three rivers
+    // called "Colorado", one of them in Argentina. `within` keeps only the
+    // matches inside the region this feature is actually about.
+    const inRegion = (f) => {
+      if (!ref.within) return true;
+      const [[w, s], [e, n]] = ref.within;
+      const [lon, lat] = geoCentroid(f);
+      return lon >= w && lon <= e && lat >= s && lat <= n;
+    };
+
+    const kept = hits.filter(inRegion);
+    if (!kept.length) {
+      errors.push(`${ref.id}: "${wanted}" matched ${hits.length} feature(s) but none inside "within"`);
+      continue;
+    }
+    for (const hit of kept) {
       const geom = simplifyGeometry(hit.geometry, tolerance);
       if (geom) parts.push({ name: wanted, geometry: geom });
     }
