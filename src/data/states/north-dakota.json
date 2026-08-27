@@ -4,18 +4,87 @@
   "fips": "38",
   "nickname": "The Peace Garden State",
   "capital": "Bismarck",
-  "capitalCoords": [-100.7837, 46.8083],
+  "capitalCoords": [
+    -100.7837,
+    46.8083
+  ],
   "region": "Midwest / Great Plains",
   "statehoodOrder": 39,
   "statehoodYear": 1889,
   "nameStory": "Dakota is the Sioux word for 'friend' or 'ally' - what the Dakota people called themselves. Two states are named Friend, north and south.",
   "capitalStory": "The town was called Edwinton until 1873, when the railroad renamed it Bismarck to flatter the German chancellor Otto von Bismarck and attract German money. It worked. A US state capital is named after a foreign politician as a marketing move.",
-  "neighboringStates": ["MT", "SD", "MN"],
+  "majorCities": [
+    {
+      "name": "Fargo",
+      "coords": [
+        -96.7898,
+        46.8772
+      ]
+    },
+    {
+      "name": "Grand Forks",
+      "coords": [
+        -97.0329,
+        47.9253
+      ]
+    },
+    {
+      "name": "Minot",
+      "coords": [
+        -101.2963,
+        48.233
+      ]
+    },
+    {
+      "name": "Williston",
+      "coords": [
+        -103.6171,
+        48.147
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "MT",
+    "SD",
+    "MN"
+  ],
   "majorFeatures": [
-    { "name": "Missouri River", "type": "river", "note": "Dammed into vast Lake Sakakawea", "coords": [-101.5, 47.5] },
-    { "name": "Red River of the North", "type": "river", "note": "Flows north into Canada", "coords": [-96.9, 47.5] },
-    { "name": "Badlands", "type": "badlands", "note": "Eroded buttes where Roosevelt ranched", "coords": [-103.5, 47.0] },
-    { "name": "Great Plains", "type": "plain", "note": "Endless grain country", "coords": [-99.5, 47.3] }
+    {
+      "name": "Missouri River",
+      "type": "river",
+      "note": "Dammed into vast Lake Sakakawea",
+      "coords": [
+        -101.5,
+        47.5
+      ]
+    },
+    {
+      "name": "Red River of the North",
+      "type": "river",
+      "note": "Flows north into Canada",
+      "coords": [
+        -96.9,
+        47.5
+      ]
+    },
+    {
+      "name": "Badlands",
+      "type": "badlands",
+      "note": "Eroded buttes where Roosevelt ranched",
+      "coords": [
+        -103.5,
+        47.0
+      ]
+    },
+    {
+      "name": "Great Plains",
+      "type": "plain",
+      "note": "Endless grain country",
+      "coords": [
+        -99.5,
+        47.3
+      ]
+    }
   ],
   "funFacts": [
     "Nobody knows whether North or South Dakota is really the 39th state. President Harrison shuffled the two papers before signing so no one could tell, and they are listed alphabetically.",

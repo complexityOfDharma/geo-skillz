@@ -4,18 +4,89 @@
   "fips": "04",
   "nickname": "The Grand Canyon State",
   "capital": "Phoenix",
-  "capitalCoords": [-112.0740, 33.4484],
+  "capitalCoords": [
+    -112.074,
+    33.4484
+  ],
   "region": "West / Southwest",
   "statehoodOrder": 48,
   "statehoodYear": 1912,
   "nameStory": "Most likely from the O'odham phrase 'ali shonak' - 'small spring' - picked up by the Spanish as 'Arizonac.' An entire desert state is named after a little spring, which tells you exactly what a small water source is worth out there.",
   "capitalStory": "Phoenix was named by a settler who looked at the abandoned canals of the Hohokam people and predicted a new city would rise from that dead civilization's ashes. He was right very literally: modern Phoenix still moves water along Hohokam canal routes.",
-  "neighboringStates": ["CA", "NV", "UT", "NM", "CO"],
+  "majorCities": [
+    {
+      "name": "Tucson",
+      "coords": [
+        -110.9747,
+        32.2226
+      ]
+    },
+    {
+      "name": "Mesa",
+      "coords": [
+        -111.8315,
+        33.4152
+      ]
+    },
+    {
+      "name": "Flagstaff",
+      "coords": [
+        -111.6513,
+        35.1983
+      ]
+    },
+    {
+      "name": "Yuma",
+      "coords": [
+        -114.6277,
+        32.6927
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "CA",
+    "NV",
+    "UT",
+    "NM",
+    "CO"
+  ],
   "majorFeatures": [
-    { "name": "Grand Canyon", "type": "canyon", "note": "277 river miles long, up to a mile deep", "coords": [-112.1, 36.1] },
-    { "name": "Colorado River", "type": "river", "note": "Carved the canyon; forms the California border", "coords": [-114.5, 34.5] },
-    { "name": "Sonoran Desert", "type": "desert", "note": "The only place saguaro cactus grows wild", "coords": [-112.5, 32.3] },
-    { "name": "Painted Desert", "type": "desert", "note": "Banded badlands of red and purple rock", "coords": [-110.0, 35.5] }
+    {
+      "name": "Grand Canyon",
+      "type": "canyon",
+      "note": "277 river miles long, up to a mile deep",
+      "coords": [
+        -112.1,
+        36.1
+      ]
+    },
+    {
+      "name": "Colorado River",
+      "type": "river",
+      "note": "Carved the canyon; forms the California border",
+      "coords": [
+        -114.5,
+        34.5
+      ]
+    },
+    {
+      "name": "Sonoran Desert",
+      "type": "desert",
+      "note": "The only place saguaro cactus grows wild",
+      "coords": [
+        -112.5,
+        32.3
+      ]
+    },
+    {
+      "name": "Painted Desert",
+      "type": "desert",
+      "note": "Banded badlands of red and purple rock",
+      "coords": [
+        -110.0,
+        35.5
+      ]
+    }
   ],
   "funFacts": [
     "The last of the contiguous 48 states admitted, on Valentine's Day 1912.",

@@ -4,18 +4,86 @@
   "fips": "23",
   "nickname": "The Pine Tree State",
   "capital": "Augusta",
-  "capitalCoords": [-69.7795, 44.3106],
+  "capitalCoords": [
+    -69.7795,
+    44.3106
+  ],
   "region": "Northeast / New England",
   "statehoodOrder": 23,
   "statehoodYear": 1820,
   "nameStory": "The likeliest explanation is the simplest: sailors working a coast studded with more than 4,000 islands needed a word for the solid part, so they called it the main land. Maine is the mainland, as opposed to everything else out there.",
   "capitalStory": "Augusta sits at the head of navigation on the Kennebec River - the exact point where ocean-going ships had to stop and cargo moved onto land. Towns almost always grow where travel changes mode, and capitals often follow.",
-  "neighboringStates": ["NH"],
+  "majorCities": [
+    {
+      "name": "Portland",
+      "coords": [
+        -70.2568,
+        43.6591
+      ]
+    },
+    {
+      "name": "Bangor",
+      "coords": [
+        -68.7778,
+        44.8016
+      ]
+    },
+    {
+      "name": "Bar Harbor",
+      "coords": [
+        -68.2039,
+        44.3876
+      ]
+    },
+    {
+      "name": "Lewiston",
+      "coords": [
+        -70.2148,
+        44.1004
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "NH"
+  ],
   "majorFeatures": [
-    { "name": "Mount Katahdin", "type": "mountain", "note": "Northern end of the Appalachian Trail", "coords": [-68.92, 45.9] },
-    { "name": "Mount Desert Island", "type": "island", "note": "Acadia National Park", "coords": [-68.3, 44.35] },
-    { "name": "Kennebec River", "type": "river", "note": "The state's main historic highway", "coords": [-69.8, 44.8] },
-    { "name": "Gulf of Maine", "type": "gulf", "note": "Cold, rich fishing and lobster grounds", "coords": [-68.5, 43.4] }
+    {
+      "name": "Mount Katahdin",
+      "type": "mountain",
+      "note": "Northern end of the Appalachian Trail",
+      "coords": [
+        -68.92,
+        45.9
+      ],
+      "point": true
+    },
+    {
+      "name": "Mount Desert Island",
+      "type": "island",
+      "note": "Acadia National Park",
+      "coords": [
+        -68.3,
+        44.35
+      ]
+    },
+    {
+      "name": "Kennebec River",
+      "type": "river",
+      "note": "The state's main historic highway",
+      "coords": [
+        -69.8,
+        44.8
+      ]
+    },
+    {
+      "name": "Gulf of Maine",
+      "type": "gulf",
+      "note": "Cold, rich fishing and lobster grounds",
+      "coords": [
+        -68.5,
+        43.4
+      ]
+    }
   ],
   "funFacts": [
     "Maine borders exactly one other state, fewer than any other state in the country.",

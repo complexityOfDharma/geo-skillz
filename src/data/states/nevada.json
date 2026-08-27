@@ -4,18 +4,89 @@
   "fips": "32",
   "nickname": "The Silver State",
   "capital": "Carson City",
-  "capitalCoords": [-119.7674, 39.1638],
+  "capitalCoords": [
+    -119.7674,
+    39.1638
+  ],
   "region": "West / Great Basin",
   "statehoodOrder": 36,
   "statehoodYear": 1864,
   "nameStory": "Nevada is Spanish for 'snow-covered,' which is a joke on the driest state in America. It is named for the Sierra Nevada on its western edge - and those mountains are exactly why Nevada is dry, because they wring the rain out of Pacific storms before anything reaches the far side. The name explains the desert.",
   "capitalStory": "Carson City, named for the scout Kit Carson, exploded in the 1860s because the Comstock Lode - the richest silver strike in American history - was in the hills right next door. The silver is why the state is nicknamed Silver State, and why it became a state at all.",
-  "neighboringStates": ["OR", "ID", "UT", "AZ", "CA"],
+  "majorCities": [
+    {
+      "name": "Las Vegas",
+      "coords": [
+        -115.1398,
+        36.1699
+      ]
+    },
+    {
+      "name": "Reno",
+      "coords": [
+        -119.8138,
+        39.5296
+      ]
+    },
+    {
+      "name": "Elko",
+      "coords": [
+        -115.7631,
+        40.8324
+      ]
+    },
+    {
+      "name": "Henderson",
+      "coords": [
+        -114.9817,
+        36.0397
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "OR",
+    "ID",
+    "UT",
+    "AZ",
+    "CA"
+  ],
   "majorFeatures": [
-    { "name": "Great Basin", "type": "basin", "note": "Water here never reaches the sea", "coords": [-117.0, 39.5] },
-    { "name": "Lake Tahoe", "type": "lake", "note": "Deep alpine lake shared with California", "coords": [-119.95, 39.1] },
-    { "name": "Mojave Desert", "type": "desert", "note": "The hot southern corner around Las Vegas", "coords": [-115.5, 36.2] },
-    { "name": "Lake Mead", "type": "lake", "note": "Colorado River reservoir behind Hoover Dam", "coords": [-114.4, 36.1] }
+    {
+      "name": "Great Basin",
+      "type": "basin",
+      "note": "Water here never reaches the sea",
+      "coords": [
+        -117.0,
+        39.5
+      ]
+    },
+    {
+      "name": "Lake Tahoe",
+      "type": "lake",
+      "note": "Deep alpine lake shared with California",
+      "coords": [
+        -119.95,
+        39.1
+      ]
+    },
+    {
+      "name": "Mojave Desert",
+      "type": "desert",
+      "note": "The hot southern corner around Las Vegas",
+      "coords": [
+        -115.5,
+        36.2
+      ]
+    },
+    {
+      "name": "Lake Mead",
+      "type": "lake",
+      "note": "Colorado River reservoir behind Hoover Dam",
+      "coords": [
+        -114.4,
+        36.1
+      ]
+    }
   ],
   "funFacts": [
     "Nevada is the driest state, averaging about 10 inches of precipitation a year.",

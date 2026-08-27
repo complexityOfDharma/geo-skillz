@@ -4,18 +4,90 @@
   "fips": "51",
   "nickname": "Old Dominion",
   "capital": "Richmond",
-  "capitalCoords": [-77.4360, 37.5407],
+  "capitalCoords": [
+    -77.436,
+    37.5407
+  ],
   "region": "South / Mid-Atlantic",
   "statehoodOrder": 10,
   "statehoodYear": 1788,
   "nameStory": "Virginia is named for the fact that Queen Elizabeth I never married. She was called the Virgin Queen, and Walter Raleigh flattered her by naming the whole claim after it. An entire state is named after a monarch's marital status.",
   "capitalStory": "William Byrd II stood on a hill above the James River, decided the bend looked just like the view at Richmond upon Thames back in London, and used the name. That hill later became the Confederate capital - only about 100 miles from Washington, DC.",
-  "neighboringStates": ["MD", "NC", "TN", "KY", "WV", "DC"],
+  "majorCities": [
+    {
+      "name": "Virginia Beach",
+      "coords": [
+        -75.978,
+        36.8529
+      ]
+    },
+    {
+      "name": "Norfolk",
+      "coords": [
+        -76.2859,
+        36.8508
+      ]
+    },
+    {
+      "name": "Charlottesville",
+      "coords": [
+        -78.4767,
+        38.0293
+      ]
+    },
+    {
+      "name": "Roanoke",
+      "coords": [
+        -79.9414,
+        37.271
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "MD",
+    "NC",
+    "TN",
+    "KY",
+    "WV",
+    "DC"
+  ],
   "majorFeatures": [
-    { "name": "Chesapeake Bay", "type": "bay", "note": "Largest estuary in the United States", "coords": [-76.1, 37.4] },
-    { "name": "Blue Ridge Mountains", "type": "mountains", "note": "The eastern front of the Appalachians", "coords": [-79.2, 37.9] },
-    { "name": "Shenandoah Valley", "type": "valley", "note": "A natural highway between the ridges", "coords": [-78.8, 38.6] },
-    { "name": "James River", "type": "river", "note": "Jamestown, Richmond, and the road inland", "coords": [-77.5, 37.4] }
+    {
+      "name": "Chesapeake Bay",
+      "type": "bay",
+      "note": "Largest estuary in the United States",
+      "coords": [
+        -76.1,
+        37.4
+      ]
+    },
+    {
+      "name": "Blue Ridge Mountains",
+      "type": "mountains",
+      "note": "The eastern front of the Appalachians",
+      "coords": [
+        -79.2,
+        37.9
+      ]
+    },
+    {
+      "name": "Shenandoah Valley",
+      "type": "valley",
+      "note": "A natural highway between the ridges",
+      "coords": [
+        -78.8,
+        38.6
+      ]
+    },
+    {
+      "name": "James River",
+      "type": "river",
+      "note": "Jamestown, Richmond, and the road inland",
+      "coords": [
+        -77.5,
+        37.4
+      ]
+    }
   ],
   "funFacts": [
     "Eight presidents were born in Virginia, more than any other state - hence 'Mother of Presidents.'",

@@ -4,18 +4,87 @@
   "fips": "53",
   "nickname": "The Evergreen State",
   "capital": "Olympia",
-  "capitalCoords": [-122.9007, 47.0379],
+  "capitalCoords": [
+    -122.9007,
+    47.0379
+  ],
   "region": "West / Pacific Northwest",
   "statehoodOrder": 42,
   "statehoodYear": 1889,
   "nameStory": "The only state named for a US president - and it was an accident. Settlers wanted to call it Columbia. Congress changed it to Washington specifically to avoid confusion with the District of Columbia, thereby creating the single most confusing state name in the country.",
   "capitalStory": "Olympia is named for the Olympic Mountains you can see across Puget Sound, which were themselves named after Mount Olympus by a homesick English captain. The capital is named after a view.",
-  "neighboringStates": ["OR", "ID"],
+  "majorCities": [
+    {
+      "name": "Seattle",
+      "coords": [
+        -122.3321,
+        47.6062
+      ]
+    },
+    {
+      "name": "Spokane",
+      "coords": [
+        -117.426,
+        47.6588
+      ]
+    },
+    {
+      "name": "Tacoma",
+      "coords": [
+        -122.4443,
+        47.2529
+      ]
+    },
+    {
+      "name": "Bellingham",
+      "coords": [
+        -122.4787,
+        48.7519
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "OR",
+    "ID"
+  ],
   "majorFeatures": [
-    { "name": "Cascade Range", "type": "mountains", "note": "Volcanic wall splitting the state in two", "coords": [-121.3, 47.3] },
-    { "name": "Puget Sound", "type": "sound", "note": "A drowned glacial trough full of islands", "coords": [-122.6, 47.9] },
-    { "name": "Mount Rainier", "type": "volcano", "note": "14,411 ft, and still active", "coords": [-121.76, 46.85] },
-    { "name": "Columbia River", "type": "river", "note": "The border, the dams, and the salmon runs", "coords": [-119.5, 46.3] }
+    {
+      "name": "Cascade Range",
+      "type": "mountains",
+      "note": "Volcanic wall splitting the state in two",
+      "coords": [
+        -121.3,
+        47.3
+      ]
+    },
+    {
+      "name": "Puget Sound",
+      "type": "sound",
+      "note": "A drowned glacial trough full of islands",
+      "coords": [
+        -122.6,
+        47.9
+      ]
+    },
+    {
+      "name": "Mount Rainier",
+      "type": "volcano",
+      "note": "14,411 ft, and still active",
+      "coords": [
+        -121.76,
+        46.85
+      ],
+      "point": true
+    },
+    {
+      "name": "Columbia River",
+      "type": "river",
+      "note": "The border, the dams, and the salmon runs",
+      "coords": [
+        -119.5,
+        46.3
+      ]
+    }
   ],
   "funFacts": [
     "The Olympic Peninsula gets about 12 feet of rain a year while eastern Washington gets 8 inches. The Cascades wring out every Pacific storm, so one state contains a rainforest and a near-desert.",

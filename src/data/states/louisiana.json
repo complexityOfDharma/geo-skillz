@@ -4,18 +4,87 @@
   "fips": "22",
   "nickname": "The Pelican State",
   "capital": "Baton Rouge",
-  "capitalCoords": [-91.1871, 30.4515],
+  "capitalCoords": [
+    -91.1871,
+    30.4515
+  ],
   "region": "South / Gulf Coast",
   "statehoodOrder": 18,
   "statehoodYear": 1812,
   "nameStory": "In 1682 La Salle stood at the mouth of the Mississippi and claimed the entire river basin for King Louis XIV, naming it Louisiana for a monarch who would never see it. That absurd paper claim is exactly what Napoleon later sold to Jefferson, doubling the size of the United States in one transaction.",
   "capitalStory": "Baton Rouge is French for 'red stick.' Explorers coming upriver saw a reddish cypress pole planted on the bluff, marking the hunting boundary between the Houma and Bayogoula peoples. The capital is named after a property line.",
-  "neighboringStates": ["AR", "MS", "TX"],
+  "majorCities": [
+    {
+      "name": "New Orleans",
+      "coords": [
+        -90.0715,
+        29.9511
+      ]
+    },
+    {
+      "name": "Shreveport",
+      "coords": [
+        -93.7502,
+        32.5252
+      ]
+    },
+    {
+      "name": "Lafayette",
+      "coords": [
+        -92.0198,
+        30.2241
+      ]
+    },
+    {
+      "name": "Lake Charles",
+      "coords": [
+        -93.2174,
+        30.2266
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "AR",
+    "MS",
+    "TX"
+  ],
   "majorFeatures": [
-    { "name": "Mississippi River Delta", "type": "delta", "note": "Where the continent's water finally reaches the Gulf", "coords": [-89.4, 29.2] },
-    { "name": "Atchafalaya Basin", "type": "wetland", "note": "Largest wetland and swamp in the US", "coords": [-91.5, 30.2] },
-    { "name": "Lake Pontchartrain", "type": "lake", "note": "The shallow lake north of New Orleans", "coords": [-90.1, 30.2] },
-    { "name": "Red River", "type": "river", "note": "Crosses the state to meet the Mississippi", "coords": [-93.0, 31.8] }
+    {
+      "name": "Mississippi River Delta",
+      "type": "delta",
+      "note": "Where the continent's water finally reaches the Gulf",
+      "coords": [
+        -89.4,
+        29.2
+      ]
+    },
+    {
+      "name": "Atchafalaya Basin",
+      "type": "wetland",
+      "note": "Largest wetland and swamp in the US",
+      "coords": [
+        -91.5,
+        30.2
+      ]
+    },
+    {
+      "name": "Lake Pontchartrain",
+      "type": "lake",
+      "note": "The shallow lake north of New Orleans",
+      "coords": [
+        -90.1,
+        30.2
+      ]
+    },
+    {
+      "name": "Red River",
+      "type": "river",
+      "note": "Crosses the state to meet the Mississippi",
+      "coords": [
+        -93.0,
+        31.8
+      ]
+    }
   ],
   "funFacts": [
     "Louisiana is the only state with parishes instead of counties, a leftover of Catholic French and Spanish rule.",

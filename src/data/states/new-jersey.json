@@ -4,18 +4,87 @@
   "fips": "34",
   "nickname": "The Garden State",
   "capital": "Trenton",
-  "capitalCoords": [-74.7429, 40.2206],
+  "capitalCoords": [
+    -74.7429,
+    40.2206
+  ],
   "region": "Northeast / Mid-Atlantic",
   "statehoodOrder": 3,
   "statehoodYear": 1787,
   "nameStory": "Named for the Isle of Jersey, a small island in the English Channel that Sir George Carteret had defended for the king. He was handed a chunk of America as a reward and named it after his island - so the most crowded state in the country is named for a rock off the coast of France.",
   "capitalStory": "Trenton is simply 'Trent's town,' after a merchant. Its real significance is one night: December 26, 1776, when Washington crossed the ice-choked Delaware and captured the Hessian garrison here. The Revolution was collapsing, and Trenton is where it turned around.",
-  "neighboringStates": ["NY", "PA", "DE"],
+  "majorCities": [
+    {
+      "name": "Newark",
+      "coords": [
+        -74.1724,
+        40.7357
+      ]
+    },
+    {
+      "name": "Jersey City",
+      "coords": [
+        -74.0776,
+        40.7282
+      ]
+    },
+    {
+      "name": "Atlantic City",
+      "coords": [
+        -74.4229,
+        39.3643
+      ]
+    },
+    {
+      "name": "Princeton",
+      "coords": [
+        -74.6672,
+        40.3573
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "NY",
+    "PA",
+    "DE"
+  ],
   "majorFeatures": [
-    { "name": "Delaware River", "type": "river", "note": "The whole western border", "coords": [-75.1, 40.4] },
-    { "name": "Pine Barrens", "type": "forest", "note": "A million acres of wilderness in the densest state", "coords": [-74.5, 39.8] },
-    { "name": "Jersey Shore", "type": "coast", "note": "127 miles of barrier beaches", "coords": [-74.1, 39.9] },
-    { "name": "Appalachian Ridges", "type": "mountains", "note": "Folded ridges in the northwest corner", "coords": [-74.8, 41.1] }
+    {
+      "name": "Delaware River",
+      "type": "river",
+      "note": "The whole western border",
+      "coords": [
+        -75.1,
+        40.4
+      ]
+    },
+    {
+      "name": "Pine Barrens",
+      "type": "forest",
+      "note": "A million acres of wilderness in the densest state",
+      "coords": [
+        -74.5,
+        39.8
+      ]
+    },
+    {
+      "name": "Jersey Shore",
+      "type": "coast",
+      "note": "127 miles of barrier beaches",
+      "coords": [
+        -74.1,
+        39.9
+      ]
+    },
+    {
+      "name": "Appalachian Ridges",
+      "type": "mountains",
+      "note": "Folded ridges in the northwest corner",
+      "coords": [
+        -74.8,
+        41.1
+      ]
+    }
   ],
   "funFacts": [
     "New Jersey is the most densely populated state in the country.",

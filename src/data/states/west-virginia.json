@@ -4,18 +4,89 @@
   "fips": "54",
   "nickname": "The Mountain State",
   "capital": "Charleston",
-  "capitalCoords": [-81.6326, 38.3498],
+  "capitalCoords": [
+    -81.6326,
+    38.3498
+  ],
   "region": "South / Appalachia",
   "statehoodOrder": 35,
   "statehoodYear": 1863,
   "nameStory": "West Virginia is the state that seceded from a secession. When Virginia left the Union in 1861, the mountain counties in the west - too steep for plantations, with few enslaved people and long-standing resentment of the coastal planters who ran the state - refused to go along and broke away to form their own state.",
   "capitalStory": "Charleston sits where the Elk River meets the Kanawha, named for an early settler's father. The capital bounced back and forth between Wheeling and Charleston twice before the argument was finally settled by popular vote in 1877.",
-  "neighboringStates": ["VA", "MD", "PA", "OH", "KY"],
+  "majorCities": [
+    {
+      "name": "Huntington",
+      "coords": [
+        -82.4452,
+        38.4192
+      ]
+    },
+    {
+      "name": "Morgantown",
+      "coords": [
+        -79.9553,
+        39.6295
+      ]
+    },
+    {
+      "name": "Wheeling",
+      "coords": [
+        -80.7209,
+        40.064
+      ]
+    },
+    {
+      "name": "Harpers Ferry",
+      "coords": [
+        -77.7386,
+        39.3254
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "VA",
+    "MD",
+    "PA",
+    "OH",
+    "KY"
+  ],
   "majorFeatures": [
-    { "name": "Appalachian Mountains", "type": "mountains", "note": "The entire state sits inside them", "coords": [-80.3, 38.7] },
-    { "name": "New River Gorge", "type": "gorge", "note": "One of the oldest rivers on the continent", "coords": [-81.08, 38.07] },
-    { "name": "Allegheny Plateau", "type": "plateau", "note": "Steep dissected highlands", "coords": [-80.0, 38.9] },
-    { "name": "Ohio River", "type": "river", "note": "The western border", "coords": [-81.9, 39.3] }
+    {
+      "name": "Appalachian Mountains",
+      "type": "mountains",
+      "note": "The entire state sits inside them",
+      "coords": [
+        -80.3,
+        38.7
+      ]
+    },
+    {
+      "name": "New River Gorge",
+      "type": "gorge",
+      "note": "One of the oldest rivers on the continent",
+      "coords": [
+        -81.08,
+        38.07
+      ]
+    },
+    {
+      "name": "Allegheny Plateau",
+      "type": "plateau",
+      "note": "Steep dissected highlands",
+      "coords": [
+        -80.0,
+        38.9
+      ]
+    },
+    {
+      "name": "Ohio River",
+      "type": "river",
+      "note": "The western border",
+      "coords": [
+        -81.9,
+        39.3
+      ]
+    }
   ],
   "funFacts": [
     "West Virginia is the only state entirely within the Appalachian mountains.",

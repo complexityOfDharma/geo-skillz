@@ -162,6 +162,33 @@ const txOverlap = await page.evaluate(() => {
 });
 check('no neighbour or country label sits inside Texas', txOverlap.length === 0, txOverlap.join(','));
 
+// ---- state close-up glyphs ----
+await goto('#/us/states/kentucky');
+await page.waitForSelector('.slide-state');
+const ky = await page.evaluate(() => ({
+  caps: document.querySelectorAll('.map-detail .glyph-capital').length,
+  cities: document.querySelectorAll('.map-detail .glyph-city').length,
+  marks: [...document.querySelectorAll('.map-detail .marker')]
+    .filter((g) => g.querySelector('.glyph-landmark'))
+    .map((g) => g.querySelector('text').textContent),
+}));
+check('exactly one capital star', ky.caps === 1, String(ky.caps));
+check('city dots present', ky.cities >= 2, String(ky.cities));
+check(
+  'landmark squares are point places only',
+  ky.marks.length === 2 && ky.marks.includes('Mammoth Cave') && ky.marks.includes('Cumberland Gap'),
+  ky.marks.join(', ')
+);
+
+// California's features are all ranges, valleys and faults - areas and lines,
+// so none of them may get a square.
+await goto('#/us/states/california');
+await page.waitForSelector('.slide-state');
+check(
+  'no square for ranges or valleys',
+  (await page.$$('.map-detail .glyph-landmark')).length === 0
+);
+
 // ---- inert affordances ----
 await goto('#/us/states/maryland');
 await page.waitForSelector('.slide-state');

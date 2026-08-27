@@ -4,18 +4,88 @@
   "fips": "20",
   "nickname": "The Sunflower State",
   "capital": "Topeka",
-  "capitalCoords": [-95.6890, 39.0473],
+  "capitalCoords": [
+    -95.689,
+    39.0473
+  ],
   "region": "Midwest / Great Plains",
   "statehoodOrder": 34,
   "statehoodYear": 1861,
   "nameStory": "Named for the Kansa people, whose name is usually translated 'people of the south wind.' A state named after wind, which happens to be the flattest, windiest, most tornado-famous stretch of the country - the name and the weather agree.",
   "capitalStory": "Topeka is thought to mean 'a good place to dig potatoes,' referring to wild prairie tubers. It was founded in 1854 by antislavery settlers trying to win Kansas for the free-state side, and a century later it gave its name to the case that ended school segregation.",
-  "neighboringStates": ["NE", "MO", "OK", "CO"],
+  "majorCities": [
+    {
+      "name": "Wichita",
+      "coords": [
+        -97.3301,
+        37.6872
+      ]
+    },
+    {
+      "name": "Kansas City",
+      "coords": [
+        -94.6275,
+        39.1142
+      ]
+    },
+    {
+      "name": "Lawrence",
+      "coords": [
+        -95.2353,
+        38.9717
+      ]
+    },
+    {
+      "name": "Dodge City",
+      "coords": [
+        -100.0171,
+        37.7528
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "NE",
+    "MO",
+    "OK",
+    "CO"
+  ],
   "majorFeatures": [
-    { "name": "Great Plains", "type": "plain", "note": "The state tilts steadily upward toward the west", "coords": [-100.5, 38.5] },
-    { "name": "Flint Hills", "type": "hills", "note": "The last large tallgrass prairie in America", "coords": [-96.6, 38.4] },
-    { "name": "Arkansas River", "type": "river", "note": "Crosses the state west to east", "coords": [-98.5, 38.0] },
-    { "name": "Kansas River", "type": "river", "note": "Joins the Missouri at Kansas City", "coords": [-95.9, 39.1] }
+    {
+      "name": "Great Plains",
+      "type": "plain",
+      "note": "The state tilts steadily upward toward the west",
+      "coords": [
+        -100.5,
+        38.5
+      ]
+    },
+    {
+      "name": "Flint Hills",
+      "type": "hills",
+      "note": "The last large tallgrass prairie in America",
+      "coords": [
+        -96.6,
+        38.4
+      ]
+    },
+    {
+      "name": "Arkansas River",
+      "type": "river",
+      "note": "Crosses the state west to east",
+      "coords": [
+        -98.5,
+        38.0
+      ]
+    },
+    {
+      "name": "Kansas River",
+      "type": "river",
+      "note": "Joins the Missouri at Kansas City",
+      "coords": [
+        -95.9,
+        39.1
+      ]
+    }
   ],
   "funFacts": [
     "The geographic center of the contiguous 48 states sits in Smith County, Kansas.",

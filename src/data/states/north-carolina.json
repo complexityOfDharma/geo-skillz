@@ -4,18 +4,89 @@
   "fips": "37",
   "nickname": "The Tar Heel State",
   "capital": "Raleigh",
-  "capitalCoords": [-78.6382, 35.7796],
+  "capitalCoords": [
+    -78.6382,
+    35.7796
+  ],
   "region": "South / Southeast",
   "statehoodOrder": 12,
   "statehoodYear": 1789,
   "nameStory": "Carolina is Latin for 'land of Charles,' honoring King Charles I and later his son. The single colony grew too big and unruly to govern from one place, so in 1712 it was cut in half - which is why there are two Carolinas and not one.",
   "capitalStory": "Raleigh is named for Sir Walter Raleigh, who never came to America but sponsored the Roanoke colony on this coast. Those settlers vanished, leaving only the word CROATOAN carved on a post. North Carolina's capital honors the man behind the Lost Colony.",
-  "neighboringStates": ["VA", "TN", "GA", "SC"],
+  "majorCities": [
+    {
+      "name": "Charlotte",
+      "coords": [
+        -80.8431,
+        35.2271
+      ]
+    },
+    {
+      "name": "Asheville",
+      "coords": [
+        -82.5515,
+        35.5951
+      ]
+    },
+    {
+      "name": "Wilmington",
+      "coords": [
+        -77.9447,
+        34.2257
+      ]
+    },
+    {
+      "name": "Durham",
+      "coords": [
+        -78.8986,
+        35.994
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "VA",
+    "TN",
+    "GA",
+    "SC"
+  ],
   "majorFeatures": [
-    { "name": "Outer Banks", "type": "islands", "note": "Barrier islands that constantly move", "coords": [-75.7, 35.4] },
-    { "name": "Blue Ridge Mountains", "type": "mountains", "note": "The high western edge of the state", "coords": [-82.4, 35.7] },
-    { "name": "Great Smoky Mountains", "type": "mountains", "note": "Shared with Tennessee along the crest", "coords": [-83.4, 35.55] },
-    { "name": "Cape Hatteras", "type": "cape", "note": "Where two ocean currents collide", "coords": [-75.53, 35.25] }
+    {
+      "name": "Outer Banks",
+      "type": "islands",
+      "note": "Barrier islands that constantly move",
+      "coords": [
+        -75.7,
+        35.4
+      ]
+    },
+    {
+      "name": "Blue Ridge Mountains",
+      "type": "mountains",
+      "note": "The high western edge of the state",
+      "coords": [
+        -82.4,
+        35.7
+      ]
+    },
+    {
+      "name": "Great Smoky Mountains",
+      "type": "mountains",
+      "note": "Shared with Tennessee along the crest",
+      "coords": [
+        -83.4,
+        35.55
+      ]
+    },
+    {
+      "name": "Cape Hatteras",
+      "type": "cape",
+      "note": "Where two ocean currents collide",
+      "coords": [
+        -75.53,
+        35.25
+      ],
+      "point": true
+    }
   ],
   "funFacts": [
     "Mount Mitchell, at 6,684 feet, is the highest point anywhere in the United States east of the Mississippi.",

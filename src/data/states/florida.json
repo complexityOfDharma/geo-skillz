@@ -4,18 +4,86 @@
   "fips": "12",
   "nickname": "The Sunshine State",
   "capital": "Tallahassee",
-  "capitalCoords": [-84.2807, 30.4383],
+  "capitalCoords": [
+    -84.2807,
+    30.4383
+  ],
   "region": "South / Southeast",
   "statehoodOrder": 27,
   "statehoodYear": 1845,
   "nameStory": "Florida is named after Easter. Ponce de Leon made landfall around Easter 1513, which Spaniards call 'Pascua Florida,' the Feast of Flowers, so he called the place La Florida - the flowery land.",
   "capitalStory": "Tallahassee is Muskogee for 'old fields,' land the Apalachee had already farmed and left. It became the capital by pure geometry: in 1824 riders set out from St. Augustine and Pensacola, the only two real cities, and the government was planted where they met.",
-  "neighboringStates": ["GA", "AL"],
+  "majorCities": [
+    {
+      "name": "Miami",
+      "coords": [
+        -80.1918,
+        25.7617
+      ]
+    },
+    {
+      "name": "Orlando",
+      "coords": [
+        -81.3792,
+        28.5383
+      ]
+    },
+    {
+      "name": "Jacksonville",
+      "coords": [
+        -81.6557,
+        30.3322
+      ]
+    },
+    {
+      "name": "Tampa",
+      "coords": [
+        -82.4572,
+        27.9506
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "GA",
+    "AL"
+  ],
   "majorFeatures": [
-    { "name": "Everglades", "type": "wetland", "note": "A river of grass 60 miles wide and inches deep", "coords": [-80.9, 25.9] },
-    { "name": "Florida Keys", "type": "islands", "note": "120-mile coral island chain", "coords": [-81.1, 24.7] },
-    { "name": "Lake Okeechobee", "type": "lake", "note": "Florida's inland sea, source of the Everglades", "coords": [-80.8, 26.9] },
-    { "name": "St. Johns River", "type": "river", "note": "One of the few US rivers that flows north", "coords": [-81.5, 29.5] }
+    {
+      "name": "Everglades",
+      "type": "wetland",
+      "note": "A river of grass 60 miles wide and inches deep",
+      "coords": [
+        -80.9,
+        25.9
+      ]
+    },
+    {
+      "name": "Florida Keys",
+      "type": "islands",
+      "note": "120-mile coral island chain",
+      "coords": [
+        -81.1,
+        24.7
+      ]
+    },
+    {
+      "name": "Lake Okeechobee",
+      "type": "lake",
+      "note": "Florida's inland sea, source of the Everglades",
+      "coords": [
+        -80.8,
+        26.9
+      ]
+    },
+    {
+      "name": "St. Johns River",
+      "type": "river",
+      "note": "One of the few US rivers that flows north",
+      "coords": [
+        -81.5,
+        29.5
+      ]
+    }
   ],
   "funFacts": [
     "St. Augustine, founded in 1565, is the oldest continuously occupied European settlement in the United States.",

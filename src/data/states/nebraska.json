@@ -4,18 +4,91 @@
   "fips": "31",
   "nickname": "The Cornhusker State",
   "capital": "Lincoln",
-  "capitalCoords": [-96.6852, 40.8136],
+  "capitalCoords": [
+    -96.6852,
+    40.8136
+  ],
   "region": "Midwest / Great Plains",
   "statehoodOrder": 37,
   "statehoodYear": 1867,
   "nameStory": "From an Otoe and Omaha phrase meaning 'flat water,' describing the Platte River. Pioneers put it more bluntly: the Platte is a mile wide and an inch deep, too thick to drink and too thin to plow.",
   "capitalStory": "The town was called Lancaster until 1867, when opponents of moving the capital there renamed it Lincoln - betting that legislators with Southern sympathies would refuse to put their government in a town named after the recently assassinated president. The gambit failed completely and the name stuck.",
-  "neighboringStates": ["SD", "IA", "MO", "KS", "CO", "WY"],
+  "majorCities": [
+    {
+      "name": "Omaha",
+      "coords": [
+        -95.9345,
+        41.2565
+      ]
+    },
+    {
+      "name": "Grand Island",
+      "coords": [
+        -98.342,
+        40.9264
+      ]
+    },
+    {
+      "name": "Kearney",
+      "coords": [
+        -99.0817,
+        40.6995
+      ]
+    },
+    {
+      "name": "Scottsbluff",
+      "coords": [
+        -103.6672,
+        41.8666
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "SD",
+    "IA",
+    "MO",
+    "KS",
+    "CO",
+    "WY"
+  ],
   "majorFeatures": [
-    { "name": "Platte River", "type": "river", "note": "The natural highway of the Oregon Trail", "coords": [-99.0, 40.9] },
-    { "name": "Sandhills", "type": "dunes", "note": "Grass-covered dunes over a quarter of the state", "coords": [-101.0, 42.0] },
-    { "name": "Missouri River", "type": "river", "note": "The eastern border", "coords": [-96.1, 41.5] },
-    { "name": "Chimney Rock", "type": "landmark", "note": "The most recorded landmark on the Oregon Trail", "coords": [-103.34, 41.7] }
+    {
+      "name": "Platte River",
+      "type": "river",
+      "note": "The natural highway of the Oregon Trail",
+      "coords": [
+        -99.0,
+        40.9
+      ]
+    },
+    {
+      "name": "Sandhills",
+      "type": "dunes",
+      "note": "Grass-covered dunes over a quarter of the state",
+      "coords": [
+        -101.0,
+        42.0
+      ]
+    },
+    {
+      "name": "Missouri River",
+      "type": "river",
+      "note": "The eastern border",
+      "coords": [
+        -96.1,
+        41.5
+      ]
+    },
+    {
+      "name": "Chimney Rock",
+      "type": "landmark",
+      "note": "The most recorded landmark on the Oregon Trail",
+      "coords": [
+        -103.34,
+        41.7
+      ],
+      "point": true
+    }
   ],
   "funFacts": [
     "Nebraska is the only state with a one-house legislature, and its members run without party labels.",

@@ -4,18 +4,90 @@
   "fips": "36",
   "nickname": "The Empire State",
   "capital": "Albany",
-  "capitalCoords": [-73.7562, 42.6526],
+  "capitalCoords": [
+    -73.7562,
+    42.6526
+  ],
   "region": "Northeast / Mid-Atlantic",
   "statehoodOrder": 11,
   "statehoodYear": 1788,
   "nameStory": "It was New Amsterdam, run by the Dutch, until an English fleet sailed into the harbor in 1664 and demanded surrender. Governor Peter Stuyvesant wanted to fight; the townspeople refused, and the colony changed hands without a shot. The English renamed it for the king's brother, the Duke of York.",
   "capitalStory": "Albany is named for the same man - 'Duke of Albany' was his Scottish title. It became and stayed the capital because of where it sits: at the head of navigation on the Hudson, exactly where the Erie Canal later met the river, making it the hinge between the ocean and the entire interior.",
-  "neighboringStates": ["VT", "MA", "CT", "NJ", "PA"],
+  "majorCities": [
+    {
+      "name": "New York City",
+      "coords": [
+        -74.006,
+        40.7128
+      ]
+    },
+    {
+      "name": "Buffalo",
+      "coords": [
+        -78.8784,
+        42.8864
+      ]
+    },
+    {
+      "name": "Rochester",
+      "coords": [
+        -77.6109,
+        43.1566
+      ]
+    },
+    {
+      "name": "Syracuse",
+      "coords": [
+        -76.1474,
+        43.0481
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "VT",
+    "MA",
+    "CT",
+    "NJ",
+    "PA"
+  ],
   "majorFeatures": [
-    { "name": "Hudson River", "type": "river", "note": "A tidal estuary navigable 150 miles inland", "coords": [-73.9, 42.0] },
-    { "name": "Adirondack Mountains", "type": "mountains", "note": "Six million acres of protected wilderness", "coords": [-74.2, 44.1] },
-    { "name": "Niagara Falls", "type": "waterfall", "note": "Where Lake Erie drains toward Lake Ontario", "coords": [-79.04, 43.08] },
-    { "name": "Finger Lakes", "type": "lakes", "note": "Long thin lakes gouged out by glaciers", "coords": [-76.8, 42.7] }
+    {
+      "name": "Hudson River",
+      "type": "river",
+      "note": "A tidal estuary navigable 150 miles inland",
+      "coords": [
+        -73.9,
+        42.0
+      ]
+    },
+    {
+      "name": "Adirondack Mountains",
+      "type": "mountains",
+      "note": "Six million acres of protected wilderness",
+      "coords": [
+        -74.2,
+        44.1
+      ]
+    },
+    {
+      "name": "Niagara Falls",
+      "type": "waterfall",
+      "note": "Where Lake Erie drains toward Lake Ontario",
+      "coords": [
+        -79.04,
+        43.08
+      ],
+      "point": true
+    },
+    {
+      "name": "Finger Lakes",
+      "type": "lakes",
+      "note": "Long thin lakes gouged out by glaciers",
+      "coords": [
+        -76.8,
+        42.7
+      ]
+    }
   ],
   "funFacts": [
     "The Erie Canal, finished in 1825, linked the Great Lakes to the Atlantic and turned New York City into the dominant port in America almost overnight.",

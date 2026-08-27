@@ -4,18 +4,90 @@
   "fips": "16",
   "nickname": "The Gem State",
   "capital": "Boise",
-  "capitalCoords": [-116.2023, 43.6150],
+  "capitalCoords": [
+    -116.2023,
+    43.615
+  ],
   "region": "West / Mountain",
   "statehoodOrder": 43,
   "statehoodYear": 1890,
   "nameStory": "Idaho is the one state name that was simply made up. A lobbyist named George Willing told Congress it was Shoshone for 'gem of the mountains.' It wasn't - he invented it. The hoax was exposed, Congress gave the name Colorado to that territory instead, and then Idaho got stuck on a different territory anyway.",
   "capitalStory": "French trappers crossing the treeless Snake River plain finally spotted a line of cottonwoods along a river and shouted 'les bois!' - 'the woods!' The capital of Idaho is named after the relief of seeing trees.",
-  "neighboringStates": ["WA", "OR", "NV", "UT", "WY", "MT"],
+  "majorCities": [
+    {
+      "name": "Idaho Falls",
+      "coords": [
+        -112.0341,
+        43.4666
+      ]
+    },
+    {
+      "name": "Coeur d'Alene",
+      "coords": [
+        -116.7805,
+        47.6777
+      ]
+    },
+    {
+      "name": "Pocatello",
+      "coords": [
+        -112.4455,
+        42.8713
+      ]
+    },
+    {
+      "name": "Twin Falls",
+      "coords": [
+        -114.4609,
+        42.5558
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "WA",
+    "OR",
+    "NV",
+    "UT",
+    "WY",
+    "MT"
+  ],
   "majorFeatures": [
-    { "name": "Snake River", "type": "river", "note": "Curves across the whole southern state", "coords": [-114.5, 42.8] },
-    { "name": "Hells Canyon", "type": "canyon", "note": "Deepest river gorge in North America", "coords": [-116.8, 45.3] },
-    { "name": "Sawtooth Mountains", "type": "mountains", "note": "Jagged granite peaks in the center", "coords": [-114.9, 44.0] },
-    { "name": "Salmon River", "type": "river", "note": "The 'River of No Return'", "coords": [-114.8, 45.2] }
+    {
+      "name": "Snake River",
+      "type": "river",
+      "note": "Curves across the whole southern state",
+      "coords": [
+        -114.5,
+        42.8
+      ]
+    },
+    {
+      "name": "Hells Canyon",
+      "type": "canyon",
+      "note": "Deepest river gorge in North America",
+      "coords": [
+        -116.8,
+        45.3
+      ]
+    },
+    {
+      "name": "Sawtooth Mountains",
+      "type": "mountains",
+      "note": "Jagged granite peaks in the center",
+      "coords": [
+        -114.9,
+        44.0
+      ]
+    },
+    {
+      "name": "Salmon River",
+      "type": "river",
+      "note": "The 'River of No Return'",
+      "coords": [
+        -114.8,
+        45.2
+      ]
+    }
   ],
   "funFacts": [
     "Hells Canyon is deeper than the Grand Canyon.",
