@@ -239,13 +239,14 @@ html, body {
 .detail-neighbor { fill: var(--map-land); stroke: var(--bg); stroke-width: 0.6; }
 /* Canada and Mexico: present for orientation, clearly not the subject. */
 .detail-abroad {
-  fill: #101d25;
-  stroke: #46617230;
+  fill: var(--map-land);
   stroke: #4a6577;
   stroke-width: 0.9;
   stroke-dasharray: 3 2.5;
   pointer-events: none;
 }
+.detail-abroad-hatch { stroke: none; pointer-events: none; }
+.hatch-line { stroke: var(--ink-faint); stroke-width: 0.7; opacity: 0.4; }
 .country-label {
   font-size: 12px;
   font-weight: 600;

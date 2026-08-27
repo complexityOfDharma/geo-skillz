@@ -87,13 +87,22 @@ function greyStateLabels(path, list, atlas, width, height) {
 //
 // Returns shapes and labels separately: the outlines belong underneath the
 // states, but the labels must go on top or the subject state paints over them.
+let hatchSeq = 0;
+
 function abroad(path, atlas, width, height) {
   const shapes = [];
   const labels = [];
+  // Pattern ids are document-global, so each SVG mints its own.
+  const hatchId = `abroad-hatch-${++hatchSeq}`;
   for (const [name, geom] of Object.entries(atlas.context ?? {})) {
     const d = path(geom);
     if (!d) continue;
-    shapes.push(`<path class="detail-abroad" d="${d}" />`);
+    // Same land colour as the states, differentiated by a light crosshatch
+    // rather than a darker fill - a darker fill reads as a hole in the map.
+    shapes.push(
+      `<path class="detail-abroad" d="${d}" />` +
+        `<path class="detail-abroad-hatch" d="${d}" fill="url(#${hatchId})" />`
+    );
 
     // Only label a country that is genuinely on screen, and anchor it near the
     // edge it enters from - Mexico's true centre is far south of a Texas frame,
@@ -115,7 +124,12 @@ function abroad(path, atlas, width, height) {
       )}" text-anchor="middle" dy="0.32em">${esc(name)}</text>`
     );
   }
-  return { shapes: shapes.join(''), labels: labels.join('') };
+  const defs = shapes.length
+    ? `<defs><pattern id="${hatchId}" width="7" height="7" patternUnits="userSpaceOnUse">` +
+      `<path class="hatch-line" d="M0,0 L7,7 M7,0 L0,7" /></pattern></defs>`
+    : '';
+
+  return { defs, shapes: shapes.join(''), labels: labels.join('') };
 }
 
 function project(projection, markers, width, height) {
@@ -215,6 +229,7 @@ export function stateDetailMap(atlas, state, { width = 820, height = 520 } = {})
 
   return (
     svgOpen(width, height, 'map map-detail') +
+    beyond.defs +
     beyond.shapes +
     around +
     `<path class="detail-subject" d="${path(target)}" />` +
@@ -331,6 +346,7 @@ export function featureDetailMap(atlas, item, { width = 820, height = 520 } = {}
 
   return (
     svgOpen(width, height, 'map map-detail') +
+    beyond.defs +
     beyond.shapes +
     base +
     (grid ? `<path class="graticule" d="${grid}" />` : '') +
