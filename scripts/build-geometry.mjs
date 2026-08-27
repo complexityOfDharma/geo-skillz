@@ -80,9 +80,31 @@ function douglasPeucker(points, tolerance) {
 
 const round = (ring) => ring.map(([x, y]) => [+x.toFixed(3), +y.toFixed(3)]);
 
+// Simplification happily collapses a long straight border into two distant
+// endpoints. That is fine on a plane, but d3-geo draws each segment as a great
+// circle, and a great circle between two points at the same latitude bows
+// toward the pole - the US/Canada prairie border became a single 27.6-degree
+// segment that bowed ~100 km north, leaving a visible wedge of gap above the
+// states. Re-inserting intermediate points keeps long edges where they belong.
+function densify(ring, maxSeg = 0.25) {
+  const out = [];
+  for (let i = 0; i < ring.length - 1; i++) {
+    const [x1, y1] = ring[i];
+    const [x2, y2] = ring[i + 1];
+    out.push(ring[i]);
+    const steps = Math.ceil(Math.hypot(x2 - x1, y2 - y1) / maxSeg);
+    for (let k = 1; k < steps; k++) {
+      const t = k / steps;
+      out.push([+(x1 + (x2 - x1) * t).toFixed(3), +(y1 + (y2 - y1) * t).toFixed(3)]);
+    }
+  }
+  if (ring.length) out.push(ring[ring.length - 1]);
+  return out;
+}
+
 function simplifyRing(ring, tolerance, closed) {
   // A ring needs 4 points to still be a polygon after simplification.
-  const out = round(douglasPeucker(ring, tolerance));
+  const out = densify(round(douglasPeucker(ring, tolerance)));
   if (closed && out.length >= 3) {
     const [fx, fy] = out[0];
     const [lx, ly] = out[out.length - 1];
