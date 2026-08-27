@@ -47,6 +47,77 @@ function labelMarkup(items, width) {
     .join('');
 }
 
+// Grey names on states, used by both close-up maps. A state whose centre is
+// off-frame still gets labelled in the middle of whatever part IS visible -
+// otherwise a wide state like Montana shows only one of its four neighbours.
+// Full name where it fits in the visible width, postal abbreviation where not.
+function greyStateLabels(path, list, atlas, width, height) {
+  return (list ?? [])
+    .map((st) => {
+      const geo = atlas.byFips.get(st.fips);
+      if (!geo) return '';
+      const [[x0, y0], [x1, y1]] = path.bounds(geo);
+      if (![x0, y0, x1, y1].every(Number.isFinite)) return '';
+
+      const vx0 = Math.max(x0, 4);
+      const vy0 = Math.max(y0, 4);
+      const vx1 = Math.min(x1, width - 4);
+      const vy1 = Math.min(y1, height - 4);
+      const vw = vx1 - vx0;
+      const vh = vy1 - vy0;
+      if (vw < 26 || vh < 14) return '';
+
+      const [cx, cy] = path.centroid(geo);
+      const inFrame =
+        Number.isFinite(cx) && cx > vx0 && cx < vx1 && cy > vy0 && cy < vy1;
+      const lx = inFrame ? cx : (vx0 + vx1) / 2;
+      const ly = inFrame ? cy : (vy0 + vy1) / 2;
+      const text = st.name.length * 6.4 < vw ? st.name : st.abbr;
+
+      return `<text class="state-label" x="${lx.toFixed(1)}" y="${ly.toFixed(
+        1
+      )}" text-anchor="middle" dy="0.32em">${esc(text)}</text>`;
+    })
+    .join('');
+}
+
+// Canada and Mexico on close-up maps. Deliberately absent from the national
+// context map, which uses AlbersUsa and relocates Alaska and Hawaii into insets
+// - drawing real neighbours against fake placement would lie.
+//
+// Returns shapes and labels separately: the outlines belong underneath the
+// states, but the labels must go on top or the subject state paints over them.
+function abroad(path, atlas, width, height) {
+  const shapes = [];
+  const labels = [];
+  for (const [name, geom] of Object.entries(atlas.context ?? {})) {
+    const d = path(geom);
+    if (!d) continue;
+    shapes.push(`<path class="detail-abroad" d="${d}" />`);
+
+    // Only label a country that is genuinely on screen, and anchor it near the
+    // edge it enters from - Mexico's true centre is far south of a Texas frame,
+    // so centring the label there would drop it on top of Texas.
+    const [[x0, y0], [x1, y1]] = path.bounds(geom);
+    const vx0 = Math.max(x0, 6);
+    const vy0 = Math.max(y0, 6);
+    const vx1 = Math.min(x1, width - 6);
+    const vy1 = Math.min(y1, height - 6);
+    if (vx1 - vx0 < 90 || vy1 - vy0 < 30) continue;
+
+    const [cx, cy] = path.centroid(geom);
+    const fromSouth = Number.isFinite(cy) ? cy > height / 2 : y1 > height;
+    const ly = fromSouth ? vy1 - 12 : vy0 + 12;
+    const lx = Math.min(Math.max(Number.isFinite(cx) ? cx : (vx0 + vx1) / 2, vx0 + 44), vx1 - 44);
+    labels.push(
+      `<text class="country-label" x="${lx.toFixed(1)}" y="${ly.toFixed(
+        1
+      )}" text-anchor="middle" dy="0.32em">${esc(name)}</text>`
+    );
+  }
+  return { shapes: shapes.join(''), labels: labels.join('') };
+}
+
 function project(projection, markers, width, height) {
   const placed = [];
   for (const m of markers ?? []) {
@@ -124,6 +195,9 @@ export function stateDetailMap(atlas, state, { width = 820, height = 520 } = {})
     .map((f) => (path(f) ? `<path class="detail-neighbor" d="${path(f)}" />` : ''))
     .join('');
 
+  const neighbourNames = greyStateLabels(path, state.neighborStates, atlas, width, height);
+  const beyond = abroad(path, atlas, width, height);
+
   const markers = project(
     projection,
     [
@@ -141,8 +215,11 @@ export function stateDetailMap(atlas, state, { width = 820, height = 520 } = {})
 
   return (
     svgOpen(width, height, 'map map-detail') +
+    beyond.shapes +
     around +
     `<path class="detail-subject" d="${path(target)}" />` +
+    beyond.labels +
+    neighbourNames +
     capitalStar +
     labelMarkup(markers, width) +
     `</svg>`
@@ -179,25 +256,8 @@ export function featureDetailMap(atlas, item, { width = 820, height = 520 } = {}
     })
     .join('');
 
-  // Grey names on the states the feature passes through. Full name where it
-  // fits inside the state's projected width, postal abbreviation where it
-  // doesn't - otherwise a 14-state route turns into a pile of overlapping text.
-  const stateLabels = (item.touchedStates ?? [])
-    .map((st) => {
-      const geo = atlas.byFips.get(st.fips);
-      if (!geo) return '';
-      const [cx, cy] = path.centroid(geo);
-      if (!Number.isFinite(cx)) return '';
-      // A state whose centre is off-frame would render as a clipped fragment.
-      if (cx < 4 || cy < 4 || cx > width - 4 || cy > height - 4) return '';
-      const [[x0], [x1]] = [path.bounds(geo)[0], path.bounds(geo)[1]];
-      const room = x1 - x0;
-      const text = st.name.length * 6.4 < room ? st.name : st.abbr;
-      return `<text class="state-label" x="${cx.toFixed(1)}" y="${cy.toFixed(
-        1
-      )}" text-anchor="middle" dy="0.32em">${esc(text)}</text>`;
-    })
-    .join('');
+  const stateLabels = greyStateLabels(path, item.touchedStates, atlas, width, height);
+  const beyond = abroad(path, atlas, width, height);
 
   // The feature itself: thick bold outline over a semi-transparent fill.
   const shapeClass = item.geometry?.kind === 'line' ? 'feat-line' : 'feat-shape';
@@ -271,8 +331,10 @@ export function featureDetailMap(atlas, item, { width = 820, height = 520 } = {}
 
   return (
     svgOpen(width, height, 'map map-detail') +
+    beyond.shapes +
     base +
     (grid ? `<path class="graticule" d="${grid}" />` : '') +
+    beyond.labels +
     stateLabels +
     drawn +
     labels +
