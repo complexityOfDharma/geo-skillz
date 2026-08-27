@@ -88,10 +88,22 @@
     }
   ],
   "funFacts": [
-    "A wind gust of 231 mph was recorded on Mount Washington in 1934 and stood as the world record for surface wind for over 60 years.",
+    {
+      "text": "A wind gust of 231 mph was recorded on Mount Washington in 1934 and stood as the world record for surface wind for over 60 years.",
+      "source": "noaa-mwn"
+    },
     "New Hampshire has about 18 miles of ocean coastline, the shortest of any coastal state.",
     "The 1944 Bretton Woods conference, held at a New Hampshire resort, set up the financial system that ran the postwar world.",
     "Three climate zones collide over Mount Washington, which is why its weather is so violent."
   ],
-  "whyItMatters": "New Hampshire has held the first presidential primary in the nation since 1920. A state with about 0.4% of the US population gets an outsized first look at every candidate, which both parties argue about constantly."
+  "whyItMatters": "New Hampshire has held the first presidential primary in the nation since 1920. A state with about 0.4% of the US population gets an outsized first look at every candidate, which both parties argue about constantly.",
+  "sources": [
+    {
+      "id": "noaa-mwn",
+      "title": "The Mount Washington Observatory",
+      "publisher": "NOAA National Weather Service Heritage",
+      "url": "https://vlab.noaa.gov/web/nws-heritage/-/the-mount-washington-observatory",
+      "accessed": "2026-08-27"
+    }
+  ]
 }

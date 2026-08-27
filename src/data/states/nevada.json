@@ -94,5 +94,14 @@
     "In the Great Basin, rivers just end: they evaporate or sink, and none of that water ever reaches an ocean.",
     "About 80% of Nevada is owned by the federal government, more than any other state."
   ],
-  "whyItMatters": "Nevada was rushed into the Union in 1864, well short of the usual population requirement, because Lincoln needed the electoral votes and Senate support for the 13th Amendment. Its flag still reads 'Battle Born.'"
+  "whyItMatters": "Nevada was rushed into the Union in 1864, well short of the usual population requirement, because Lincoln needed the electoral votes and Senate support for the 13th Amendment. Its flag still reads 'Battle Born.'",
+  "sources": [
+    {
+      "id": "usgs-elevations",
+      "title": "Highest and Lowest Elevations",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/educational-resources/highest-and-lowest-elevations",
+      "accessed": "2026-08-27"
+    }
+  ]
 }

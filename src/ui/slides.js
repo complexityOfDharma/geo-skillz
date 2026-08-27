@@ -23,8 +23,42 @@ export function breadcrumbFor(trail) {
 const esc = (s) =>
   String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-const list = (items, cls = '') =>
-  `<ul class="${cls}">${items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`;
+// A fact is either a plain string or { text, source } pinning it to a source id.
+const factText = (f) => (typeof f === 'string' ? f : f.text);
+const factSource = (f) => (typeof f === 'string' ? null : f.source);
+
+// Superscript marker linking a fact to its numbered source.
+const cite = (n) => (n ? `<sup class="cite">${n}</sup>` : '');
+
+const list = (items, cls = '', index = null) =>
+  `<ul class="${cls}">${items
+    .map((i) => `<li>${esc(factText(i))}${cite(index?.get(factSource(i)))}</li>`)
+    .join('')}</ul>`;
+
+// Numbered source list at the foot of a slide. Returns the markup and a map
+// from source id to its number, so facts can point at the right entry.
+function sourceBlock(sources) {
+  const index = new Map((sources ?? []).map((s, i) => [s.id, i + 1]));
+  if (!sources?.length) return { index, markup: '' };
+  const rows = sources
+    .map(
+      (s, i) =>
+        `<li><span class="src-n">${i + 1}</span>` +
+        `<a class="src-link" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(
+          s.title
+        )}</a>` +
+        `<span class="src-pub">${esc(s.publisher)}</span></li>`
+    )
+    .join('');
+  return {
+    index,
+    markup: `
+      <details class="sources">
+        <summary class="sources-summary">Sources (${sources.length})</summary>
+        <ol class="src-list">${rows}</ol>
+      </details>`,
+  };
+}
 
 const ordinal = (n) => {
   const s = ['th', 'st', 'nd', 'rd'];
@@ -32,9 +66,11 @@ const ordinal = (n) => {
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 };
 
-const whyBlock = (text) =>
+const whyBlock = (text, n) =>
   text
-    ? `<aside class="why"><h3 class="why-title">Why it matters</h3><p>${esc(text)}</p></aside>`
+    ? `<aside class="why"><h3 class="why-title">Why it matters</h3><p>${esc(text)}${cite(
+        n
+      )}</p></aside>`
     : '';
 
 const storyBlock = (parts) =>
@@ -53,6 +89,7 @@ const mapPair = (contextSvg, detailSvg, contextCaption, detailCaption) =>
    </section>`;
 
 function stateSlide(atlas, s) {
+  const { index: srcIndex, markup: sources } = sourceBlock(s.sources);
   const neighbours = s.neighboringStates.length
     ? s.neighboringStates
         .map((n) => `<button class="chip" data-goto-abbr="${esc(n)}">${esc(n)}</button>`)
@@ -103,12 +140,13 @@ function stateSlide(atlas, s) {
           </div>
           <div>
             <h3 class="panel-title">Worth knowing</h3>
-            ${list(s.funFacts, 'fun-list')}
+            ${list(s.funFacts, 'fun-list', srcIndex)}
           </div>
         </div>
       </section>
 
-      ${whyBlock(s.whyItMatters)}
+      ${whyBlock(s.whyItMatters, srcIndex.get(s.whyItMattersSource))}
+      ${sources}
     </article>`;
 }
 
@@ -148,6 +186,7 @@ function timelineBlock(timeline) {
 }
 
 function featureSlide(atlas, f) {
+  const { index: srcIndex, markup: sources } = sourceBlock(f.sources);
   // World features draw against country geometry and a globe projection; US
   // features against us-atlas. atlas.world is present once it has loaded.
   const isWorld = f.scope === 'world';
@@ -205,7 +244,7 @@ function featureSlide(atlas, f) {
         <div class="facts-cols">
           <div>
             <h3 class="panel-title">Key facts</h3>
-            ${list(f.keyFacts, 'fun-list')}
+            ${list(f.keyFacts, 'fun-list', srcIndex)}
           </div>
           <div>
             <h3 class="panel-title">${isWorld ? 'Countries it touches' : 'States it touches'}</h3>
@@ -220,7 +259,8 @@ function featureSlide(atlas, f) {
         </div>
       </section>
 
-      ${whyBlock(f.whyItMatters)}
+      ${whyBlock(f.whyItMatters, srcIndex.get(f.whyItMattersSource))}
+      ${sources}
     </article>`;
 }
 

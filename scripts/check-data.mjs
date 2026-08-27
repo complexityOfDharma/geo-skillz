@@ -16,6 +16,11 @@ const geoByFips = new Map(
   topojson.feature(topo, topo.objects.states).features.map((f) => [f.id, f])
 );
 
+// Citation coverage ratchets: every slide that HAS sources must have valid
+// ones, and once a section is fully cited its entry here flips to true so no
+// later slide can ship uncited. See CLAUDE.md.
+const REQUIRE_SOURCES = { states: false, features: false };
+
 const errors = [];
 const warnings = [];
 const fail = (f, m) => errors.push(`${f}: ${m}`);
@@ -27,8 +32,48 @@ const REQUIRED = [
   'neighboringStates', 'majorFeatures', 'funFacts',
 ];
 
+// Shared by states and features: a slide's sources must be well formed, and
+// every source a fact points at must exist.
+function checkSources(label, d, factLists, requireSome) {
+  const sources = d.sources ?? [];
+  const ids = new Set();
+  for (const src of sources) {
+    for (const k of ['id', 'title', 'publisher', 'url']) {
+      if (!src[k]) fail(label, `source ${src.id ?? '?'} missing "${k}"`);
+    }
+    if (src.id && ids.has(src.id)) fail(label, `duplicate source id "${src.id}"`);
+    if (src.id) ids.add(src.id);
+    try {
+      const u = new URL(src.url);
+      if (u.protocol !== 'https:') fail(label, `source "${src.id}" is not https`);
+    } catch {
+      fail(label, `source "${src.id}" has an unparseable url`);
+    }
+  }
+  let cited = 0;
+  for (const facts of factLists) {
+    for (const f of facts ?? []) {
+      const ref = typeof f === 'string' ? null : f.source;
+      if (!ref) continue;
+      cited++;
+      if (!ids.has(ref)) fail(label, `fact cites unknown source "${ref}"`);
+    }
+  }
+  if (d.whyItMattersSource && !ids.has(d.whyItMattersSource)) {
+    fail(label, `whyItMatters cites unknown source "${d.whyItMattersSource}"`);
+  }
+  if (!sources.length) {
+    (requireSome ? fail : warn)(label, 'no sources - see CLAUDE.md on citing verifiable claims');
+  } else if (cited === 0) {
+    warn(label, 'has sources but no fact points at one');
+  }
+  return sources.length;
+}
+
 const states = readdirSync(statesDir).filter((f) => f.endsWith('.json'));
 const byAbbr = new Map();
+let citedStates = 0;
+let citedFeatures = 0;
 
 for (const file of states) {
   const d = JSON.parse(readFileSync(join(statesDir, file), 'utf8'));
@@ -96,6 +141,7 @@ for (const file of states) {
     }
   }
   if (d.funFacts.length < 3) warn(file, `only ${d.funFacts.length} funFacts (aim for 3-5)`);
+  citedStates += checkSources(file, d, [d.funFacts], REQUIRE_SOURCES.states) ? 1 : 0;
 }
 
 // Neighbor lists should agree with each other. DC is a valid neighbor but has
@@ -186,6 +232,7 @@ features.forEach((f, i) => {
   if (f.geometry && !shapes[f.id] && !f.geometry.inlineParts?.length) {
     fail(`features.json[${i}]`, `"${f.id}" declares geometry but resolves to no parts`);
   }
+  citedFeatures += checkSources(`${f.id}`, f, [f.keyFacts], REQUIRE_SOURCES.features) ? 1 : 0;
   for (const abbr of f.statesTouched ?? []) {
     if (abbr !== 'DC' && !byAbbr.has(abbr)) fail(`features.json[${i}]`, `unknown state "${abbr}"`);
   }
@@ -214,6 +261,9 @@ const counts = sections
   })
   .join(' ');
 console.log(`checked ${states.length} states + ${features.length} features`);
+console.log(
+  `cited: ${citedStates}/${states.length} states, ${citedFeatures}/${features.length} features`
+);
 console.log(`categories: ${counts}`);
 if (warnings.length) console.log('\nWARNINGS:\n' + warnings.map((w) => '  ' + w).join('\n'));
 if (errors.length) {

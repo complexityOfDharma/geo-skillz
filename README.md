@@ -174,6 +174,39 @@ neighbours, plus each feature's name, category, bounding box and states touched.
 That covers the three planned modes — click the highlighted state, type the
 capital, name the feature on the map — without touching any content file.
 
+## Citations
+
+Every checkable claim - numbers, dates, superlatives, and anything politically
+contested - should carry a source. Narrative framing, etymology and mnemonics do
+not need one.
+
+```jsonc
+"sources": [
+  { "id": "usgs-elevations", "title": "Highest and Lowest Elevations",
+    "publisher": "U.S. Geological Survey",
+    "url": "https://...", "accessed": "2026-08-27" }
+],
+"funFacts": [
+  "A plain string still works and stays uncited.",
+  { "text": "Mount Whitney is 14,494 feet.", "source": "usgs-elevations" }
+],
+"whyItMattersSource": "usgs-elevations"
+```
+
+This renders as a collapsible numbered **Sources** block at the foot of the
+slide, with a superscript marker on each pinned fact.
+
+`npm run check` validates that every source has a title, publisher and https
+URL, that no fact cites a source id that does not exist, and that ids are unique
+within a slide. Slides with no sources are reported.
+
+**The coverage ratchet.** `scripts/check-data.mjs` carries
+`REQUIRE_SOURCES = { states, features }`. While a flag is `false`, an uncited
+slide is only a warning. Once a section is fully cited, flip its flag to `true`
+and CI will fail on any future slide that ships without sources. See
+`CLAUDE.md` for the full convention, including which publishers to prefer and
+why you must never cite a page you have not actually read.
+
 ## Disputed names
 
 Some place names are live political questions, and the deck says so rather than

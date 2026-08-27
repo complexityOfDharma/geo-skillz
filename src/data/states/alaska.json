@@ -83,5 +83,14 @@
     "The Aleutians cross the 180th meridian, which technically makes Alaska both the westernmost and the easternmost state.",
     "It borders no US state - only Canada."
   ],
-  "whyItMatters": "As Arctic sea ice retreats, Alaska sits beside newly navigable shipping routes and contested seabed oil, making it a focus of US, Russian, and Chinese strategic interest."
+  "whyItMatters": "As Arctic sea ice retreats, Alaska sits beside newly navigable shipping routes and contested seabed oil, making it a focus of US, Russian, and Chinese strategic interest.",
+  "sources": [
+    {
+      "id": "usgs-denali",
+      "title": "New Elevation for Nation’s Highest Peak",
+      "publisher": "U.S. Geological Survey",
+      "url": "https://www.usgs.gov/news/national-news-release/new-elevation-nations-highest-peak",
+      "accessed": "2026-08-27"
+    }
+  ]
 }
