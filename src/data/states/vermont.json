@@ -4,17 +4,78 @@
   "fips": "50",
   "nickname": "The Green Mountain State",
   "capital": "Montpelier",
-  "capitalCoords": [-72.5754, 44.2601],
+  "capitalCoords": [
+    -72.5754,
+    44.2601
+  ],
   "region": "Northeast / New England",
   "statehoodOrder": 14,
   "statehoodYear": 1791,
   "nameStory": "Vermont is French for green mountain - 'vert mont.' The nickname is not a nickname at all, it is just a translation of the name. Green Mountain State means Green Mountain State.",
   "capitalStory": "Montpelier is the smallest state capital in America, around 8,000 people, and the only one without a single McDonald's. The whole state's government runs out of a town the size of a large high school's worth of families.",
-  "neighboringStates": ["NY", "NH", "MA"],
+  "majorCities": [
+    {
+      "name": "Burlington",
+      "coords": [
+        -73.2121,
+        44.4759
+      ]
+    },
+    {
+      "name": "Rutland",
+      "coords": [
+        -72.9726,
+        43.6106
+      ]
+    },
+    {
+      "name": "Brattleboro",
+      "coords": [
+        -72.5579,
+        42.8509
+      ]
+    },
+    {
+      "name": "Stowe",
+      "coords": [
+        -72.6845,
+        44.4654
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "NY",
+    "NH",
+    "MA"
+  ],
   "majorFeatures": [
-    { "name": "Green Mountains", "type": "mountains", "note": "The forested spine running the state's length", "coords": [-72.9, 44.0] },
-    { "name": "Lake Champlain", "type": "lake", "note": "Deep glacial lake on the New York border", "coords": [-73.3, 44.5] },
-    { "name": "Connecticut River", "type": "river", "note": "The entire New Hampshire border", "coords": [-72.3, 43.9] }
+    {
+      "name": "Green Mountains",
+      "type": "mountains",
+      "note": "The forested spine running the state's length",
+      "coords": [
+        -72.9,
+        44.0
+      ]
+    },
+    {
+      "name": "Lake Champlain",
+      "type": "lake",
+      "note": "Deep glacial lake on the New York border",
+      "coords": [
+        -73.3,
+        44.5
+      ]
+    },
+    {
+      "name": "Connecticut River",
+      "type": "river",
+      "note": "The entire New Hampshire border",
+      "coords": [
+        -72.3,
+        43.9
+      ]
+    }
   ],
   "funFacts": [
     "Vermont was an independent republic for 14 years before joining, with its own currency and postal service.",

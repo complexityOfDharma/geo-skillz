@@ -4,18 +4,90 @@
   "fips": "46",
   "nickname": "The Mount Rushmore State",
   "capital": "Pierre",
-  "capitalCoords": [-100.3510, 44.3683],
+  "capitalCoords": [
+    -100.351,
+    44.3683
+  ],
   "region": "Midwest / Great Plains",
   "statehoodOrder": 40,
   "statehoodYear": 1889,
   "nameStory": "Dakota means 'friend' or 'ally' in the Sioux language - the Dakota people's word for themselves. Note the irony that the two states named Friend were carved out of land taken from those same people.",
   "capitalStory": "Pierre is pronounced 'peer,' not the French way, and it is one of the smallest state capitals in the country. It won the job by sitting almost exactly at the center of the state, on the Missouri River.",
-  "neighboringStates": ["ND", "MN", "IA", "NE", "WY", "MT"],
+  "majorCities": [
+    {
+      "name": "Sioux Falls",
+      "coords": [
+        -96.7311,
+        43.546
+      ]
+    },
+    {
+      "name": "Rapid City",
+      "coords": [
+        -103.231,
+        44.0805
+      ]
+    },
+    {
+      "name": "Aberdeen",
+      "coords": [
+        -98.4865,
+        45.4647
+      ]
+    },
+    {
+      "name": "Deadwood",
+      "coords": [
+        -103.7296,
+        44.3767
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "ND",
+    "MN",
+    "IA",
+    "NE",
+    "WY",
+    "MT"
+  ],
   "majorFeatures": [
-    { "name": "Missouri River", "type": "river", "note": "Splits the state into East River and West River", "coords": [-100.0, 44.4] },
-    { "name": "Black Hills", "type": "mountains", "note": "An isolated forested range sacred to the Lakota", "coords": [-103.6, 44.0] },
-    { "name": "Badlands", "type": "badlands", "note": "Eroded spires and layered rock", "coords": [-102.3, 43.75] },
-    { "name": "Great Plains", "type": "plain", "note": "Shortgrass prairie across the west", "coords": [-101.0, 44.8] }
+    {
+      "name": "Missouri River",
+      "type": "river",
+      "note": "Splits the state into East River and West River",
+      "coords": [
+        -100.0,
+        44.4
+      ]
+    },
+    {
+      "name": "Black Hills",
+      "type": "mountains",
+      "note": "An isolated forested range sacred to the Lakota",
+      "coords": [
+        -103.6,
+        44.0
+      ]
+    },
+    {
+      "name": "Badlands",
+      "type": "badlands",
+      "note": "Eroded spires and layered rock",
+      "coords": [
+        -102.3,
+        43.75
+      ]
+    },
+    {
+      "name": "Great Plains",
+      "type": "plain",
+      "note": "Shortgrass prairie across the west",
+      "coords": [
+        -101.0,
+        44.8
+      ]
+    }
   ],
   "funFacts": [
     "South Dakotans divide their own state into 'East River' and 'West River' - the Missouri splits it into two different cultures, economies, and landscapes.",

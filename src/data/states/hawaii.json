@@ -4,18 +4,86 @@
   "fips": "15",
   "nickname": "The Aloha State",
   "capital": "Honolulu",
-  "capitalCoords": [-157.8583, 21.3069],
+  "capitalCoords": [
+    -157.8583,
+    21.3069
+  ],
   "region": "Pacific",
   "statehoodOrder": 50,
   "statehoodYear": 1959,
   "nameStory": "The name likely comes from Hawaiki, the legendary Polynesian homeland - or from Hawai'iloa, the navigator remembered as finding the islands. Either way, voyagers crossed 2,000 miles of open ocean and named the new place after the old one they had left.",
   "capitalStory": "Honolulu means 'sheltered harbor.' It is the only deep protected anchorage in the whole chain, which is why whalers, then traders, then the US Navy all converged on the same few square miles - Pearl Harbor is right next door.",
+  "majorCities": [
+    {
+      "name": "Hilo",
+      "coords": [
+        -155.0868,
+        19.7297
+      ]
+    },
+    {
+      "name": "Kailua-Kona",
+      "coords": [
+        -155.9969,
+        19.64
+      ]
+    },
+    {
+      "name": "Lahaina",
+      "coords": [
+        -156.6825,
+        20.8783
+      ]
+    },
+    {
+      "name": "Lihue",
+      "coords": [
+        -159.3711,
+        21.9811
+      ]
+    }
+  ],
   "neighboringStates": [],
   "majorFeatures": [
-    { "name": "Mauna Kea", "type": "mountain", "note": "Tallest mountain on Earth measured from its base", "coords": [-155.47, 19.82] },
-    { "name": "Kilauea", "type": "volcano", "note": "One of the most active volcanoes in the world", "coords": [-155.28, 19.42] },
-    { "name": "Pearl Harbor", "type": "harbor", "note": "Attacked December 7, 1941", "coords": [-157.97, 21.35] },
-    { "name": "Waimea Canyon", "type": "canyon", "note": "The 'Grand Canyon of the Pacific' on Kauai", "coords": [-159.66, 22.07] }
+    {
+      "name": "Mauna Kea",
+      "type": "mountain",
+      "note": "Tallest mountain on Earth measured from its base",
+      "coords": [
+        -155.47,
+        19.82
+      ],
+      "point": true
+    },
+    {
+      "name": "Kilauea",
+      "type": "volcano",
+      "note": "One of the most active volcanoes in the world",
+      "coords": [
+        -155.28,
+        19.42
+      ],
+      "point": true
+    },
+    {
+      "name": "Pearl Harbor",
+      "type": "harbor",
+      "note": "Attacked December 7, 1941",
+      "coords": [
+        -157.97,
+        21.35
+      ],
+      "point": true
+    },
+    {
+      "name": "Waimea Canyon",
+      "type": "canyon",
+      "note": "The 'Grand Canyon of the Pacific' on Kauai",
+      "coords": [
+        -159.66,
+        22.07
+      ]
+    }
   ],
   "funFacts": [
     "The only US state made entirely of islands, and the only one in the tropics.",

@@ -4,18 +4,90 @@
   "fips": "05",
   "nickname": "The Natural State",
   "capital": "Little Rock",
-  "capitalCoords": [-92.2896, 34.7465],
+  "capitalCoords": [
+    -92.2896,
+    34.7465
+  ],
   "region": "South",
   "statehoodOrder": 25,
   "statehoodYear": 1836,
   "nameStory": "French traders' spelling of an Illinois-language word for the Quapaw, 'akansa' - the downstream people. Arkansas and Kansas share that root, but Arkansas kept the silent French 's.' The pronunciation fight got so heated the legislature passed a law in 1881 declaring it 'AR-kan-saw.'",
   "capitalStory": "French explorers coming up the Arkansas River crossed miles of flat delta mud, then hit a small stone outcrop - 'la Petite Roche,' the little rock. It was the first solid landmark telling you the flatland was over and the highlands had begun.",
-  "neighboringStates": ["MO", "TN", "MS", "LA", "TX", "OK"],
+  "majorCities": [
+    {
+      "name": "Fayetteville",
+      "coords": [
+        -94.1574,
+        36.0626
+      ]
+    },
+    {
+      "name": "Fort Smith",
+      "coords": [
+        -94.3985,
+        35.3859
+      ]
+    },
+    {
+      "name": "Hot Springs",
+      "coords": [
+        -93.0552,
+        34.5037
+      ]
+    },
+    {
+      "name": "Jonesboro",
+      "coords": [
+        -90.7043,
+        35.8423
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "MO",
+    "TN",
+    "MS",
+    "LA",
+    "TX",
+    "OK"
+  ],
   "majorFeatures": [
-    { "name": "Ozark Mountains", "type": "mountains", "note": "Eroded plateau across the north", "coords": [-93.3, 36.0] },
-    { "name": "Ouachita Mountains", "type": "mountains", "note": "Rare east-west running range", "coords": [-93.7, 34.6] },
-    { "name": "Mississippi River", "type": "river", "note": "The entire eastern border", "coords": [-90.9, 34.5] },
-    { "name": "Arkansas River", "type": "river", "note": "Cuts the state in half diagonally", "coords": [-92.5, 35.1] }
+    {
+      "name": "Ozark Mountains",
+      "type": "mountains",
+      "note": "Eroded plateau across the north",
+      "coords": [
+        -93.3,
+        36.0
+      ]
+    },
+    {
+      "name": "Ouachita Mountains",
+      "type": "mountains",
+      "note": "Rare east-west running range",
+      "coords": [
+        -93.7,
+        34.6
+      ]
+    },
+    {
+      "name": "Mississippi River",
+      "type": "river",
+      "note": "The entire eastern border",
+      "coords": [
+        -90.9,
+        34.5
+      ]
+    },
+    {
+      "name": "Arkansas River",
+      "type": "river",
+      "note": "Cuts the state in half diagonally",
+      "coords": [
+        -92.5,
+        35.1
+      ]
+    }
   ],
   "funFacts": [
     "Crater of Diamonds is the only public diamond mine in the world where you keep whatever you dig up.",

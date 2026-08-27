@@ -51,6 +51,41 @@ for (const file of states) {
   if (!geoContains(geo, d.capitalCoords)) {
     warn(file, `capitalCoords ${d.capitalCoords} fall outside the state polygon`);
   }
+  // Cities are drawn as points on the state's own map, so a wrong coordinate
+  // puts a labelled dot in the wrong state - or the ocean.
+  for (const city of d.majorCities ?? []) {
+    if (!city.name || !city.coords) {
+      fail(file, `majorCities entry missing name or coords`);
+      continue;
+    }
+    if (!geoContains(geo, city.coords)) {
+      // us-atlas coastlines are generalised, so a genuine coastal town can sit
+      // just outside the polygon. Only treat it as an error if it is well
+      // clear of the state's own extent - that means the wrong state entirely.
+      const [[bw, bs], [be, bn]] = geoBounds(geo);
+      const pad = 0.25;
+      const nearby =
+        city.coords[0] >= bw - pad && city.coords[0] <= be + pad &&
+        city.coords[1] >= bs - pad && city.coords[1] <= bn + pad;
+      if (nearby) warn(file, `city "${city.name}" sits just outside the generalised coastline`);
+      else fail(file, `city "${city.name}" ${city.coords} is not in ${d.name}`);
+    }
+  }
+  if ((d.majorCities ?? []).length < 2) warn(file, `only ${(d.majorCities ?? []).length} majorCities (aim for 2-5)`);
+  if ((d.majorCities ?? []).some((c) => c.name === d.capital)) {
+    fail(file, `majorCities repeats the capital "${d.capital}" - the star already marks it`);
+  }
+
+  // A landmark marked `point` gets a square on the map, so it must actually be
+  // one place. Ranges, rivers and regions must not be flagged.
+  for (const feat of d.majorFeatures) {
+    if (!feat.point) continue;
+    if (!feat.coords) { fail(file, `"${feat.name}" is marked point but has no coords`); continue; }
+    if (!geoContains(geo, feat.coords)) {
+      warn(file, `point landmark "${feat.name}" falls outside ${d.name}`);
+    }
+  }
+
   const [[w, s], [e, n]] = geoBounds(geo);
   for (const feat of d.majorFeatures) {
     if (!feat.coords) continue;

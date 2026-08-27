@@ -4,18 +4,89 @@
   "fips": "25",
   "nickname": "The Bay State",
   "capital": "Boston",
-  "capitalCoords": [-71.0589, 42.3601],
+  "capitalCoords": [
+    -71.0589,
+    42.3601
+  ],
   "region": "Northeast / New England",
   "statehoodOrder": 6,
   "statehoodYear": 1788,
   "nameStory": "From the Massachusett people, meaning roughly 'at the great hill' - the Blue Hills just south of Boston. The longest, most misspelled state name in America is really just directions to a hill you can still go climb.",
   "capitalStory": "Boston was built on a cramped, hilly peninsula, so colonists did something drastic: they shoveled the hills into the harbor to manufacture more land. Much of downtown Boston, including Back Bay, is ground that did not exist in 1700.",
-  "neighboringStates": ["NH", "VT", "NY", "CT", "RI"],
+  "majorCities": [
+    {
+      "name": "Worcester",
+      "coords": [
+        -71.8023,
+        42.2626
+      ]
+    },
+    {
+      "name": "Springfield",
+      "coords": [
+        -72.5898,
+        42.1015
+      ]
+    },
+    {
+      "name": "Cambridge",
+      "coords": [
+        -71.1097,
+        42.3736
+      ]
+    },
+    {
+      "name": "Provincetown",
+      "coords": [
+        -70.1828,
+        42.0526
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "NH",
+    "VT",
+    "NY",
+    "CT",
+    "RI"
+  ],
   "majorFeatures": [
-    { "name": "Cape Cod", "type": "peninsula", "note": "A pile of sand and gravel dumped by a glacier", "coords": [-70.1, 41.85] },
-    { "name": "Berkshire Mountains", "type": "mountains", "note": "The wooded western highlands", "coords": [-73.2, 42.4] },
-    { "name": "Connecticut River", "type": "river", "note": "Splits the state's fertile middle valley", "coords": [-72.6, 42.4] },
-    { "name": "Massachusetts Bay", "type": "bay", "note": "The harbor that made Boston", "coords": [-70.7, 42.4] }
+    {
+      "name": "Cape Cod",
+      "type": "peninsula",
+      "note": "A pile of sand and gravel dumped by a glacier",
+      "coords": [
+        -70.1,
+        41.85
+      ]
+    },
+    {
+      "name": "Berkshire Mountains",
+      "type": "mountains",
+      "note": "The wooded western highlands",
+      "coords": [
+        -73.2,
+        42.4
+      ]
+    },
+    {
+      "name": "Connecticut River",
+      "type": "river",
+      "note": "Splits the state's fertile middle valley",
+      "coords": [
+        -72.6,
+        42.4
+      ]
+    },
+    {
+      "name": "Massachusetts Bay",
+      "type": "bay",
+      "note": "The harbor that made Boston",
+      "coords": [
+        -70.7,
+        42.4
+      ]
+    }
   ],
   "funFacts": [
     "America's first public school (Boston Latin, 1635) and first college (Harvard, 1636) are both here, founded within a year of each other.",

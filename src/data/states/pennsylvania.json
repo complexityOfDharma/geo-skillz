@@ -4,18 +4,91 @@
   "fips": "42",
   "nickname": "The Keystone State",
   "capital": "Harrisburg",
-  "capitalCoords": [-76.8867, 40.2732],
+  "capitalCoords": [
+    -76.8867,
+    40.2732
+  ],
   "region": "Northeast / Mid-Atlantic",
   "statehoodOrder": 2,
   "statehoodYear": 1787,
   "nameStory": "'Penn's Woods' - but not for the William Penn you're thinking of. The king named it for Penn's father, an admiral he owed money to. The Quaker son who actually founded the colony was mortified at the vanity of it and tried to get the name changed. Charles II said no.",
   "capitalStory": "Harrisburg is named for John Harris, who ran a ferry across the Susquehanna. Notice the pattern: capitals keep landing where people had to cross water, because that is where everybody already had to stop.",
-  "neighboringStates": ["NY", "NJ", "DE", "MD", "WV", "OH"],
+  "majorCities": [
+    {
+      "name": "Philadelphia",
+      "coords": [
+        -75.1652,
+        39.9526
+      ]
+    },
+    {
+      "name": "Pittsburgh",
+      "coords": [
+        -79.9959,
+        40.4406
+      ]
+    },
+    {
+      "name": "Allentown",
+      "coords": [
+        -75.4902,
+        40.6023
+      ]
+    },
+    {
+      "name": "Erie",
+      "coords": [
+        -80.0851,
+        42.1292
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "NY",
+    "NJ",
+    "DE",
+    "MD",
+    "WV",
+    "OH"
+  ],
   "majorFeatures": [
-    { "name": "Appalachian Mountains", "type": "mountains", "note": "Long parallel folded ridges", "coords": [-77.8, 40.9] },
-    { "name": "Susquehanna River", "type": "river", "note": "Cuts straight through the ridges", "coords": [-76.6, 40.6] },
-    { "name": "Delaware River", "type": "river", "note": "The entire eastern border", "coords": [-75.2, 41.0] },
-    { "name": "Ohio River headwaters", "type": "confluence", "note": "Two rivers meet at Pittsburgh to form the Ohio", "coords": [-80.01, 40.44] }
+    {
+      "name": "Appalachian Mountains",
+      "type": "mountains",
+      "note": "Long parallel folded ridges",
+      "coords": [
+        -77.8,
+        40.9
+      ]
+    },
+    {
+      "name": "Susquehanna River",
+      "type": "river",
+      "note": "Cuts straight through the ridges",
+      "coords": [
+        -76.6,
+        40.6
+      ]
+    },
+    {
+      "name": "Delaware River",
+      "type": "river",
+      "note": "The entire eastern border",
+      "coords": [
+        -75.2,
+        41.0
+      ]
+    },
+    {
+      "name": "Ohio River headwaters",
+      "type": "confluence",
+      "note": "Two rivers meet at Pittsburgh to form the Ohio",
+      "coords": [
+        -80.01,
+        40.44
+      ],
+      "point": true
+    }
   ],
   "funFacts": [
     "'Keystone' is an arch metaphor: Pennsylvania was the middle colony of thirteen, the wedge at the top holding the rest together.",

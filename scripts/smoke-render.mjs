@@ -83,7 +83,14 @@ for (const section of sections.filter((s) => s.status !== 'planned')) {
       if (!/<svg/.test(slideHtml)) m.push('no svg rendered');
       const paths = (slideHtml.match(/ d="/g) ?? []).length;
       if (paths < 40) m.push(`only ${paths} map paths`);
-      if (!/marker-dot/.test(slideHtml)) m.push('no markers placed');
+      // State close-ups use a star/dot/square glyph set; feature slides use
+      // point markers or a drawn shape.
+      if (slide.kind === 'state') {
+        if (!/glyph-capital/.test(slideHtml)) m.push('no capital star');
+        if (!/glyph-city/.test(slideHtml)) m.push('no city dots');
+      } else if (!/marker-dot|feat-shape|feat-line/.test(slideHtml)) {
+        m.push('no markers or shape placed');
+      }
       if (!/breadcrumb/.test(slideHtml)) m.push('no breadcrumb');
       if (m.length) problem(slide.title, m);
     }

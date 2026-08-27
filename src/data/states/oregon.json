@@ -4,18 +4,88 @@
   "fips": "41",
   "nickname": "The Beaver State",
   "capital": "Salem",
-  "capitalCoords": [-123.0351, 44.9429],
+  "capitalCoords": [
+    -123.0351,
+    44.9429
+  ],
   "region": "West / Pacific Northwest",
   "statehoodOrder": 33,
   "statehoodYear": 1859,
   "nameStory": "Nobody knows. Oregon is the great unsolved mystery of American place names. The leading theories are a mapmaker's misprint of an old name for the Wisconsin River, a Spanish word for 'big-eared,' and a French word for storm. Historians have argued about it for 200 years without settling it.",
   "capitalStory": "Salem is an English spelling of 'shalom' - peace. Missionaries named it, and it beat out bigger rivals for the capital largely because it was already the mission headquarters when the question came up.",
-  "neighboringStates": ["WA", "ID", "NV", "CA"],
+  "majorCities": [
+    {
+      "name": "Portland",
+      "coords": [
+        -122.6784,
+        45.5152
+      ]
+    },
+    {
+      "name": "Eugene",
+      "coords": [
+        -123.0868,
+        44.0521
+      ]
+    },
+    {
+      "name": "Bend",
+      "coords": [
+        -121.3153,
+        44.0582
+      ]
+    },
+    {
+      "name": "Medford",
+      "coords": [
+        -122.8756,
+        42.3265
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "WA",
+    "ID",
+    "NV",
+    "CA"
+  ],
   "majorFeatures": [
-    { "name": "Columbia River", "type": "river", "note": "The northern border and only sea-level gap in the Cascades", "coords": [-121.5, 45.65] },
-    { "name": "Cascade Range", "type": "mountains", "note": "Volcanic wall dividing wet west from dry east", "coords": [-121.8, 44.3] },
-    { "name": "Crater Lake", "type": "lake", "note": "Deepest lake in the United States", "coords": [-122.11, 42.94] },
-    { "name": "Willamette Valley", "type": "valley", "note": "The end of the Oregon Trail", "coords": [-123.1, 44.6] }
+    {
+      "name": "Columbia River",
+      "type": "river",
+      "note": "The northern border and only sea-level gap in the Cascades",
+      "coords": [
+        -121.5,
+        45.65
+      ]
+    },
+    {
+      "name": "Cascade Range",
+      "type": "mountains",
+      "note": "Volcanic wall dividing wet west from dry east",
+      "coords": [
+        -121.8,
+        44.3
+      ]
+    },
+    {
+      "name": "Crater Lake",
+      "type": "lake",
+      "note": "Deepest lake in the United States",
+      "coords": [
+        -122.11,
+        42.94
+      ]
+    },
+    {
+      "name": "Willamette Valley",
+      "type": "valley",
+      "note": "The end of the Oregon Trail",
+      "coords": [
+        -123.1,
+        44.6
+      ]
+    }
   ],
   "funFacts": [
     "Crater Lake is 1,943 feet deep and sits in the collapsed crater of Mount Mazama, which blew itself apart about 7,700 years ago.",

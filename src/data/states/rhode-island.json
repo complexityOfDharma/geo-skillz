@@ -4,17 +4,70 @@
   "fips": "44",
   "nickname": "The Ocean State",
   "capital": "Providence",
-  "capitalCoords": [-71.4128, 41.8240],
+  "capitalCoords": [
+    -71.4128,
+    41.824
+  ],
   "region": "Northeast / New England",
   "statehoodOrder": 13,
   "statehoodYear": 1790,
   "nameStory": "It is not an island, and it has nothing to do with Rhodes - probably. The name is either Dutch 'Roodt Eylandt' (red island) or an explorer's offhand comparison of Block Island to the Greek island of Rhodes. The smallest state has the least accurate name.",
   "capitalStory": "Roger Williams was banished from Massachusetts in the dead of winter for arguing that government had no business dictating religion. He named the place he landed Providence, for the divine providence he believed had saved him, and built the first colony in America with real separation of church and state.",
-  "neighboringStates": ["CT", "MA"],
+  "majorCities": [
+    {
+      "name": "Newport",
+      "coords": [
+        -71.3128,
+        41.4901
+      ]
+    },
+    {
+      "name": "Warwick",
+      "coords": [
+        -71.4162,
+        41.7001
+      ]
+    },
+    {
+      "name": "Pawtucket",
+      "coords": [
+        -71.3826,
+        41.8787
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "CT",
+    "MA"
+  ],
   "majorFeatures": [
-    { "name": "Narragansett Bay", "type": "bay", "note": "A deep bay that nearly cuts the state in half", "coords": [-71.35, 41.6] },
-    { "name": "Block Island", "type": "island", "note": "Twelve miles offshore", "coords": [-71.58, 41.17] },
-    { "name": "Atlantic Coast", "type": "coast", "note": "400 miles of shoreline in a tiny state", "coords": [-71.5, 41.35] }
+    {
+      "name": "Narragansett Bay",
+      "type": "bay",
+      "note": "A deep bay that nearly cuts the state in half",
+      "coords": [
+        -71.35,
+        41.6
+      ]
+    },
+    {
+      "name": "Block Island",
+      "type": "island",
+      "note": "Twelve miles offshore",
+      "coords": [
+        -71.58,
+        41.17
+      ]
+    },
+    {
+      "name": "Atlantic Coast",
+      "type": "coast",
+      "note": "400 miles of shoreline in a tiny state",
+      "coords": [
+        -71.5,
+        41.35
+      ]
+    }
   ],
   "funFacts": [
     "Rhode Island is about 1,214 square miles - you could fit 425 of them inside Alaska.",

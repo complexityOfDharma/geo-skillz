@@ -4,18 +4,88 @@
   "fips": "27",
   "nickname": "Land of 10,000 Lakes",
   "capital": "Saint Paul",
-  "capitalCoords": [-93.0900, 44.9537],
+  "capitalCoords": [
+    -93.09,
+    44.9537
+  ],
   "region": "Midwest / Upper Midwest",
   "statehoodOrder": 32,
   "statehoodYear": 1858,
   "nameStory": "From the Dakota 'mnisota' - water so clear it reflects the sky. A state named for the look of its water, in a place that has more lakes than almost anywhere on the continent.",
   "capitalStory": "Saint Paul was originally called Pig's Eye, after a one-eyed whiskey trader named Pierre 'Pig's Eye' Parrant who set up shop there. A priest built a chapel in 1841 and renamed it, which is the only reason Minnesota's capital is not Pig's Eye, Minnesota.",
-  "neighboringStates": ["WI", "IA", "SD", "ND"],
+  "majorCities": [
+    {
+      "name": "Minneapolis",
+      "coords": [
+        -93.265,
+        44.9778
+      ]
+    },
+    {
+      "name": "Duluth",
+      "coords": [
+        -92.1005,
+        46.7867
+      ]
+    },
+    {
+      "name": "Rochester",
+      "coords": [
+        -92.4802,
+        44.0121
+      ]
+    },
+    {
+      "name": "Saint Cloud",
+      "coords": [
+        -94.1636,
+        45.5579
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "WI",
+    "IA",
+    "SD",
+    "ND"
+  ],
   "majorFeatures": [
-    { "name": "Lake Itasca", "type": "lake", "note": "Headwaters of the Mississippi - you can step across it", "coords": [-95.2, 47.24] },
-    { "name": "Lake Superior", "type": "lake", "note": "The North Shore and the port of Duluth", "coords": [-91.0, 47.5] },
-    { "name": "Boundary Waters", "type": "wilderness", "note": "A million acres of lakes and canoe routes", "coords": [-91.5, 48.0] },
-    { "name": "Iron Range", "type": "region", "note": "Iron ore that built American steel", "coords": [-92.5, 47.5] }
+    {
+      "name": "Lake Itasca",
+      "type": "lake",
+      "note": "Headwaters of the Mississippi - you can step across it",
+      "coords": [
+        -95.2,
+        47.24
+      ]
+    },
+    {
+      "name": "Lake Superior",
+      "type": "lake",
+      "note": "The North Shore and the port of Duluth",
+      "coords": [
+        -91.0,
+        47.5
+      ]
+    },
+    {
+      "name": "Boundary Waters",
+      "type": "wilderness",
+      "note": "A million acres of lakes and canoe routes",
+      "coords": [
+        -91.5,
+        48.0
+      ]
+    },
+    {
+      "name": "Iron Range",
+      "type": "region",
+      "note": "Iron ore that built American steel",
+      "coords": [
+        -92.5,
+        47.5
+      ]
+    }
   ],
   "funFacts": [
     "The Mississippi River begins here as a stream you can walk across in about ten steps.",

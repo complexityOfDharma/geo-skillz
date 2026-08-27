@@ -31,23 +31,6 @@ function spread(items, minGap, height) {
   return items;
 }
 
-function labelMarkup(items, width) {
-  return items
-    .map((m) => {
-      const right = m.x > width * 0.55;
-      const tx = right ? m.x - 9 : m.x + 9;
-      return (
-        `<g class="marker">` +
-        `<line class="marker-leader" x1="${m.x}" y1="${m.y}" x2="${tx}" y2="${m.labelY}" />` +
-        `<circle class="marker-dot" cx="${m.x}" cy="${m.y}" r="3.5" />` +
-        `<text class="marker-label" x="${tx}" y="${m.labelY}" dy="0.32em" ` +
-        `text-anchor="${right ? 'end' : 'start'}">${esc(m.name)}</text>` +
-        `</g>`
-      );
-    })
-    .join('');
-}
-
 // Grey names on states, used by both close-up maps.
 //
 // The projection is clipped to the viewport, so path.centroid() returns the
@@ -130,6 +113,30 @@ function abroad(path, atlas, width, height) {
     : '';
 
   return { defs, shapes: shapes.join(''), labels: labels.join('') };
+}
+
+// Five-pointed star, centred on (x, y). Used only for capitals.
+function starPath(x, y, outer = 7, inner = 2.9) {
+  const pts = [];
+  for (let i = 0; i < 10; i++) {
+    const r = i % 2 ? inner : outer;
+    const a = (Math.PI / 5) * i - Math.PI / 2;
+    pts.push(`${(x + r * Math.cos(a)).toFixed(1)},${(y + r * Math.sin(a)).toFixed(1)}`);
+  }
+  return `M${pts.join('L')}Z`;
+}
+
+// Three marker kinds on a state close-up: a star for the capital, a dot for
+// other cities, and a hollow square for a landmark - but only where the
+// landmark is genuinely a single place. A mountain RANGE gets no marker,
+// because a dot in the middle of the Appalachians means nothing.
+function glyph(kind, x, y) {
+  if (kind === 'capital') return `<path class="glyph-capital" d="${starPath(x, y)}" />`;
+  if (kind === 'landmark')
+    return `<rect class="glyph-landmark" x="${(x - 4).toFixed(1)}" y="${(y - 4).toFixed(
+      1
+    )}" width="8" height="8" />`;
+  return `<circle class="glyph-city" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.4" />`;
 }
 
 function project(projection, markers, width, height) {
@@ -221,20 +228,33 @@ export function stateDetailMap(atlas, state, { width = 820, height = 520 } = {})
   );
   const beyond = abroad(path, atlas, width, height);
 
-  const markers = project(
-    projection,
-    [
-      { name: `${state.capital} (capital)`, coords: state.capitalCoords, isCapital: true },
-      ...state.majorFeatures.filter((f) => f.coords),
-    ],
-    width,
-    height
-  );
+  // Capital first so it wins the collision pass, then cities, then any
+  // point-resolvable landmark.
+  const points = [
+    { name: state.capital, coords: state.capitalCoords, kind: 'capital' },
+    ...(state.majorCities ?? []).map((c) => ({ ...c, kind: 'city' })),
+    ...state.majorFeatures
+      .filter((f) => f.point && f.coords)
+      .map((f) => ({ ...f, kind: 'landmark' })),
+  ];
 
-  const capital = markers.find((m) => m.isCapital);
-  const capitalStar = capital
-    ? `<circle class="capital-halo" cx="${capital.x}" cy="${capital.y}" r="8" />`
-    : '';
+  const placed = project(projection, points, width, height);
+
+  const markerMarkup = placed
+    .map((m) => {
+      const right = m.x > width * 0.55;
+      const tx = right ? m.x - 10 : m.x + 10;
+      const cls = m.kind === 'capital' ? 'marker-label is-capital' : 'marker-label';
+      return (
+        `<g class="marker">` +
+        `<line class="marker-leader" x1="${m.x}" y1="${m.y}" x2="${tx}" y2="${m.labelY}" />` +
+        glyph(m.kind, m.x, m.y) +
+        `<text class="${cls}" x="${tx}" y="${m.labelY}" dy="0.32em" ` +
+        `text-anchor="${right ? 'end' : 'start'}">${esc(m.name)}</text>` +
+        `</g>`
+      );
+    })
+    .join('');
 
   return (
     svgOpen(width, height, 'map map-detail') +
@@ -244,8 +264,7 @@ export function stateDetailMap(atlas, state, { width = 820, height = 520 } = {})
     `<path class="detail-subject" d="${path(target)}"><title>${esc(state.name)}</title></path>` +
     beyond.labels +
     neighbourNames +
-    capitalStar +
-    labelMarkup(markers, width) +
+    markerMarkup +
     `</svg>`
   );
 }

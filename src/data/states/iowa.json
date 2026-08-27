@@ -4,18 +4,90 @@
   "fips": "19",
   "nickname": "The Hawkeye State",
   "capital": "Des Moines",
-  "capitalCoords": [-93.6091, 41.5868],
+  "capitalCoords": [
+    -93.6091,
+    41.5868
+  ],
   "region": "Midwest",
   "statehoodOrder": 29,
   "statehoodYear": 1846,
   "nameStory": "Named for the Ioway people, who called themselves Baxoje. The shape to remember: Iowa is the only state whose entire eastern and western borders are both big navigable rivers - the Mississippi on one side, the Missouri on the other. It is a state held between two rivers.",
   "capitalStory": "Des Moines comes from the French 'Riviere des Moines,' which sounds like 'river of the monks' - and there were never any monks. The French were most likely mangling an Algonquian name for the Moingona people into words that made sense in French.",
-  "neighboringStates": ["MN", "WI", "IL", "MO", "NE", "SD"],
+  "majorCities": [
+    {
+      "name": "Cedar Rapids",
+      "coords": [
+        -91.6656,
+        41.9779
+      ]
+    },
+    {
+      "name": "Davenport",
+      "coords": [
+        -90.5776,
+        41.5236
+      ]
+    },
+    {
+      "name": "Iowa City",
+      "coords": [
+        -91.5301,
+        41.6611
+      ]
+    },
+    {
+      "name": "Sioux City",
+      "coords": [
+        -96.4003,
+        42.4963
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "MN",
+    "WI",
+    "IL",
+    "MO",
+    "NE",
+    "SD"
+  ],
   "majorFeatures": [
-    { "name": "Mississippi River", "type": "river", "note": "The entire eastern border", "coords": [-91.1, 42.0] },
-    { "name": "Missouri River", "type": "river", "note": "The entire western border", "coords": [-96.0, 42.2] },
-    { "name": "Loess Hills", "type": "hills", "note": "Wind-blown silt bluffs above the Missouri", "coords": [-95.9, 41.5] },
-    { "name": "Driftless Area", "type": "region", "note": "Steep corner the glaciers never flattened", "coords": [-91.4, 43.2] }
+    {
+      "name": "Mississippi River",
+      "type": "river",
+      "note": "The entire eastern border",
+      "coords": [
+        -91.1,
+        42.0
+      ]
+    },
+    {
+      "name": "Missouri River",
+      "type": "river",
+      "note": "The entire western border",
+      "coords": [
+        -96.0,
+        42.2
+      ]
+    },
+    {
+      "name": "Loess Hills",
+      "type": "hills",
+      "note": "Wind-blown silt bluffs above the Missouri",
+      "coords": [
+        -95.9,
+        41.5
+      ]
+    },
+    {
+      "name": "Driftless Area",
+      "type": "region",
+      "note": "Steep corner the glaciers never flattened",
+      "coords": [
+        -91.4,
+        43.2
+      ]
+    }
   ],
   "funFacts": [
     "Iowa has some of the richest topsoil on Earth, left behind by glaciers and windblown dust.",

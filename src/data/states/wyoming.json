@@ -4,18 +4,90 @@
   "fips": "56",
   "nickname": "The Equality State",
   "capital": "Cheyenne",
-  "capitalCoords": [-104.8202, 41.1400],
+  "capitalCoords": [
+    -104.8202,
+    41.14
+  ],
   "region": "West / Mountain",
   "statehoodOrder": 44,
   "statehoodYear": 1890,
   "nameStory": "The name is borrowed from 1,500 miles away and does not describe the place at all. 'Wyoming' is a Delaware word meaning 'at the big river flat,' and it names a valley in Pennsylvania. A congressman simply liked the sound of it and pinned it on a territory of high, dry mountains.",
   "capitalStory": "Cheyenne, named for the Cheyenne people, was a Union Pacific construction camp - one of the rolling, lawless 'hell on wheels' towns that followed the railhead west. This one happened to stop moving, and became the capital.",
-  "neighboringStates": ["MT", "SD", "NE", "CO", "UT", "ID"],
+  "majorCities": [
+    {
+      "name": "Casper",
+      "coords": [
+        -106.3131,
+        42.8666
+      ]
+    },
+    {
+      "name": "Jackson",
+      "coords": [
+        -110.7624,
+        43.4799
+      ]
+    },
+    {
+      "name": "Laramie",
+      "coords": [
+        -105.5911,
+        41.3114
+      ]
+    },
+    {
+      "name": "Sheridan",
+      "coords": [
+        -106.9562,
+        44.7972
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "MT",
+    "SD",
+    "NE",
+    "CO",
+    "UT",
+    "ID"
+  ],
   "majorFeatures": [
-    { "name": "Yellowstone", "type": "park", "note": "A caldera sitting on a supervolcano", "coords": [-110.5, 44.6] },
-    { "name": "Grand Teton", "type": "mountains", "note": "Young, sharp peaks with no foothills", "coords": [-110.8, 43.74] },
-    { "name": "Continental Divide", "type": "divide", "note": "Splits and encircles a basin that drains nowhere", "coords": [-108.5, 42.3] },
-    { "name": "Great Plains", "type": "plain", "note": "High dry grassland in the east", "coords": [-105.0, 43.0] }
+    {
+      "name": "Yellowstone",
+      "type": "park",
+      "note": "A caldera sitting on a supervolcano",
+      "coords": [
+        -110.5,
+        44.6
+      ]
+    },
+    {
+      "name": "Grand Teton",
+      "type": "mountains",
+      "note": "Young, sharp peaks with no foothills",
+      "coords": [
+        -110.8,
+        43.74
+      ]
+    },
+    {
+      "name": "Continental Divide",
+      "type": "divide",
+      "note": "Splits and encircles a basin that drains nowhere",
+      "coords": [
+        -108.5,
+        42.3
+      ]
+    },
+    {
+      "name": "Great Plains",
+      "type": "plain",
+      "note": "High dry grassland in the east",
+      "coords": [
+        -105.0,
+        43.0
+      ]
+    }
   ],
   "funFacts": [
     "Wyoming has fewer people than any other state - fewer than the city of Fresno.",

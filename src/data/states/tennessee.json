@@ -4,18 +4,92 @@
   "fips": "47",
   "nickname": "The Volunteer State",
   "capital": "Nashville",
-  "capitalCoords": [-86.7816, 36.1627],
+  "capitalCoords": [
+    -86.7816,
+    36.1627
+  ],
   "region": "South / Upland South",
   "statehoodOrder": 16,
   "statehoodYear": 1796,
   "nameStory": "From Tanasi, a Cherokee town on the Little Tennessee River. What the word originally meant has been lost - the town is gone, and now sits under a reservoir. A state is named after a place nobody can visit and a word nobody can translate.",
   "capitalStory": "Nashville honors Francis Nash, a general killed at Germantown in 1777. Its position on the Cumberland River made it a trade hub, and the same rivers and rail lines that moved cotton later carried country music out of the hills and into the rest of America.",
-  "neighboringStates": ["KY", "VA", "NC", "GA", "AL", "MS", "AR", "MO"],
+  "majorCities": [
+    {
+      "name": "Memphis",
+      "coords": [
+        -90.049,
+        35.1495
+      ]
+    },
+    {
+      "name": "Knoxville",
+      "coords": [
+        -83.9207,
+        35.9606
+      ]
+    },
+    {
+      "name": "Chattanooga",
+      "coords": [
+        -85.3097,
+        35.0456
+      ]
+    },
+    {
+      "name": "Gatlinburg",
+      "coords": [
+        -83.5102,
+        35.7143
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "KY",
+    "VA",
+    "NC",
+    "GA",
+    "AL",
+    "MS",
+    "AR",
+    "MO"
+  ],
   "majorFeatures": [
-    { "name": "Great Smoky Mountains", "type": "mountains", "note": "Most visited national park in America", "coords": [-83.5, 35.6] },
-    { "name": "Mississippi River", "type": "river", "note": "The entire western border", "coords": [-90.1, 35.5] },
-    { "name": "Tennessee River", "type": "river", "note": "Leaves the state, then comes back", "coords": [-88.0, 35.5] },
-    { "name": "Cumberland Plateau", "type": "plateau", "note": "Flat-topped highland across the middle", "coords": [-85.2, 36.0] }
+    {
+      "name": "Great Smoky Mountains",
+      "type": "mountains",
+      "note": "Most visited national park in America",
+      "coords": [
+        -83.5,
+        35.6
+      ]
+    },
+    {
+      "name": "Mississippi River",
+      "type": "river",
+      "note": "The entire western border",
+      "coords": [
+        -90.1,
+        35.5
+      ]
+    },
+    {
+      "name": "Tennessee River",
+      "type": "river",
+      "note": "Leaves the state, then comes back",
+      "coords": [
+        -88.0,
+        35.5
+      ]
+    },
+    {
+      "name": "Cumberland Plateau",
+      "type": "plateau",
+      "note": "Flat-topped highland across the middle",
+      "coords": [
+        -85.2,
+        36.0
+      ]
+    }
   ],
   "funFacts": [
     "Tennessee touches eight states, tied with Missouri for the most.",

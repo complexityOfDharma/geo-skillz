@@ -4,17 +4,80 @@
   "fips": "01",
   "nickname": "The Yellowhammer State",
   "capital": "Montgomery",
-  "capitalCoords": [-86.3009, 32.3792],
+  "capitalCoords": [
+    -86.3009,
+    32.3792
+  ],
   "region": "South / Deep South",
   "statehoodOrder": 22,
   "statehoodYear": 1819,
   "nameStory": "Named for the Albaamaha people, whose name most likely came from Choctaw words for 'thicket-clearers' - people who cut back the brush to plant crops. The state is still farm country, so the name describes what people did there 400 years ago and what many still do.",
   "capitalStory": "Montgomery bookends American history in about four city blocks. The Confederacy was founded here in February 1861, and Rosa Parks refused to give up her bus seat here in December 1955 - same downtown, a century apart.",
-  "neighboringStates": ["TN", "GA", "FL", "MS"],
+  "majorCities": [
+    {
+      "name": "Birmingham",
+      "coords": [
+        -86.8025,
+        33.5186
+      ]
+    },
+    {
+      "name": "Mobile",
+      "coords": [
+        -88.0399,
+        30.6954
+      ]
+    },
+    {
+      "name": "Huntsville",
+      "coords": [
+        -86.5861,
+        34.7304
+      ]
+    },
+    {
+      "name": "Tuscaloosa",
+      "coords": [
+        -87.5692,
+        33.2098
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "TN",
+    "GA",
+    "FL",
+    "MS"
+  ],
   "majorFeatures": [
-    { "name": "Mobile Bay", "type": "bay", "note": "Alabama's outlet to the Gulf", "coords": [-88.0, 30.4] },
-    { "name": "Tennessee River", "type": "river", "note": "Loops down across northern Alabama", "coords": [-87.0, 34.8] },
-    { "name": "Cheaha Mountain", "type": "mountain", "note": "Southern tail of the Appalachians, 2,413 ft", "coords": [-85.8, 33.5] }
+    {
+      "name": "Mobile Bay",
+      "type": "bay",
+      "note": "Alabama's outlet to the Gulf",
+      "coords": [
+        -88.0,
+        30.4
+      ]
+    },
+    {
+      "name": "Tennessee River",
+      "type": "river",
+      "note": "Loops down across northern Alabama",
+      "coords": [
+        -87.0,
+        34.8
+      ]
+    },
+    {
+      "name": "Cheaha Mountain",
+      "type": "mountain",
+      "note": "Southern tail of the Appalachians, 2,413 ft",
+      "coords": [
+        -85.8,
+        33.5
+      ],
+      "point": true
+    }
   ],
   "funFacts": [
     "Mobile held America's first Mardi Gras in 1703 - fifteen years before New Orleans existed.",

@@ -4,18 +4,77 @@
   "fips": "02",
   "nickname": "The Last Frontier",
   "capital": "Juneau",
-  "capitalCoords": [-134.4197, 58.3019],
+  "capitalCoords": [
+    -134.4197,
+    58.3019
+  ],
   "region": "Pacific / Arctic",
   "statehoodOrder": 49,
   "statehoodYear": 1959,
   "nameStory": "From the Aleut word 'Alaxsxaq' - roughly 'the thing the sea crashes against,' meaning the mainland. To people living out on the Aleutian islands, Alaska was simply the big land the waves break on.",
   "capitalStory": "Juneau is the only state capital in America you cannot drive to. No road connects it to the rest of the continent, so legislators fly or take a ferry to work. It is named for Joe Juneau, a prospector who struck gold there in 1880.",
+  "majorCities": [
+    {
+      "name": "Anchorage",
+      "coords": [
+        -149.9003,
+        61.2181
+      ]
+    },
+    {
+      "name": "Fairbanks",
+      "coords": [
+        -147.7164,
+        64.8378
+      ]
+    },
+    {
+      "name": "Nome",
+      "coords": [
+        -165.4064,
+        64.5011
+      ]
+    }
+  ],
   "neighboringStates": [],
   "majorFeatures": [
-    { "name": "Denali", "type": "mountain", "note": "Highest peak in North America, 20,310 ft", "coords": [-151.0, 63.07] },
-    { "name": "Yukon River", "type": "river", "note": "Runs 1,980 miles from Canada to the Bering Sea", "coords": [-158.0, 62.5] },
-    { "name": "Aleutian Islands", "type": "islands", "note": "A 1,200-mile volcanic arc", "coords": [-172.0, 52.5] },
-    { "name": "Brooks Range", "type": "mountains", "note": "Arctic mountain wall across the north", "coords": [-152.0, 68.2] }
+    {
+      "name": "Denali",
+      "type": "mountain",
+      "note": "Highest peak in North America, 20,310 ft",
+      "coords": [
+        -151.0,
+        63.07
+      ],
+      "point": true
+    },
+    {
+      "name": "Yukon River",
+      "type": "river",
+      "note": "Runs 1,980 miles from Canada to the Bering Sea",
+      "coords": [
+        -158.0,
+        62.5
+      ]
+    },
+    {
+      "name": "Aleutian Islands",
+      "type": "islands",
+      "note": "A 1,200-mile volcanic arc",
+      "coords": [
+        -172.0,
+        52.5
+      ]
+    },
+    {
+      "name": "Brooks Range",
+      "type": "mountains",
+      "note": "Arctic mountain wall across the north",
+      "coords": [
+        -152.0,
+        68.2
+      ]
+    }
   ],
   "funFacts": [
     "The US bought Alaska from Russia in 1867 for $7.2 million, about two cents an acre. Newspapers called it 'Seward's Folly.'",

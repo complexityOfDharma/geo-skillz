@@ -4,18 +4,88 @@
   "fips": "18",
   "nickname": "The Hoosier State",
   "capital": "Indianapolis",
-  "capitalCoords": [-86.1581, 39.7684],
+  "capitalCoords": [
+    -86.1581,
+    39.7684
+  ],
   "region": "Midwest",
   "statehoodOrder": 19,
   "statehoodYear": 1816,
   "nameStory": "Indiana means 'Land of the Indians' - a name chosen by white settlers for a place they were in the middle of clearing of Native people. Within about 25 years of statehood, nearly every Native nation had been forced out of the state that carries their name.",
   "capitalStory": "Indianapolis is just 'Indiana' plus the Greek word for city. It was built from nothing in 1821 at the exact center of the state, beside the White River - which then turned out to be far too shallow for boats. A capital planned around a highway that didn't work became a rail and road hub instead, and calls itself the Crossroads of America.",
-  "neighboringStates": ["MI", "OH", "KY", "IL"],
+  "majorCities": [
+    {
+      "name": "Fort Wayne",
+      "coords": [
+        -85.1394,
+        41.0793
+      ]
+    },
+    {
+      "name": "Evansville",
+      "coords": [
+        -87.5711,
+        37.9716
+      ]
+    },
+    {
+      "name": "South Bend",
+      "coords": [
+        -86.252,
+        41.6764
+      ]
+    },
+    {
+      "name": "Bloomington",
+      "coords": [
+        -86.5264,
+        39.1653
+      ]
+    }
+  ],
+  "neighboringStates": [
+    "MI",
+    "OH",
+    "KY",
+    "IL"
+  ],
   "majorFeatures": [
-    { "name": "Ohio River", "type": "river", "note": "The whole curving southern border", "coords": [-86.5, 38.0] },
-    { "name": "Wabash River", "type": "river", "note": "State river; part of the Illinois border", "coords": [-87.4, 39.5] },
-    { "name": "Indiana Dunes", "type": "dunes", "note": "Sand hills on the Lake Michigan shore", "coords": [-87.0, 41.65] },
-    { "name": "Lake Michigan", "type": "lake", "note": "A short but industrially vital shoreline", "coords": [-87.2, 41.8] }
+    {
+      "name": "Ohio River",
+      "type": "river",
+      "note": "The whole curving southern border",
+      "coords": [
+        -86.5,
+        38.0
+      ]
+    },
+    {
+      "name": "Wabash River",
+      "type": "river",
+      "note": "State river; part of the Illinois border",
+      "coords": [
+        -87.4,
+        39.5
+      ]
+    },
+    {
+      "name": "Indiana Dunes",
+      "type": "dunes",
+      "note": "Sand hills on the Lake Michigan shore",
+      "coords": [
+        -87.0,
+        41.65
+      ]
+    },
+    {
+      "name": "Lake Michigan",
+      "type": "lake",
+      "note": "A short but industrially vital shoreline",
+      "coords": [
+        -87.2,
+        41.8
+      ]
+    }
   ],
   "funFacts": [
     "The Indianapolis 500 is the largest single-day sporting event in the world.",
