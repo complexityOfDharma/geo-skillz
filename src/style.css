@@ -219,6 +219,11 @@ html, body {
    excludes lakes and bays from country polygons, so without this a real feature
    like James Bay renders as an unexplained hole in Canada. */
 .map-water { fill: var(--map-water); }
+/* The globe view paints the sphere itself rather than a rectangle, so the
+   corners outside the projection stay page-coloured. */
+.ocean-sphere { fill: var(--map-water); }
+.map-world .ctx-state { stroke-width: 0.35; }
+.map-world .graticule { opacity: 0.35; }
 
 .ctx-state { fill: var(--map-land); stroke: var(--bg); stroke-width: 0.5; }
 .ctx-state.is-active { fill: var(--accent); }

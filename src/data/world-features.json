@@ -1,0 +1,1625 @@
+[
+  {
+    "id": "seven-continents",
+    "name": "The Seven Continents",
+    "type": "continents",
+    "category": "continents",
+    "subtitle": "Why the count depends on who is teaching",
+    "story": "Seven is what American schools teach, and it is a convention rather than a fact. Europe and Asia are one continuous landmass with no water between them - the dividing line is the Ural Mountains, agreed on by people, not drawn by geology. Many countries teach six continents, merging Europe and Asia into Eurasia. Some teach five, merging the Americas. The rock does not care; the textbook does.",
+    "nameStory": "'Continent' comes from the Latin 'terra continens' - continuous land. Which is exactly the problem with counting Europe and Asia as two.",
+    "countriesTouched": [],
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "regions",
+      "labelParts": true,
+      "names": [
+        "AFRICA",
+        "ANTARCTICA",
+        "ASIA",
+        "AUSTRALIA",
+        "EUROPE",
+        "NORTH AMERICA",
+        "SOUTH AMERICA"
+      ],
+      "tolerance": 0.6,
+      "minArea": 1.5
+    },
+    "keyFacts": [
+      "Asia is the largest at about 44 million sq km and holds roughly 60% of all people.",
+      "Antarctica is the coldest, driest and windiest, and has no permanent residents.",
+      "Africa is the only continent crossed by both the Equator and both tropics.",
+      "Australia is the only one that is also a single country.",
+      "Europe and Asia share a land border, which is why the seven-continent model is a choice rather than an observation."
+    ]
+  },
+  {
+    "id": "pangaea-plate-tectonics",
+    "name": "Pangaea & Plate Tectonics",
+    "type": "tectonics",
+    "category": "continents",
+    "subtitle": "The jigsaw that turned out to be real",
+    "story": "Look at the eastern bulge of South America and the western notch of Africa. They fit. Alfred Wegener said so in 1912 and was mocked for decades, because he could not explain what would move a continent. He was right anyway. The continents sit on plates that drift a few centimetres a year - about the speed your fingernails grow - and 200 million years ago they were joined in one supercontinent, Pangaea.",
+    "nameStory": "Wegener coined 'Pangaea' from Greek: 'pan' all, 'gaia' earth. All-Earth. He called the drift 'Kontinentalverschiebung' - continental displacement - and died on a Greenland expedition long before anyone accepted it.",
+    "countriesTouched": [],
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "regions",
+      "labelParts": true,
+      "names": [
+        "SOUTH AMERICA",
+        "AFRICA"
+      ],
+      "tolerance": 0.5,
+      "minArea": 1.0
+    },
+    "markers": [
+      {
+        "name": "Mid-Atlantic Ridge",
+        "coords": [
+          -25,
+          -5
+        ]
+      },
+      {
+        "name": "Brazil's bulge",
+        "coords": [
+          -38,
+          -7
+        ]
+      },
+      {
+        "name": "Gulf of Guinea notch",
+        "coords": [
+          5,
+          3
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Matching rock formations and identical fossils appear on both coasts, thousands of miles apart across deep ocean.",
+      "The Atlantic is still widening by roughly an inch a year at the Mid-Atlantic Ridge.",
+      "The theory was only accepted in the 1960s, once sea-floor spreading was measured.",
+      "The Himalayas are still rising because India is still pushing into Asia."
+    ],
+    "whyItMatters": "Plate boundaries are where earthquakes and volcanoes happen, which is why the same handful of places - Japan, Chile, Indonesia, California - keep appearing in the news for the same reason."
+  },
+  {
+    "id": "antarctica",
+    "name": "Antarctica",
+    "type": "continent",
+    "category": "continents",
+    "subtitle": "A desert under two miles of ice",
+    "story": "Antarctica is a desert. It gets less precipitation than the Sahara - the interior sees a couple of inches a year - and everything that falls simply stays, because it never melts. Stacked up over millions of years, that produces an ice sheet averaging over a mile thick, holding about 70% of the world's fresh water and 90% of its ice. The weight is enough to push the bedrock beneath it below sea level.",
+    "nameStory": "From the Greek 'antarktikos' - opposite the Arctic. The Arctic is named for the Great Bear constellation, 'arktos'. So the far south is named for not being the far north, which is named for a bear.",
+    "countriesTouched": [],
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "regions",
+      "names": [
+        "ANTARCTICA"
+      ],
+      "labelParts": true,
+      "tolerance": 0.5,
+      "minArea": 1.0
+    },
+    "markers": [
+      {
+        "name": "South Pole",
+        "coords": [
+          0,
+          -90
+        ]
+      },
+      {
+        "name": "Vostok - coldest on Earth",
+        "coords": [
+          106.8,
+          -78.46
+        ]
+      },
+      {
+        "name": "Antarctic Peninsula",
+        "coords": [
+          -63,
+          -66
+        ]
+      }
+    ],
+    "keyFacts": [
+      "The lowest natural temperature ever recorded on Earth, -128.6 degrees Fahrenheit, was measured at Vostok Station in 1983.",
+      "No country owns it. The 1959 Antarctic Treaty suspended all territorial claims and reserved the continent for science.",
+      "If its ice sheet melted entirely, global sea level would rise by roughly 60 metres.",
+      "It has no permanent population, but a few thousand researchers live there seasonally."
+    ],
+    "whyItMatters": "The Antarctic Treaty is the rare case of nations agreeing to leave a whole continent unclaimed and demilitarised. It has held since 1961, and is the model people point to when arguing about who owns the Arctic seabed, or the Moon."
+  },
+  {
+    "id": "five-oceans",
+    "name": "The Five Oceans",
+    "type": "oceans",
+    "category": "water",
+    "subtitle": "One ocean, five names",
+    "story": "There is really only one ocean. Every basin connects to every other, and a bottle dropped off Maine can wash up in Madagascar. The divisions are human bookkeeping. The newest, the Southern Ocean, was only recognised by the US in 2021 - not because anything changed in the water, but because the current circling Antarctica behaves so differently that scientists wanted it named.",
+    "nameStory": "'Ocean' comes from Okeanos, the Greek river-god the ancients believed encircled the whole world. They were closer than they knew.",
+    "countriesTouched": [],
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "marine",
+      "labelParts": true,
+      "tolerance": 0.8,
+      "names": [
+        "North Pacific Ocean",
+        "South Pacific Ocean",
+        "North Atlantic Ocean",
+        "South Atlantic Ocean",
+        "INDIAN OCEAN",
+        "Arctic Ocean",
+        "SOUTHERN OCEAN"
+      ],
+      "minArea": 2.0
+    },
+    "keyFacts": [
+      "Oceans cover about 71% of the planet's surface and hold 97% of its water.",
+      "The Pacific alone is larger than all the land on Earth put together.",
+      "The deepest point, Challenger Deep in the Mariana Trench, is about 36,000 feet down - deeper than Everest is tall.",
+      "The Southern Ocean was formally recognised in 2021, making the count five.",
+      "More of the sea floor is unmapped in detail than the surface of Mars."
+    ]
+  },
+  {
+    "id": "amazon-river",
+    "name": "The Amazon River",
+    "type": "river",
+    "category": "water",
+    "subtitle": "A fifth of all the river water on Earth",
+    "story": "The Amazon carries more water than the next several largest rivers combined - about a fifth of all the fresh water flowing into the oceans. The discharge is so enormous that the sea is measurably less salty for over a hundred miles offshore, and early sailors could dip drinking water from the ocean before sighting land. It is also, remarkably, a river with no bridges across its main stem.",
+    "nameStory": "A Spanish expedition in 1542 reported being attacked by women warriors, and named the river for the Amazons of Greek myth. Whether they met women fighters, misread long-haired warriors, or invented it to excuse a failed expedition, nobody knows.",
+    "countriesTouched": [
+      "Brazil",
+      "Peru",
+      "Colombia"
+    ],
+    "geometry": {
+      "kind": "line",
+      "source": "natural-earth",
+      "layer": "rivers",
+      "labelParts": true,
+      "names": [
+        "Amazonas"
+      ],
+      "within": [
+        [
+          -82,
+          -20
+        ],
+        [
+          -44,
+          6
+        ]
+      ],
+      "tolerance": 0.05
+    },
+    "markers": [
+      {
+        "name": "Andes headwaters",
+        "coords": [
+          -73.5,
+          -15.5
+        ]
+      },
+      {
+        "name": "Manaus",
+        "coords": [
+          -60.02,
+          -3.12
+        ]
+      },
+      {
+        "name": "Mouth at Belem",
+        "coords": [
+          -48.5,
+          -1.45
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Roughly 4,000 miles long - it and the Nile trade places for longest depending on where you decide each one starts.",
+      "It discharges about 209,000 cubic metres of water every second.",
+      "No bridge crosses the main river along its entire length; people cross by ferry.",
+      "It starts as meltwater high in the Peruvian Andes, only about 100 miles from the Pacific, then runs the entire width of the continent the other way."
+    ]
+  },
+  {
+    "id": "mediterranean-sea",
+    "name": "The Mediterranean Sea",
+    "type": "sea",
+    "category": "water",
+    "subtitle": "The sea in the middle of the land",
+    "story": "The Mediterranean is nearly a closed basin - it connects to the Atlantic only through the nine-mile gap at Gibraltar. More water evaporates from it than the rivers pour in, so Atlantic water constantly flows east through the strait to top it up. About six million years ago that gap closed, and the whole sea dried out into a deep salt desert. When the Atlantic broke back through, it refilled in perhaps a couple of years.",
+    "nameStory": "Latin 'medius' middle plus 'terra' land - the sea in the middle of the land. The Romans, who eventually controlled every shore of it, simply called it 'Mare Nostrum': our sea.",
+    "countriesTouched": [
+      "Spain",
+      "France",
+      "Italy",
+      "Greece",
+      "Turkey",
+      "Egypt",
+      "Libya",
+      "Tunisia",
+      "Algeria",
+      "Morocco",
+      "Israel",
+      "Syria"
+    ],
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "marine",
+      "names": [
+        "Mediterranean Sea"
+      ],
+      "labelParts": true,
+      "tolerance": 0.08
+    },
+    "markers": [
+      {
+        "name": "Strait of Gibraltar",
+        "coords": [
+          -5.6,
+          35.95
+        ]
+      },
+      {
+        "name": "Suez Canal",
+        "coords": [
+          32.35,
+          30.6
+        ]
+      },
+      {
+        "name": "Bosphorus",
+        "coords": [
+          29.05,
+          41.1
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Almost enclosed: its only natural opening to the ocean is the Strait of Gibraltar, about nine miles wide.",
+      "The Messinian salinity crisis dried it almost completely around 5.6 million years ago.",
+      "Its shores held Egypt, Phoenicia, Greece, Carthage and Rome - trade across it is why those civilisations knew each other at all.",
+      "It is saltier than the open Atlantic, because evaporation outpaces river inflow."
+    ],
+    "whyItMatters": "Nearly every ancient civilisation the West studies grew on this one shoreline. A sea that is easy to cross does not separate people; it connects them, which is why the Mediterranean world shares gods, alphabets and grudges."
+  },
+  {
+    "id": "everest-himalayas",
+    "name": "Mount Everest & the Himalayas",
+    "type": "mountains",
+    "category": "landforms",
+    "subtitle": "A mountain range made by a continent crashing",
+    "story": "The Himalayas exist because India is a runaway continent. It broke off Africa, drifted north across the Tethys Sea at an unusual speed, and about 50 million years ago slammed into Asia. It has not stopped. India is still pushing north a couple of inches a year, and the range is still rising - Everest grows a few millimetres annually, though erosion takes some back.",
+    "nameStory": "Nepal calls it Sagarmatha, Tibet calls it Chomolungma, 'Goddess Mother of the World'. The British named it in 1865 for George Everest, a surveyor who had retired, never saw the mountain, and objected to the honour because locals could not easily pronounce his name.",
+    "countriesTouched": [
+      "Nepal",
+      "China",
+      "India",
+      "Bhutan",
+      "Pakistan"
+    ],
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "regions",
+      "names": [
+        "HIMALAYAS"
+      ],
+      "labelParts": true,
+      "tolerance": 0.1
+    },
+    "markers": [
+      {
+        "name": "Everest 29,032 ft",
+        "coords": [
+          86.925,
+          27.988
+        ]
+      },
+      {
+        "name": "K2",
+        "coords": [
+          76.513,
+          35.881
+        ]
+      },
+      {
+        "name": "Kathmandu",
+        "coords": [
+          85.324,
+          27.717
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Everest is 29,032 feet - the summit was re-measured jointly by Nepal and China in 2020.",
+      "All fourteen of the world's peaks above 8,000 metres are in the Himalaya and Karakoram.",
+      "Marine fossils are found near the summit, because that rock was once the floor of the Tethys Sea.",
+      "It is not the tallest mountain measured from base to peak - Mauna Kea is - only the highest above sea level."
+    ],
+    "whyItMatters": "The range wrings monsoon rain out of the air and feeds the Indus, Ganges and Brahmaputra. Its glaciers supply water to well over a billion people, which is why their retreat is a security question and not only an environmental one."
+  },
+  {
+    "id": "sahara",
+    "name": "The Sahara",
+    "type": "desert",
+    "category": "landforms",
+    "subtitle": "As large as the United States, and green within human memory",
+    "story": "The Sahara is roughly the size of the United States, and it has not always been sand. As recently as 6,000 years ago it was green - grassland, lakes and hippos, with rock paintings deep in the desert showing people swimming and herding cattle. A slow wobble in Earth's orbit shifted the monsoon south and it dried out. That wobble continues, so it will green again, in roughly 15,000 years.",
+    "nameStory": "From the Arabic 'sahra', simply meaning desert. So 'the Sahara Desert' says desert twice - like the Rio Grande River, or the La Brea Tar Pits.",
+    "countriesTouched": [
+      "Algeria",
+      "Libya",
+      "Egypt",
+      "Sudan",
+      "Chad",
+      "Niger",
+      "Mali",
+      "Mauritania",
+      "Morocco",
+      "Tunisia"
+    ],
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "regions",
+      "names": [
+        "SAHARA"
+      ],
+      "labelParts": true,
+      "tolerance": 0.15
+    },
+    "markers": [
+      {
+        "name": "Timbuktu",
+        "coords": [
+          -3,
+          16.77
+        ]
+      },
+      {
+        "name": "Tibesti Mountains",
+        "coords": [
+          17.5,
+          21
+        ]
+      },
+      {
+        "name": "Nile valley",
+        "coords": [
+          31.2,
+          25.7
+        ]
+      }
+    ],
+    "keyFacts": [
+      "About 3.6 million square miles - comparable to the whole United States.",
+      "Only around a quarter of it is sand dunes; most is rock, gravel and bare mountain.",
+      "Saharan dust blows across the Atlantic and fertilises the Amazon rainforest with phosphorus.",
+      "The 'Green Sahara' ended roughly 5,000 years ago, well within recorded human history in the region."
+    ],
+    "whyItMatters": "Trans-Saharan caravan routes carried gold, salt and enslaved people between West Africa and the Mediterranean for a thousand years. Timbuktu was rich because it sat where the desert crossing met the Niger River."
+  },
+  {
+    "id": "andes",
+    "name": "The Andes",
+    "type": "mountains",
+    "category": "landforms",
+    "subtitle": "The longest mountain range on any continent",
+    "story": "The Andes run about 4,300 miles down the entire western edge of South America, through seven countries - the longest continental mountain range on Earth. They exist because the Nazca plate is sliding under the continent, which crumples the edge upward and produces a chain of volcanoes along it. The same collision makes Chile and Peru two of the most earthquake-prone countries anywhere.",
+    "nameStory": "Probably from the Quechua 'anti', meaning east - the mountains east of the Inca heartland - though some trace it to 'andenes', the Spanish word for the agricultural terraces cut into the slopes.",
+    "countriesTouched": [
+      "Chile",
+      "Argentina",
+      "Peru",
+      "Bolivia",
+      "Ecuador",
+      "Colombia",
+      "Venezuela"
+    ],
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "regions",
+      "names": [
+        "ANDES"
+      ],
+      "labelParts": true,
+      "tolerance": 0.1
+    },
+    "markers": [
+      {
+        "name": "Aconcagua 22,838 ft",
+        "coords": [
+          -70.011,
+          -32.653
+        ]
+      },
+      {
+        "name": "Cusco",
+        "coords": [
+          -71.978,
+          -13.53
+        ]
+      },
+      {
+        "name": "Lake Titicaca",
+        "coords": [
+          -69.35,
+          -15.8
+        ]
+      },
+      {
+        "name": "Atacama Desert",
+        "coords": [
+          -69.2,
+          -24
+        ]
+      }
+    ],
+    "keyFacts": [
+      "About 4,300 miles long and up to 430 miles wide.",
+      "Aconcagua, 22,838 feet, is the highest peak outside Asia.",
+      "The Inca ran an empire of some 25,000 miles of road through this terrain without the wheel, iron, or a writing system as usually defined.",
+      "The Atacama on their western slope is the driest non-polar desert on Earth; some weather stations have never recorded rain."
+    ]
+  },
+  {
+    "id": "arctic-circle",
+    "name": "The Arctic Circle",
+    "type": "line",
+    "category": "climate",
+    "subtitle": "The line where the sun stops setting",
+    "story": "The Arctic Circle sits at about 66.5 degrees north, and it is not an arbitrary line. It marks where the sun fails to set for at least one full day in summer, and fails to rise for at least one full day in winter. That number is exactly 90 degrees minus the tilt of the Earth's axis. Change the tilt and the circle moves - and the tilt does wobble, so the line drifts about 15 metres north each year.",
+    "nameStory": "'Arctic' comes from the Greek 'arktos', bear - not for polar bears, but for the constellation Ursa Major wheeling overhead in the northern sky. Sailors navigated by it long before anyone went there.",
+    "countriesTouched": [
+      "Russia",
+      "Canada",
+      "United States of America",
+      "Greenland",
+      "Norway",
+      "Sweden",
+      "Finland",
+      "Iceland"
+    ],
+    "geometry": {
+      "kind": "line",
+      "source": "natural-earth",
+      "layer": "lines",
+      "names": [
+        "Arctic Circle"
+      ],
+      "labelParts": true,
+      "tolerance": 0.3
+    },
+    "markers": [
+      {
+        "name": "Murmansk",
+        "coords": [
+          33.08,
+          68.97
+        ]
+      },
+      {
+        "name": "Utqiagvik, Alaska",
+        "coords": [
+          -156.79,
+          71.29
+        ]
+      },
+      {
+        "name": "Tromso",
+        "coords": [
+          18.96,
+          69.65
+        ]
+      }
+    ],
+    "keyFacts": [
+      "It sits at roughly 66 degrees 34 minutes north - the complement of Earth's 23.4-degree axial tilt.",
+      "At the circle itself you get one day of midnight sun a year; at the Pole you get six months.",
+      "About four million people live north of it, across eight countries.",
+      "It is slowly moving north as Earth's tilt changes, at roughly 15 metres a year."
+    ],
+    "whyItMatters": "Arctic sea ice is retreating fast enough that shipping lanes and seabed resources once locked away are becoming reachable, which is why eight countries suddenly care a great deal about a line most of them ignored for a century."
+  },
+  {
+    "id": "amazon-rainforest",
+    "name": "The Amazon Rainforest",
+    "type": "rainforest",
+    "category": "climate",
+    "subtitle": "A forest that makes its own rain",
+    "story": "The Amazon does not merely receive rain - it manufactures it. A single large tree can release hundreds of litres of water vapour a day, and that moisture blows west, falls as rain, and is released again. Meteorologists call the result flying rivers: airborne moisture carrying more water than the Amazon River itself. Clear enough forest and the cycle weakens, which is why scientists talk about a tipping point beyond which the rest dries out on its own.",
+    "nameStory": "It takes its name from the river, which took its name from a Spanish expedition's claim of being attacked by women warriors out of Greek myth.",
+    "countriesTouched": [
+      "Brazil",
+      "Peru",
+      "Colombia",
+      "Bolivia",
+      "Ecuador",
+      "Venezuela",
+      "Guyana",
+      "Suriname"
+    ],
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "regions",
+      "names": [
+        "AMAZON BASIN"
+      ],
+      "labelParts": true,
+      "tolerance": 0.15
+    },
+    "markers": [
+      {
+        "name": "Manaus",
+        "coords": [
+          -60.02,
+          -3.12
+        ]
+      },
+      {
+        "name": "Rondonia - deforestation arc",
+        "coords": [
+          -63,
+          -10.5
+        ]
+      }
+    ],
+    "keyFacts": [
+      "About 2.6 million square miles, roughly 60% of it in Brazil.",
+      "It holds perhaps 10% of all known species on Earth.",
+      "Recycled moisture, not the ocean, supplies a large share of its own rainfall.",
+      "Parts of the southeastern Amazon now release more carbon than they absorb."
+    ],
+    "whyItMatters": "The 'flying rivers' water farmland thousands of miles south in Brazil and Argentina. Cutting the forest is therefore not only an environmental question for the Amazon; it is an agricultural question for a continent."
+  },
+  {
+    "id": "monsoon-asia",
+    "name": "Monsoon Asia",
+    "type": "climate",
+    "category": "climate",
+    "subtitle": "A wind that reverses, and a billion people who plan around it",
+    "story": "A monsoon is not a storm - it is a wind that changes direction with the season. Land heats faster than ocean in summer, air rises over Asia, and moist air rushes in off the Indian Ocean, bringing months of rain. In winter it reverses and blows dry off the continent. The Himalayas make it extreme by trapping the wet air against the mountain wall. Most of India's yearly rain falls in about four months.",
+    "nameStory": "From the Arabic 'mawsim', meaning season. Arab traders used the word for the sailing seasons - they rode the southwest wind to India and waited months for the northeast wind to carry them home.",
+    "countriesTouched": [
+      "India",
+      "Bangladesh",
+      "Myanmar",
+      "Thailand",
+      "Vietnam",
+      "Nepal",
+      "Pakistan",
+      "Sri Lanka",
+      "China"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          60,
+          2
+        ],
+        [
+          110,
+          36
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Mumbai",
+        "coords": [
+          72.877,
+          19.076
+        ]
+      },
+      {
+        "name": "Kolkata",
+        "coords": [
+          88.363,
+          22.573
+        ]
+      },
+      {
+        "name": "Cherrapunji - wettest place",
+        "coords": [
+          91.7,
+          25.3
+        ]
+      },
+      {
+        "name": "Dhaka",
+        "coords": [
+          90.41,
+          23.81
+        ]
+      }
+    ],
+    "keyFacts": [
+      "India receives roughly 70-80% of its annual rainfall in the June-September monsoon.",
+      "Cherrapunji and nearby Mawsynram are among the wettest inhabited places on Earth, at around 460 inches a year.",
+      "A monsoon that arrives late or weak can cut harvests across a subcontinent.",
+      "The word originally described a sailing season, not weather."
+    ],
+    "whyItMatters": "More than a billion people farm on the assumption that the rains arrive roughly on time. Monsoon timing moves food prices, migration and elections, which is why Indian news covers its onset the way American news covers hurricanes."
+  },
+  {
+    "id": "strait-of-gibraltar",
+    "name": "The Strait of Gibraltar",
+    "type": "strait",
+    "category": "borders",
+    "subtitle": "Nine miles between two continents",
+    "story": "At its narrowest the Strait of Gibraltar is about nine miles across - Europe on one side, Africa on the other, close enough to see the far shore clearly on a decent day. It is the only natural door between the Atlantic and the Mediterranean, which made it the most strategically valuable water in the ancient world and kept it valuable ever since. Britain has held the Rock of Gibraltar since 1713, and Spain has wanted it back ever since.",
+    "nameStory": "From the Arabic 'Jabal Tariq' - Tariq's Mountain - after Tariq ibn Ziyad, who landed there in 711 to begin the Muslim conquest of Iberia. The Greeks called the headlands on either side the Pillars of Hercules, and considered them the edge of the known world.",
+    "countriesTouched": [
+      "Spain",
+      "Morocco"
+    ],
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "marine",
+      "names": [
+        "Strait of Gibraltar"
+      ],
+      "labelParts": true,
+      "tolerance": 0.01
+    },
+    "markers": [
+      {
+        "name": "Gibraltar",
+        "coords": [
+          -5.353,
+          36.14
+        ]
+      },
+      {
+        "name": "Tangier",
+        "coords": [
+          -5.813,
+          35.767
+        ]
+      },
+      {
+        "name": "Tarifa - Europe's south tip",
+        "coords": [
+          -5.604,
+          36.013
+        ]
+      }
+    ],
+    "keyFacts": [
+      "About nine miles across at the narrowest point.",
+      "Atlantic water flows in near the surface while saltier Mediterranean water flows out underneath - two currents in opposite directions, stacked.",
+      "Roughly 300 ships pass through every day.",
+      "The Greeks called the flanking headlands the Pillars of Hercules and treated them as the limit of the world."
+    ],
+    "whyItMatters": "Whoever controls a nine-mile gap controls access to an entire sea. That is why Gibraltar has been fought over for 1,300 years and is still a live disagreement between Britain and Spain."
+  },
+  {
+    "id": "strait-of-hormuz",
+    "name": "The Strait of Hormuz",
+    "type": "strait",
+    "category": "borders",
+    "subtitle": "The world's most important oil chokepoint",
+    "story": "The Persian Gulf has one exit, and it is 21 miles wide at the narrowest. Roughly a fifth of the world's oil passes through it, in a shipping lane only about two miles wide in each direction, with Iran on the north shore and Oman on the south. No alternative route exists for most Gulf producers. That geography turns a narrow piece of water into permanent leverage, and closing it is a threat that gets made whenever tension in the region rises.",
+    "nameStory": "Named for the island and old kingdom of Hormuz, itself possibly from Ormus, a Persian ruler, or from Ahura Mazda, the chief god of Zoroastrianism.",
+    "countriesTouched": [
+      "Iran",
+      "Oman",
+      "United Arab Emirates"
+    ],
+    "geometry": {
+      "kind": "polygon",
+      "source": "inline",
+      "approximate": true,
+      "labelParts": true,
+      "inlineParts": [
+        {
+          "name": "Strait of Hormuz",
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  55.6,
+                  26.9
+                ],
+                [
+                  56.9,
+                  26.6
+                ],
+                [
+                  57.2,
+                  25.9
+                ],
+                [
+                  56.6,
+                  25.6
+                ],
+                [
+                  56,
+                  26.2
+                ],
+                [
+                  55.2,
+                  26.5
+                ],
+                [
+                  55.6,
+                  26.9
+                ]
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "markers": [
+      {
+        "name": "Bandar Abbas, Iran",
+        "coords": [
+          56.28,
+          27.19
+        ]
+      },
+      {
+        "name": "Musandam, Oman",
+        "coords": [
+          56.25,
+          26.2
+        ]
+      },
+      {
+        "name": "Dubai",
+        "coords": [
+          55.27,
+          25.2
+        ]
+      }
+    ],
+    "keyFacts": [
+      "About 21 miles wide at its narrowest, with usable shipping lanes far narrower than that.",
+      "Roughly 20% of global petroleum consumption passes through it.",
+      "Saudi Arabia, Iraq, Kuwait, Qatar and the UAE all depend on it to reach world markets.",
+      "The Omani side is the Musandam Peninsula, an exclave of Oman separated from the rest of the country by the UAE."
+    ],
+    "whyItMatters": "Hormuz is the clearest example of a chokepoint: a place where geography alone hands one country influence over the global economy. It explains why a regional dispute moves oil prices worldwide within hours."
+  },
+  {
+    "id": "northwest-passage",
+    "name": "The Northwest Passage",
+    "type": "passage",
+    "category": "borders",
+    "subtitle": "The shortcut Europe searched for over 400 years",
+    "story": "For four centuries European explorers hunted for a sea route over the top of North America to Asia. Many died looking; Franklin's entire expedition vanished in 1845 and both ships were only found in the 2010s. Roald Amundsen finally made the crossing in 1903-06, taking three years, and it was useless for trade because the ice never really let go. Now it does, some summers - and the argument has shifted from whether it can be sailed to who controls it.",
+    "nameStory": "Simply the passage to the northwest, named by people looking for it rather than by anyone who lived there. The Inuit had navigated these waters for centuries and were the reason several expeditions survived at all.",
+    "countriesTouched": [
+      "Canada",
+      "Greenland",
+      "United States of America"
+    ],
+    "geometry": {
+      "kind": "line",
+      "source": "inline",
+      "approximate": true,
+      "labelParts": true,
+      "inlineParts": [
+        {
+          "name": "Northwest Passage",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -56,
+                69
+              ],
+              [
+                -62,
+                71.5
+              ],
+              [
+                -70,
+                73.5
+              ],
+              [
+                -80,
+                74.2
+              ],
+              [
+                -90,
+                74
+              ],
+              [
+                -96,
+                72.5
+              ],
+              [
+                -101,
+                70.5
+              ],
+              [
+                -110,
+                69.5
+              ],
+              [
+                -119,
+                69.8
+              ],
+              [
+                -128,
+                70
+              ],
+              [
+                -140,
+                70.5
+              ],
+              [
+                -152,
+                71
+              ],
+              [
+                -160,
+                71
+              ],
+              [
+                -168,
+                66.5
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "markers": [
+      {
+        "name": "Baffin Bay",
+        "coords": [
+          -65,
+          73
+        ]
+      },
+      {
+        "name": "Franklin wrecks - King William I.",
+        "coords": [
+          -98,
+          69
+        ]
+      },
+      {
+        "name": "Beaufort Sea",
+        "coords": [
+          -135,
+          71.5
+        ]
+      },
+      {
+        "name": "Bering Strait",
+        "coords": [
+          -168.5,
+          65.8
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Amundsen completed the first full transit in 1906, after three winters in the ice.",
+      "Franklin's lost ships, Erebus and Terror, were located in 2014 and 2016 using Inuit oral testimony.",
+      "The route can cut roughly 4,000 miles off an Asia-to-Europe voyage compared with the Panama Canal.",
+      "Canada considers the passage internal waters; the United States and others call it an international strait."
+    ],
+    "whyItMatters": "This is a live sovereignty dispute between close allies. If the ice keeps retreating and the route becomes commercially usable, the disagreement stops being theoretical - it decides who sets the rules, collects the fees, and polices the traffic."
+  },
+  {
+    "id": "world-megacities",
+    "name": "The World's Megacities",
+    "type": "cities",
+    "category": "cities",
+    "subtitle": "Humanity moved to town, and mostly not in the West",
+    "story": "In 1950 there were two cities over ten million: New York and Tokyo. There are now more than thirty, and most are in Asia and Africa. The world crossed the halfway mark - more people in cities than outside them - around 2007, and the shift is accelerating. The fastest growth is no longer in the places that industrialised first; Lagos alone adds roughly the population of a mid-sized city every year.",
+    "nameStory": "'Megacity' is a technical threshold, not a compliment: any urban area over ten million people. Tokyo has been the largest on Earth for most of the last seventy years and is now, unusually, shrinking.",
+    "countriesTouched": [
+      "Japan",
+      "India",
+      "China",
+      "Brazil",
+      "Nigeria",
+      "Egypt",
+      "Mexico",
+      "Bangladesh",
+      "Indonesia",
+      "Pakistan"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -120,
+          -40
+        ],
+        [
+          150,
+          55
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Tokyo",
+        "coords": [
+          139.69,
+          35.69
+        ]
+      },
+      {
+        "name": "Delhi",
+        "coords": [
+          77.21,
+          28.61
+        ]
+      },
+      {
+        "name": "Shanghai",
+        "coords": [
+          121.47,
+          31.23
+        ]
+      },
+      {
+        "name": "Sao Paulo",
+        "coords": [
+          -46.63,
+          -23.55
+        ]
+      },
+      {
+        "name": "Lagos",
+        "coords": [
+          3.38,
+          6.52
+        ]
+      },
+      {
+        "name": "Cairo",
+        "coords": [
+          31.24,
+          30.04
+        ]
+      },
+      {
+        "name": "Mexico City",
+        "coords": [
+          -99.13,
+          19.43
+        ]
+      },
+      {
+        "name": "Dhaka",
+        "coords": [
+          90.41,
+          23.81
+        ]
+      }
+    ],
+    "keyFacts": [
+      "More than half the world's people have lived in urban areas since about 2007.",
+      "Tokyo's metropolitan area, around 37 million, has been the world's largest for decades.",
+      "Two megacities existed in 1950; there are now over thirty.",
+      "Most of the growth to come is expected in Africa and South Asia, not in Europe or the Americas."
+    ],
+    "whyItMatters": "Cities concentrate people where the geography once made sense - a harbour, a river crossing, a delta. Many of those same spots are now the most exposed to flooding and sea-level rise, so the reasons cities grew are now the reasons they are at risk."
+  },
+  {
+    "id": "nile-and-egypt",
+    "name": "The Nile & Egypt",
+    "type": "river",
+    "category": "cities",
+    "subtitle": "A country living on a green ribbon in a desert",
+    "story": "Egypt is mostly uninhabitable. Roughly 95% of its people live on about 5% of its land - the thin green strip along the Nile and its delta. From the air the country is a brown desert with a bright green line drawn down it. Herodotus called Egypt 'the gift of the Nile' 2,500 years ago and the satellite photo still proves him right.",
+    "nameStory": "From the Greek 'Neilos'. Ancient Egyptians called it Iteru, simply 'the river' - when there is only one, you do not need a name for it. They called the fertile strip Kemet, the black land, after the dark silt, and the desert Deshret, the red land.",
+    "countriesTouched": [
+      "Egypt",
+      "Sudan",
+      "S. Sudan",
+      "Uganda",
+      "Ethiopia"
+    ],
+    "geometry": {
+      "kind": "line",
+      "source": "natural-earth",
+      "layer": "rivers",
+      "labelParts": true,
+      "names": [
+        "Nile"
+      ],
+      "within": [
+        [
+          20,
+          -5
+        ],
+        [
+          40,
+          34
+        ]
+      ],
+      "tolerance": 0.05
+    },
+    "markers": [
+      {
+        "name": "Cairo",
+        "coords": [
+          31.24,
+          30.04
+        ]
+      },
+      {
+        "name": "Aswan High Dam",
+        "coords": [
+          32.88,
+          23.97
+        ]
+      },
+      {
+        "name": "Luxor",
+        "coords": [
+          32.64,
+          25.69
+        ]
+      },
+      {
+        "name": "Nile Delta",
+        "coords": [
+          31,
+          31.2
+        ]
+      }
+    ],
+    "keyFacts": [
+      "About 4,100 miles long, running north from the highlands of East Africa to the Mediterranean.",
+      "It is one of very few major rivers that flows north, which confuses people reading maps.",
+      "Its annual flood laid down fresh silt every year, which is why Egyptian agriculture lasted millennia in a desert.",
+      "The Aswan High Dam ended the flood in 1970, trading fertility for flood control and electricity."
+    ],
+    "whyItMatters": "Ethiopia's Grand Renaissance Dam on the Blue Nile can regulate water that Egypt has depended on for 5,000 years. Egypt, Sudan and Ethiopia have negotiated over it for more than a decade, because for Egypt this is not a water dispute - it is the whole country."
+  },
+  {
+    "id": "singapore-malacca",
+    "name": "Singapore & the Strait of Malacca",
+    "type": "strait",
+    "category": "cities",
+    "subtitle": "A country built entirely on being in the way",
+    "story": "The Strait of Malacca is the shortest sea route between the Indian and Pacific Oceans, and at its narrowest it is under two miles wide. Singapore sits at the end of it. The island has no oil, no farmland and not enough fresh water - it imports both water and sand - and is one of the wealthiest countries per person on Earth, entirely because of where it is. Roughly a quarter of all traded goods pass by.",
+    "nameStory": "Singapore is from the Sanskrit 'Simhapura', Lion City, after a beast an early prince supposedly saw - almost certainly a tiger, since lions have never lived on the island.",
+    "countriesTouched": [
+      "Singapore",
+      "Malaysia",
+      "Indonesia"
+    ],
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "marine",
+      "names": [
+        "Strait of Malacca"
+      ],
+      "labelParts": true,
+      "tolerance": 0.02
+    },
+    "markers": [
+      {
+        "name": "Singapore",
+        "coords": [
+          103.82,
+          1.35
+        ]
+      },
+      {
+        "name": "Kuala Lumpur",
+        "coords": [
+          101.69,
+          3.14
+        ]
+      },
+      {
+        "name": "Medan, Sumatra",
+        "coords": [
+          98.67,
+          3.59
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Under two miles wide at the Phillips Channel, its narrowest navigable point.",
+      "Roughly 100,000 vessels a year use it, carrying about a quarter of world trade.",
+      "Singapore has no natural fresh water supply and imports much of it from Malaysia.",
+      "The alternative routes around Indonesia add days of sailing, so almost nobody takes them."
+    ],
+    "whyItMatters": "China calls its dependence on this one strait the 'Malacca dilemma' - most of its imported oil passes through water it does not control. A great deal of Chinese infrastructure spending elsewhere is an attempt to route around a two-mile gap."
+  },
+  {
+    "id": "panama-canal",
+    "name": "The Panama Canal",
+    "type": "canal",
+    "category": "cultural",
+    "subtitle": "Fifty miles that saved eight thousand",
+    "story": "Before 1914, a ship sailing from New York to San Francisco went around Cape Horn - about 13,000 miles through some of the worst seas on Earth. The canal cut it to roughly 5,000. The French tried first and failed, losing around 22,000 workers mostly to yellow fever and malaria. The Americans succeeded largely because Walter Reed's work had shown mosquitoes carried both, so the decisive engineering was drainage and screening as much as digging.",
+    "nameStory": "Named for the country, itself named for a fishing village whose name is usually translated as 'abundance of fish'. The canal is the reason Panama is a country at all: it was part of Colombia until the US backed its independence in 1903 and secured the rights within weeks.",
+    "countriesTouched": [
+      "Panama"
+    ],
+    "geometry": {
+      "kind": "line",
+      "source": "inline",
+      "approximate": true,
+      "labelParts": true,
+      "inlineParts": [
+        {
+          "name": "Panama Canal",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                -79.92,
+                9.38
+              ],
+              [
+                -79.85,
+                9.3
+              ],
+              [
+                -79.8,
+                9.2
+              ],
+              [
+                -79.75,
+                9.1
+              ],
+              [
+                -79.68,
+                9.05
+              ],
+              [
+                -79.62,
+                8.98
+              ],
+              [
+                -79.55,
+                8.94
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "markers": [
+      {
+        "name": "Colon - Atlantic side",
+        "coords": [
+          -79.9,
+          9.36
+        ]
+      },
+      {
+        "name": "Gatun Locks",
+        "coords": [
+          -79.92,
+          9.27
+        ]
+      },
+      {
+        "name": "Panama City - Pacific side",
+        "coords": [
+          -79.52,
+          8.98
+        ]
+      }
+    ],
+    "keyFacts": [
+      "About 51 miles long, and a transit takes 8 to 10 hours.",
+      "Ships are raised roughly 85 feet to Gatun Lake and lowered again - it is not a sea-level cut.",
+      "Because of how the isthmus curves, a ship heading to the Pacific actually travels southeast.",
+      "The US controlled the Canal Zone until it was handed to Panama at the end of 1999."
+    ],
+    "whyItMatters": "The canal runs on fresh water - every transit drains tens of millions of gallons from Gatun Lake into the sea. Drought has forced Panama to cut daily crossings, which means a rainfall shortage in one small country raises shipping costs worldwide."
+  },
+  {
+    "id": "suez-canal",
+    "name": "The Suez Canal",
+    "type": "canal",
+    "category": "cultural",
+    "subtitle": "The seam between Africa and Asia",
+    "story": "The Suez Canal cuts through the Isthmus of Suez, the narrow land bridge joining Africa to Asia, connecting the Mediterranean to the Red Sea. Opened in 1869, it removed the need to sail all the way around Africa - roughly 5,000 miles saved on a Europe-to-Asia voyage. Unlike Panama it has no locks, because both seas sit at essentially the same level; it is a trench at sea level, about 120 miles long.",
+    "nameStory": "From the Egyptian town of Suez at the southern end, whose name traces back through Arabic to an ancient Egyptian word. Pharaohs dug an earlier canal along a different line more than 2,000 years before, linking the Nile to the Red Sea.",
+    "countriesTouched": [
+      "Egypt"
+    ],
+    "geometry": {
+      "kind": "line",
+      "source": "inline",
+      "approximate": true,
+      "labelParts": true,
+      "inlineParts": [
+        {
+          "name": "Suez Canal",
+          "geometry": {
+            "type": "LineString",
+            "coordinates": [
+              [
+                32.3,
+                31.26
+              ],
+              [
+                32.32,
+                31.05
+              ],
+              [
+                32.34,
+                30.8
+              ],
+              [
+                32.35,
+                30.6
+              ],
+              [
+                32.32,
+                30.4
+              ],
+              [
+                32.4,
+                30.15
+              ],
+              [
+                32.55,
+                29.97
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    "markers": [
+      {
+        "name": "Port Said",
+        "coords": [
+          32.3,
+          31.26
+        ]
+      },
+      {
+        "name": "Great Bitter Lake",
+        "coords": [
+          32.36,
+          30.33
+        ]
+      },
+      {
+        "name": "Suez",
+        "coords": [
+          32.55,
+          29.97
+        ]
+      }
+    ],
+    "keyFacts": [
+      "About 120 miles long, with no locks - both ends are at sea level.",
+      "Roughly 12% of global trade passes through it.",
+      "Nasser's nationalisation of the canal in 1956 triggered an international crisis and an invasion by Britain, France and Israel.",
+      "In 2021 a single grounded container ship, the Ever Given, blocked it for six days and stalled billions of dollars of trade."
+    ],
+    "whyItMatters": "Suez and Panama are the two seams holding global shipping together, and both are single points of failure. The Ever Given proved how little it takes - one ship, sideways, for under a week."
+  },
+  {
+    "id": "pyramids-seven-wonders",
+    "name": "The Pyramids & the Seven Wonders",
+    "type": "monuments",
+    "category": "cultural",
+    "subtitle": "Six are gone; one is older than the list",
+    "story": "The ancient Greeks compiled a list of seven wonders - essentially a tourist itinerary of the Mediterranean world. Six have been destroyed by earthquake, fire or war and survive only in description. The Great Pyramid of Giza is the exception. It was already about 2,000 years old when the list was written, and it is still standing now, roughly 4,500 years on. It was the tallest structure humans built for some 3,800 years.",
+    "nameStory": "The Greek 'theamata' meant 'things to be seen' - sights. The stronger word 'thaumata', wonders, came later. So the original list was closer to a travel guide than a ranking of marvels.",
+    "countriesTouched": [
+      "Egypt",
+      "Greece",
+      "Turkey",
+      "Iraq"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          20,
+          22
+        ],
+        [
+          50,
+          42
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Great Pyramid of Giza",
+        "coords": [
+          31.134,
+          29.979
+        ]
+      },
+      {
+        "name": "Lighthouse of Alexandria",
+        "coords": [
+          29.885,
+          31.214
+        ]
+      },
+      {
+        "name": "Temple of Artemis - Ephesus",
+        "coords": [
+          27.364,
+          37.95
+        ]
+      },
+      {
+        "name": "Mausoleum at Halicarnassus",
+        "coords": [
+          27.424,
+          37.038
+        ]
+      },
+      {
+        "name": "Colossus of Rhodes",
+        "coords": [
+          28.227,
+          36.451
+        ]
+      },
+      {
+        "name": "Statue of Zeus - Olympia",
+        "coords": [
+          21.63,
+          37.638
+        ]
+      },
+      {
+        "name": "Hanging Gardens - Babylon?",
+        "coords": [
+          44.42,
+          32.54
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Only the Great Pyramid survives; the other six are known from written descriptions.",
+      "It held the record for tallest human structure for roughly 3,800 years.",
+      "Every wonder on the list sits within reach of the Mediterranean - the limit of the Greek world, not of human achievement.",
+      "The Hanging Gardens may never have existed in Babylon at all; some scholars place them at Nineveh instead."
+    ],
+    "whyItMatters": "The list is a useful reminder that 'the wonders of the world' meant the wonders of one small region. Great Zimbabwe, Angkor Wat, Teotihuacan and the Great Wall were unknown to whoever wrote it."
+  },
+  {
+    "id": "ukraine",
+    "name": "Ukraine",
+    "type": "country",
+    "category": "conflict",
+    "subtitle": "Flat, fertile, and on the road between powers",
+    "story": "Ukraine is mostly steppe - open, flat, extraordinarily fertile black soil, and almost no natural defensive barrier between it and Russia to the east. That geography made it one of the great grain regions of the world and also made it a corridor: Mongols, Poles, Swedes, Ottomans, Napoleon and Hitler's armies all moved across this ground. The Dnieper runs down the middle to the Black Sea, and Crimea juts into that sea, which is why a peninsula the size of Massachusetts matters so much.",
+    "nameStory": "Usually traced to a Slavic root meaning 'borderland' or 'region'. Ukrainians generally reject the borderland reading, since it defines the country by its position relative to somewhere else - which is precisely the argument.",
+    "countriesTouched": [
+      "Ukraine",
+      "Russia",
+      "Belarus",
+      "Poland",
+      "Romania",
+      "Moldova",
+      "Hungary",
+      "Slovakia"
+    ],
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "countries",
+      "names": [
+        "Ukraine"
+      ],
+      "labelParts": true,
+      "tolerance": 0.02
+    },
+    "markers": [
+      {
+        "name": "Kyiv",
+        "coords": [
+          30.52,
+          50.45
+        ]
+      },
+      {
+        "name": "Dnieper River",
+        "coords": [
+          33.5,
+          47.9
+        ]
+      },
+      {
+        "name": "Donbas",
+        "coords": [
+          37.8,
+          48.3
+        ]
+      },
+      {
+        "name": "Crimea",
+        "coords": [
+          34.1,
+          45.3
+        ]
+      },
+      {
+        "name": "Odesa - grain port",
+        "coords": [
+          30.73,
+          46.48
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Roughly a quarter of the world's chernozem - black earth, among the most fertile soil anywhere - lies in Ukraine.",
+      "Before 2022 it was one of the largest exporters of wheat, maize and sunflower oil, most shipped from Odesa.",
+      "Russia annexed Crimea in 2014, which almost no other country recognises, and launched a full-scale invasion in February 2022.",
+      "Fighting has concentrated in the eastern Donbas and along the south toward Crimea - the flattest, most open ground.",
+      "Different countries' maps draw Crimea differently, so the same place can sit inside two different borders depending on who published the atlas."
+    ],
+    "whyItMatters": "This is an ongoing war, and its basic facts are documented rather than matters of opinion: Russia annexed Crimea in 2014 and invaded on a large scale in 2022. What remains genuinely disputed is the status of that territory - Russia claims Crimea and four other regions as its own; Ukraine and the large majority of UN member states reject those claims. Blockades of Odesa raised bread prices across North Africa and the Middle East within months, which is a hard lesson in how far one country's geography reaches."
+  },
+  {
+    "id": "chernobyl",
+    "name": "Chernobyl",
+    "type": "site",
+    "category": "conflict",
+    "subtitle": "How the world found out, and who told them",
+    "story": "Reactor Four exploded on 26 April 1986. The Soviet government said nothing. Two days later, workers arriving at the Forsmark plant in Sweden - over 700 miles away - set off radiation alarms, and staff searched their own site for a leak before realising the contamination had blown in on the wind from the southeast. Sweden's questions are what forced the announcement. The wind, not the government, told the world.",
+    "nameStory": "From the Ukrainian for mugwort or wormwood, a plant that grows in the area. The purpose-built town for plant workers, Pripyat, is named for the river; it was evacuated 36 hours after the explosion and never reoccupied.",
+    "countriesTouched": [
+      "Ukraine",
+      "Belarus"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          27.5,
+          50.2
+        ],
+        [
+          33.5,
+          52.6
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Reactor Four",
+        "coords": [
+          30.099,
+          51.389
+        ]
+      },
+      {
+        "name": "Pripyat - evacuated 1986",
+        "coords": [
+          30.06,
+          51.405
+        ]
+      },
+      {
+        "name": "Exclusion Zone",
+        "coords": [
+          29.8,
+          51.25
+        ]
+      },
+      {
+        "name": "Belarus border",
+        "coords": [
+          30,
+          51.68
+        ]
+      },
+      {
+        "name": "Kyiv - 60 miles south",
+        "coords": [
+          30.52,
+          50.45
+        ]
+      }
+    ],
+    "keyFacts": [
+      "The Exclusion Zone covers roughly 1,000 square miles across Ukraine and Belarus.",
+      "Prevailing winds carried much of the heaviest fallout north into Belarus, which absorbed a large share of the contamination despite having no reactor of its own.",
+      "Detection in Sweden on 28 April is what forced the Soviet Union to acknowledge the accident.",
+      "With people gone, the zone has become an accidental wildlife refuge - wolves, lynx, boar and Przewalski's horses live there now.",
+      "Russian forces occupied the site early in the 2022 invasion, digging in contaminated soil before withdrawing."
+    ],
+    "whyItMatters": "Radiation does not respect borders, and neither does the wind. Chernobyl is why Europe built shared radiation-monitoring networks, and why the safety of a reactor in one country is now treated as everyone's business."
+  },
+  {
+    "id": "south-china-sea",
+    "name": "The South China Sea",
+    "type": "sea",
+    "category": "conflict",
+    "subtitle": "Reefs, shipping lanes, and six sets of claims",
+    "story": "About a third of global shipping crosses the South China Sea, and beneath it lie fisheries and probable oil and gas. Six governments claim overlapping pieces of it. China claims by far the largest share, marked on its maps by a nine-dash line looping close to other countries' coasts, and since 2013 has built artificial islands on reefs and shoals, adding runways and harbours. The rocks themselves are nearly worthless; what they generate is a claim to the water around them.",
+    "nameStory": "Called the South China Sea in English, the East Sea in Vietnam, the West Philippine Sea in the Philippines, and the South Sea in China. What a country calls it tracks what a country claims.",
+    "countriesTouched": [
+      "China",
+      "Vietnam",
+      "Philippines",
+      "Malaysia",
+      "Brunei",
+      "Indonesia",
+      "Taiwan"
+    ],
+    "geometry": {
+      "kind": "polygon",
+      "source": "natural-earth",
+      "layer": "marine",
+      "names": [
+        "South China Sea"
+      ],
+      "labelParts": true,
+      "tolerance": 0.1
+    },
+    "markers": [
+      {
+        "name": "Spratly Islands",
+        "coords": [
+          114,
+          9.5
+        ]
+      },
+      {
+        "name": "Paracel Islands",
+        "coords": [
+          112,
+          16.5
+        ]
+      },
+      {
+        "name": "Scarborough Shoal",
+        "coords": [
+          117.75,
+          15.15
+        ]
+      },
+      {
+        "name": "Manila",
+        "coords": [
+          120.98,
+          14.6
+        ]
+      },
+      {
+        "name": "Hainan",
+        "coords": [
+          109.8,
+          19.2
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Roughly one third of world shipping passes through it each year.",
+      "China, Taiwan, Vietnam, the Philippines, Malaysia and Brunei all hold overlapping claims.",
+      "A 2016 tribunal under the UN Convention on the Law of the Sea found no legal basis for China's nine-dash line; China rejected the ruling and does not accept the tribunal's jurisdiction.",
+      "Under that convention a habitable island generates a 200-mile exclusive economic zone while a bare rock does not, which is why the status of each tiny feature is argued over so fiercely.",
+      "Several reefs have been enlarged into artificial islands with airstrips and ports."
+    ],
+    "whyItMatters": "The disagreement is not really about the reefs; it is about who owns the sea around them and who gets to decide. That makes it a test of whether maritime law can settle a dispute between a very large country and its smaller neighbours - which is why states with no claim of their own, including the US, sail warships through it."
+  }
+]

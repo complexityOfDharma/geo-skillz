@@ -1,4 +1,5 @@
 import {
+  geoEqualEarth,
   geoAlbersUsa,
   geoConicEqualArea,
   geoBounds,
@@ -14,6 +15,12 @@ export function contextProjection(nation, width, height, pad = 8) {
     [[pad, pad], [width - pad, height - pad]],
     nation
   );
+}
+
+// The whole-world context projection. Equal Earth keeps areas honest, which
+// matters when the subject is a continent or an ocean.
+export function worldProjection(land, width, height, pad = 6) {
+  return geoEqualEarth().fitExtent([[pad, pad], [width - pad, height - pad]], land);
 }
 
 // A zoom projection fitted to one shape. AlbersUsa is wrong here - it would keep

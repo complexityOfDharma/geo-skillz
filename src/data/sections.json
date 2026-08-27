@@ -59,8 +59,57 @@
   {
     "id": "world",
     "title": "The World",
-    "status": "planned",
-    "blurb": "Coming next — continents, countries, and global physical geography, using the same six categories.",
-    "categories": []
+    "status": "live",
+    "blurb": "Continents, oceans, borders and the places a world history class keeps coming back to.",
+    "categories": [
+      {
+        "id": "continents",
+        "title": "Continents",
+        "kind": "features",
+        "blurb": "The seven landmasses, how they came apart, and the one nobody owns."
+      },
+      {
+        "id": "water",
+        "title": "Bodies of Water",
+        "kind": "features",
+        "blurb": "Oceans, seas and the rivers that decided where civilisations grew."
+      },
+      {
+        "id": "landforms",
+        "title": "Landforms",
+        "kind": "features",
+        "blurb": "The highest, the driest and the longest features on the planet."
+      },
+      {
+        "id": "climate",
+        "title": "Climate & Natural Regions",
+        "kind": "features",
+        "blurb": "The belts of climate that circle the globe, and the lines we draw on them."
+      },
+      {
+        "id": "borders",
+        "title": "Countries, Regions & Borders",
+        "kind": "features",
+        "blurb": "Chokepoints and passages - the narrow places world trade squeezes through."
+      },
+      {
+        "id": "cities",
+        "title": "Cities & Population",
+        "kind": "features",
+        "blurb": "Where the world actually lives, and why it clustered there."
+      },
+      {
+        "id": "cultural",
+        "title": "Cultural & Human-Made Features",
+        "kind": "features",
+        "blurb": "Canals and monuments - geography people built, and what it rearranged."
+      },
+      {
+        "id": "conflict",
+        "title": "Global Conflict",
+        "kind": "features",
+        "blurb": "Places in the news, explained by their geography rather than argued about."
+      }
+    ]
   }
 ]

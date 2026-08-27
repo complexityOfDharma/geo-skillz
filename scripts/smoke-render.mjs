@@ -21,6 +21,15 @@ const atlas = {
   context: read('src/data/geometry/context.json'),
 };
 
+// The browser loads this lazily; the Node check always has it.
+const worldTopo = read('node_modules/world-atlas/countries-50m.json');
+const worldCountries = topojson.feature(worldTopo, worldTopo.objects.countries);
+atlas.world = {
+  countries: worldCountries,
+  land: topojson.feature(worldTopo, worldTopo.objects.land),
+  byName: new Map(worldCountries.features.map((f) => [f.properties.name, f])),
+};
+
 const dir = join(root, 'src/data/states');
 const states = readdirSync(dir)
   .filter((f) => f.endsWith('.json'))
@@ -30,8 +39,11 @@ const states = readdirSync(dir)
 const sections = buildSections(
   read('src/data/sections.json'),
   states,
-  read('src/data/features.json'),
-  read('src/data/geometry/shapes.json')
+  [
+    ...read('src/data/features.json').map((f) => ({ ...f, section: 'us' })),
+    ...read('src/data/world-features.json').map((f) => ({ ...f, section: 'world' })),
+  ],
+  { ...read('src/data/geometry/shapes.json'), ...read('src/data/geometry/world-shapes.json') }
 );
 const crumb = breadcrumbFor([{ label: 'Home', href: '#/' }, { label: 'Test' }]);
 
@@ -54,8 +66,12 @@ const scan = (html) => {
 {
   const html = renderLanding(sections);
   const msgs = scan(html);
+  // One tile per live category across every section.
+  const expected = sections
+    .filter((s) => s.status !== 'planned')
+    .reduce((n, s) => n + s.categories.length, 0);
   const tiles = (html.match(/class="tile[ "]/g) ?? []).length;
-  if (tiles !== 8) msgs.push(`${tiles} tiles, expected 8 (7 categories + planned World)`);
+  if (tiles !== expected) msgs.push(`${tiles} tiles, expected ${expected}`);
   if (msgs.length) problem('landing', msgs);
 }
 
