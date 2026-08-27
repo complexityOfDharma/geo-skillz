@@ -41,9 +41,7 @@ export function renderCategory(category, atlas, breadcrumb) {
     <article class="page page-category">
       ${breadcrumb}
       <header class="page-head">
-        <p class="eyebrow">${esc(category.icon ?? '')} ${category.count} ${
-    category.count === 1 ? 'slide' : 'slides'
-  }</p>
+        <p class="eyebrow">${category.count} ${category.count === 1 ? 'slide' : 'slides'}</p>
         <h1 class="page-title">${esc(category.title)}</h1>
         <p class="page-sub">${esc(category.blurb)}</p>
       </header>

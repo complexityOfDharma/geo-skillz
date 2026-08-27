@@ -7,7 +7,6 @@ function tile(category) {
   const href = format({ kind: 'category', sectionId: category.sectionId, categoryId: category.id });
   return `
     <a class="tile" href="${href}" data-route>
-      <span class="tile-icon" aria-hidden="true">${esc(category.icon ?? '')}</span>
       <span class="tile-title">${esc(category.title)}</span>
       <span class="tile-count">${category.count} ${category.count === 1 ? 'slide' : 'slides'}</span>
       <span class="tile-blurb">${esc(category.blurb)}</span>
@@ -17,7 +16,6 @@ function tile(category) {
 function plannedTile(section) {
   return `
     <div class="tile is-planned" aria-disabled="true">
-      <span class="tile-icon" aria-hidden="true">🌍</span>
       <span class="tile-title">${esc(section.title)}</span>
       <span class="tile-count">Coming soon</span>
       <span class="tile-blurb">The same six categories, applied to the whole map.</span>

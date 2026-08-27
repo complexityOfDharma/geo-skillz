@@ -4,8 +4,16 @@
 
 export const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-export function buildSections(sectionData, states, features) {
-  const fipsByAbbr = new Map(states.map((s) => [s.abbreviation, s.fips]));
+export function buildSections(sectionData, states, features, shapes = {}) {
+  const byAbbr = new Map(states.map((s) => [s.abbreviation, s]));
+
+  // Geometry comes from two places: shapes.json (subsetted from Natural Earth
+  // by scripts/build-geometry.mjs) and inlineParts hand-authored in the data
+  // file for routes no public dataset carries.
+  const partsFor = (data) => [
+    ...(shapes[data.id]?.parts ?? []),
+    ...(data.geometry?.inlineParts ?? []),
+  ];
 
   const stateSlide = (data) => ({
     kind: 'state',
@@ -24,7 +32,13 @@ export function buildSections(sectionData, states, features) {
       ...data,
       // us-atlas identifies geometries by FIPS, so resolve the abbreviations the
       // data files use into ids the map can match.
-      fipsTouched: (data.statesTouched ?? []).map((a) => fipsByAbbr.get(a)).filter(Boolean),
+      fipsTouched: (data.statesTouched ?? []).map((a) => byAbbr.get(a)?.fips).filter(Boolean),
+      // Names for the grey labels drawn on states the feature crosses.
+      touchedStates: (data.statesTouched ?? [])
+        .map((a) => byAbbr.get(a))
+        .filter(Boolean)
+        .map((s) => ({ fips: s.fips, name: s.name, abbr: s.abbreviation })),
+      geometryParts: partsFor(data),
     },
   });
 

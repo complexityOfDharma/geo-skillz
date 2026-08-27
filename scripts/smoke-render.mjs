@@ -26,7 +26,12 @@ const states = readdirSync(dir)
   .map((f) => JSON.parse(readFileSync(join(dir, f), 'utf8')))
   .sort((a, b) => a.name.localeCompare(b.name));
 
-const sections = buildSections(read('src/data/sections.json'), states, read('src/data/features.json'));
+const sections = buildSections(
+  read('src/data/sections.json'),
+  states,
+  read('src/data/features.json'),
+  read('src/data/geometry/shapes.json')
+);
 const crumb = breadcrumbFor([{ label: 'Home', href: '#/' }, { label: 'Test' }]);
 
 let bad = 0;
