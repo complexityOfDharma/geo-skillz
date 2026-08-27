@@ -1,4 +1,11 @@
-import { contextMap, stateDetailMap, featureDetailMap } from '../lib/maps.js';
+import {
+  contextMap,
+  isGlobalSpan,
+  stateDetailMap,
+  featureDetailMap,
+  worldContextMap,
+  worldDetailMap,
+} from '../lib/maps.js';
 
 // Rendered above every slide and category page so "up" is always visible, not
 // just reachable by pressing Escape.
@@ -141,6 +148,34 @@ function timelineBlock(timeline) {
 }
 
 function featureSlide(atlas, f) {
+  // World features draw against country geometry and a globe projection; US
+  // features against us-atlas. atlas.world is present once it has loaded.
+  const isWorld = f.scope === 'world';
+  const maps = isWorld && isGlobalSpan(f)
+    ? `<section class="maps maps-single">
+         <figure class="map-figure">
+           ${worldContextMap(atlas.world, f, { width: 900, height: 500, showMarkers: true })}
+           <figcaption>${esc(f.name)} — the whole globe, so there is no closer view</figcaption>
+         </figure>
+       </section>`
+    : isWorld
+    ? mapPair(
+        worldContextMap(atlas.world, f),
+        worldDetailMap(atlas.world, f),
+        `${f.name} on the globe`,
+        `${f.name} up close${f.geometry?.approximate ? ' — shape/route approximate' : ''}`
+      )
+    : mapPair(
+        contextMap(atlas, {
+          highlight: f.fipsTouched,
+          shapeParts: f.geometryParts,
+          kind: f.geometry?.kind,
+        }),
+        featureDetailMap(atlas, f),
+        `${f.name} in national context`,
+        `${f.name} up close${f.geometry?.approximate ? ' — shape/route approximate' : ''}`
+      );
+
   const touched = (f.statesTouched ?? [])
     .map((a) => `<button class="chip" data-goto-abbr="${esc(a)}">${esc(a)}</button>`)
     .join('');
@@ -148,7 +183,7 @@ function featureSlide(atlas, f) {
   return `
     <article class="slide slide-feature">
       <header class="slide-head">
-        <p class="eyebrow">US geographic feature &middot; ${esc(f.type)}</p>
+        <p class="eyebrow">${isWorld ? 'World geography' : 'US geographic feature'} &middot; ${esc(f.type)}</p>
         <h1 class="slide-title">${esc(f.name)}${
     f.disputedName ? '<span class="disputed" title="This name is disputed">disputed name</span>' : ''
   }</h1>
@@ -162,17 +197,7 @@ function featureSlide(atlas, f) {
         { label: 'Where the name comes from', text: f.nameStory },
       ])}
 
-      ${mapPair(
-        contextMap(atlas, {
-          highlight: f.fipsTouched,
-          shapeParts: f.geometryParts,
-          kind: f.geometry?.kind,
-        }),
-        featureDetailMap(atlas, f),
-        `${f.name} in national context`,
-        // Hand-drawn routes must never imply survey precision.
-        `${f.name} up close${f.geometry?.approximate ? ' — shape/route approximate' : ''}`
-      )}
+      ${maps}
 
       ${timelineBlock(f.namingTimeline)}
 
@@ -183,8 +208,14 @@ function featureSlide(atlas, f) {
             ${list(f.keyFacts, 'fun-list')}
           </div>
           <div>
-            <h3 class="panel-title">States it touches</h3>
-            <div class="chips">${touched || '<span class="chip is-empty">n/a</span>'}</div>
+            <h3 class="panel-title">${isWorld ? 'Countries it touches' : 'States it touches'}</h3>
+            <div class="chips">${
+              isWorld
+                ? (f.countriesTouched ?? [])
+                    .map((c) => `<span class="chip is-inert">${esc(c)}</span>`)
+                    .join('') || '<span class="chip is-empty">n/a</span>'
+                : touched || '<span class="chip is-empty">n/a</span>'
+            }</div>
           </div>
         </div>
       </section>

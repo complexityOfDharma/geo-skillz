@@ -1,4 +1,13 @@
-import { contextProjection, zoomProjection, bboxFeature, boundsOfParts, graticuleFor, pathFor } from './geo.js';
+import {
+  contextProjection,
+  worldProjection,
+  zoomProjection,
+  bboxFeature,
+  boundsOfParts,
+  graticuleFor,
+  pathFor,
+} from './geo.js';
+import { geoGraticule10 } from 'd3-geo';
 
 const esc = (s) =>
   String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -315,23 +324,7 @@ export function featureDetailMap(atlas, item, { width = 820, height = 520 } = {}
   // Shape labels and point markers compete for the same space, so they go
   // through one collision pass together rather than being placed independently
   // and landing on top of each other.
-  const labelItems = [];
-
-  if (item.geometry?.labelParts !== false && hasShape) {
-    // One label per distinct name, on that name's largest part - so the five
-    // Great Lakes each get labelled, but a river split into three segments does
-    // not get labelled three times.
-    const best = new Map();
-    for (const part of parts) {
-      const [cx, cy] = path.centroid(part.geometry);
-      if (!Number.isFinite(cx)) continue;
-      const size = Math.abs(path.area(part.geometry)) || path.measure(part.geometry);
-      const prev = best.get(part.name);
-      if (!prev || size > prev.size)
-        best.set(part.name, { name: displayName(item, part.name), x: cx, y: cy, size, isPart: true });
-    }
-    labelItems.push(...best.values());
-  }
+  const labelItems = [...partLabelItems(path, item, parts)];
 
   // A marker that merely repeats a shape's own label is noise - "Superior"
   // sitting on top of "Lake Superior".
@@ -383,6 +376,205 @@ export function featureDetailMap(atlas, item, { width = 820, height = 520 } = {}
     stateLabels +
     drawn +
     labels +
+    `</svg>`
+  );
+}
+
+// ---------------------------------------------------------------------------
+// The World. Separate from the US maps rather than generalised into them: the
+// base layer is countries not states, the context projection covers the globe,
+// and the two share nothing but the label and shape conventions.
+
+// Grey names on the countries a feature touches, using the same clipped-centroid
+// placement as the state version.
+function greyCountryLabels(path, names, world, width, height) {
+  return (names ?? [])
+    .map((name) => {
+      const geo = world.byName.get(name);
+      if (!geo) return '';
+      if (Math.abs(path.area(geo)) < 900) return '';
+      const [cx, cy] = path.centroid(geo);
+      if (!Number.isFinite(cx)) return '';
+      const half = name.length * 3.3 + 4;
+      const lx = Math.min(Math.max(cx, half), width - half);
+      return `<text class="state-label" x="${lx.toFixed(1)}" y="${cy.toFixed(
+        1
+      )}" text-anchor="middle" dy="0.32em">${esc(name)}</text>`;
+    })
+    .join('');
+}
+
+// One label per distinct part name, placed on that name's largest piece, so
+// five Great Lakes each get labelled but a river split into three segments
+// does not get labelled three times. Shared by all three shape-drawing maps.
+function partLabelItems(path, item, parts) {
+  if (item.geometry?.labelParts === false || !parts.length) return [];
+  const best = new Map();
+  for (const part of parts) {
+    const [cx, cy] = path.centroid(part.geometry);
+    if (!Number.isFinite(cx)) continue;
+    const size = Math.abs(path.area(part.geometry)) || path.measure(part.geometry);
+    const prev = best.get(part.name);
+    if (!prev || size > prev.size) {
+      best.set(part.name, { name: displayName(item, part.name), x: cx, y: cy, size, isPart: true });
+    }
+  }
+  return [...best.values()];
+}
+
+function featureShapes(path, item, parts) {
+  const cls = item.geometry?.kind === 'line' ? 'feat-line' : 'feat-shape';
+  return parts
+    .map((part) => {
+      const d = path(part.geometry);
+      return d
+        ? `<path class="${cls}" d="${d}"><title>${esc(displayName(item, part.name))}</title></path>`
+        : '';
+    })
+    .join('');
+}
+
+// Some world features - the continents, the oceans, the Arctic Circle - span
+// most of the planet. There is no meaningful "zoom" for those, and fitting a
+// conic projection to the whole globe mirrors and shreds it, so they get a
+// single globe view instead of a pair.
+export function isGlobalSpan(item) {
+  const bbox = boundsOfParts(item.geometryParts ?? [], item.markers) ?? item.focus?.bbox;
+  if (!bbox) return false;
+  const [[w, s], [e, n]] = bbox;
+  return Math.abs(e - w) > 150 || Math.abs(n - s) > 100;
+}
+
+// Tier 1 for world features: the whole globe, with the subject drawn on it.
+export function worldContextMap(world, item, { width = 820, height = 460, showMarkers = false } = {}) {
+  const projection = worldProjection(world.land, width, height);
+  const path = pathFor(projection);
+  const parts = item.geometryParts ?? [];
+  const touched = new Set(parts.length ? [] : item.countriesTouched ?? []);
+
+  const base = world.countries.features
+    .map((f) => {
+      const d = path(f);
+      if (!d) return '';
+      const on = touched.has(f.properties.name);
+      return `<path class="ctx-state${on ? ' is-active' : ''}" d="${d}"><title>${esc(
+        f.properties.name
+      )}</title></path>`;
+    })
+    .join('');
+
+  const grid = path(geoGraticule10());
+
+  // A globe-spanning feature with no shape - the megacities, say - carries its
+  // meaning entirely in its markers, so the context map has to draw them.
+  // Only when the globe IS the detail map. On a paired layout the markers
+  // belong on the zoomed view; at world scale they pile into one corner.
+  // Only when the globe IS the only map. On a paired layout these belong on
+  // the zoomed view; at world scale they pile into one corner.
+  const overlay = !showMarkers
+    ? ''
+    : spread(
+        [...partLabelItems(path, item, parts), ...project(projection, item.markers, width, height)],
+        15,
+        height
+      )
+        .map((m) => {
+          if (m.isPart) {
+            return `<text class="feat-label" x="${m.x.toFixed(1)}" y="${m.labelY.toFixed(
+              1
+            )}" text-anchor="middle" dy="0.32em">${esc(m.name)}</text>`;
+          }
+          const right = m.x > width * 0.55;
+          const tx = right ? m.x - 8 : m.x + 8;
+          return (
+            `<g class="marker">` +
+            `<line class="marker-leader" x1="${m.x}" y1="${m.y}" x2="${tx}" y2="${m.labelY}" />` +
+            `<circle class="marker-dot" cx="${m.x}" cy="${m.y}" r="3" />` +
+            `<text class="marker-label" x="${tx}" y="${m.labelY}" dy="0.32em" ` +
+            `text-anchor="${right ? 'end' : 'start'}">${esc(m.name)}</text></g>`
+          );
+        })
+        .join('');
+
+  return (
+    svgOpen(width, height, 'map map-context map-world') +
+    `<path class="ocean-sphere" d="${path({ type: 'Sphere' })}" />` +
+    `<path class="graticule" d="${grid}" />` +
+    base +
+    featureShapes(path, item, parts).replace(/class="feat-/g, 'class="is-ctx feat-') +
+    overlay +
+    `</svg>`
+  );
+}
+
+// Tier 2 for world features: zoom to the subject, countries as context.
+export function worldDetailMap(world, item, { width = 820, height = 520 } = {}) {
+  const parts = item.geometryParts ?? [];
+  const bbox = boundsOfParts(parts, item.markers) ?? item.focus?.bbox;
+  if (!bbox) return `<p class="map-missing">No detail geometry.</p>`;
+
+  const frame = bboxFeature(bbox);
+  const projection = zoomProjection(frame, width, height, 14);
+  projection.clipExtent([[0, 0], [width, height]]);
+  const path = pathFor(projection);
+
+  const touched = new Set(parts.length ? [] : item.countriesTouched ?? []);
+  const base = world.countries.features
+    .map((f) => {
+      const d = path(f);
+      if (!d) return '';
+      const on = touched.has(f.properties.name);
+      return `<path class="detail-neighbor${on ? ' is-touched' : ''}" d="${d}"><title>${esc(
+        f.properties.name
+      )}</title></path>`;
+    })
+    .join('');
+
+  const labels = greyCountryLabels(path, item.countriesTouched, world, width, height);
+  const grid = path(graticuleFor(bbox));
+
+  // Shape labels and markers share one collision pass, as on the US maps.
+  const items = [...partLabelItems(path, item, parts)];
+  const partNames = parts.map((p) => p.name.toLowerCase());
+  for (const m of item.markers ?? []) {
+    const n = m.name.toLowerCase();
+    if (partNames.some((p) => p.includes(n) || n.includes(p))) continue;
+    const pt = projection(m.coords);
+    if (!pt || !Number.isFinite(pt[0])) continue;
+    items.push({ ...m, x: pt[0], y: pt[1] });
+  }
+
+  const drawn = spread(items, 20, height)
+    .map((l) => {
+      const moved = Math.abs(l.labelY - l.y) > 5;
+      if (l.isPart) {
+        return (
+          `<g class="marker">` +
+          (moved ? `<line class="marker-leader" x1="${l.x}" y1="${l.y}" x2="${l.x}" y2="${l.labelY}" />` : '') +
+          `<text class="feat-label" x="${l.x.toFixed(1)}" y="${l.labelY.toFixed(
+            1
+          )}" text-anchor="middle" dy="0.32em">${esc(l.name)}</text></g>`
+        );
+      }
+      const right = l.x > width * 0.55;
+      const tx = right ? l.x - 10 : l.x + 10;
+      return (
+        `<g class="marker">` +
+        `<line class="marker-leader" x1="${l.x}" y1="${l.y}" x2="${tx}" y2="${l.labelY}" />` +
+        `<circle class="marker-dot" cx="${l.x}" cy="${l.y}" r="3.4" />` +
+        `<text class="marker-label" x="${tx}" y="${l.labelY}" dy="0.32em" ` +
+        `text-anchor="${right ? 'end' : 'start'}">${esc(l.name)}</text></g>`
+      );
+    })
+    .join('');
+
+  return (
+    svgOpen(width, height, 'map map-detail map-world') +
+    base +
+    (grid ? `<path class="graticule" d="${grid}" />` : '') +
+    labels +
+    featureShapes(path, item, parts) +
+    drawn +
     `</svg>`
   );
 }

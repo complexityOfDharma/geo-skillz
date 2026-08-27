@@ -103,8 +103,12 @@ function densify(ring, maxSeg = 0.25) {
 }
 
 function simplifyRing(ring, tolerance, closed) {
+  // Densify in proportion to how coarse the shape already is. A quarter-degree
+  // step is right for a state border, but re-inserting points that finely into
+  // a continent outline simplified at 0.6 degrees just undoes the saving.
+  const maxSeg = Math.min(Math.max(tolerance * 4, 0.25), 2);
   // A ring needs 4 points to still be a polygon after simplification.
-  const out = densify(round(douglasPeucker(ring, tolerance)));
+  const out = densify(round(douglasPeucker(ring, tolerance)), maxSeg);
   if (closed && out.length >= 3) {
     const [fx, fy] = out[0];
     const [lx, ly] = out[out.length - 1];
@@ -113,7 +117,17 @@ function simplifyRing(ring, tolerance, closed) {
   return out;
 }
 
-function simplifyGeometry(geom, tolerance) {
+// Rough planar area of a ring in square degrees - only used to decide whether
+// a polygon is too small to be worth keeping at the scale it will be drawn.
+function ringArea(ring) {
+  let a = 0;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    a += (ring[j][0] + ring[i][0]) * (ring[j][1] - ring[i][1]);
+  }
+  return Math.abs(a / 2);
+}
+
+function simplifyGeometry(geom, tolerance, minArea = 0) {
   const { type, coordinates } = geom;
   if (type === 'Polygon') {
     const rings = coordinates.map((r) => simplifyRing(r, tolerance, true)).filter((r) => r.length >= 4);
@@ -122,7 +136,9 @@ function simplifyGeometry(geom, tolerance) {
   if (type === 'MultiPolygon') {
     const polys = coordinates
       .map((poly) => poly.map((r) => simplifyRing(r, tolerance, true)).filter((r) => r.length >= 4))
-      .filter((poly) => poly.length);
+      // A continent carries thousands of islands that are far below one pixel
+      // at world scale; keeping them costs hundreds of KB and shows nothing.
+      .filter((poly) => poly.length && ringArea(poly[0]) >= minArea);
     return polys.length ? { type, coordinates: polys } : null;
   }
   if (type === 'LineString') {
@@ -146,7 +162,9 @@ function collectRefs() {
     if (!existsSync(path)) continue;
     for (const item of JSON.parse(readFileSync(path, 'utf8'))) {
       const g = item.geometry;
-      if (g?.source === 'natural-earth') refs.push({ id: item.id, ...g });
+      if (g?.source === 'natural-earth') {
+        refs.push({ id: item.id, section: rel.includes('world') ? 'world' : 'us', ...g });
+      }
     }
   }
   return refs;
@@ -198,12 +216,12 @@ for (const ref of refs) {
       continue;
     }
     for (const hit of kept) {
-      const geom = simplifyGeometry(hit.geometry, tolerance);
+      const geom = simplifyGeometry(hit.geometry, tolerance, ref.minArea ?? 0);
       if (geom) parts.push({ name: wanted, geometry: geom });
     }
   }
 
-  if (parts.length) shapes[ref.id] = { kind: ref.kind, parts };
+  if (parts.length) shapes[ref.id] = { kind: ref.kind, section: ref.section, parts };
 }
 
 if (errors.length) {
@@ -213,8 +231,17 @@ if (errors.length) {
 
 const outDir = join(root, 'src/data/geometry');
 mkdirSync(outDir, { recursive: true });
+// Two files: US shapes ship in the main bundle, world shapes load lazily
+// alongside the country geometry, so the US section never pays for them.
+const split = { us: {}, world: {} };
+for (const [id, shape] of Object.entries(shapes)) {
+  const { section, ...rest } = shape;
+  split[section ?? 'us'][id] = rest;
+}
 const outPath = join(outDir, 'shapes.json');
-writeFileSync(outPath, JSON.stringify(shapes) + '\n');
+writeFileSync(outPath, JSON.stringify(split.us) + '\n');
+const worldPath = join(outDir, 'world-shapes.json');
+writeFileSync(worldPath, JSON.stringify(split.world) + '\n');
 
 const kb = (readFileSync(outPath).length / 1024).toFixed(0);
 console.log(`\nwrote ${Object.keys(shapes).length} shapes (${refs.reduce((n, r) => n + r.names.length, 0)} parts) -> ${kb} KB`);

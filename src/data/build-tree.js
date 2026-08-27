@@ -7,7 +7,7 @@ import { geoArea } from 'd3-geo';
 // d3-geo reads a ring wound the wrong way as "the entire globe minus this
 // shape", which floods the map. Hand-authoring the correct direction is a trap
 // nobody should have to think about, so normalise by measurement instead.
-function normalizeWinding(geometry) {
+export function normalizeWinding(geometry) {
   if (!geometry || (geometry.type !== 'Polygon' && geometry.type !== 'MultiPolygon')) return geometry;
   if (geoArea({ type: 'Feature', properties: {}, geometry }) <= 2 * Math.PI) return geometry;
   const flip = (rings) => rings.map((r) => [...r].reverse());
@@ -55,6 +55,7 @@ export function buildSections(sectionData, states, features, shapes = {}) {
       // us-atlas identifies geometries by FIPS, so resolve the abbreviations the
       // data files use into ids the map can match.
       fipsTouched: (data.statesTouched ?? []).map((a) => byAbbr.get(a)?.fips).filter(Boolean),
+      scope: data.section === 'world' ? 'world' : 'us',
       // Names for the grey labels drawn on states the feature crosses.
       touchedStates: namesFor(data.statesTouched),
       geometryParts: partsFor(data),
@@ -66,7 +67,9 @@ export function buildSections(sectionData, states, features, shapes = {}) {
       const slides =
         category.kind === 'states'
           ? states.map(stateSlide)
-          : features.filter((f) => f.category === category.id).map(featureSlide);
+          : features
+              .filter((f) => f.category === category.id && (f.section ?? 'us') === section.id)
+              .map(featureSlide);
 
       slides.forEach((slide, i) => {
         slide.sectionId = section.id;

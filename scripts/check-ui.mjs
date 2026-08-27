@@ -31,11 +31,16 @@ const goto = (hash) => page.goto(BASE + hash, { waitUntil: 'networkidle0' });
 await goto('');
 await page.waitForSelector('.page-landing');
 check('landing renders', true);
+// 7 US categories + 8 world categories, and nothing left marked "planned".
 check(
-  'seven category tiles + one planned',
-  (await page.$$('.tile')).length === 8 && (await page.$$('.tile.is-planned')).length === 1
+  'a tile per live category',
+  (await page.$$('.tile')).length === 15 && (await page.$$('.tile.is-planned')).length === 0,
+  `${(await page.$$('.tile')).length} tiles`
 );
-check('sidebar lists every category', (await page.$$('.sidebar [data-category]')).length === 8);
+check(
+  'sidebar lists every category plus Home',
+  (await page.$$('.sidebar [data-category]')).length === 16
+);
 
 // ---- landing -> category -> slide ----
 await page.click('.tile[href="#/us/states"]');
@@ -188,6 +193,19 @@ check(
   'no square for ranges or valleys',
   (await page.$$('.map-detail .glyph-landmark')).length === 0
 );
+
+// ---- The World ----
+await goto('#/world/conflict/ukraine');
+await page.waitForSelector('.slide-feature');
+check('world slide renders', (await title()) === 'Ukraine');
+check('world slide draws country geometry', (await page.$$('.map-world .feat-shape')).length >= 1);
+check('world detail names neighbouring countries', (await page.$$('.map-detail .state-label')).length >= 3);
+
+// Globe-spanning features get one map, not a meaningless "zoom".
+await goto('#/world/continents/seven-continents');
+await page.waitForSelector('.slide-feature');
+check('continents get a single globe view', (await page.$$('.maps-single .map-world')).length === 1);
+check('all seven continents labelled', (await page.$$('.map-world .feat-label')).length === 7);
 
 // ---- inert affordances ----
 await goto('#/us/states/maryland');

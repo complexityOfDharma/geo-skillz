@@ -1,5 +1,5 @@
 import './style.css';
-import { loadAtlas } from './lib/atlas.js';
+import { loadAtlas, loadWorldAtlas } from './lib/atlas.js';
 import * as router from './lib/router.js';
 import {
   sections,
@@ -10,6 +10,7 @@ import {
   getSlideById,
   getSlideByFips,
   getSlideByAbbr,
+  attachWorldShapes,
 } from './data/index.js';
 import { renderSlide, breadcrumbFor } from './ui/slides.js';
 import { renderLanding } from './ui/landing.js';
@@ -120,8 +121,23 @@ function trailFor(current) {
   return trail;
 }
 
-function go(next, { replace = false } = {}) {
+async function go(next, { replace = false } = {}) {
   route = next;
+
+  // Country geometry is ~700 KB, so it loads only when a world page is first
+  // opened. The US section never pays for it.
+  if (next.sectionId === 'world' && !atlas.world) {
+    stage.innerHTML = '<div class="boot">Loading world map data…</div>';
+    try {
+      atlas.world = await loadWorldAtlas();
+      attachWorldShapes(atlas.world.shapes);
+    } catch (err) {
+      stage.innerHTML =
+        `<div class="boot boot-error"><p>Could not load the world map data.</p>` +
+        `<p class="boot-detail">${err.message}</p></div>`;
+      return;
+    }
+  }
   const crumb = breadcrumbFor(trailFor(route));
 
   let title = 'Geo Skillz';

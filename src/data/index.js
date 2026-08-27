@@ -5,15 +5,21 @@
 // Adding a CATEGORY means editing sections.json and tagging features with its
 // id. Adding a whole SECTION (Phase 2: world geography) means a sections.json
 // entry plus one more glob here for its place files.
-import { buildSections, slug } from './build-tree.js';
+import { buildSections, normalizeWinding, slug } from './build-tree.js';
 import sectionData from './sections.json';
 import featureData from './features.json';
+import worldFeatureData from './world-features.json';
 import shapeData from './geometry/shapes.json';
 
 const stateModules = import.meta.glob('./states/*.json', { eager: true, import: 'default' });
 
 export const states = Object.values(stateModules).sort((a, b) => a.name.localeCompare(b.name));
-export const features = featureData;
+// Two files, one list. The section tag is what keeps a category id like
+// "water" from pulling US features into The World and vice versa.
+export const features = [
+  ...featureData.map((f) => ({ ...f, section: 'us' })),
+  ...worldFeatureData.map((f) => ({ ...f, section: 'world' })),
+];
 export const stateByAbbr = new Map(states.map((s) => [s.abbreviation, s]));
 
 export { slug };
@@ -71,3 +77,23 @@ export const quizPool = {
     focus: f.focus,
   })),
 };
+
+// World shapes arrive with the world atlas rather than in the main bundle, so
+// their slides are built without geometry and filled in on first visit.
+let worldShapesAttached = false;
+
+export function attachWorldShapes(shapes) {
+  if (worldShapesAttached) return;
+  worldShapesAttached = true;
+  for (const slide of allSlides) {
+    if (slide.sectionId !== 'world' || slide.kind !== 'feature') continue;
+    const parts = [
+      ...(shapes[slide.data.id]?.parts ?? []),
+      ...(slide.data.geometry?.inlineParts ?? []),
+    ];
+    slide.data.geometryParts = parts.map((p) => ({
+      ...p,
+      geometry: normalizeWinding(p.geometry),
+    }));
+  }
+}
