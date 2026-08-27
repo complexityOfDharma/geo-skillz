@@ -89,6 +89,8 @@ function greyStateLabels(path, list, atlas, width, height) {
 // Returns shapes and labels separately: the outlines belong underneath the
 // states, but the labels must go on top or the subject state paints over them.
 let hatchSeq = 0;
+// Tile size of the neighbouring-country crosshatch, in SVG units.
+const HATCH_TILE = 13;
 
 function abroad(projection, path, atlas, width, height) {
   const shapes = [];
@@ -129,8 +131,9 @@ function abroad(projection, path, atlas, width, height) {
     );
   }
   const defs = shapes.length
-    ? `<defs><pattern id="${hatchId}" width="7" height="7" patternUnits="userSpaceOnUse">` +
-      `<path class="hatch-line" d="M0,0 L7,7 M7,0 L0,7" /></pattern></defs>`
+    ? `<defs><pattern id="${hatchId}" width="${HATCH_TILE}" height="${HATCH_TILE}" patternUnits="userSpaceOnUse">` +
+      `<path class="hatch-line" d="M0,0 L${HATCH_TILE},${HATCH_TILE} M${HATCH_TILE},0 L0,${HATCH_TILE}" />` +
+      `</pattern></defs>`
     : '';
 
   return { defs, shapes: shapes.join(''), labels: labels.join('') };
