@@ -14,6 +14,7 @@
   --why: #35211c;
   --why-line: #a2542f;
   --why-ink: #ffb894;
+  --map-water: #0d1b26;
   --map-land: #22353f;
   --map-land-2: #2c4350;
   --radius: 12px;
@@ -214,6 +215,10 @@ html, body {
 }
 
 .map { display: block; width: 100%; height: auto; }
+/* Water is drawn explicitly rather than left as page background. Natural Earth
+   excludes lakes and bays from country polygons, so without this a real feature
+   like James Bay renders as an unexplained hole in Canada. */
+.map-water { fill: var(--map-water); }
 
 .ctx-state { fill: var(--map-land); stroke: var(--bg); stroke-width: 0.5; }
 .ctx-state.is-active { fill: var(--accent); }

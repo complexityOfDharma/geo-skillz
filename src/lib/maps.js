@@ -14,7 +14,8 @@ const titleCase = (s) =>
 const displayName = (item, name) => item.geometry?.labels?.[name] ?? titleCase(name);
 
 const svgOpen = (w, h, cls) =>
-  `<svg class="${cls}" viewBox="0 0 ${w} ${h}" role="img" preserveAspectRatio="xMidYMid meet">`;
+  `<svg class="${cls}" viewBox="0 0 ${w} ${h}" role="img" preserveAspectRatio="xMidYMid meet">` +
+  `<rect class="map-water" x="0" y="0" width="${w}" height="${h}" />`;
 
 // Nudges labels apart vertically so short feature names don't stack on top of
 // each other. Good enough for the 3-6 labels a slide actually carries.
@@ -89,7 +90,7 @@ function greyStateLabels(path, list, atlas, width, height) {
 // states, but the labels must go on top or the subject state paints over them.
 let hatchSeq = 0;
 
-function abroad(path, atlas, width, height) {
+function abroad(projection, path, atlas, width, height) {
   const shapes = [];
   const labels = [];
   // Pattern ids are document-global, so each SVG mints its own.
@@ -104,20 +105,23 @@ function abroad(path, atlas, width, height) {
         `<path class="detail-abroad-hatch" d="${d}" fill="url(#${hatchId})" />`
     );
 
-    // Only label a country that is genuinely on screen, and anchor it near the
-    // edge it enters from - Mexico's true centre is far south of a Texas frame,
-    // so centring the label there would drop it on top of Texas.
-    const [[x0, y0], [x1, y1]] = path.bounds(geom);
-    const vx0 = Math.max(x0, 6);
-    const vy0 = Math.max(y0, 6);
-    const vx1 = Math.min(x1, width - 6);
-    const vy1 = Math.min(y1, height - 6);
-    if (vx1 - vx0 < 90 || vy1 - vy0 < 30) continue;
+    // Label the country's visible LAND, not the middle of its bounding box.
+    // Mexico's box over a Florida frame is mostly open Gulf, and its true
+    // centroid is off-screen entirely, so both would drop the label in water.
+    const inside = [];
+    const walk = (coords, depth) => {
+      if (depth === 0) {
+        const pt = projection(coords);
+        if (pt && pt[0] >= 8 && pt[0] <= width - 8 && pt[1] >= 8 && pt[1] <= height - 8) inside.push(pt);
+        return;
+      }
+      for (const c of coords) walk(c, depth - 1);
+    };
+    walk(geom.coordinates, geom.type === 'MultiPolygon' ? 3 : 2);
+    if (inside.length < 12) continue;
 
-    const [cx, cy] = path.centroid(geom);
-    const fromSouth = Number.isFinite(cy) ? cy > height / 2 : y1 > height;
-    const ly = fromSouth ? vy1 - 12 : vy0 + 12;
-    const lx = Math.min(Math.max(Number.isFinite(cx) ? cx : (vx0 + vx1) / 2, vx0 + 44), vx1 - 44);
+    const lx = inside.reduce((a, p) => a + p[0], 0) / inside.length;
+    const ly = inside.reduce((a, p) => a + p[1], 0) / inside.length;
     labels.push(
       `<text class="country-label" x="${lx.toFixed(1)}" y="${ly.toFixed(
         1
@@ -210,7 +214,7 @@ export function stateDetailMap(atlas, state, { width = 820, height = 520 } = {})
     .join('');
 
   const neighbourNames = greyStateLabels(path, state.neighborStates, atlas, width, height);
-  const beyond = abroad(path, atlas, width, height);
+  const beyond = abroad(projection, path, atlas, width, height);
 
   const markers = project(
     projection,
@@ -272,7 +276,7 @@ export function featureDetailMap(atlas, item, { width = 820, height = 520 } = {}
     .join('');
 
   const stateLabels = greyStateLabels(path, item.touchedStates, atlas, width, height);
-  const beyond = abroad(path, atlas, width, height);
+  const beyond = abroad(projection, path, atlas, width, height);
 
   // The feature itself: thick bold outline over a semi-transparent fill.
   const shapeClass = item.geometry?.kind === 'line' ? 'feat-line' : 'feat-shape';
