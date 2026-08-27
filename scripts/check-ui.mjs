@@ -1,6 +1,6 @@
 // Drives the built site in a real browser to check the things a Node render
-// test cannot: clicking the overview map, neighbour chips, keyboard nav, the
-// jump-to search, and hash deep links.
+// test cannot: the landing page, category navigation, backing out of a slide,
+// clicking the overview map, keyboard nav, jump-to search and deep links.
 //
 // Needs a preview server already running and a local Chrome:
 //   npm run build && npm run preview      (in one shell)
@@ -8,71 +8,107 @@
 //
 // Not part of `npm run check` or CI, because it depends on both of those.
 import puppeteer from 'puppeteer-core';
+
 const CHROME = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
 const BASE = 'http://localhost:4173/geo-skillz/';
+
 const out = [];
-const check = (name, ok, extra = '') => out.push(`${ok ? 'OK  ' : 'FAIL'} ${name}${extra ? ' :: ' + extra : ''}`);
+const check = (name, ok, extra = '') =>
+  out.push(`${ok ? 'OK  ' : 'FAIL'} ${name}${extra ? ' :: ' + extra : ''}`);
 
 const browser = await puppeteer.launch({ executablePath: CHROME, headless: 'new', args: ['--no-sandbox'] });
 const page = await browser.newPage();
-await page.setViewport({ width: 1200, height: 900 });
+await page.setViewport({ width: 1280, height: 900 });
 
 const errors = [];
 page.on('pageerror', (e) => errors.push(String(e)));
-page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
+page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
 
-await page.goto(BASE, { waitUntil: 'networkidle0' });
-await page.waitForSelector('.slide-overview');
-check('overview slide renders', true);
-const clickable = (await page.$$('.ctx-state[data-fips]')).length;
-// AlbersUsa clips Puerto Rico, Guam, American Samoa, the US Virgin Islands and
-// the N. Marianas, so those geometries produce no path and are not rendered.
-// What must be clickable is the 50 states plus DC.
-check('exactly the 50 states are clickable', clickable === 50, `${clickable} shapes`);
-check('DC is rendered but inert', (await page.$('.ctx-state.is-inert')) !== null);
+const title = () => page.$eval('.page-title, .slide-title', (e) => e.textContent.trim());
+const goto = (hash) => page.goto(BASE + hash, { waitUntil: 'networkidle0' });
 
-// Click Texas (FIPS 48) on the overview map.
+// ---- landing ----
+await goto('');
+await page.waitForSelector('.page-landing');
+check('landing renders', true);
+check(
+  'seven category tiles + one planned',
+  (await page.$$('.tile')).length === 8 && (await page.$$('.tile.is-planned')).length === 1
+);
+check('sidebar lists every category', (await page.$$('.sidebar [data-category]')).length === 8);
+
+// ---- landing -> category -> slide ----
+await page.click('.tile[href="#/us/states"]');
+await page.waitForSelector('.page-category');
+check('States tile opens the states index', (await title()) === 'States');
+check('states index has 50 cards', (await page.$$('.card')).length === 50);
+
 await page.click('.ctx-state[data-fips="48"]');
 await page.waitForSelector('.slide-state');
-check('clicking a state jumps to it', (await page.$eval('.slide-title', (e) => e.textContent)) === 'Texas');
-check('url reflects the slide', page.url().endsWith('#/texas'));
+check('clicking Texas on the map opens Texas', (await title()) === 'Texas');
+check('url is hierarchical', page.url().endsWith('#/us/states/texas'));
+check(
+  'counter is scoped to the category',
+  (await page.$eval('#tb-count', (e) => e.textContent)) === '43 / 50',
+  await page.$eval('#tb-count', (e) => e.textContent)
+);
 
-// Neighbour chip navigation.
-await page.click('.chip[data-goto-abbr="NM"]');
-await page.waitForFunction(() => document.querySelector('.slide-title')?.textContent === 'New Mexico');
-check('neighbour chip navigates', true);
+// ---- backing out: the thing that was broken ----
+await page.keyboard.press('Escape');
+await page.waitForSelector('.page-category');
+check('Escape from a slide returns to the category', (await title()) === 'States');
+await page.keyboard.press('Escape');
+await page.waitForSelector('.page-landing');
+check('Escape again returns to the landing page', true);
 
-// Keyboard.
-const before = await page.$eval('#tb-count', (e) => e.textContent);
+// ---- breadcrumb ----
+await goto('#/us/landforms/denali');
+await page.waitForSelector('.slide-feature');
+check('deep link to a feature slide works', (await title()).startsWith('Denali'));
+check('breadcrumb shows the full trail', (await page.$$('.breadcrumb .crumb')).length === 4);
+await page.click('.breadcrumb a.crumb:nth-of-type(2)');
+await page.waitForSelector('.page-category');
+check('breadcrumb navigates to the category', (await title()) === 'Landforms');
+
+// ---- small category scoping ----
+await goto('#/us/cities');
+await page.waitForSelector('.page-category');
+check('Cities & Population is populated', (await page.$$('.card')).length === 4);
+await page.click('.card');
+await page.waitForSelector('.slide-feature');
+check('small category counter', (await page.$eval('#tb-count', (e) => e.textContent)) === '1 / 4');
 await page.keyboard.press('ArrowRight');
-const after = await page.$eval('#tb-count', (e) => e.textContent);
-check('arrow key advances', before !== after, `${before} -> ${after}`);
-await page.keyboard.press('Home');
-await page.waitForFunction(() => document.querySelector('.slide-overview') !== null);
-check('Home returns to overview', true);
+await page.waitForFunction(() => document.querySelector('#tb-count').textContent === '2 / 4');
+check('arrow key advances within the category', true);
 
-// Jump menu via "/" then search.
+// ---- sidebar from deep inside ----
+await page.click('.sidebar .nav-home');
+await page.waitForSelector('.page-landing');
+check('sidebar Home works from a slide', true);
+
+// ---- search ----
 await page.keyboard.press('/');
 await page.waitForFunction(() => !document.querySelector('.jump').hidden);
-check('slash opens jump menu', true);
 await page.type('.jump-input', 'richmond');
 await page.waitForFunction(() => document.querySelectorAll('.jump-row').length === 1);
 check('search matches on capital name', (await page.$eval('.jump-row .jump-name', (e) => e.textContent)) === 'Virginia');
 await page.keyboard.press('Enter');
-await page.waitForFunction(() => document.querySelector('.slide-title')?.textContent === 'Virginia');
-check('enter jumps to result', true);
-
-// Maryland borders DC, which has no slide - that chip must be inert.
-await page.goto(BASE + '#/maryland', { waitUntil: 'networkidle0' });
 await page.waitForSelector('.slide-state');
-check('DC neighbour chip is disabled',
-  await page.$eval('[data-goto-abbr="DC"]', (e) => e.disabled && e.classList.contains('is-inert')));
+check('search result opens the slide', (await title()) === 'Virginia');
 
-// Deep link straight to a feature slide.
-await page.goto(BASE + '#/denali', { waitUntil: 'networkidle0' });
-await page.waitForSelector('.slide-feature');
-check('deep link to feature works', (await page.$$('.tl-list li')).length === 7, 'naming timeline rows');
-check('disputed badge shown', (await page.$('.disputed')) !== null);
+// ---- legacy deep links from the first build ----
+await goto('#/wyoming');
+await page.waitForSelector('.slide-state');
+check('legacy flat link still resolves', (await title()) === 'Wyoming');
+check('legacy link is rewritten', page.url().endsWith('#/us/states/wyoming'), page.url().split('#')[1]);
+
+// ---- inert affordances ----
+await goto('#/us/states/maryland');
+await page.waitForSelector('.slide-state');
+check(
+  'DC neighbour chip is disabled',
+  await page.$eval('[data-goto-abbr="DC"]', (e) => e.disabled && e.classList.contains('is-inert'))
+);
 
 check('no page errors', errors.length === 0, errors.slice(0, 3).join(' | '));
 await browser.close();

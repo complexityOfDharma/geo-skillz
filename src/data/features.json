@@ -508,7 +508,7 @@
     "focus": {
       "bbox": [
         [
-          -158.0,
+          -158,
           60.2
         ],
         [
@@ -695,5 +695,1168 @@
       "About 40 major rock layers are visible from rim to river."
     ],
     "whyItMatters": "Glen Canyon Dam, just upstream, changed the river that made the canyon. The Colorado used to run warm, red, and full of silt, and it flooded every spring. Now it runs cold and clear year-round because water is drawn from deep in the reservoir behind the dam. Native fish have largely vanished and the beaches are washing away, so managers periodically release artificial floods to try to rebuild them."
+  },
+  {
+    "id": "colorado-river",
+    "name": "The Colorado River",
+    "type": "river",
+    "category": "water",
+    "subtitle": "The most fought-over river in America",
+    "story": "It runs 1,450 miles from the Colorado Rockies toward the Gulf of California - except it usually never gets there. So much water is pulled out for cities and farms that the river dries up in the Mexican desert, often about 100 miles short of the sea. The river that carved the Grand Canyon can no longer reach the ocean.",
+    "nameStory": "Spanish for 'colored red,' after the silt it carried. Glen Canyon Dam now traps that silt, so the river below it runs cold and clear. The name describes a river that no longer exists.",
+    "statesTouched": [
+      "CO",
+      "UT",
+      "WY",
+      "NM",
+      "AZ",
+      "NV",
+      "CA"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -118,
+          31.5
+        ],
+        [
+          -105.5,
+          43.5
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Headwaters, Rocky Mtns",
+        "coords": [
+          -105.8,
+          40.4
+        ]
+      },
+      {
+        "name": "Glen Canyon Dam",
+        "coords": [
+          -111.48,
+          36.94
+        ]
+      },
+      {
+        "name": "Grand Canyon",
+        "coords": [
+          -112.1,
+          36.1
+        ]
+      },
+      {
+        "name": "Hoover Dam / Lake Mead",
+        "coords": [
+          -114.74,
+          36.02
+        ]
+      },
+      {
+        "name": "Delta - usually dry",
+        "coords": [
+          -114.8,
+          32
+        ]
+      }
+    ],
+    "keyFacts": [
+      "About 40 million people across seven states and Mexico drink from it.",
+      "The 1922 Colorado River Compact split the water during an unusually wet decade, so it promised out more water than the river actually carries. Every drop is legally spoken for, and then some.",
+      "Lake Mead and Lake Powell are the two largest reservoirs in the United States, and both have dropped far below capacity.",
+      "Its delta in Mexico, once a huge wetland, is now mostly dry salt flat."
+    ],
+    "whyItMatters": "Seven states, thirty tribal nations and Mexico all hold rights to this one river, allocated under a hundred-year-old deal based on water that was never there. Renegotiating it is one of the hardest political problems in the American West."
+  },
+  {
+    "id": "chesapeake-bay",
+    "name": "Chesapeake Bay",
+    "type": "bay",
+    "category": "water",
+    "subtitle": "A drowned river valley, and the largest estuary in America",
+    "story": "The Chesapeake is not really a bay in the ordinary sense. It is the Susquehanna River's old valley, flooded when the ice age ended and sea level rose some 400 feet. The shape you see on a map is a river channel underwater - trace the bay and you are tracing a river that stopped existing at that level 10,000 years ago.",
+    "nameStory": "From an Algonquian word usually given as 'great shellfish bay.' Oysters were once so abundant that their reefs were a hazard to shipping, and colonists described having to steer around them.",
+    "statesTouched": [
+      "MD",
+      "VA",
+      "DE",
+      "PA",
+      "NY",
+      "WV",
+      "DC"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -78.5,
+          36.5
+        ],
+        [
+          -74.8,
+          40.5
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Susquehanna enters",
+        "coords": [
+          -76.08,
+          39.55
+        ]
+      },
+      {
+        "name": "Baltimore",
+        "coords": [
+          -76.61,
+          39.29
+        ]
+      },
+      {
+        "name": "Annapolis",
+        "coords": [
+          -76.49,
+          38.98
+        ]
+      },
+      {
+        "name": "Potomac joins",
+        "coords": [
+          -76.3,
+          38
+        ]
+      },
+      {
+        "name": "Mouth at Norfolk",
+        "coords": [
+          -76.29,
+          36.95
+        ]
+      }
+    ],
+    "keyFacts": [
+      "200 miles long, and in places only about 30 feet deep.",
+      "Its watershed covers parts of six states plus DC - some 64,000 square miles, draining about 150 rivers and streams.",
+      "An asteroid struck near the mouth of the bay about 35 million years ago, and the crater still influences where the channel sits.",
+      "The oyster population is a small fraction of what it was in 1900, and oysters filter the water, so losing them made the water murkier."
+    ],
+    "whyItMatters": "Fertiliser and manure washing off farms hundreds of miles inland feed algae blooms that strip oxygen from the bay, creating summer dead zones. Fixing it needs six states that share nothing else to agree, which is why the Chesapeake Bay Program is studied as a model for governing a whole watershed."
+  },
+  {
+    "id": "mojave-sonoran-deserts",
+    "name": "The Mojave & Sonoran Deserts",
+    "type": "desert",
+    "category": "climate",
+    "subtitle": "Two deserts side by side, and the hottest air ever recorded",
+    "story": "The Southwest has two very different deserts touching each other, and you can tell them apart by looking at the plants. The Mojave is higher, cold in winter, and belongs to the Joshua tree. The Sonoran is lower, hotter, gets two rainy seasons instead of one, and is the only place on Earth where the saguaro cactus grows wild. Cross the line between them and the vegetation changes completely.",
+    "nameStory": "Mojave comes from the Pipa Aha Macav, 'the people who live along the water' - a name about a river, attached to a desert. Sonoran is named for the Mexican state next door. Both deserts exist for the same reason: mountains to the west wring the rain out of Pacific storms before they arrive.",
+    "statesTouched": [
+      "CA",
+      "NV",
+      "AZ",
+      "UT"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -119,
+          31.3
+        ],
+        [
+          -110.5,
+          38
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Death Valley, -282 ft",
+        "coords": [
+          -116.82,
+          36.5
+        ]
+      },
+      {
+        "name": "Joshua Tree",
+        "coords": [
+          -115.9,
+          33.9
+        ]
+      },
+      {
+        "name": "Phoenix",
+        "coords": [
+          -112.07,
+          33.45
+        ]
+      },
+      {
+        "name": "Saguaro country",
+        "coords": [
+          -111.17,
+          32.25
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Death Valley recorded 134 degrees Fahrenheit in 1913 - the highest air temperature ever measured anywhere on Earth.",
+      "Joshua trees grow only in the Mojave. Saguaros grow only in the Sonoran. Neither crosses into the other's desert.",
+      "The Sonoran gets both winter rain and a summer monsoon, which makes it the greenest desert in North America.",
+      "A saguaro can take 60 years to grow its first arm and can live over 150 years."
+    ],
+    "whyItMatters": "Phoenix and Las Vegas are among the fastest-growing metros in the country and both sit in these deserts, running on Colorado River water and air conditioning. They are a bet that engineering can keep outrunning the climate."
+  },
+  {
+    "id": "great-plains",
+    "name": "The Great Plains",
+    "type": "plain",
+    "category": "climate",
+    "subtitle": "Where the rain stops",
+    "story": "Draw a line straight down the 100th meridian, through the middle of the Dakotas, Nebraska, Kansas, Oklahoma and Texas. East of that line you get roughly enough rain to farm the ordinary way. West of it you do not. That invisible boundary is arguably the most important line in American agriculture - and as the climate warms it has been creeping east.",
+    "nameStory": "Stephen Long's 1820 expedition labelled the region the 'Great American Desert' on its map, and that one phrase kept settlers away for decades. It was never a desert. It was grassland, whose deep roots were the only thing holding thin dry soil in place.",
+    "statesTouched": [
+      "MT",
+      "ND",
+      "SD",
+      "WY",
+      "NE",
+      "CO",
+      "KS",
+      "OK",
+      "NM",
+      "TX"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -107,
+          31
+        ],
+        [
+          -96,
+          49
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "The 100th meridian",
+        "coords": [
+          -100,
+          40.5
+        ]
+      },
+      {
+        "name": "Dust Bowl core",
+        "coords": [
+          -101.5,
+          36.5
+        ]
+      },
+      {
+        "name": "Ogallala Aquifer",
+        "coords": [
+          -101,
+          38.6
+        ]
+      },
+      {
+        "name": "Flint Hills prairie",
+        "coords": [
+          -96.6,
+          38.4
+        ]
+      }
+    ],
+    "keyFacts": [
+      "The 100th meridian roughly marks 20 inches of rain a year, the practical limit for farming without irrigation.",
+      "Plowing up the grass removed the roots holding the soil down. When drought hit in the 1930s the topsoil simply blew away, and the Dust Bowl was the result.",
+      "The Ogallala Aquifer under the plains is being pumped far faster than rain refills it; in places it has already been drained past the point of use.",
+      "Less than 4% of the original tallgrass prairie survives anywhere."
+    ],
+    "whyItMatters": "The Dust Bowl was a man-made disaster - the result of farming a grassland as though it were Ohio. It produced the Soil Conservation Service and the idea that how you treat land is a public matter, not only a private one."
+  },
+  {
+    "id": "everglades",
+    "name": "The Everglades",
+    "type": "wetland",
+    "category": "climate",
+    "subtitle": "A river 60 miles wide and six inches deep",
+    "story": "The Everglades looks like a swamp and is not one. It is a river. Water leaves Lake Okeechobee and moves south across a limestone shelf so nearly level that it falls about two inches per mile. The whole sheet of water is flowing - just far too slowly to see. Marjory Stoneman Douglas gave it the name that finally made people understand it in 1947: the River of Grass.",
+    "nameStory": "A 'glade' is an old English word for an open grassy clearing in a forest. Early surveyors wrote 'River Glades' and then 'Ever Glades' on their maps - glades that went on forever, because nobody could find the far side.",
+    "statesTouched": [
+      "FL"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -82.6,
+          24.6
+        ],
+        [
+          -79.7,
+          27.8
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Lake Okeechobee - source",
+        "coords": [
+          -80.8,
+          26.9
+        ]
+      },
+      {
+        "name": "Big Cypress",
+        "coords": [
+          -81.1,
+          26
+        ]
+      },
+      {
+        "name": "Shark River Slough",
+        "coords": [
+          -80.9,
+          25.6
+        ]
+      },
+      {
+        "name": "Florida Bay",
+        "coords": [
+          -80.9,
+          25.1
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Water takes months to travel from Lake Okeechobee to Florida Bay.",
+      "Sawgrass is not grass at all - it is a sedge, and its edges really will cut you.",
+      "It is the only place on Earth where alligators and crocodiles live in the same water.",
+      "Roughly half the historic Everglades has been drained for farmland and cities."
+    ],
+    "whyItMatters": "For a century the Everglades was treated as wasted land to be drained. Reversing that is now the largest ecosystem restoration ever attempted anywhere, and it has to work while South Florida's drinking water and its defence against storm surge both depend on it."
+  },
+  {
+    "id": "tornado-alley",
+    "name": "Tornado Alley",
+    "type": "region",
+    "category": "climate",
+    "subtitle": "Where three air masses collide with nothing in the way",
+    "story": "The central United States gets more tornadoes than the rest of the world combined, and the reason is an accident of terrain. Warm wet air pushes north off the Gulf of Mexico. Cold dry air drops south out of Canada. Hot dry air comes east off the Rockies and rides over the top of both. Nowhere else on Earth stacks those three so reliably - because nowhere else has a thousand miles of flat ground with no east-west mountain range to keep them apart.",
+    "nameStory": "Not an official region and not on any government map. The phrase came out of a 1952 US Air Force research project on forecasting tornado risk, and meteorologists have argued ever since about where it is - and whether it is moving.",
+    "statesTouched": [
+      "TX",
+      "OK",
+      "KS",
+      "NE",
+      "SD",
+      "IA",
+      "MO",
+      "AR",
+      "IL"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -104,
+          29
+        ],
+        [
+          -88,
+          45
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Gulf moisture arrives",
+        "coords": [
+          -94,
+          29.6
+        ]
+      },
+      {
+        "name": "Moore, OK",
+        "coords": [
+          -97.49,
+          35.34
+        ]
+      },
+      {
+        "name": "Greensburg, KS",
+        "coords": [
+          -99.29,
+          37.6
+        ]
+      },
+      {
+        "name": "Joplin, MO",
+        "coords": [
+          -94.51,
+          37.08
+        ]
+      }
+    ],
+    "keyFacts": [
+      "The US averages around 1,200 tornadoes a year, more than every other country combined.",
+      "Europe and Asia have east-west mountain ranges that block this collision. North America's ranges run north-south, which lets the air masses drive straight at each other.",
+      "Peak season moves north through spring - Texas in March, the Dakotas by June.",
+      "'Dixie Alley' in the Southeast gets fewer tornadoes but deadlier ones, because more of them come at night and are hidden by trees and rain."
+    ],
+    "whyItMatters": "Tornado activity has been shifting east out of the classic Plains alley and into the Southeast, where there are more people, more trees blocking the view, and more housing that cannot survive a strong storm."
+  },
+  {
+    "id": "rio-grande-border",
+    "name": "The Rio Grande Border",
+    "type": "border",
+    "category": "borders",
+    "subtitle": "What happens when your border is a river that moves",
+    "story": "For about 1,250 of the 1,954 miles of the US-Mexico border, the boundary is a river. That is a problem, because rivers wander. When the Rio Grande shifted its channel in the 1860s, roughly 600 acres of Mexico ended up on the American side at El Paso, and Mexico spent the next century demanding it back. The Chamizal dispute was not settled until 1963, and the fix was to pour the river into a concrete channel so it could never move again.",
+    "nameStory": "It is the Rio Grande in the United States and the Rio Bravo del Norte in Mexico - 'the great river' on one bank, 'the fierce river' on the other. One river with two names, depending on which side you are standing on.",
+    "statesTouched": [
+      "TX",
+      "NM",
+      "CO"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -108,
+          25.5
+        ],
+        [
+          -96.5,
+          38.5
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Headwaters, Colorado",
+        "coords": [
+          -107.3,
+          37.8
+        ]
+      },
+      {
+        "name": "El Paso / Ciudad Juarez",
+        "coords": [
+          -106.49,
+          31.76
+        ]
+      },
+      {
+        "name": "Big Bend",
+        "coords": [
+          -103.25,
+          29.3
+        ]
+      },
+      {
+        "name": "Mouth at the Gulf",
+        "coords": [
+          -97.15,
+          25.95
+        ]
+      }
+    ],
+    "keyFacts": [
+      "About 1,900 miles long overall; roughly 1,250 of those miles are an international boundary.",
+      "It became the border under the 1848 Treaty of Guadalupe Hidalgo that ended the Mexican-American War.",
+      "In dry years, irrigation takes so much water that stretches of the 'border' are a sandy trench you can walk across.",
+      "A 1970 treaty finally fixed the boundary in place no matter how the channel moves in future."
+    ],
+    "whyItMatters": "Nearly every argument about the southern border is really an argument about this river - where it runs, who may cross it, and what a boundary means when the thing marking it is water that shifts, floods and sometimes disappears."
+  },
+  {
+    "id": "forty-ninth-parallel",
+    "name": "The 49th Parallel",
+    "type": "border",
+    "category": "borders",
+    "subtitle": "The longest straight line between two countries",
+    "story": "Most of the US-Canada border is not a river or a ridge. It is a line of latitude - 49 degrees north - running about 1,260 miles from Minnesota to the Pacific. It was agreed by negotiators in a room in 1818 and simply drawn. Which is why it produces absurdities: Point Roberts, Washington, sits just below the line on the tip of a Canadian peninsula, so the only way to drive there from the rest of America is to leave the country and come back.",
+    "nameStory": "Named only for its latitude. The 1844 campaign slogan 'Fifty-four forty or fight!' demanded the border be pushed far north to 54 degrees 40 minutes. The 1846 Oregon Treaty settled on 49 instead, and nobody fought.",
+    "statesTouched": [
+      "WA",
+      "ID",
+      "MT",
+      "ND",
+      "MN"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -125,
+          44
+        ],
+        [
+          -93,
+          51
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Point Roberts",
+        "coords": [
+          -123.06,
+          48.98
+        ]
+      },
+      {
+        "name": "Glacier NP",
+        "coords": [
+          -113.8,
+          48.7
+        ]
+      },
+      {
+        "name": "Northwest Angle",
+        "coords": [
+          -95.1,
+          49.3
+        ]
+      },
+      {
+        "name": "Seattle",
+        "coords": [
+          -122.33,
+          47.6
+        ]
+      }
+    ],
+    "keyFacts": [
+      "The full US-Canada border is 5,525 miles, the longest between any two countries on Earth.",
+      "Minnesota's Northwest Angle is the only part of the lower 48 north of the 49th parallel - the result of a treaty written using a map that put the source of the Mississippi in the wrong place.",
+      "A 20-foot strip is kept permanently cleared of trees along the border so the line stays visible from the ground.",
+      "It is often described as the world's longest undefended border."
+    ],
+    "whyItMatters": "It is the clearest example anywhere of a border drawn by mathematics rather than geography. It splits watersheds, towns and one library down the middle, and it works anyway - which is itself worth noticing."
+  },
+  {
+    "id": "mason-dixon-line",
+    "name": "The Mason-Dixon Line",
+    "type": "border",
+    "category": "borders",
+    "subtitle": "A property dispute that became the North-South divide",
+    "story": "Charles Mason and Jeremiah Dixon were English astronomers hired to settle a dull argument: the Penn and Calvert families could not agree where Pennsylvania ended and Maryland began. From 1763 to 1767 the two men surveyed a line by the stars and planted milestones shipped from England. Eighty years later that arbitrary property boundary had become the border between free states and slave states, and 'below the Mason-Dixon' still means the South.",
+    "nameStory": "Just the two surveyors' surnames. They also laid out the Twelve-Mile Circle around New Castle, Delaware - the only circular state boundary in America. Whether 'Dixie' comes from Dixon is argued about and has never been settled.",
+    "statesTouched": [
+      "PA",
+      "MD",
+      "DE",
+      "WV"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -81.5,
+          37.6
+        ],
+        [
+          -74.6,
+          41.2
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Western terminus",
+        "coords": [
+          -80.52,
+          39.72
+        ]
+      },
+      {
+        "name": "The line, 39 deg 43 min",
+        "coords": [
+          -78,
+          39.72
+        ]
+      },
+      {
+        "name": "Twelve-Mile Circle",
+        "coords": [
+          -75.6,
+          39.68
+        ]
+      },
+      {
+        "name": "Philadelphia",
+        "coords": [
+          -75.16,
+          39.95
+        ]
+      }
+    ],
+    "keyFacts": [
+      "233 miles, surveyed over four years using stars rather than landmarks.",
+      "Some of the original limestone milestones are still standing in fields and hedgerows.",
+      "The line sits at latitude 39 degrees 43 minutes - not a round number, because it was fixed by the Delaware circle, not chosen.",
+      "Mason and Dixon had to stop when their Native guides refused to go further west into contested territory."
+    ],
+    "whyItMatters": "Two astronomers settling a real estate quarrel accidentally drew the line the country would split along. It is the cleanest demonstration that borders acquire meanings nobody intended when they were made."
+  },
+  {
+    "id": "four-corners",
+    "name": "Four Corners",
+    "type": "border",
+    "category": "borders",
+    "subtitle": "The only place in America where four states touch",
+    "story": "Arizona, New Mexico, Colorado and Utah all meet at a single point - the only quadripoint in the United States. It exists because by the time the Southwest was being organised, surveyors had instruments good enough to just draw rectangles, so Congress did. Older states follow rivers and mountain crests; these four follow lines of latitude and longitude, and rectangles have corners.",
+    "nameStory": "Purely descriptive, and the description hides a good argument. The monument sits about 1,800 feet from where modern GPS says the corner mathematically belongs. It does not matter: the Supreme Court has held that the markers the original 1875 surveyors planted define the boundary. The corner is legally wherever they said it was.",
+    "statesTouched": [
+      "AZ",
+      "NM",
+      "CO",
+      "UT"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -112.5,
+          34.8
+        ],
+        [
+          -105.5,
+          39.5
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Four Corners Monument",
+        "coords": [
+          -109.045,
+          36.999
+        ]
+      },
+      {
+        "name": "Monument Valley",
+        "coords": [
+          -110.1,
+          36.98
+        ]
+      },
+      {
+        "name": "Mesa Verde",
+        "coords": [
+          -108.47,
+          37.23
+        ]
+      },
+      {
+        "name": "Navajo Nation",
+        "coords": [
+          -110,
+          36.2
+        ]
+      }
+    ],
+    "keyFacts": [
+      "The only point in the country where you can stand in four states at once.",
+      "It sits on land held by the Navajo Nation and the Ute Mountain Ute Tribe, who run the monument.",
+      "Colorado and Wyoming are the only two states whose borders are entirely straight lines - and Colorado's southwest corner is this one.",
+      "The 'error' gets rediscovered by the public every few years and is reported as a scandal each time."
+    ],
+    "whyItMatters": "Four Corners is a useful reminder that a border is a legal fact rather than a physical one. The line is where a surveyor's chain stopped in 1875, and being able to prove that is wrong changes nothing."
+  },
+  {
+    "id": "boswash-megalopolis",
+    "name": "The BosWash Megalopolis",
+    "type": "region",
+    "category": "cities",
+    "subtitle": "Six hundred miles of almost continuous city",
+    "story": "From Boston to Washington runs a nearly unbroken band of urban development: Boston, Providence, Hartford, New York, Newark, Philadelphia, Baltimore, Washington. Around 50 million people - close to one American in six - on under 2% of the country's land. There is a reason they line up so neatly. They all sit on the Fall Line, the place where rivers tumble off the hard rock of the Piedmont onto the coastal plain. That was the furthest a ship could sail upriver, and the first place you could put a water wheel. Every one of those cities is a port that could also run a mill.",
+    "nameStory": "Geographer Jean Gottmann borrowed 'Megalopolis' in 1961 - Greek for 'great city,' and also the name of a real ancient town in Arcadia that tried to unite its region and failed. 'BosWash' was coined a few years later by a futurist compressing Boston and Washington into one word.",
+    "statesTouched": [
+      "MA",
+      "RI",
+      "CT",
+      "NY",
+      "NJ",
+      "PA",
+      "DE",
+      "MD",
+      "VA",
+      "DC"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -78.5,
+          37.8
+        ],
+        [
+          -69.5,
+          43.5
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Boston",
+        "coords": [
+          -71.06,
+          42.36
+        ]
+      },
+      {
+        "name": "New York",
+        "coords": [
+          -74.01,
+          40.71
+        ]
+      },
+      {
+        "name": "Philadelphia",
+        "coords": [
+          -75.17,
+          39.95
+        ]
+      },
+      {
+        "name": "Baltimore",
+        "coords": [
+          -76.61,
+          39.29
+        ]
+      },
+      {
+        "name": "Washington DC",
+        "coords": [
+          -77.04,
+          38.91
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Roughly 50 million people, about one in six Americans.",
+      "The Fall Line explains the placement of nearly every city in the chain - it is where boats had to stop and where mills could be built.",
+      "The Northeast Corridor rail line strings the whole thing together and is the busiest passenger railway in the country.",
+      "It holds the nation's political capital and its financial capital, about 100 miles apart."
+    ],
+    "whyItMatters": "Gottmann's argument was that this was a genuinely new kind of settlement - not one city, but no longer separate cities either. Most of the world's population now lives in something shaped like it."
+  },
+  {
+    "id": "sun-belt-shift",
+    "name": "The Sun Belt Shift",
+    "type": "region",
+    "category": "cities",
+    "subtitle": "Air conditioning moved the country",
+    "story": "In 1950 the Northeast and Midwest held most of America's people and most of its political power. Since then the population has swung hard south and west - Texas, Florida, Arizona, Georgia, the Carolinas, Nevada. The biggest single reason is unglamorous. Affordable air conditioning made hot places liveable in August, and once they were liveable, cheap land and cheap energy did the rest. Phoenix had about 107,000 people in 1950. It has well over 1.6 million now.",
+    "nameStory": "The political analyst Kevin Phillips popularised 'Sun Belt' in 1969, and he was describing a voting bloc at least as much as a climate zone. The name arrived because the shift was already changing elections.",
+    "statesTouched": [
+      "CA",
+      "NV",
+      "AZ",
+      "NM",
+      "TX",
+      "OK",
+      "AR",
+      "LA",
+      "MS",
+      "AL",
+      "GA",
+      "FL",
+      "SC",
+      "NC",
+      "TN"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -125,
+          24.5
+        ],
+        [
+          -74,
+          40
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Las Vegas",
+        "coords": [
+          -115.14,
+          36.17
+        ]
+      },
+      {
+        "name": "Phoenix",
+        "coords": [
+          -112.07,
+          33.45
+        ]
+      },
+      {
+        "name": "Houston",
+        "coords": [
+          -95.37,
+          29.76
+        ]
+      },
+      {
+        "name": "Atlanta",
+        "coords": [
+          -84.39,
+          33.75
+        ]
+      },
+      {
+        "name": "Miami",
+        "coords": [
+          -80.19,
+          25.76
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Every census since 1950 has moved House seats - and therefore electoral votes - from the Northeast and Midwest to the South and West.",
+      "Texas and Florida gained seats after the 2020 census; New York and California lost them.",
+      "The shift depends on water and electricity supplies that are now under real strain in exactly the places growing fastest.",
+      "Interstate highways and, later, cheap air travel made distance from the old industrial core matter much less."
+    ],
+    "whyItMatters": "This is geography rewriting political power on a ten-year clock. Where people choose to live decides how many votes each state gets in Congress and in presidential elections, so a technology as ordinary as air conditioning ends up reshaping who governs."
+  },
+  {
+    "id": "chicago-rail-hub",
+    "name": "Chicago, the Rail Hub",
+    "type": "city",
+    "category": "cities",
+    "subtitle": "Why the country's railroads all bend toward one city",
+    "story": "Look at a map of American freight rail and everything converges on Chicago. That is geography, not business luck. Lake Michigan is 300 miles of water pointing straight down into the middle of the country, so any east-west route has to go around it, and going around the southern tip is far shorter. Then, just southwest of the city, there is a low swampy divide where the Great Lakes watershed almost touches the Mississippi's - close enough that in a wet year you could float a canoe between two oceans' worth of drainage. One spot became the hinge between eastern shipping and the entire western interior.",
+    "nameStory": "From the Miami-Illinois word 'shikaakwa,' a wild onion that grew thick in those marshes. The third-largest city in America is named after a smelly plant nobody wanted to walk through.",
+    "statesTouched": [
+      "IL",
+      "IN",
+      "WI",
+      "MI"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -91.5,
+          40
+        ],
+        [
+          -84.5,
+          47
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Chicago",
+        "coords": [
+          -87.63,
+          41.88
+        ]
+      },
+      {
+        "name": "Chicago Portage",
+        "coords": [
+          -87.82,
+          41.79
+        ]
+      },
+      {
+        "name": "Illinois River",
+        "coords": [
+          -89,
+          41
+        ]
+      },
+      {
+        "name": "Lake Michigan",
+        "coords": [
+          -87,
+          43.6
+        ]
+      }
+    ],
+    "keyFacts": [
+      "Chicago is still the busiest rail hub in North America; a huge share of US freight passes through it.",
+      "The Illinois and Michigan Canal opened in 1848 across that low divide, finally connecting the Great Lakes to the Mississippi.",
+      "The railroads invented standard time zones in 1883 because they could not write timetables otherwise. The meeting that did it was held in Chicago.",
+      "Freight trains can still take longer to cross Chicago than to reach it from the east coast."
+    ],
+    "whyItMatters": "Time zones were created by a private industry to solve a scheduling problem, and most of the country simply went along with it. Congress did not make them law until 1918 - 35 years after everyone was already using them."
+  },
+  {
+    "id": "los-angeles-water",
+    "name": "Los Angeles and Its Water",
+    "type": "city",
+    "category": "cities",
+    "subtitle": "A city that outgrew its river, then took someone else's",
+    "story": "Los Angeles sits in a semi-arid basin with one modest river and about 15 inches of rain a year. By 1900 it had already outgrown that. So the city quietly bought up land and water rights in the Owens Valley, 230 miles north in the shadow of the Sierra Nevada, and built an aqueduct to bring the water down using nothing but gravity. Owens Valley farms dried up. Owens Lake turned into a dust flat. Los Angeles became the second-largest city in the country. Almost every drop it drinks comes from somewhere else.",
+    "nameStory": "Founded in 1781 as El Pueblo de Nuestra Senora la Reina de los Angeles - the town of Our Lady the Queen of the Angels - on the banks of a river the Spanish called the Porciuncula. That river is still there, running through the city inside a concrete channel.",
+    "statesTouched": [
+      "CA",
+      "NV",
+      "AZ"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -121.5,
+          32.5
+        ],
+        [
+          -114,
+          39
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Mono Lake",
+        "coords": [
+          -119,
+          38
+        ]
+      },
+      {
+        "name": "Owens Valley",
+        "coords": [
+          -118.2,
+          36.9
+        ]
+      },
+      {
+        "name": "Owens Lake - dry",
+        "coords": [
+          -117.95,
+          36.4
+        ]
+      },
+      {
+        "name": "Los Angeles",
+        "coords": [
+          -118.24,
+          34.05
+        ]
+      },
+      {
+        "name": "Colorado River Aqueduct",
+        "coords": [
+          -115.5,
+          33.6
+        ]
+      }
+    ],
+    "keyFacts": [
+      "The Los Angeles Aqueduct opened in 1913: 233 miles, entirely gravity-fed, no pumps.",
+      "Owens Lake became the largest single source of dust pollution in the United States, and LA now spends heavily keeping it damp.",
+      "The city also draws from the Colorado River and from Northern California - three separate long-distance supplies.",
+      "After deadly floods in 1938 the Los Angeles River was lined with concrete, which is why it looks like a drainage ditch in films."
+    ],
+    "whyItMatters": "This became the template for water in the American West: a growing city buys the water rights of a rural valley that cannot outvote it, and moves the water hundreds of miles. Nearly every western water fight since has followed the same shape."
+  },
+  {
+    "id": "erie-canal",
+    "name": "The Erie Canal",
+    "type": "canal",
+    "category": "cultural",
+    "subtitle": "The ditch that made New York City",
+    "story": "In 1825 New York finished a 363-mile canal from Albany on the Hudson to Buffalo on Lake Erie. It worked because of a geographic fluke: the Mohawk Valley is the only near-sea-level gap through the entire Appalachian chain, which runs 1,500 miles without another one. Suddenly midwestern grain could reach the Atlantic without ever climbing a mountain. Freight costs collapsed by about 95%, New York overtook every rival port, and the interior of the continent was open.",
+    "nameStory": "Named for the lake at its western end, which is named for the Erie nation. Opponents called it 'Clinton's Ditch' after Governor DeWitt Clinton, who staked his career on it. The nickname stopped being an insult about a year after it opened.",
+    "statesTouched": [
+      "NY"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -80,
+          41.6
+        ],
+        [
+          -72.8,
+          44.6
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Buffalo / Lake Erie",
+        "coords": [
+          -78.88,
+          42.89
+        ]
+      },
+      {
+        "name": "Rochester",
+        "coords": [
+          -77.61,
+          43.16
+        ]
+      },
+      {
+        "name": "Syracuse",
+        "coords": [
+          -76.15,
+          43.05
+        ]
+      },
+      {
+        "name": "Albany / Hudson",
+        "coords": [
+          -73.76,
+          42.65
+        ]
+      }
+    ],
+    "keyFacts": [
+      "363 miles and 83 locks, dug largely by hand by men with shovels and mules.",
+      "Moving a ton of freight from Buffalo to New York City fell from around $100 to about $10, and from three weeks to one.",
+      "It paid back its entire construction cost in under a decade.",
+      "It is why upstate New York is full of classical names - Syracuse, Rome, Utica, Ithaca - laid out by surveyors during a fashion for antiquity."
+    ],
+    "whyItMatters": "Before the canal, Philadelphia, Baltimore and New Orleans were all serious rivals to New York. Afterwards there was no contest. A single engineering project decided which American city would become the largest, and it has stayed decided for 200 years."
+  },
+  {
+    "id": "route-66",
+    "name": "Route 66",
+    "type": "highway",
+    "category": "cultural",
+    "subtitle": "Chicago to Santa Monica, and the road out of the Dust Bowl",
+    "story": "Route 66 ran 2,448 miles from Chicago to the Pacific at Santa Monica, across eight states. It mattered most in the 1930s, when Dust Bowl families loaded everything they owned onto a truck and drove west on it looking for work in California. Steinbeck called it the mother road, the road of flight. Then the Interstates were built to bypass the towns instead of running through them, and in 1985 Route 66 was decommissioned - taken off the map entirely. It survives as nostalgia and a very well-signposted ghost.",
+    "nameStory": "The number was very nearly 60. Planners argued over it for months, and 66 won partly because it was still unassigned and partly because it simply sounded better. America's most famous road is named after a number chosen to end a bureaucratic argument.",
+    "statesTouched": [
+      "IL",
+      "MO",
+      "KS",
+      "OK",
+      "TX",
+      "NM",
+      "AZ",
+      "CA"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -119.5,
+          32
+        ],
+        [
+          -87,
+          42.5
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Chicago - eastern end",
+        "coords": [
+          -87.63,
+          41.88
+        ]
+      },
+      {
+        "name": "St. Louis",
+        "coords": [
+          -90.2,
+          38.63
+        ]
+      },
+      {
+        "name": "Oklahoma City",
+        "coords": [
+          -97.52,
+          35.47
+        ]
+      },
+      {
+        "name": "Albuquerque",
+        "coords": [
+          -106.65,
+          35.08
+        ]
+      },
+      {
+        "name": "Santa Monica - western end",
+        "coords": [
+          -118.49,
+          34.01
+        ]
+      }
+    ],
+    "keyFacts": [
+      "2,448 miles across eight states - though Kansas got only about 13 of them.",
+      "It was one of the first US highways paved end to end, finished in 1938.",
+      "Officially removed from the highway system in 1985, after the Interstates made it redundant.",
+      "The towns that boomed because the road went through them mostly emptied out when the Interstate went around them."
+    ],
+    "whyItMatters": "Route 66 is the clearest case of infrastructure deciding which places live and which die. The same country that made those towns by routing a road through them unmade them by routing the next road elsewhere."
+  },
+  {
+    "id": "transcontinental-railroad",
+    "name": "The Transcontinental Railroad",
+    "type": "railroad",
+    "category": "cultural",
+    "subtitle": "Six days instead of six months",
+    "story": "Before 1869, crossing the continent meant four to six months in a wagon, or a sea voyage all the way around South America. On May 10, 1869, the Central Pacific building east and the Union Pacific building west met at Promontory Summit in Utah, and the journey became about six days. Nothing else in American history compressed distance that fast. The hard part was the Sierra Nevada: solid granite, tunnelled through by hand and black powder, in winters that buried the work camps.",
+    "nameStory": "Officially just the Pacific Railroad. The golden spike driven at the meeting was ceremonial - it was pulled straight back out and the rails were joined with ordinary iron, because gold is far too soft to hold a railroad together.",
+    "statesTouched": [
+      "CA",
+      "NV",
+      "UT",
+      "WY",
+      "NE",
+      "IA"
+    ],
+    "focus": {
+      "bbox": [
+        [
+          -124,
+          36
+        ],
+        [
+          -93,
+          44
+        ]
+      ]
+    },
+    "markers": [
+      {
+        "name": "Sacramento",
+        "coords": [
+          -121.49,
+          38.58
+        ]
+      },
+      {
+        "name": "Donner Pass",
+        "coords": [
+          -120.32,
+          39.32
+        ]
+      },
+      {
+        "name": "Promontory Summit 1869",
+        "coords": [
+          -112.55,
+          41.62
+        ]
+      },
+      {
+        "name": "Omaha",
+        "coords": [
+          -95.94,
+          41.26
+        ]
+      }
+    ],
+    "keyFacts": [
+      "About 1,900 miles of track laid in six years.",
+      "Chinese labourers made up the large majority of the Central Pacific's workforce and did the most dangerous work in the Sierra. Many died, and they were left out of the official story and the famous photograph for over a century.",
+      "The railroad companies were paid by the mile, which is one reason some of the route wanders.",
+      "Standard time zones followed in 1883, because a national railway is impossible without them."
+    ],
+    "whyItMatters": "The railroad made the West governable and settlement unstoppable, and it did so at enormous cost to the Plains nations. It carried hunters who destroyed the bison herds within about fifteen years, and without the bison the economies and independence of those nations collapsed."
   }
 ]
